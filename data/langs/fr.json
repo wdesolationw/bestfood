@@ -1,0 +1,2069 @@
+{
+  "code": "fr",
+  "native": "Français",
+  "name": "French",
+  "ui": {
+    "sub": "Remplacements",
+    "ph": "Tu as envie de quoi ? Ex. : pâtes au poulet",
+    "all": "Toutes",
+    "fav": "★ Favoris",
+    "cats": "Catégories",
+    "kcal": "kcal",
+    "p": "P",
+    "plus": "+ protéine",
+    "fl": "Filtres et tri",
+    "fk": "Calories",
+    "fp": "Protéines",
+    "fs": "Trier",
+    "any": "Toutes",
+    "anyp": "Toutes",
+    "k300": "jusqu'à 300",
+    "k500": "de 300 à 500",
+    "k600": "plus de 500",
+    "p20": "dès 20 g",
+    "p30": "dès 30 g",
+    "p40": "dès 40 g",
+    "s0": "Ordre par défaut",
+    "sp": "Plus de protéines",
+    "sk": "Moins de calories",
+    "found": "Trouvées : ",
+    "none": "Aucun résultat",
+    "none2": "Essaie un autre mot ou retire les filtres.",
+    "reset": "Tout réinitialiser",
+    "back": "← Toutes les recettes",
+    "favAdd": "☆ Ajouter aux favoris",
+    "favOn": "★ Dans les favoris",
+    "ver": "Version",
+    "noP": "Sans protéine en poudre",
+    "withP": "Avec protéine en poudre",
+    "g": ["kcal", "protéines", "lipides", "glucides"],
+    "per": "Valeurs par portion. La recette donne : ",
+    "est": "Valeurs estimées.",
+    "calc": "Calculé à partir des ingrédients.",
+    "auth": "Données de l'auteur de la recette.",
+    "ingh": "Ingrédients (touche pour cocher)",
+    "steph": "Préparation",
+    "stor": "Conservation :",
+    "vid": "▶ Voir la préparation",
+    "st": "Remplacer un ingrédient",
+    "st2": "Un ingrédient introuvable au magasin ? Trouve ici par quoi le remplacer.",
+    "find": "Chercher un ingrédient",
+    "th": ["Dans la recette", "À la place"],
+    "nf": "Aucun résultat",
+    "quickl": "Recherche rapide",
+    "base": "Ingrédient principal",
+    "favaria": "Ajouter aux favoris",
+    "clear": "Effacer la recherche",
+    "foot": "Les calories et les macros sont par portion. Pour la première série de recettes, les valeurs viennent des auteurs ; pour les autres, elles sont calculées à partir des ingrédients, marge d'erreur d'environ 10 %.",
+    "langT": "Langue",
+    "look": "Apparence",
+    "mode": "Thème",
+    "auto": "Système",
+    "light": "Clair",
+    "dark": "Sombre",
+    "palette": "Couleur",
+    "custom": "Couleur perso",
+    "resetLook": "Réinitialiser l'apparence",
+    "done": "OK",
+    "pal": {
+      "mint": "Menthe",
+      "ocean": "Océan",
+      "berry": "Baies",
+      "sunset": "Couchant",
+      "lavender": "Lavande",
+      "graphite": "Graphite"
+    },
+    "navR": "Recettes",
+    "navDay": "Jour",
+    "navMine": "Mes plats",
+    "swapT": "Remplacer par",
+    "swapHint": "Il te manque un ingrédient ? Touche ⇄ à côté : je propose un remplacement et je recalcule les macros.",
+    "swapBest": "macros les plus proches",
+    "swapReset": "Revenir à l'original",
+    "swapped": "avec remplacements",
+    "resetSwaps": "Annuler tous les remplacements",
+    "perServ": "par portion",
+    "noSwap": "Pas de remplacement pour cet ingrédient",
+    "addDay": "+ À ma journée",
+    "added": "Ajouté à « Ma journée »",
+    "today": "Aujourd'hui",
+    "portions": "port.",
+    "total": "Total de la journée",
+    "goal": "Objectif du jour",
+    "goalK": "Calories",
+    "goalP": "Protéines, g",
+    "left": "Reste",
+    "over": "Au-dessus de l'objectif de",
+    "emptyDay": "Rien pour l'instant. Ajoute une recette, un de tes plats ou un produit.",
+    "addProd": "+ Produit",
+    "grams": "g",
+    "findProd": "Chercher un produit",
+    "addBtn": "Ajouter",
+    "remove": "Retirer",
+    "newDish": "+ Créer un plat",
+    "myVersion": "Faire ma version",
+    "dishName": "Nom du plat",
+    "servings": "Portions",
+    "ingredients": "Ingrédients",
+    "addIng": "Ajouter un ingrédient",
+    "customProd": "Produit perso",
+    "per100": "pour 100 g",
+    "name": "Nom",
+    "save": "Enregistrer",
+    "saved": "Enregistré",
+    "del": "Supprimer le plat",
+    "delConfirm": "Sûr ? Touche encore pour supprimer",
+    "whole": "Plat entier",
+    "oneServ": "1 portion",
+    "emptyMine": "Pas encore de plats. Compose-en un avec des produits ou fais ta version d'une recette.",
+    "untitled": "Sans nom",
+    "storageNote": "Tes plats et ton journal sont enregistrés uniquement sur cet appareil, dans ce navigateur.",
+    "edit": "Modifier",
+    "copySuffix": " (ma version)",
+    "fL": "L",
+    "cL": "G",
+    "noIng": "Ajoute au moins un ingrédient",
+    "swapsShort": "remplacements",
+    "genT": "Inventer un plat",
+    "genPh": "Ex. : salade de veau sans tomates",
+    "genBtn": "Inventer 3 versions",
+    "genEx": [
+      "salade de veau sans tomates",
+      "bowl protéiné au saumon",
+      "pâtes au poulet et champignons",
+      "smoothie banane sans lait"
+    ],
+    "genUse": "Pris en compte",
+    "genNo": "Sans",
+    "genUnknown": "Je n'ai pas reconnu le type de plat, alors j'ai fait une assiette : protéine, accompagnement et légumes.",
+    "reroll": "Autre version",
+    "saveMine": "Enregistrer dans mes plats",
+    "oneServing": "1 portion",
+    "photo": "Ajouter une photo",
+    "photoDel": "Retirer la photo",
+    "photoNote": "Image dessinée d'après les ingrédients",
+    "photoFail": "Pas assez de place pour la photo, essaie une plus petite",
+    "genHint": "Écris ce que tu veux : type de plat, ingrédients et ce qu'il ne faut pas mettre.",
+    "navPlan": "Plan",
+    "navMe": "Moi",
+    "quickT": "Rapides 15-25 min",
+    "prepT": "Batch cooking de la semaine",
+    "prepD": "Plans prêts : tu cuisines 2 fois par semaine, les plats de 4 portions se gardent en boîtes jusqu'à 3 jours. Charge un plan et obtiens tout de suite la liste de courses.",
+    "cuisT": "Cuisine",
+    "allCu": "Toutes",
+    "cu": {
+      "asian": "Asiatique",
+      "georgian": "Géorgienne",
+      "italian": "Italienne",
+      "mexican": "Mexicaine",
+      "mediterranean": "Méditerranéenne",
+      "home": "Familiale",
+      "american": "Américaine"
+    },
+    "st0": "Plus rapides",
+    "vegF": "Régime",
+    "vegetarian": "Végétarien",
+    "vegan": "Végan",
+    "hiddenN": "Recettes masquées à cause de ta liste « Je ne mange pas » : {n}.",
+    "showAll": "Tout afficher",
+    "min": "min",
+    "pcs": "pcs",
+    "perOne": "Par portion",
+    "modeFit": "Macros maîtrisées",
+    "modeClassic": "Classique",
+    "modeFitD": "Version protéinée : produits plus légers, calories et macros maîtrisées.",
+    "modeClassicD": "Comme on la fait d'habitude : produits laitiers et viande plus gras, plus d'huile. Calories recalculées.",
+    "addPlan": "+ Au plan",
+    "addShop": "+ Aux courses",
+    "scaleNote": "Les grammes sont recalculés pour le nombre de portions. Vérifie toi-même cuillères et verres.",
+    "notEatT": "Je ne mange pas",
+    "coachQ": "Tu veux des résultats plus vite ?",
+    "coachQd": "Un programme personnel d'entraînement et d'alimentation par le coach.",
+    "wantProg": "Je veux un programme",
+    "noGoal": "Pas d'objectif du jour.",
+    "calcLink": "Calculer mes besoins",
+    "waterT": "Eau",
+    "liters": "L",
+    "ml": "ml",
+    "planT": "Plan de la semaine",
+    "shopT": "Courses",
+    "slot": {"b": "Petit-déjeuner", "l": "Déjeuner", "d": "Dîner", "s": "Collation"},
+    "planToShop": "Liste de courses de la semaine",
+    "planToDay": "Copier le jour dans le journal",
+    "planClear": "Vider la semaine",
+    "sureAgain": "Sûr ? Touche encore",
+    "load": "Charger",
+    "loaded": "Plan chargé",
+    "addedPlan": "Ajouté au plan",
+    "addedShop": "Ajouté aux courses",
+    "shopMade": "Liste de courses prête",
+    "kg": "kg",
+    "shopCat": {
+      "meat": "Viande, poisson, tofu",
+      "dairy": "Produits laitiers et œufs",
+      "veg": "Légumes et herbes",
+      "fruit": "Fruits et baies",
+      "grain": "Céréales, pain, légumineuses",
+      "other": "Autres"
+    },
+    "copy": "Copier",
+    "copied": "Liste copiée",
+    "clearDone": "Retirer ce qui est acheté",
+    "clearAll": "Tout vider",
+    "shopEmpty": "La liste est vide. Ajoute une recette avec « Aux courses » ou crée la liste depuis le plan de la semaine.",
+    "shopNote": "Certains ingrédients (épices, sauces) des premières recettes ne sont pas dans la liste, vérifie-les toi-même :",
+    "normT": "Mes besoins du jour",
+    "normD": "Je calcule les calories et les macros pour ton objectif.",
+    "female": "Femme",
+    "male": "Homme",
+    "age": "Âge",
+    "height": "Taille, cm",
+    "weight": "Poids, kg",
+    "activity": "Activité",
+    "acts": [
+      "Presque pas d'activité",
+      "1-3 séances par semaine",
+      "3-5 séances par semaine",
+      "Entraînement presque tous les jours"
+    ],
+    "aims": {"lose": "Perdre du poids", "maintain": "Maintenir", "gain": "Prendre du muscle"},
+    "normNote": "Tu dépenses environ {t} kcal par jour. Le déficit ou le surplus est doux, sans coupes brutales.",
+    "normFloor": "Remonté à un minimum sûr.",
+    "setGoal": "En faire mon objectif du jour",
+    "goalSet": "Objectif enregistré",
+    "normFill": "Remplis l'âge, la taille et le poids.",
+    "normWarn": "C'est un repère, pas un diagnostic. En cas de maladie, de grossesse ou de difficultés avec l'alimentation, fixe les chiffres avec un médecin.",
+    "weightT": "Poids",
+    "weightToday": "Poids du jour, kg",
+    "weightChange": "Évolution",
+    "notEatD": "Indique ce que tu ne manges pas : ces produits sont remplacés automatiquement et les recettes sans remplacement sont masquées.",
+    "allerg": {
+      "lactose": "Sans produits laitiers",
+      "gluten": "Sans gluten",
+      "nuts": "Sans fruits à coque",
+      "eggs": "Sans œufs",
+      "fish": "Sans poisson ni fruits de mer",
+      "pork": "Sans porc",
+      "meat": "Végétarien",
+      "vegan": "Végan"
+    },
+    "notEatAdd": "Ajouter un produit que tu ne manges pas",
+    "defModeT": "Version de recette par défaut",
+    "coachT": "Du coach",
+    "coachIntro": "Salut ! Je suis Kirill, coach. J'ai choisi ces recettes pour que tu manges bien tout en avançant vers ton objectif. Si tu veux un programme d'entraînement et d'alimentation fait pour toi, avec mon suivi, écris-moi.",
+    "tips": [
+      "Des protéines à chaque repas : c'est plus facile de ne pas trop manger.",
+      "Cuisine 2 fois par semaine pour 3-4 jours plutôt que tout refaire chaque jour.",
+      "Ne coupe pas les calories brutalement : un progrès lent dure plus longtemps.",
+      "Pèse-toi le matin 2-3 fois par semaine et regarde la tendance, pas un seul jour."
+    ],
+    "coachSoon": "Les contacts du coach apparaîtront bientôt ici.",
+    "dayT": "Jour",
+    "mealT": "Repas"
+  },
+  "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
+  "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],
+  "bases": {
+    "chicken": "Poulet",
+    "beef": "Bœuf",
+    "turkey": "Dinde",
+    "fish": "Poisson et fruits de mer",
+    "eggs": "Œufs et fromage blanc",
+    "veg": "Sans viande"
+  },
+  "cats": [
+    [
+      "Dîners pour plusieurs jours",
+      "Dîners",
+      "Tu cuisines une fois pour 3-4 portions et tu manges plusieurs soirs. Le repas principal de la journée."
+    ],
+    [
+      "Petits-déjeuners et plats rapides",
+      "Petit-déj",
+      "Pour les jours sans envie de cuisiner. Beaucoup de protéines pour tenir jusqu'au déjeuner."
+    ],
+    [
+      "Flocons d'avoine",
+      "Avoine",
+      "Cinq variantes. Chacune existe avec et sans protéine en poudre."
+    ],
+    [
+      "Smoothies",
+      "Smoothies",
+      "Un repas rapide ou une collation. Ajoute de la protéine en poudre ou pas."
+    ],
+    ["Salades", "Salades", "Des salades qui calent vraiment, car chacune contient des protéines."],
+    ["Desserts et douceurs", "Desserts", "Du sucré à 200-250 kcal pour ne pas craquer le soir."],
+    [
+      "Sauces",
+      "Sauces",
+      "Donnent du goût au poulet, au bœuf, au riz et aux salades presque sans calories."
+    ],
+    ["Soupes", "Soupes", "Soupes chaudes et froides. Une marmite pour 3-4 jours."],
+    ["En-cas jusqu'à 200 kcal", "En-cas", "Pour tenir jusqu'au repas suivant sans craquer."],
+    [
+      "Boissons et shakes",
+      "Boissons",
+      "Shakes protéinés, limonades et boissons lactées fermentées."
+    ],
+    [
+      "Prise de masse",
+      "Masse",
+      "Plats riches en calories et en protéines pour prendre du poids et du muscle."
+    ],
+    ["Fêtes et invités", "Fête", "Des plats pour recevoir sans casser ton plan."]
+  ],
+  "subs": [
+    [
+      "Hot honey (miel pimenté)",
+      "sauce piquante (sriracha, piment) + miel : 2 c. à soupe de miel et 1 c. à café de sauce piquante"
+    ],
+    [
+      "Fromage frais Hochland Protein+, fromage frais allégé",
+      "n'importe quel fromage frais en pot ou fromage blanc 5 % passé au tamis"
+    ],
+    ["Fromage fondu President", "n'importe quel fromage fondu crémeux"],
+    [
+      "Fromage allégé 30 %",
+      "n'importe quel fromage à pâte dure à 15-30 % de MG ou de la mozzarella"
+    ],
+    ["Parmesan", "n'importe quel fromage à pâte dure finement râpé"],
+    ["Yaourt grec", "yaourt nature épais sans sucre, 2 %"],
+    ["Yaourt protéiné à la vanille", "yaourt grec + 1 c. à café de miel + une goutte de vanille"],
+    [
+      "Protéine en poudre vanille",
+      "sans : plus de yaourt ou de fromage blanc (un peu moins de protéines)"
+    ],
+    ["Sirop d'érable", "miel ou édulcorant"],
+    ["Pulpe de fruit de la passion", "purée de kiwi, framboise, fraise ou tout fruit acidulé"],
+    ["Sauce d'huître", "un peu plus de sauce soja + une pincée de sucre ou une goutte de miel"],
+    ["Vinaigre de riz", "vinaigre de cidre ou jus de citron"],
+    ["Evaporated milk (lait concentré allégé)", "crème 10 % ou lait 2,5 %"],
+    ["Ketchup sans sucre (ZERO)", "ketchup classique, un peu plus de calories"],
+    ["Nouilles aux œufs", "n'importe quelles nouilles ou spaghettis"],
+    ["Tomates séchées", "1 c. à soupe de concentré de tomate"],
+    ["Pâtes de marque (Barilla, etc.)", "n'importe quelles pâtes de blé dur"]
+  ],
+  "rec": {
+    "1": [
+      "Poulet tomate-alfredo aux épinards",
+      "4 portions",
+      [
+        "blanc de poulet : 525 g (2-3 filets)",
+        "sauce tomate au basilic pour pâtes : 360 g (1 pot)",
+        "crème 10 % : 240 ml (1 verre)",
+        "fromage frais ou fromage blanc 5 % : 160 g",
+        "pâtes de blé dur (rigatoni, penne) : 225 g crues",
+        "fromage allégé râpé : 100 g (3 morceaux de la taille d'une boîte d'allumettes)",
+        "épinards (frais ou surgelés) : 75 g (2 poignées)",
+        "lait 1,5 % : 50 ml (3 c. à soupe)",
+        "ail et oignon séchés, poivre, paprika, herbes de Provence, persil, aneth, sel"
+      ],
+      [
+        "Mets les filets entiers dans une cocotte à fond épais, ajoute la sauce tomate, la crème, le fromage frais et toutes les épices. Laisse mijoter à couvert 40-50 minutes.",
+        "Effiloche le poulet à la fourchette directement dans la sauce.",
+        "Ajoute les épinards 5 minutes avant la fin (plus tôt, ils se défont).",
+        "Incorpore les pâtes cuites (1-2 minutes de moins que sur le paquet).",
+        "Verse le lait et mélange jusqu'à obtenir une texture crémeuse. Incorpore la moitié du fromage, parsème le reste dessus et couvre 15 minutes.",
+        "Répartis dans 4 boîtes."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      ""
+    ],
+    "2": [
+      "Pâtes au bœuf, poivron et deux fromages",
+      "4 portions",
+      [
+        "bœuf haché maigre : 800 g",
+        "pâtes (coquillettes ou autres pâtes de blé dur) : 225 g crues",
+        "poivron : 250 g (2 moyens)",
+        "tomates : 250 g (2-3 moyennes)",
+        "ail : 20 g (4-5 gousses)",
+        "fromage allégé râpé : 100 g",
+        "fromage fondu crémeux : 75 g",
+        "herbes italiennes, paprika fumé, flocons de piment, ail séché, poivre, sel"
+      ],
+      [
+        "Coupe grossièrement le poivron et les tomates, hache l'ail. Fais-les sauter à sec à feu vif avec les épices 8-10 minutes, jusqu'à ce que le poivron noircisse sur les bords. Réserve.",
+        "Fais cuire les pâtes 2 minutes de moins que sur le paquet.",
+        "Dans la même poêle, fais revenir le bœuf en l'émiettant, avec les épices, jusqu'à ce que l'eau s'évapore.",
+        "Remets les légumes avec la viande, ajoute le fromage fondu et le fromage râpé et mélange jusqu'à ce qu'ils fondent.",
+        "Incorpore les pâtes et répartis dans 4 boîtes."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange. Avant de réchauffer, ajoute une cuillère de lait sur le dessus.",
+      "Calories et protéines estimées à partir des ingrédients ; l'auteur ne les a pas indiquées."
+    ],
+    "3": [
+      "Alfredo au poulet rôti",
+      "4 portions",
+      [
+        "blanc de poulet : 800 g",
+        "pâtes (fettuccine ou autres pâtes de blé dur) : 220 g crues",
+        "fromage blanc 2 % : 180 g",
+        "lait 1,5 % : 150 ml",
+        "fromage allégé râpé : 50 g",
+        "œufs : 2-3",
+        "ail séché, herbes italiennes, paprika fumé, poivre, sel"
+      ],
+      [
+        "Assaisonne les filets entiers de paprika, d'ail, de sel et de poivre. Fais-les cuire au four à 200 °C 20-25 minutes.",
+        "Fais durcir les œufs 10 minutes et écale-les.",
+        "Fais cuire les pâtes 2 minutes de moins que sur le paquet.",
+        "Mixe le fromage blanc, les œufs durs, le fromage râpé, le lait, l'ail, les herbes, le sel et le poivre jusqu'à obtenir une sauce lisse.",
+        "Laisse tiédir les pâtes et mélange-les à la sauce. Ne chauffe pas la sauce, sinon le fromage blanc tranche.",
+        "Coupe le poulet en lanières. Répartis dans des boîtes : pâtes en sauce, poulet par-dessus."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      ""
+    ],
+    "4": [
+      "Pâtes au bœuf, lardons et poivron doux",
+      "4 portions",
+      [
+        "bœuf haché maigre : 550 g",
+        "lardons ou bacon (fumé, de dinde possible) : 140 g",
+        "poivron : 325 g (2-3)",
+        "oignon : 125 g (1 gros)",
+        "fusilli ou autres pâtes de blé dur : 180 g crues",
+        "sauce : yaourt grec 350 g, lait 200 ml, fromage allégé 90 g, fromage frais ou fondu 20-40 g, parmesan ou fromage à pâte dure 20 g, miel 12 g (2 c. à café), poivre"
+      ],
+      [
+        "Coupe grossièrement le poivron et l'oignon, fais-les revenir dans une poêle chaude et assaisonne.",
+        "Ajoute le bœuf dans la même poêle en l'émiettant.",
+        "Fais dorer les lardons à part jusqu'à ce qu'ils soient croustillants et ajoute-les à la viande avec leur graisse.",
+        "Fais cuire les pâtes al dente et égoutte-les.",
+        "Fouette la sauce : yaourt, lait, miel, poivre. Incorpore les fromages râpés, pas besoin de mixeur.",
+        "Réunis tout dans une casserole et réchauffe à feu doux sans faire bouillir (le yaourt tournerait). Répartis dans 4 boîtes."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange. Depuis le congélateur : 1 min 30, mélanger, puis encore 45 secondes.",
+      ""
+    ],
+    "5": [
+      "Gratin de pâtes au poulet et oignons caramélisés",
+      "4 portions (ou 5 à 453 kcal)",
+      [
+        "blanc de poulet : 650 g (épices : 1 c. à café de paprika, d'ail et d'oignon en poudre, d'origan, de sel, de poivre et ½ c. à café de piment)",
+        "huile végétale : 1 c. à soupe",
+        "oignons : 1 gros ou 2 moyens, émincés (avec une pincée de paprika, de sel et d'herbes italiennes)",
+        "ail : 2 petites têtes (coupe le haut)",
+        "tomates séchées : 2 c. à soupe (ou 1 c. à soupe de concentré de tomate)",
+        "crème 10 % (au lieu du lait concentré allégé) : 250 ml",
+        "fromage frais allégé : 150 g",
+        "parmesan ou fromage à pâte dure : 3 c. à soupe",
+        "persil : 2 c. à soupe",
+        "fusilli : 300 g crues, ½ citron"
+      ],
+      [
+        "Badigeonne le poulet et l'oignon d'huile, sale et mets-les dans un plat avec les têtes d'ail.",
+        "Couvre de papier aluminium et enfourne à 180 °C (chaleur tournante) ou 200 °C. Sors le poulet et vérifie la cuisson (jus clair, 75 °C à cœur) ; sinon, 5-10 minutes de plus. Effiloche-le à la fourchette.",
+        "Ajoute les tomates séchées dans le plat et remets l'oignon et l'ail au four 10-20 minutes pour qu'ils caramélisent (enveloppe l'ail dans l'alu s'il n'est pas prêt).",
+        "Dans le plat encore chaud, mélange la crème, le fromage frais, le parmesan et le persil pour obtenir une crème.",
+        "Ajoute les pâtes cuites (al dente) et le poulet, presse le citron, mélange et répartis dans des boîtes."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      ""
+    ],
+    "6": [
+      "Poulet, riz et brocoli en un seul plat",
+      "4 portions",
+      [
+        "blanc de poulet en dés : 600 g",
+        "riz basmati (ou autre riz long), rincé : 200 g cru (1 verre)",
+        "brocoli haché : 600 g",
+        "pesto : 60 g (4 c. à soupe)",
+        "yaourt grec : 200 g",
+        "bouillon de volaille (cube dans l'eau) : 500 ml",
+        "mozzarella allégée : 150 g",
+        "ail et oignon en poudre 1 c. à café de chaque, sel, poivre"
+      ],
+      [
+        "Préchauffe le four à 180 °C.",
+        "Mets dans un grand plat le riz cru rincé, le poulet, le pesto, le yaourt, le brocoli, le bouillon et les épices.",
+        "Mélange bien pour que le riz soit entièrement immergé. Répartis la mozzarella dessus.",
+        "Couvre bien de papier aluminium et enfourne 45-55 minutes, jusqu'à ce que le poulet soit cuit et le riz tendre.",
+        "Retire l'alu et laisse dorer 10-15 minutes. Partage en 4 portions."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Environ 5 g de fibres par portion.",
+      ""
+    ],
+    "7": [
+      "Poulet aux nouilles et légumes, sauce asiatique",
+      "4 portions",
+      [
+        "blanc de poulet : 900 g",
+        "nouilles aux œufs (ou autres) : 225 g",
+        "courgette : 450 g (1 grosse)",
+        "champignons de Paris : 350 g",
+        "poivron : 200 g",
+        "carotte : 100 g, oignon : 100 g, oignon vert : 20 g",
+        "sauce : soja 60 g, sauce d'huître 40 g (ou plus de soja + une pincée de sucre), sriracha ou sauce piquante 15 g, ail 12 g, gingembre 10 g",
+        "fécule : 1 c. à café bombée délayée dans 50 ml d'eau froide",
+        "pour le poulet : paprika fumé, ail et oignon séchés, poivre noir, sel"
+      ],
+      [
+        "Fais cuire les nouilles 1 minute de moins qu'indiqué et rince-les à l'eau froide, sinon elles ramollissent en quelques jours.",
+        "Coupe le poulet en dés, roule-le dans les épices et fais-le dorer à sec dans une poêle très chaude, par petites quantités, 6-8 minutes. Réserve.",
+        "Coupe grossièrement les champignons et fais-les sauter à feu vif jusqu'à évaporation de l'eau. Ajoute la carotte en bâtonnets, après 2 minutes le poivron et l'oignon, encore 2 minutes. À la fin, la courgette 3-4 minutes.",
+        "Sauce : soja, sauce d'huître, sriracha, ail et gingembre râpés. Verse la fécule délayée dans la sauce bouillante.",
+        "Remets le poulet avec les légumes, verse la sauce et chauffe jusqu'à ce que ce soit brillant. Hors du feu, incorpore les nouilles.",
+        "Répartis dans 4 boîtes, oignon vert par-dessus."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "Calories et protéines estimées à partir des ingrédients ; l'auteur ne les a pas indiquées."
+    ],
+    "8": [
+      "Poulet aigre-doux et riz sauté",
+      "4 portions",
+      [
+        "blanc de poulet : 900 g",
+        "poivron : 300 g, oignon : 150 g",
+        "riz : 200 g cru (1 verre)",
+        "mélange de légumes surgelés : 500 g",
+        "œufs : 1 entier et 1-2 blancs (ou 2 entiers)",
+        "sauce : ketchup sans sucre 75 g (4 c. à soupe), soja 40 g, miel 30 g (1,5 c. à soupe), sriracha 20 g, vinaigre de riz ou de cidre 20 ml, ail 10 g",
+        "soja pour le riz : 25 g, fécule 1 c. à café, oignon vert 20 g, épices pour le poulet"
+      ],
+      [
+        "Couvre le riz d'eau (1 verre de riz pour 2,25 verres d'eau) et, après ébullition, laisse cuire à couvert 20-25 minutes. Laisse refroidir (le riz chaud colle à la poêle).",
+        "Coupe le poulet en dés, roule-le dans les épices et fais-le dorer à sec dans une poêle très chaude, par petites quantités, 6-8 minutes. Réserve.",
+        "Fais sauter le poivron et l'oignon en gros dés à feu vif 3-4 minutes pour qu'ils restent croquants.",
+        "Sauce : ketchup, soja, miel, sriracha, vinaigre, ail râpé. Délaye la fécule dans 50 ml d'eau froide et verse dans la sauce bouillante.",
+        "Remets le poulet avec le poivron, verse la sauce et chauffe 2-3 minutes jusqu'à ce que ce soit brillant.",
+        "Dans une poêle propre, chauffe les légumes 5 minutes, pousse-les sur le côté, verse les œufs et brouille-les. Ajoute le riz et le soja et fais sauter 3 minutes.",
+        "Répartis dans des boîtes : riz aux légumes et à l'œuf, poulet en sauce dessus, oignon vert."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "Calories et protéines estimées à partir des ingrédients ; l'auteur ne les a pas indiquées."
+    ],
+    "9": [
+      "Poulet sauce orange-soja et riz",
+      "4 portions (440 kcal chacune selon l'auteur)",
+      [
+        "blanc de poulet en dés : 800 g",
+        "levure chimique : 4 g (1 c. à café rase, rend le poulet plus tendre)",
+        "jus d'orange frais : 60 ml, sauce soja : 100 g, poivre noir : 2 g, fécule : 12 g (1 c. à soupe)",
+        "sauce : ail 6 g, gingembre 6 g, jus d'orange sans sucre 160 ml, soja 60 g, vinaigre de riz ou de cidre 24 g, sucre 14 g (3 c. à café, ou édulcorant)",
+        "facultatif : zeste d'orange, une pincée de flocons de piment, 1 c. à café d'huile",
+        "pour servir : sésame, oignon vert, riz cuit : 320 g pour les 4 portions (80 g par portion selon l'auteur ; plus de riz = plus de calories)"
+      ],
+      [
+        "Mélange le poulet avec la levure, le jus d'orange, la sauce soja, le poivre et la fécule et laisse reposer 15-20 minutes.",
+        "Fais dorer le poulet à feu vif.",
+        "Mélange la sauce (ail, gingembre, jus, soja, vinaigre, sucre) et fais-la réduire jusqu'à ce qu'elle épaississe.",
+        "Réunis le poulet et la sauce et chauffe jusqu'à ce que ce soit brillant. Sers avec le riz, sésame et oignon vert par-dessus."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "Seuls les ingrédients étaient visibles dans la vidéo ; les étapes suivent l'ordre habituel pour ce type de plat."
+    ],
+    "10": [
+      "Omelette protéinée au fromage blanc",
+      "1 portion",
+      [
+        "fromage blanc 1 % : 200 g (1 pot)",
+        "œufs : 3",
+        "fromage allégé râpé : 40 g",
+        "herbes au goût, sel, poivre"
+      ],
+      [
+        "Bats les œufs avec le fromage blanc à la fourchette ou au mixeur, ajoute le fromage râpé et les herbes.",
+        "Verse dans une poêle antiadhésive et fais cuire à feu doux, à couvert, 8-10 minutes (ou 3-4 minutes au micro-ondes)."
+      ],
+      "",
+      "Les étapes n'étaient pas visibles dans la vidéo, elles suivent l'ordre habituel."
+    ],
+    "11": [
+      "Pain perdu protéiné à la cannelle",
+      "1 portion (2 tranches)",
+      [
+        "pain : 2-3 tranches",
+        "œuf : 1, lait : 80 ml (⅓ de verre)",
+        "protéine vanille en poudre : ½ dosette (15 g), sans : une cuillère de lait en poudre ou simplement plus de yaourt",
+        "édulcorant ou miel : 1 c. à soupe, vanille ¼ c. à café, cannelle ¼ c. à café",
+        "huile ou spray pour la poêle",
+        "garniture : yaourt grec 0 % 85 g (⅓ de verre), protéine 15 g, un peu de lait, cannelle"
+      ],
+      [
+        "Bats l'œuf avec le lait, la protéine, l'édulcorant, la vanille et la cannelle.",
+        "Trempe le pain pour qu'il s'imbibe bien.",
+        "Fais dorer dans une poêle huilée 1-2 minutes de chaque côté.",
+        "Mélange le yaourt et la protéine ; ajoute un peu de lait si besoin.",
+        "Monte le pain perdu en couches avec la garniture, cannelle entre les couches et sur le dessus."
+      ],
+      "",
+      ""
+    ],
+    "12": [
+      "Porridge au four façon carrot cake",
+      "8 parts",
+      [
+        "bananes mûres : 3 (écrasées)",
+        "œufs : 2",
+        "lait : 180 ml (¾ de verre)",
+        "yaourt grec : 120 g",
+        "flocons d'avoine : 180 g (2 verres)",
+        "protéine vanille en poudre : 60 g (sans : avoine finement mixée et plus de crème)",
+        "carotte râpée : 100 g (1 moyenne)",
+        "noix ou noix de pécan : 60 g",
+        "miel : 2 c. à soupe, cannelle 1 c. à café, gingembre et muscade ¼ c. à café de chaque, levure chimique 1 c. à café, une pincée de sel",
+        "crème : fromage blanc 225 g, yaourt grec 30 g, miel 2 c. à soupe, vanille, cannelle"
+      ],
+      [
+        "Préchauffe le four à 180 °C.",
+        "Mélange bien tous les ingrédients du porridge dans un moule d'environ 20 × 20 cm.",
+        "Enfourne 30-35 minutes jusqu'à ce que ce soit doré.",
+        "Mixe la crème jusqu'à ce qu'elle soit lisse. Laisse refroidir le porridge, étale la crème et coupe en 8 parts."
+      ],
+      "Se conserve 3-4 jours au réfrigérateur.",
+      ""
+    ],
+    "13": [
+      "Gâteau de semoule au fromage blanc et compotée de cerises",
+      "moule ~600 g, 2 portions",
+      [
+        "pâte : fromage blanc lisse 0 % 200 g, semoule de blé fine 50 g, 1 jaune, 3 blancs, levure chimique 4 g (1 c. à café), lait 60 ml, édulcorant au goût",
+        "compotée : cerises surgelées 150 g, fécule 4 g (½ c. à café), édulcorant au goût"
+      ],
+      [
+        "Mélange tous les ingrédients de la pâte sauf la levure et les blancs. Laisse reposer 30 minutes.",
+        "Monte les blancs en neige ferme. Ajoute la levure à la pâte, mélange, puis incorpore délicatement les blancs.",
+        "Verse dans un moule et enfourne à 160 °C pendant 30 minutes. Éteins le four et entrouvre la porte.",
+        "Compotée : mets les cerises dans une poêle à feu moyen jusqu'à ce qu'elles rendent leur jus. Délaye la fécule dans une tasse avec 30 ml d'eau. Ajoute l'édulcorant, verse la fécule et remue environ 1 minute jusqu'à consistance de gelée.",
+        "Nappe le gâteau de compotée. Laisse refroidir ; tu peux le garder au frais toute la nuit et le manger le matin (ou tout de suite)."
+      ],
+      "",
+      "L'auteur a calculé les valeurs pour tout le moule ; pour une moitié, divise par deux."
+    ],
+    "14": [
+      "Bowl cheesecake protéiné aux fruits de la passion",
+      "1 portion",
+      [
+        "yaourt protéiné vanille : 160 g (ou yaourt grec + 1 c. à café de miel + une goutte de vanille)",
+        "jus de citron : 10 ml (2 c. à café)",
+        "sel : une pincée",
+        "pulpe de fruit de la passion : 30 ml (ou purée de kiwi, de framboise ou d'un autre fruit acidulé)",
+        "petits-beurre sans sucre : 4 (ou n'importe quels biscuits secs)",
+        "sirop d'érable : 20 ml (ou 1 c. à café de miel ou d'édulcorant)"
+      ],
+      [
+        "Mélange le yaourt, le jus de citron et le sel.",
+        "Verse dans une passoire tapissée d'une étamine ou d'un torchon propre au-dessus d'un saladier. Presse légèrement avec une tasse et laisse 24 heures au réfrigérateur, jusqu'à ce que ce soit épais et crémeux.",
+        "Avant de servir, égoutte un peu et monte en couches avec les biscuits émiettés et la purée de fruits."
+      ],
+      "",
+      ""
+    ],
+    "15": [
+      "Sauce protéinée au miel pimenté",
+      "8 portions (2 c. à soupe chacune)",
+      [
+        "yaourt grec 0 % : 220 g",
+        "mayonnaise allégée : 40 g (2 c. à soupe)",
+        "hot honey : 40 g ; chez nous : 2 c. à soupe de miel + 1 c. à café de sauce piquante (sriracha, piment)",
+        "moutarde de Dijon ou à l'ancienne : 15 g (1 c. à soupe)",
+        "vinaigre de cidre : 10 g (2 c. à café)",
+        "ail en poudre et paprika fumé ½ c. à café de chaque, sel, poivre"
+      ],
+      [
+        "Mets tous les ingrédients dans un blender ou un bol avec un mixeur plongeant.",
+        "Mixe jusqu'à obtenir une sauce lisse et crémeuse, goûte et rectifie.",
+        "Verse dans une bouteille ou une boîte et garde au frais au moins 30 minutes. Va bien avec le poulet, le bœuf et le riz."
+      ],
+      "Au réfrigérateur, dans une boîte fermée.",
+      ""
+    ],
+    "16": [
+      "Boulettes de poulet sauce tomate et riz",
+      "4 portions",
+      [
+        "poulet haché (de blanc) : 600 g",
+        "flocons d'avoine : 40 g (5 c. à soupe)",
+        "œuf : 55 g (1)",
+        "oignon : 100 g (1 petit)",
+        "passata ou tomates concassées : 500 g (2 verres)",
+        "riz cru : 200 g (1 verre)",
+        "huile d'olive : 15 g (1 c. à soupe)",
+        "2 gousses d'ail, sel, poivre, basilic ou origan séché"
+      ],
+      [
+        "Fais cuire le riz selon le paquet.",
+        "Mélange la viande avec l'avoine, l'œuf, l'oignon haché fin, le sel et le poivre, et forme des boulettes de 30-35 g.",
+        "Fais dorer les boulettes dans l'huile sur toutes les faces 5 minutes.",
+        "Verse les tomates, ajoute l'ail et les herbes et laisse mijoter à couvert 15 minutes.",
+        "Répartis le riz et les boulettes en sauce dans 4 boîtes."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "17": [
+      "Chili con carne au bœuf et riz",
+      "4 portions",
+      [
+        "bœuf haché maigre : 500 g",
+        "oignon : 150 g (1 gros)",
+        "poivron : 200 g (1 gros)",
+        "passata ou tomates en conserve : 400 g (1,5 verre)",
+        "haricots rouges en conserve, égouttés : 240 g (1 boîte)",
+        "maïs en conserve : 150 g (½ boîte)",
+        "riz cru : 160 g (¾ de verre)",
+        "huile : 10 g (2 c. à café)",
+        "épices : paprika 2 c. à café, cumin 1 c. à café, piment moulu au goût, 3 gousses d'ail, sel"
+      ],
+      [
+        "Fais revenir l'oignon et le poivron dans l'huile 5 minutes, ajoute l'ail et les épices 1 minute.",
+        "Ajoute la viande, émiette-la à la spatule et fais-la cuire jusqu'à ce qu'elle change de couleur.",
+        "Verse les tomates, ajoute les haricots et le maïs et laisse mijoter à couvert 25 minutes.",
+        "Sers avec du riz cuit et, si tu veux, une cuillère de yaourt."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "Sans haricots rouges, n'importe quels haricots en conserve conviennent. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "18": [
+      "Curry de poulet aux pois chiches et riz",
+      "4 portions",
+      [
+        "blanc de poulet en dés : 600 g",
+        "pois chiches en conserve, égouttés : 240 g (1 boîte)",
+        "lait de coco allégé (ou lait 2,5 % + 1 c. à café d'huile) : 200 g (¾ de verre)",
+        "passata : 200 g (¾ de verre)",
+        "oignon : 100 g (1 petit)",
+        "riz cru : 200 g (1 verre)",
+        "huile : 10 g (2 c. à café)",
+        "curry en poudre 1,5 c. à soupe, gingembre et ail râpés 2 c. à café de chaque, sel, herbes fraîches"
+      ],
+      [
+        "Fais revenir l'oignon dans l'huile 4 minutes, ajoute le gingembre, l'ail et le curry 1 minute.",
+        "Ajoute le poulet et fais-le dorer 5 minutes.",
+        "Verse la passata et le lait de coco, ajoute les pois chiches et laisse mijoter à couvert 15 minutes.",
+        "Sers avec du riz et des herbes fraîches."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "Sans lait de coco : prends du lait et un peu plus de tomate, le goût sera plus léger. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "19": [
+      "Pâtes au thon et à la tomate",
+      "4 portions",
+      [
+        "pâtes de blé dur crues : 320 g",
+        "thon au naturel, égoutté : 360 g (3 petites boîtes)",
+        "passata : 400 g (1,5 verre)",
+        "oignon : 100 g (1 petit)",
+        "olives : 40 g (une poignée)",
+        "fromage à pâte dure : 40 g (la taille d'une boîte d'allumettes)",
+        "huile d'olive : 15 g (1 c. à soupe)",
+        "2 gousses d'ail, piment, sel, poivre, persil"
+      ],
+      [
+        "Fais cuire les pâtes 1 minute de moins que sur le paquet.",
+        "Fais revenir l'oignon et l'ail dans l'huile, verse la passata et laisse mijoter 8 minutes.",
+        "Ajoute le thon, les olives et les épices et réchauffe 3 minutes.",
+        "Mélange avec les pâtes et une cuillère d'eau de cuisson, fromage râpé par-dessus."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "20": [
+      "Burrito bowl au poulet",
+      "4 portions",
+      [
+        "blanc de poulet : 600 g",
+        "riz cru : 200 g (1 verre)",
+        "haricots rouges en conserve : 240 g (1 boîte)",
+        "maïs : 120 g (5 c. à soupe)",
+        "tomates : 200 g (2 moyennes)",
+        "avocat : 100 g (½ gros)",
+        "yaourt grec pour la sauce : 160 g (⅔ de verre)",
+        "paprika, cumin, ail, citron vert ou jaune, sel, poivre"
+      ],
+      [
+        "Coupe le poulet en lanières, roule-le dans le paprika, le cumin et l'ail et fais-le dorer.",
+        "Fais cuire le riz. Réchauffe les haricots et le maïs.",
+        "Sauce : yaourt, jus de citron vert, ail, sel.",
+        "Répartis dans les boîtes par compartiments : riz, poulet, haricots et maïs, tomates. Ajoute l'avocat et la sauce juste avant de manger."
+      ],
+      "Se conserve 3 jours au réfrigérateur. Garde l'avocat et la sauce à part et ajoute-les au dernier moment.",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "21": [
+      "Poivrons farcis à la dinde et au riz",
+      "4 portions",
+      [
+        "gros poivrons : 800 g (4)",
+        "dinde hachée : 500 g",
+        "riz cru : 140 g (⅔ de verre)",
+        "oignon : 100 g (1 petit)",
+        "passata : 300 g (1 verre)",
+        "crème aigre 10 % : 100 g (5 c. à soupe)",
+        "fromage à pâte dure : 60 g (2 morceaux de la taille d'une boîte d'allumettes)",
+        "sel, poivre, paprika, herbes"
+      ],
+      [
+        "Fais cuire le riz à moitié. Coupe le chapeau des poivrons et retire les graines.",
+        "Mélange la viande, le riz, l'oignon, le sel et les épices et farcis les poivrons.",
+        "Sauce : passata, crème aigre et une pincée de sel. Mets les poivrons dans un plat et nappe de sauce.",
+        "Couvre d'alu, enfourne 40 minutes à 190 °C, puis parsème de fromage et remets 10 minutes."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "22": [
+      "Poulet rôti aux pommes de terre et légumes",
+      "4 portions",
+      [
+        "blanc ou hauts de cuisse de poulet sans peau : 700 g",
+        "pommes de terre : 800 g (5-6 moyennes)",
+        "courgette : 300 g (1 moyenne)",
+        "poivron : 200 g (1 gros)",
+        "yaourt grec pour la marinade : 120 g (½ verre)",
+        "huile d'olive : 20 g (1,5 c. à soupe)",
+        "paprika, ail en granulés, sel, poivre, herbes séchées"
+      ],
+      [
+        "Mélange le poulet avec le yaourt et les épices et laisse mariner 20 minutes.",
+        "Coupe les pommes de terre en quartiers et les légumes en gros morceaux, mélange le tout avec l'huile et le sel.",
+        "Étale en une seule couche sur une plaque et enfourne 40-45 minutes à 200 °C en remuant une fois."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "La recette la plus simple du recueil, pour les jours sans énergie pour cuisiner. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "23": [
+      "Lasagnes express au pain lavash",
+      "4 portions",
+      [
+        "pain lavash fin (ou tortillas de blé) : 150 g (2 feuilles)",
+        "bœuf haché maigre : 500 g",
+        "fromage blanc 5 % : 200 g (¾ de verre)",
+        "passata : 400 g (1,5 verre)",
+        "mozzarella : 120 g (½ boule)",
+        "œuf : 55 g (1)",
+        "oignon : 100 g (1 petit)",
+        "ail, origan, sel, poivre"
+      ],
+      [
+        "Fais revenir la viande avec l'oignon, verse la passata et laisse mijoter 10 minutes avec les épices.",
+        "Mélange le fromage blanc avec l'œuf et le sel.",
+        "Monte en couches dans un plat : lavash, viande, fromage blanc ; recommence.",
+        "Râpe la mozzarella dessus. Enfourne 25 minutes à 190 °C jusqu'à ce que ce soit doré."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "24": [
+      "Crevettes au riz sauté et légumes",
+      "4 portions",
+      [
+        "crevettes décortiquées : 500 g",
+        "riz cru : 240 g (1 verre bien rempli)",
+        "courgette : 300 g (1 moyenne)",
+        "poivron : 150 g (1 petit)",
+        "carotte : 100 g (1 moyenne)",
+        "œufs : 110 g (2)",
+        "sauce soja : 40 g (2 c. à soupe)",
+        "huile : 20 g (1,5 c. à soupe)",
+        "ail, gingembre, oignon vert"
+      ],
+      [
+        "Fais cuire le riz à l'avance et laisse-le refroidir (le riz froid se fait mieux sauter).",
+        "Coupe les légumes en petits morceaux et fais-les sauter à feu vif 4 minutes ; ajoute l'ail et le gingembre.",
+        "Pousse les légumes, casse les œufs et remue jusqu'à ce qu'ils prennent. Ajoute les crevettes 3 minutes.",
+        "Incorpore le riz et la sauce soja et réchauffe. Oignon vert par-dessus."
+      ],
+      "Se conserve jusqu'à 2 jours au réfrigérateur.",
+      "Mieux vaut ne pas garder les crevettes plus de 2 jours en boîte. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "25": [
+      "Sarrasin à la dinde et aux champignons",
+      "4 portions",
+      [
+        "sarrasin cru : 240 g (1 verre bien rempli)",
+        "dinde hachée : 500 g",
+        "champignons de Paris : 300 g (10 moyens)",
+        "oignon : 100 g (1 petit)",
+        "crème aigre 10 % : 100 g (5 c. à soupe)",
+        "huile : 15 g (1 c. à soupe)",
+        "ail, sel, poivre, aneth"
+      ],
+      [
+        "Fais cuire le sarrasin.",
+        "Fais revenir l'oignon et les champignons dans l'huile jusqu'à évaporation de l'eau.",
+        "Ajoute la viande, fais cuire 8 minutes, verse la crème aigre avec l'ail et laisse mijoter 5 minutes.",
+        "Mélange avec le sarrasin et l'aneth."
+      ],
+      "Se conserve 3 jours au réfrigérateur, congèle le reste. Décongèle la veille au réfrigérateur. Réchauffe 1 min 30 au micro-ondes et mélange.",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "26": [
+      "Chakchouka à la feta",
+      "2 portions",
+      [
+        "œufs : 220 g (4)",
+        "passata : 300 g (1 verre)",
+        "poivron : 150 g (1 petit)",
+        "oignon : 80 g (½ gros)",
+        "feta : 60 g (un morceau de la taille d'une boîte d'allumettes)",
+        "huile : 10 g (2 c. à café)",
+        "pain pour servir : 100 g (2 tranches)",
+        "paprika, cumin, ail, sel, herbes fraîches"
+      ],
+      [
+        "Fais revenir l'oignon et le poivron dans l'huile 5 minutes, ajoute l'ail et les épices.",
+        "Verse la passata et laisse mijoter 7 minutes.",
+        "Creuse des puits, casse les œufs dedans, couvre 5-7 minutes.",
+        "Feta et herbes par-dessus, sers avec du pain."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "27": [
+      "Galettes de fromage blanc (syrniki) au yaourt et aux fruits rouges",
+      "2 portions (6 galettes)",
+      [
+        "fromage blanc 5 % : 400 g (1,5 verre)",
+        "œuf : 55 g (1)",
+        "flocons d'avoine mixés : 50 g (6 c. à soupe)",
+        "miel : 15 g (2 c. à café)",
+        "huile pour la poêle : 8 g (1,5 c. à café)",
+        "yaourt grec pour servir : 100 g (⅓ de verre)",
+        "fruits rouges : 100 g (une poignée)",
+        "vanille, une pincée de sel"
+      ],
+      [
+        "Mixe les flocons en farine.",
+        "Mélange le fromage blanc, l'œuf, la farine, le miel, la vanille et le sel et forme 6 galettes.",
+        "Fais-les cuire dans une poêle à peine huilée, 3 minutes de chaque côté à feu moyen.",
+        "Sers avec le yaourt et les fruits rouges."
+      ],
+      "",
+      "Pour encore plus de protéines : remplace la farine par 30 g de protéine en poudre et 20 g d'avoine. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "28": [
+      "Pancakes à la banane",
+      "1 portion (3-4 pancakes)",
+      [
+        "banane : 100 g (1 petite)",
+        "œuf : 55 g (1)",
+        "flocons d'avoine mixés : 40 g (5 c. à soupe)",
+        "lait : 50 g (3 c. à soupe)",
+        "fruits rouges pour servir : 80 g (une poignée)",
+        "miel : 10 g (1,5 c. à café)",
+        "½ c. à café de levure chimique, cannelle",
+        "<b>Avec protéine, ajoute :</b> protéine vanille en poudre (avec la farine) : 25 g (1 dosette)",
+        "<b>Sans protéine, ajoute à la place :</b> yaourt grec pour servir : 60 g (2 c. à soupe)"
+      ],
+      [
+        "Écrase la banane à la fourchette ou au mixeur, ajoute l'œuf, le lait, la farine d'avoine et la levure.",
+        "Fais cuire de petits pancakes dans une poêle antiadhésive sans matière grasse, 2 minutes de chaque côté.",
+        "Sers avec les fruits rouges et le miel."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "29": [
+      "Gâteau de fromage blanc au four",
+      "4 parts",
+      [
+        "fromage blanc 5 % : 500 g (2 verres)",
+        "œufs : 110 g (2)",
+        "semoule fine : 40 g (3 c. à soupe)",
+        "miel : 40 g (2 c. à soupe)",
+        "fruits rouges (surgelés possibles) : 150 g (1 verre)",
+        "vanille, une pincée de sel"
+      ],
+      [
+        "Mixe tout sauf les fruits rouges jusqu'à obtenir une pâte lisse et laisse reposer 15 minutes pour que la semoule gonfle.",
+        "Verse dans un moule, fruits rouges dessus.",
+        "Enfourne 35-40 minutes à 180 °C. Laisse refroidir avant de couper."
+      ],
+      "Se conserve jusqu'à 4 jours au réfrigérateur.",
+      "Avec une cuillère de yaourt dessus, c'est un vrai petit-déjeuner d'environ 300 kcal. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "30": [
+      "Toast avocat et œufs",
+      "1 portion",
+      [
+        "pain : 80 g (2 tranches)",
+        "avocat : 70 g (½ petit)",
+        "œufs : 110 g (2)",
+        "tomate : 60 g (½ moyenne)",
+        "citron, sel, poivre, flocons de piment"
+      ],
+      [
+        "Fais griller le pain au grille-pain ou dans une poêle sèche.",
+        "Écrase l'avocat avec le citron et le sel et tartine-le sur le pain.",
+        "Fais cuire les œufs mollets ou au plat sans matière grasse, pose-les dessus et ajoute la tomate et les épices."
+      ],
+      "",
+      "Pour plus de protéines, ajoute un troisième œuf ou une cuillère de fromage blanc sur le pain. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "31": [
+      "Porridge banane et beurre de cacahuète",
+      "1 portion",
+      [
+        "flocons d'avoine : 50 g (5 c. à soupe)",
+        "lait : 200 g (1 verre)",
+        "banane : 100 g (1 petite)",
+        "beurre de cacahuète : 15 g (1 c. à soupe)",
+        "<b>Avec protéine, ajoute :</b> protéine vanille en poudre (à incorporer après cuisson, quand le porridge a un peu tiédi) : 25 g (1 dosette)",
+        "<b>Sans protéine, ajoute à la place :</b> yaourt grec par-dessus : 100 g (⅓ de verre)"
+      ],
+      [
+        "Verse le lait sur les flocons et fais cuire 5 minutes à feu moyen en remuant.",
+        "Hors du feu, incorpore la moitié de la banane et la protéine si tu en mets.",
+        "Par-dessus, le reste de la banane et le beurre de cacahuète."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "32": [
+      "Porridge au chocolat",
+      "1 portion",
+      [
+        "flocons d'avoine : 50 g (5 c. à soupe)",
+        "lait : 200 g (1 verre)",
+        "banane : 80 g (½ grosse)",
+        "cacao : 8 g (1 c. à soupe)",
+        "miel : 10 g (2 c. à café)",
+        "<b>Avec protéine, ajoute :</b> protéine chocolat ou vanille en poudre : 25 g (1 dosette)",
+        "<b>Sans protéine, ajoute à la place :</b> yaourt grec par-dessus : 100 g (⅓ de verre)"
+      ],
+      [
+        "Fais cuire les flocons avec le cacao et le lait 5 minutes.",
+        "Ajoute le miel et la moitié de la banane et écrase.",
+        "Par-dessus, le reste de la banane en rondelles."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "33": [
+      "Porridge « tarte aux pommes »",
+      "1 portion",
+      [
+        "flocons d'avoine : 50 g (5 c. à soupe)",
+        "lait : 200 g (1 verre)",
+        "pomme : 150 g (1 moyenne)",
+        "noix : 15 g (2-3 noix)",
+        "miel : 10 g (2 c. à café)",
+        "cannelle 1 c. à café",
+        "<b>Avec protéine, ajoute :</b> protéine vanille en poudre : 25 g (1 dosette)",
+        "<b>Sans protéine, ajoute à la place :</b> yaourt grec par-dessus : 100 g (⅓ de verre)"
+      ],
+      [
+        "Coupe la pomme en dés et fais-la compoter 3 minutes à sec avec la cannelle.",
+        "Fais cuire les flocons dans le lait 5 minutes.",
+        "Mélange avec la pomme, noix et miel par-dessus."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "34": [
+      "Overnight oats aux fruits rouges et yaourt",
+      "1 bocal",
+      [
+        "flocons d'avoine : 45 g (4,5 c. à soupe)",
+        "lait : 100 g (½ verre)",
+        "yaourt grec : 150 g (½ verre)",
+        "graines de chia : 8 g (2 c. à café)",
+        "fruits rouges (surgelés possibles) : 100 g (une poignée)",
+        "miel : 10 g (2 c. à café)",
+        "<b>Avec protéine, ajoute :</b> protéine vanille en poudre (délaye-la dans le lait) : 20 g (¾ de dosette)",
+        "<b>Sans protéine :</b> laisse-la de côté, il y a déjà assez de protéines"
+      ],
+      [
+        "Mélange tout sauf les fruits rouges dans un bocal, fruits rouges par-dessus.",
+        "Laisse au moins 6 heures au réfrigérateur, idéalement toute la nuit.",
+        "Le matin, mélange et mange froid."
+      ],
+      "",
+      "Prépare 3 bocaux d'un coup pour plusieurs jours, ils se gardent jusqu'à 3 jours. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "35": [
+      "Porridge au four aux cerises",
+      "1 portion",
+      [
+        "flocons d'avoine : 50 g (5 c. à soupe)",
+        "œuf : 55 g (1)",
+        "lait : 100 g (½ verre)",
+        "cerises (surgelées possibles) : 100 g (½ verre)",
+        "miel : 10 g (2 c. à café)",
+        "½ c. à café de levure chimique, cannelle",
+        "<b>Avec protéine, ajoute :</b> protéine vanille en poudre (dans la pâte avec l'avoine) : 20 g (¾ de dosette)",
+        "<b>Sans protéine, ajoute à la place :</b> yaourt grec par-dessus : 80 g (3 c. à soupe)"
+      ],
+      [
+        "Préchauffe le four à 180 °C.",
+        "Mélange les flocons, l'œuf, le lait, la levure et le miel, ajoute la moitié des cerises.",
+        "Verse dans un petit moule, le reste des cerises par-dessus.",
+        "Enfourne 20-25 minutes jusqu'à ce que ce soit doré."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "36": [
+      "Smoothie chocolat-banane au beurre de cacahuète",
+      "1 verre (~400 ml)",
+      [
+        "lait : 250 g (1 verre)",
+        "banane congelée : 120 g (1 moyenne)",
+        "beurre de cacahuète : 15 g (1 c. à soupe)",
+        "cacao : 5 g (1 c. à café bombée)",
+        "glaçons si tu veux",
+        "<b>Avec protéine, ajoute :</b> protéine chocolat ou vanille en poudre : 25 g (1 dosette)",
+        "<b>Sans protéine, ajoute à la place :</b> yaourt grec : 100 g (⅓ de verre)"
+      ],
+      ["Mets tout dans le blender et mixe 1 minute jusqu'à ce que ce soit lisse."],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "37": [
+      "Smoothie fraise-yaourt",
+      "1 verre (~400 ml)",
+      [
+        "fraises (surgelées possibles) : 200 g (1,5 verre)",
+        "yaourt grec : 150 g (½ verre)",
+        "lait : 100 g (½ verre)",
+        "miel : 10 g (2 c. à café)",
+        "<b>Avec protéine, ajoute :</b> protéine vanille en poudre : 20 g (¾ de dosette)",
+        "<b>Sans protéine :</b> laisse-la de côté, il y a déjà assez de protéines"
+      ],
+      ["Mixe tout jusqu'à ce que ce soit lisse. Si c'est trop épais, ajoute un peu de lait."],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "38": [
+      "Smoothie vert épinards-ananas",
+      "1 verre (~400 ml)",
+      [
+        "épinards frais : 40 g (2 poignées)",
+        "banane : 100 g (1 petite)",
+        "ananas (surgelé ou frais) : 100 g (3-4 tranches)",
+        "lait : 200 g (1 verre)",
+        "yaourt grec : 100 g (⅓ de verre)",
+        "<b>Avec protéine, ajoute :</b> protéine vanille en poudre : 20 g (¾ de dosette)",
+        "<b>Sans protéine :</b> laisse-la de côté, il y a déjà assez de protéines"
+      ],
+      [
+        "Mixe d'abord les épinards avec le lait, puis ajoute le reste et mixe jusqu'à ce que ce soit homogène. On sent à peine les épinards."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "39": [
+      "Smoothie fruits rouges et avoine",
+      "1 verre (~400 ml)",
+      [
+        "fruits rouges surgelés : 150 g (1 verre)",
+        "yaourt grec : 150 g (½ verre)",
+        "lait : 150 g (⅔ de verre)",
+        "flocons d'avoine : 25 g (2,5 c. à soupe)",
+        "miel : 10 g (2 c. à café)",
+        "<b>Avec protéine, ajoute :</b> protéine vanille en poudre : 20 g (¾ de dosette)",
+        "<b>Sans protéine :</b> laisse-la de côté, il y a déjà assez de protéines"
+      ],
+      [
+        "Tu peux faire tremper l'avoine 5 minutes dans le lait. Mixe tout jusqu'à ce que ce soit lisse."
+      ],
+      "",
+      "L'avoine rend le smoothie épais et rassasiant, il peut servir de petit-déjeuner léger. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "40": [
+      "César au poulet, sauce yaourt",
+      "1 portion",
+      [
+        "blanc de poulet (poids cru) : 150 g (1 petit)",
+        "laitue romaine ou iceberg : 120 g (une grosse poignée)",
+        "pain pour les croûtons : 30 g (1 tranche)",
+        "fromage à pâte dure râpé : 20 g (1 c. à soupe)",
+        "tomates cerises : 80 g (5-6)",
+        "yaourt grec pour la sauce : 60 g (2 c. à soupe)",
+        "mayonnaise allégée : 15 g (1 c. à café bombée)",
+        "pour la sauce : ail, 1 c. à café de moutarde, jus de citron, sel"
+      ],
+      [
+        "Fais cuire le poulet à sec à la poêle 6-7 minutes et tranche-le. Coupe le pain en dés et fais-le dorer à la poêle ou au four.",
+        "Fouette la sauce à la fourchette : yaourt, mayonnaise, moutarde, ail et citron.",
+        "Dresse la salade, poulet, croûtons et fromage par-dessus."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "41": [
+      "Salade grecque aux pois chiches",
+      "1 portion",
+      [
+        "pois chiches en conserve, égouttés : 120 g (½ boîte)",
+        "concombre : 150 g (1 gros)",
+        "tomates : 150 g (1-2 moyennes)",
+        "poivron : 80 g (½ petit)",
+        "feta : 50 g (un morceau)",
+        "olives : 30 g (7-8)",
+        "oignon rouge : 30 g (¼)",
+        "huile d'olive : 10 g (2 c. à café)",
+        "jus de citron, origan, sel"
+      ],
+      [
+        "Coupe les légumes en gros morceaux, rince les pois chiches.",
+        "Mélange le tout et assaisonne d'huile, de citron et d'origan. Pose la feta par-dessus."
+      ],
+      "",
+      "Sans viande, mais avec les protéines des pois chiches et de la feta. Si besoin, ajoute 100 g de poulet. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "42": [
+      "Salade thon-haricots",
+      "1 portion",
+      [
+        "thon au naturel, égoutté : 120 g (1 petite boîte)",
+        "haricots en conserve : 120 g (½ boîte)",
+        "tomates : 120 g (1 moyenne)",
+        "oignon rouge : 30 g (¼)",
+        "roquette ou autre verdure : 40 g (2 poignées)",
+        "œuf dur : 55 g (1)",
+        "huile d'olive : 10 g (2 c. à café)",
+        "jus de citron, sel, poivre"
+      ],
+      [
+        "Coupe tout, écrase légèrement les haricots et le thon à la fourchette, coupe l'œuf en quartiers.",
+        "Mélange et assaisonne d'huile et de citron."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "43": [
+      "Salade crevettes-avocat",
+      "1 portion",
+      [
+        "crevettes décortiquées : 150 g (10-12)",
+        "avocat : 80 g (½ petit)",
+        "concombre : 100 g (1 petit)",
+        "feuilles de salade : 80 g (2 poignées)",
+        "maïs : 50 g (2 c. à soupe)",
+        "huile d'olive : 5 g (1 c. à café)",
+        "yaourt grec pour la sauce : 50 g (2 c. à soupe)",
+        "ail, citron vert ou jaune, sel, poivre"
+      ],
+      [
+        "Fais sauter les crevettes dans l'huile avec l'ail 2-3 minutes.",
+        "Coupe les légumes et l'avocat et mélange-les avec la salade et le maïs.",
+        "Mélange le yaourt avec le jus de citron vert et le sel, verse sur la salade et ajoute les crevettes."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "44": [
+      "Salade mexicaine poulet-haricots",
+      "1 portion",
+      [
+        "blanc de poulet (poids cru) : 150 g (1 petit)",
+        "haricots rouges en conserve : 80 g (3 c. à soupe)",
+        "maïs : 60 g (3 c. à soupe)",
+        "tomate : 100 g (1 petite)",
+        "feuilles de salade : 80 g (2 poignées)",
+        "avocat : 50 g (⅓ petit)",
+        "yaourt grec pour la sauce : 60 g (2 c. à soupe)",
+        "paprika, cumin, citron vert, sel, piment au goût"
+      ],
+      [
+        "Roule le poulet dans le paprika et le cumin, fais-le cuire et coupe-le en lanières.",
+        "Mélange dans un saladier la salade, la tomate, les haricots, le maïs et l'avocat.",
+        "Mélange le yaourt avec le citron vert et le sel, verse et pose le poulet par-dessus."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "45": [
+      "Mousse au chocolat et fromage blanc",
+      "2 portions",
+      [
+        "fromage blanc 1 % : 300 g (1 verre bien rempli)",
+        "cacao : 15 g (1,5 c. à soupe)",
+        "miel : 25 g (1 c. à soupe)",
+        "lait : 50 g (3 c. à soupe)",
+        "chocolat noir à râper : 15 g (3 carrés)"
+      ],
+      [
+        "Mixe le fromage blanc, le cacao, le miel et le lait jusqu'à ce que ce soit parfaitement lisse.",
+        "Répartis dans des verres et garde 30 minutes au frais.",
+        "Râpe le chocolat par-dessus avant de servir."
+      ],
+      "",
+      "Avec du fromage blanc à 5 %, la texture est plus onctueuse, mais il y a plus de calories. Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "46": [
+      "Brownies banane-avoine",
+      "6 parts",
+      [
+        "bananes mûres : 250 g (2 grosses)",
+        "flocons d'avoine mixés : 100 g (10 c. à soupe)",
+        "cacao : 25 g (2,5 c. à soupe)",
+        "œufs : 110 g (2)",
+        "yaourt grec : 100 g (⅓ de verre)",
+        "chocolat noir en morceaux : 40 g (½ tablette)",
+        "miel : 20 g (1 c. à soupe)",
+        "1 c. à café de levure chimique, une pincée de sel",
+        "<b>Avec protéine, ajoute :</b> protéine chocolat en poudre (avec les ingrédients secs) : 30 g (1,5 dosette)",
+        "<b>Sans protéine :</b> ne l'ajoute pas, la recette marche quand même, avec moins de protéines"
+      ],
+      [
+        "Préchauffe le four à 180 °C. Écrase les bananes, ajoute les œufs, le yaourt et le miel.",
+        "Incorpore la farine d'avoine, le cacao, la levure et la moitié du chocolat.",
+        "Verse dans un moule de 18 × 18 cm, le reste du chocolat par-dessus.",
+        "Enfourne 25 minutes. Laisse refroidir et coupe en 6 parts."
+      ],
+      "Se conserve jusqu'à 4 jours au réfrigérateur.",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "47": [
+      "Pudding de chia à la mangue",
+      "2 portions",
+      [
+        "graines de chia : 40 g (4 c. à soupe)",
+        "lait : 300 g (1 verre bien rempli)",
+        "mangue (surgelée possible) : 150 g (1 petite)",
+        "miel : 15 g (2 c. à café)",
+        "<b>Avec protéine, ajoute :</b> protéine vanille en poudre (délaye-la dans le lait avant le chia) : 20 g (¾ de dosette)",
+        "<b>Sans protéine, ajoute à la place :</b> yaourt grec par-dessus : 100 g (⅓ de verre)"
+      ],
+      [
+        "Mélange le chia avec le lait et la moitié du miel, remue deux fois à 5 minutes d'intervalle pour éviter les grumeaux.",
+        "Laisse 4 heures ou toute la nuit au réfrigérateur.",
+        "Mixe la mangue en purée et monte en couches avec le pudding."
+      ],
+      "Se conserve jusqu'à 3 jours au réfrigérateur.",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "48": [
+      "Pommes au four au fromage blanc",
+      "2 portions",
+      [
+        "grosses pommes : 400 g (2)",
+        "fromage blanc 5 % : 150 g (½ verre)",
+        "miel : 20 g (2 c. à café)",
+        "noix : 10 g (1-2 noix)",
+        "cannelle, vanille"
+      ],
+      [
+        "Coupe le chapeau des pommes et évide-les délicatement en gardant le fond.",
+        "Mélange le fromage blanc avec le miel, la cannelle et la vanille, farcis les pommes, noix par-dessus.",
+        "Enfourne 25 minutes à 180 °C."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "49": [
+      "Glace au yaourt et fruits rouges",
+      "2 portions",
+      [
+        "yaourt grec : 300 g (1 verre)",
+        "fruits rouges surgelés : 200 g (1,5 verre)",
+        "miel : 25 g (1 c. à soupe)",
+        "<b>Avec protéine, ajoute :</b> protéine vanille en poudre : 20 g (¾ de dosette)",
+        "<b>Sans protéine :</b> laisse-la de côté, il y a déjà assez de protéines"
+      ],
+      [
+        "Mixe le tout jusqu'à obtenir une crème épaisse.",
+        "Pour une glace plus ferme, mets-la 1-2 heures au congélateur et mélange au bout d'une heure."
+      ],
+      "",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "50": [
+      "Sauce yaourt à l'ail",
+      "4 portions (3 c. à soupe chacune)",
+      [
+        "yaourt grec 0 % : 200 g (¾ de verre)",
+        "1-2 gousses d'ail, jus d'½ citron, aneth, sel, poivre"
+      ],
+      [
+        "Mélange tout et laisse reposer 15 minutes. Va avec le poulet, les pommes de terre, le burrito bowl et les salades."
+      ],
+      "Se conserve jusqu'à 4 jours au réfrigérateur.",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "51": [
+      "Sauce César allégée",
+      "4 portions (2 c. à soupe chacune)",
+      [
+        "yaourt grec 0 % : 100 g (⅓ de verre)",
+        "mayonnaise allégée : 30 g (1,5 c. à soupe)",
+        "fromage à pâte dure râpé : 20 g (1 c. à soupe)",
+        "moutarde 1 c. à café, 1 gousse d'ail, jus d'½ citron, sel, poivre"
+      ],
+      ["Mélange le tout jusqu'à ce que ce soit lisse. Si c'est trop épais, ajoute de l'eau."],
+      "Se conserve jusqu'à 4 jours au réfrigérateur.",
+      "Valeurs calculées à partir des ingrédients, marge d'erreur d'environ 10 %."
+    ],
+    "52": [
+      "Soupe de poulet aux vermicelles",
+      null,
+      null,
+      [
+        "Couvre le poulet de bouillon ou d'eau, porte à ébullition, écume et laisse cuire 20 minutes. Sors-le et coupe-le.",
+        "Ajoute la pomme de terre, la carotte et l'oignon et cuis 10 minutes.",
+        "Ajoute les pâtes, remets le poulet et cuis encore 7-8 minutes. Sale et parsème d'herbes."
+      ],
+      null,
+      null
+    ],
+    "53": [
+      "Soupe de lentilles",
+      null,
+      null,
+      [
+        "Fais revenir l'oignon, la carotte et l'ail dans l'huile 5 minutes.",
+        "Ajoute les lentilles corail rincées, la tomate et le bouillon. Laisse cuire 20 minutes, jusqu'à ce qu'elles se défassent.",
+        "Mixe la moitié, sale et ajoute le jus de citron."
+      ],
+      null,
+      null
+    ],
+    "54": [
+      "Soupe tomate aux haricots et dinde",
+      null,
+      null,
+      [
+        "Coupe la dinde en dés et fais-la dorer avec l'oignon et l'ail 5 minutes.",
+        "Ajoute le poivron, la tomate, les haricots et le bouillon.",
+        "Laisse cuire 15 minutes, sale et poivre."
+      ],
+      null,
+      null
+    ],
+    "55": [
+      "Velouté de brocoli",
+      null,
+      null,
+      [
+        "Couvre la pomme de terre, l'oignon et le brocoli de bouillon et cuis 15 minutes.",
+        "Verse le lait et mixe jusqu'à obtenir un velouté lisse.",
+        "Ajoute le fromage râpé, réchauffe en remuant et sale."
+      ],
+      null,
+      null
+    ],
+    "56": [
+      "Khartcho allégé",
+      null,
+      null,
+      [
+        "Coupe le bœuf en morceaux, couvre d'eau et laisse cuire 35 minutes en écumant.",
+        "Ajoute le riz, l'oignon et la tomate et cuis 12 minutes.",
+        "Incorpore les noix moulues, le tkemali, l'ail et le khmeli-souneli, cuis 3 minutes et parsème de coriandre."
+      ],
+      null,
+      null
+    ],
+    "57": [
+      "Okrochka au kéfir",
+      null,
+      null,
+      [
+        "Fais cuire le poulet, les œufs et les pommes de terre en robe des champs, puis laisse refroidir.",
+        "Coupe tout en dés avec les concombres, la ciboule et l'aneth.",
+        "Verse le kéfir froid allongé d'eau et sale. Sers bien frais."
+      ],
+      null,
+      null
+    ],
+    "58": [
+      "Soupe asiatique au poulet et nouilles de riz",
+      null,
+      null,
+      [
+        "Fais cuire le poulet dans le bouillon avec le gingembre et l'ail 15 minutes, puis émince-le.",
+        "Ajoute les champignons et la carotte, cuis 5 minutes et verse la sauce soja.",
+        "Ajoute les nouilles et les épinards ; après 3 minutes remets le poulet et parsème de ciboule."
+      ],
+      null,
+      null
+    ],
+    "59": [
+      "Barres protéinées sans cuisson",
+      null,
+      null,
+      [
+        "Mélange les flocons d'avoine et la protéine, ajoute le beurre de cacahuète, le miel et le lait et pétris une pâte ferme.",
+        "Tasse dans un moule chemisé sur 1,5 cm et nappe de chocolat fondu.",
+        "Mets 1 heure au frais et coupe en 8 barres."
+      ],
+      null,
+      null
+    ],
+    "60": [
+      "Houmous et bâtonnets de légumes",
+      null,
+      null,
+      [
+        "Mixe les pois chiches avec le tahini, le jus de citron, l'ail et l'eau jusqu'à obtenir une crème et sale.",
+        "Coupe la carotte, le concombre et le poivron en bâtonnets.",
+        "Trempe les légumes dans le houmous. Il se garde 4 jours au frais."
+      ],
+      null,
+      null
+    ],
+    "61": [
+      "Boules de fromage blanc à la noix de coco",
+      null,
+      null,
+      [
+        "Écrase le fromage blanc avec la protéine et le miel pour obtenir une pâte ferme.",
+        "Forme 12 boules avec les mains mouillées.",
+        "Roule-les dans la noix de coco râpée ou le cacao et mets 20 minutes au frais. Une portion = 3 boules."
+      ],
+      null,
+      null
+    ],
+    "62": [
+      "Œufs, concombre et yaourt",
+      null,
+      null,
+      [
+        "Fais cuire les œufs durs 9 minutes et refroidis-les à l'eau froide.",
+        "Coupe les œufs et le concombre.",
+        "Nappe de yaourt aux herbes, sale et poivre."
+      ],
+      null,
+      null
+    ],
+    "63": [
+      "Roulés de dinde au fromage",
+      null,
+      null,
+      [
+        "Étale les tranches de jambon de dinde.",
+        "Pose sur chacune un morceau de fromage, un bâtonnet de concombre et une feuille de salade.",
+        "Roule et fixe avec un pique."
+      ],
+      null,
+      null
+    ],
+    "64": [
+      "Yaourt aux fruits rouges et chia",
+      null,
+      null,
+      [
+        "Verse le yaourt dans un bol.",
+        "Ajoute les fruits rouges, frais ou décongelés.",
+        "Arrose de miel et parsème de chia."
+      ],
+      null,
+      null
+    ],
+    "65": [
+      "Pomme au beurre de cacahuète",
+      null,
+      null,
+      [
+        "Épépine la pomme et coupe-la en quartiers.",
+        "Mesure environ 15 g de beurre de cacahuète, une cuillère.",
+        "Trempe les quartiers et saupoudre de cannelle si tu veux."
+      ],
+      null,
+      null
+    ],
+    "66": [
+      "Pois chiches croustillants au four",
+      null,
+      null,
+      [
+        "Sèche bien les pois chiches en conserve avec un torchon.",
+        "Mélange-les avec l'huile, le sel, le paprika et l'ail en poudre.",
+        "Fais rôtir à 200 °C pendant 30 minutes en secouant toutes les 10 minutes. Ils croustillent en refroidissant."
+      ],
+      null,
+      null
+    ],
+    "67": [
+      "Shake protéiné au café",
+      null,
+      null,
+      [
+        "Prépare un espresso ou un café serré et laisse refroidir.",
+        "Mixe le café avec le lait, la protéine et l'édulcorant.",
+        "Sers sur des glaçons."
+      ],
+      null,
+      null
+    ],
+    "68": [
+      "Cacao chaud protéiné",
+      null,
+      null,
+      [
+        "Fais chauffer le lait presque jusqu'à ébullition.",
+        "À part, délaye le cacao et la protéine dans 3 cuillères de lait tiède.",
+        "Verse le reste du lait, fouette et sucre. Ne fais plus bouillir après la protéine."
+      ],
+      null,
+      null
+    ],
+    "69": [
+      "Limonade gingembre-menthe",
+      null,
+      null,
+      [
+        "Râpe le gingembre, verse 300 ml d'eau chaude avec le miel et laisse infuser 10 minutes.",
+        "Filtre puis ajoute le jus de citron et l'eau froide.",
+        "Ajoute la menthe et les glaçons. Se garde 2 jours au frais."
+      ],
+      null,
+      null
+    ],
+    "70": [
+      "Boisson kéfir et fruits rouges",
+      null,
+      null,
+      [
+        "Mets le kéfir et les fruits rouges dans le blender.",
+        "Mixe 30 secondes et sucre à ton goût.",
+        "Bois tout de suite, tant que c'est mousseux."
+      ],
+      null,
+      null
+    ],
+    "71": [
+      "Lassi à la mangue",
+      null,
+      null,
+      [
+        "Pèle la mangue et coupe-la en dés.",
+        "Mixe avec le yaourt, le lait et une pincée de cardamome.",
+        "Sers bien frais, avec des glaçons si tu veux."
+      ],
+      null,
+      null
+    ],
+    "72": [
+      "Tan au concombre et à la menthe",
+      null,
+      null,
+      [
+        "Fouette le matsoni avec l'eau froide et une pincée de sel.",
+        "Râpe le concombre et cisèle la menthe.",
+        "Mélange le tout et sers sur glace. Très désaltérant."
+      ],
+      null,
+      null
+    ],
+    "73": [
+      "Grand bowl bœuf et riz",
+      null,
+      null,
+      [
+        "Fais cuire le riz. Coupe le bœuf en fines lanières.",
+        "Saisis le bœuf à feu vif 3 minutes, puis ajoute le poivron et le brocoli 4 minutes.",
+        "Verse la sauce soja avec le miel et l'ail et réchauffe. Sers sur le riz avec du sésame."
+      ],
+      null,
+      null
+    ],
+    "74": [
+      "Pâtes crémeuses poulet-champignons",
+      null,
+      null,
+      [
+        "Fais cuire les pâtes. Coupe le poulet et fais-le dorer dans l'huile 6 minutes.",
+        "Ajoute les champignons et l'ail et fais revenir 5 minutes.",
+        "Verse la crème, incorpore le fromage râpé et les pâtes et réchauffe 2 minutes."
+      ],
+      null,
+      null
+    ],
+    "75": [
+      "Gainer maison",
+      null,
+      null,
+      [
+        "Mixe les flocons d'avoine en farine.",
+        "Ajoute le lait, la banane, le beurre de cacahuète, la protéine et le miel.",
+        "Mixe jusqu'à ce que ce soit lisse. Environ 800 kcal, pratique entre les repas en prise de masse."
+      ],
+      null,
+      null
+    ],
+    "76": [
+      "Sarrasin au bœuf, œuf et légumes",
+      null,
+      null,
+      [
+        "Fais cuire le sarrasin. Coupe le bœuf en dés.",
+        "Fais revenir le bœuf avec l'oignon et la carotte dans l'huile 10 minutes, ajoute un peu d'eau et laisse mijoter 10 minutes.",
+        "Mélange avec le sarrasin et le beurre et ajoute un œuf dur ou au plat."
+      ],
+      null,
+      null
+    ],
+    "77": [
+      "Porridge prise de masse",
+      null,
+      null,
+      [
+        "Fais cuire les flocons d'avoine dans le lait 5 minutes.",
+        "Ajoute la banane en rondelles et le beurre de cacahuète.",
+        "Parsème de noix et arrose de miel."
+      ],
+      null,
+      null
+    ],
+    "78": [
+      "Saumon au four, citron et herbes",
+      null,
+      null,
+      [
+        "Coupe les pommes de terre en quartiers, arrose de la moitié de l'huile et enfourne 15 minutes à 200 °C.",
+        "Frotte le saumon de sel, d'ail et d'herbes et couvre de rondelles de citron et du reste de l'huile.",
+        "Ajoute le poisson aux pommes de terre et enfourne encore 15 minutes."
+      ],
+      null,
+      null
+    ],
+    "79": [
+      "Brochettes de poulet marinées au yaourt",
+      null,
+      null,
+      [
+        "Coupe le poulet en morceaux et fais-le mariner au moins 1 heure dans le yaourt avec l'ail, le citron et les épices.",
+        "Enfile sur des piques avec le poivron et l'oignon.",
+        "Grille ou enfourne à 220 °C pendant 15-18 minutes en retournant. Sers avec du tkemali."
+      ],
+      null,
+      null
+    ],
+    "80": [
+      "Champignons farcis au poulet et fromage",
+      null,
+      null,
+      [
+        "Retire les pieds des champignons, hache-les finement avec l'oignon et fais revenir 5 minutes.",
+        "Mélange avec le poulet haché fin, le yaourt, l'ail et les herbes et sale.",
+        "Garnis les têtes, couvre de fromage et enfourne 20 minutes à 190 °C."
+      ],
+      null,
+      null
+    ],
+    "81": [
+      "Salade Olivier allégée",
+      null,
+      null,
+      [
+        "Fais cuire le poulet, les pommes de terre, la carotte et les œufs et laisse refroidir.",
+        "Coupe tout en dés avec les cornichons et ajoute les petits pois.",
+        "Assaisonne avec le yaourt et une cuillère de mayonnaise, sale et parsème d'aneth."
+      ],
+      null,
+      null
+    ],
+    "82": [
+      "Cheesecake sans cuisson",
+      null,
+      null,
+      [
+        "Mixe les flocons d'avoine, mélange avec le beurre fondu et le miel et tasse au fond du moule.",
+        "Mixe le fromage blanc, le fromage frais, le yaourt, la protéine et l'édulcorant jusqu'à ce que ce soit lisse et étale sur la base.",
+        "Laisse prendre au frais au moins 4 heures. Sers avec des fruits rouges."
+      ],
+      null,
+      null
+    ],
+    "83": [
+      "Tchakhokhbili de poulet",
+      null,
+      null,
+      [
+        "Fais dorer les morceaux de poulet dans une poêle sans matière grasse 8 minutes.",
+        "Ajoute l'oignon et l'huile ; après 5 minutes ajoute les tomates râpées et le poivron et laisse mijoter à couvert 25 minutes.",
+        "Incorpore l'ail, le khmeli-souneli et beaucoup d'herbes et laisse mijoter 5 minutes."
+      ],
+      null,
+      null
+    ],
+    "84": [
+      "Lobio",
+      null,
+      null,
+      [
+        "Fais revenir l'oignon dans l'huile 7 minutes.",
+        "Ajoute les haricots avec un peu de leur jus, écrase-en une partie et laisse mijoter 10 minutes.",
+        "Incorpore les noix moulues, l'ail, le khmeli-souneli, le tkemali et la coriandre. Bon chaud comme froid."
+      ],
+      null,
+      null
+    ],
+    "85": [
+      "Pkhali aux épinards",
+      null,
+      null,
+      [
+        "Blanchis les épinards 1 minute, égoutte-les et presse-les bien.",
+        "Mixe les noix avec l'ail, l'oignon, la coriandre, le khmeli-souneli et le jus de citron pour faire une pâte.",
+        "Mélange aux épinards, forme des boulettes et décore de grains de grenade."
+      ],
+      null,
+      null
+    ],
+    "86": [
+      "Adjapsandali",
+      null,
+      null,
+      [
+        "Coupe l'aubergine et la courgette en dés et fais-les revenir dans la moitié de l'huile 8 minutes.",
+        "Dans une cocotte, fais fondre l'oignon et le poivron 5 minutes, puis ajoute les pommes de terre, les légumes poêlés et les tomates râpées.",
+        "Laisse mijoter à couvert 30 minutes et termine avec l'ail et les herbes. Encore meilleur le lendemain."
+      ],
+      null,
+      null
+    ],
+    "87": [
+      "Khatchapouri léger au lavash",
+      null,
+      null,
+      [
+        "Mélange le fromage râpé, le fromage blanc et un œuf.",
+        "Étale la garniture sur le lavash, plie en chausson et badigeonne du second œuf battu.",
+        "Enfourne 10-12 minutes à 200 °C jusqu'à ce que ce soit doré."
+      ],
+      null,
+      null
+    ],
+    "88": [
+      "Chkmerouli allégé",
+      null,
+      null,
+      [
+        "Sale le poulet et enfourne-le à 210 °C pendant 25-30 minutes jusqu'à ce qu'il soit doré.",
+        "Fais chauffer le lait avec l'ail écrasé et le beurre sans bouillir et sale.",
+        "Verse la sauce à l'ail sur le poulet et enfourne encore 7 minutes. Parsème d'herbes."
+      ],
+      null,
+      null
+    ],
+    "89": [
+      "Poulet teriyaki, riz et brocoli",
+      null,
+      null,
+      [
+        "Fais cuire le riz et le brocoli à la vapeur 5 minutes.",
+        "Fais dorer les morceaux de poulet dans l'huile 8 minutes.",
+        "Verse la sauce soja avec le miel, le gingembre et l'ail et fais réduire 3 minutes jusqu'à ce que ce soit brillant. Parsème de sésame."
+      ],
+      null,
+      null
+    ],
+    "90": [
+      "Poke bowl au saumon",
+      null,
+      null,
+      [
+        "Fais cuire le riz et laisse-le tiédir.",
+        "Coupe le saumon en dés et fais-le mariner 10 minutes dans la sauce soja avec le jus de citron.",
+        "Monte les bols : riz, saumon, avocat, concombre et carotte. Parsème de sésame et de ciboule. Prends du saumon qualité sashimi."
+      ],
+      null,
+      null
+    ]
+  },
+  "food": {
+    "chicken": "Blanc de poulet",
+    "chicken_mince": "Poulet haché",
+    "turkey": "Dinde",
+    "beef": "Bœuf maigre",
+    "veal": "Veau",
+    "pork": "Porc maigre",
+    "bacon": "Bacon",
+    "shrimp": "Crevettes",
+    "tuna": "Thon en boîte",
+    "salmon": "Saumon",
+    "whitefish": "Poisson blanc (cabillaud, merlu)",
+    "tofu": "Tofu",
+    "egg": "Œuf",
+    "eggwhite": "Blanc d'œuf",
+    "tvorog1": "Fromage blanc 1 %",
+    "tvorog2": "Fromage blanc 2 %",
+    "tvorog5": "Fromage blanc 5 %",
+    "greek0": "Yaourt grec 0 %",
+    "greek2": "Yaourt grec 2 %",
+    "skyr": "Skyr",
+    "yogurt": "Yaourt nature 2,5 %",
+    "kefir": "Kéfir 1 %",
+    "milk": "Lait 2,5 %",
+    "milkskim": "Lait écrémé",
+    "oatmilk": "Lait d'avoine",
+    "almondmilk": "Lait d'amande non sucré",
+    "soymilk": "Lait de soja",
+    "cream10": "Crème 10 %",
+    "sour": "Crème aigre 10 %",
+    "coconut": "Lait de coco allégé",
+    "hard": "Fromage à pâte dure",
+    "lightcheese": "Fromage allégé 30 %",
+    "mozz": "Mozzarella allégée",
+    "feta": "Feta",
+    "suluguni": "Sulguni",
+    "procheese": "Fromage fondu",
+    "creamcheese": "Fromage frais allégé",
+    "oats": "Flocons d'avoine",
+    "rice": "Riz (cru)",
+    "ricecooked": "Riz cuit",
+    "buckwheat": "Sarrasin (cru)",
+    "buckwheatcooked": "Sarrasin cuit",
+    "pasta": "Pâtes (crues)",
+    "pastacooked": "Pâtes cuites",
+    "bulgur": "Boulgour (cru)",
+    "quinoa": "Quinoa (crue)",
+    "couscous": "Couscous (cru)",
+    "potato": "Pomme de terre",
+    "sweetpotato": "Patate douce",
+    "bread": "Pain",
+    "lavash": "Pain lavash",
+    "tortilla": "Tortilla de blé",
+    "semolina": "Semoule",
+    "beans": "Haricots en conserve",
+    "chickpeas": "Pois chiches en conserve",
+    "lentils": "Lentilles cuites",
+    "corn": "Maïs en conserve",
+    "pepper": "Poivron",
+    "zucchini": "Courgette",
+    "broccoli": "Brocoli",
+    "cauliflower": "Chou-fleur",
+    "mushroom": "Champignons",
+    "spinach": "Épinards",
+    "carrot": "Carotte",
+    "tomato": "Tomates",
+    "passata": "Passata",
+    "cucumber": "Concombre",
+    "onion": "Oignon",
+    "eggplant": "Aubergine",
+    "greenbeans": "Haricots verts",
+    "vegmix": "Mélange de légumes surgelés",
+    "lettuce": "Feuilles de salade",
+    "arugula": "Roquette",
+    "banana": "Banane",
+    "apple": "Pomme",
+    "pear": "Poire",
+    "berries": "Fruits rouges",
+    "strawberry": "Fraises",
+    "mango": "Mangue",
+    "cherry": "Cerises",
+    "pineapple": "Ananas",
+    "kiwi": "Kiwi",
+    "persimmon": "Kaki",
+    "avocado": "Avocat",
+    "olives": "Olives",
+    "oil": "Huile (olive/végétale)",
+    "pb": "Beurre de cacahuète",
+    "walnut": "Noix",
+    "almonds": "Amandes",
+    "chia": "Graines de chia",
+    "honey": "Miel",
+    "maple": "Sirop d'érable",
+    "sugar": "Sucre",
+    "sweetener": "Édulcorant",
+    "cocoa": "Cacao en poudre",
+    "choc": "Chocolat noir",
+    "protein": "Protéine whey",
+    "mayo": "Mayonnaise allégée",
+    "soy": "Sauce soja",
+    "ketchup": "Ketchup",
+    "chickenthigh": "Haut de cuisse de poulet sans peau",
+    "beef20": "Bœuf haché 20 %",
+    "turkeyham": "Jambon de dinde",
+    "sour20": "Crème aigre 20 %",
+    "tvorog9": "Fromage blanc 9 %",
+    "mozzfull": "Mozzarella",
+    "milk32": "Lait entier",
+    "cream20": "Crème 20 %",
+    "mayofull": "Mayonnaise",
+    "creamcheesefull": "Fromage frais entier",
+    "butter": "Beurre",
+    "matsoni": "Matsoni (yaourt)",
+    "imeruli": "Fromage imeruli",
+    "flour": "Farine de blé",
+    "granola": "Granola",
+    "ricenoodles": "Nouilles de riz (crues)",
+    "lentilsdry": "Lentilles (crues)",
+    "beet": "Betterave",
+    "cabbage": "Chou",
+    "pumpkin": "Potiron",
+    "celery": "Céleri",
+    "greenpeas": "Petits pois",
+    "pickles": "Cornichons",
+    "dates": "Dattes",
+    "pomegranate": "Grenade",
+    "lemon": "Citron",
+    "peanuts": "Cacahuètes",
+    "sesame": "Sésame",
+    "tahini": "Tahini",
+    "coconutflakes": "Noix de coco râpée",
+    "tkemali": "Tkemali (sauce aux prunes)",
+    "garlic": "Ail",
+    "ginger": "Gingembre",
+    "herbs": "Herbes fraîches (coriandre, persil, aneth)",
+    "greenonion": "Oignon vert",
+    "mint": "Menthe",
+    "khmeli": "Khmeli souneli",
+    "spices": "Sel et épices selon le goût",
+    "broth": "Bouillon ou eau",
+    "water": "Eau",
+    "coffee": "Café (expresso)"
+  },
+  "gen": {
+    "types": ["Salade", "Bowl", "Pâtes", "Wrap", "Omelette", "Porridge", "Smoothie", "Assiette"],
+    "kw": [
+      ["salade"],
+      ["bowl", "poke"],
+      ["pâtes", "pates", "spaghet", "nouille"],
+      ["wrap", "burrito", "kebab"],
+      ["omelette", "brouill"],
+      ["porridge", "avoine"],
+      ["smoothie", "milkshake"],
+      ["dîner", "diner", "déjeuner", "dejeuner"]
+    ],
+    "neg": ["sans", "sauf", "pas"],
+    "negAfter": [],
+    "negSuffix": [],
+    "cat": {"meat": ["viande"], "dairy": ["laitier", "lactose"], "gluten": ["gluten"], "fish": ["poisson"]},
+    "var": [
+      ["Classique", "Gourmand et rassasiant, sans compter les calories"],
+      ["Protéiné", "Un maximum de protéines, un minimum de gras"],
+      ["Équilibré", "Calories et macros bien dosées, aliments nutritifs"]
+    ],
+    "steps": {
+      "salad": [
+        "Prépare {P} : poêlé, rôti ou poché, puis tranche-le.",
+        "Coupe {V} et mélange avec la verdure.",
+        "Ajoute le reste, assaisonne et sers aussitôt."
+      ],
+      "bowl": [
+        "Fais cuire {G}.",
+        "Prépare {P} et coupe {V}.",
+        "Dispose tout dans un bol par sections et nappe de sauce."
+      ],
+      "pasta": [
+        "Fais cuire {G} 1 minute de moins que sur le paquet.",
+        "Fais revenir {P} avec {V} 8-10 minutes.",
+        "Mélange aux pâtes, ajoute le fromage et la sauce, réchauffe 2 minutes."
+      ],
+      "wrap": [
+        "Prépare {P} et coupe-le en lanières.",
+        "Coupe {V}.",
+        "Tartine la galette de sauce, ajoute la garniture et roule bien serré."
+      ],
+      "omelet": [
+        "Bats les œufs avec le produit laitier et une pincée de sel.",
+        "Fais revenir {V} 3-4 minutes.",
+        "Verse les œufs et laisse cuire à couvert à feu doux 5-7 minutes."
+      ],
+      "oatmeal": [
+        "Fais cuire les flocons dans le liquide 5 minutes en remuant.",
+        "Hors du feu, incorpore les extras.",
+        "Ajoute les fruits par-dessus."
+      ],
+      "smoothie": [
+        "Mets tous les ingrédients dans le blender.",
+        "Mixe 1 minute jusqu'à ce que ce soit lisse.",
+        "Si c'est trop épais, ajoute un peu de liquide."
+      ],
+      "plate": [
+        "Prépare l'accompagnement : {G}.",
+        "Fais poêler ou rôtir {P} jusqu'à cuisson.",
+        "Fais sauter ou rôtir {V} et sers le tout ensemble."
+      ]
+    }
+  }
+}

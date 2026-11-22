@@ -1,0 +1,98 @@
+[
+  {
+    "key": "lose",
+    "days": [
+      {"b": [[10, 1]], "l": [[52, 1]], "d": [[83, 1]], "s": [[64, 1], [70, 1]]},
+      {"b": [[34, 1]], "l": [[52, 1]], "d": [[83, 1]], "s": [[63, 1], [67, 1]]},
+      {"b": [[27, 1]], "l": [[52, 1]], "d": [[83, 1]], "s": [[61, 1], [70, 1]]},
+      {"b": [[10, 1]], "l": [[52, 1]], "d": [[83, 1]], "s": [[62, 1], [67, 1]]},
+      {"b": [[34, 1]], "l": [[58, 1]], "d": [[22, 1]], "s": [[60, 1], [70, 1]]},
+      {"b": [[87, 1]], "l": [[58, 1]], "d": [[22, 1]], "s": [[65, 1], [67, 1]]},
+      {"b": [[26, 1]], "l": [[58, 1]], "d": [[22, 1]], "s": [[66, 1], [70, 1]]}
+    ],
+    "name": {
+      "ru": "Похудение",
+      "en": "Weight loss",
+      "uk": "Схуднення",
+      "kk": "Арықтау",
+      "ka": "წონის კლება",
+      "es": "Perder peso",
+      "de": "Abnehmen",
+      "fr": "Perte de poids"
+    },
+    "desc": {
+      "ru": "≈1500 ккал и 155 г белка в день. Готовишь в понедельник чахохбили и куриный суп, в пятницу курицу с картошкой и азиатский суп.",
+      "en": "≈1500 kcal and 155 g protein a day. Cook chakhokhbili and chicken soup on Monday, chicken with potatoes and Asian soup on Friday.",
+      "uk": "≈1500 ккал і 155 г білка на день. У понеділок готуєш чахохбілі й курячий суп, у п'ятницю курку з картоплею й азійський суп.",
+      "kk": "Күніне ≈1500 ккал және 155 г ақуыз. Дүйсенбіде чахохбили мен тауық сорпасын, жұмада картопты тауық пен азиялық сорпаны дайындайсың.",
+      "ka": "დღეში ≈1500 კკალ და 155 გ ცილა. ორშაბათს ამზადებ ჩახოხბილს და ქათმის წვნიანს, პარასკევს ქათამს კარტოფილით და აზიურ წვნიანს.",
+      "es": "≈1500 kcal y 155 g de proteína al día. El lunes cocinas chakhokhbili y sopa de pollo; el viernes, pollo con patatas y sopa asiática.",
+      "de": "≈1500 kcal und 155 g Eiweiß pro Tag. Montags Tschachochbili und Hühnersuppe kochen, freitags Hähnchen mit Kartoffeln und asiatische Suppe.",
+      "fr": "≈1500 kcal et 155 g de protéines par jour. Le lundi tu prépares le tchakhokhbili et la soupe de poulet, le vendredi le poulet aux pommes de terre et la soupe asiatique."
+    }
+  },
+  {
+    "key": "balance",
+    "days": [
+      {"b": [[31, 1]], "l": [[16, 1]], "d": [[25, 1]], "s": [[59, 1], [70, 1]]},
+      {"b": [[32, 1]], "l": [[16, 1]], "d": [[25, 1]], "s": [[67, 1], [65, 1]]},
+      {"b": [[33, 1]], "l": [[16, 1]], "d": [[25, 1]], "s": [[59, 1], [64, 1]]},
+      {"b": [[34, 1]], "l": [[16, 1]], "d": [[25, 1]], "s": [[67, 1], [63, 1]]},
+      {"b": [[35, 1]], "l": [[20, 1]], "d": [[89, 1]], "s": [[59, 1], [70, 1]]},
+      {"b": [[31, 1]], "l": [[20, 1]], "d": [[89, 1]], "s": [[67, 1], [61, 1]]},
+      {"b": [[32, 1]], "l": [[20, 1]], "d": [[89, 1]], "s": [[59, 1], [64, 1]]}
+    ],
+    "name": {
+      "ru": "Баланс и поддержание",
+      "en": "Balance and maintenance",
+      "uk": "Баланс і підтримка",
+      "kk": "Теңгерім және ұстау",
+      "ka": "ბალანსი და შენარჩუნება",
+      "es": "Equilibrio y mantenimiento",
+      "de": "Balance und Gewicht halten",
+      "fr": "Équilibre et maintien"
+    },
+    "desc": {
+      "ru": "≈1850 ккал и 150 г белка в день. В понедельник тефтели и гречка с индейкой, в пятницу буррито-боул и курица терияки.",
+      "en": "≈1850 kcal and 150 g protein a day. Meatballs and turkey buckwheat on Monday, burrito bowl and teriyaki chicken on Friday.",
+      "uk": "≈1850 ккал і 150 г білка на день. У понеділок тефтелі й гречка з індичкою, у п'ятницю буріто-боул і курка теріякі.",
+      "kk": "Күніне ≈1850 ккал және 150 г ақуыз. Дүйсенбіде тефтели мен күркетауықты қарақұмық, жұмада буррито-боул мен терияки тауығы.",
+      "ka": "დღეში ≈1850 კკალ და 150 გ ცილა. ორშაბათს ტეფტელები და წიწიბურა ინდაურით, პარასკევს ბურიტო-ბოული და ტერიაკი ქათამი.",
+      "es": "≈1850 kcal y 150 g de proteína al día. Albóndigas y trigo sarraceno con pavo el lunes; burrito bowl y pollo teriyaki el viernes.",
+      "de": "≈1850 kcal und 150 g Eiweiß pro Tag. Montags Fleischbällchen und Buchweizen mit Pute, freitags Burrito-Bowl und Teriyaki-Hähnchen.",
+      "fr": "≈1850 kcal et 150 g de protéines par jour. Boulettes et sarrasin à la dinde le lundi, burrito bowl et poulet teriyaki le vendredi."
+    }
+  },
+  {
+    "key": "gain",
+    "days": [
+      {"b": [[77, 1]], "l": [[73, 1]], "d": [[74, 1]], "s": [[59, 1], [67, 1]]},
+      {"b": [[75, 1]], "l": [[73, 1]], "d": [[74, 1]], "s": [[59, 1], [65, 1]]},
+      {"b": [[77, 1]], "l": [[73, 1]], "d": [[74, 1]], "s": [[59, 1], [67, 1]]},
+      {"b": [[87, 1]], "l": [[73, 1]], "d": [[74, 1]], "s": [[75, 1]]},
+      {"b": [[77, 1]], "l": [[76, 1]], "d": [[18, 1]], "s": [[59, 1], [67, 1]]},
+      {"b": [[75, 1]], "l": [[76, 1]], "d": [[18, 1]], "s": [[59, 1], [65, 1]]},
+      {"b": [[77, 1]], "l": [[76, 1]], "d": [[18, 1]], "s": [[59, 1], [67, 1]]}
+    ],
+    "name": {
+      "ru": "Набор массы",
+      "en": "Muscle gain",
+      "uk": "Набір маси",
+      "kk": "Масса жинау",
+      "ka": "მასის მომატება",
+      "es": "Ganar masa",
+      "de": "Muskelaufbau",
+      "fr": "Prise de masse"
+    },
+    "desc": {
+      "ru": "≈2650 ккал и 170 г белка в день. В понедельник боул с говядиной и сливочная паста, в пятницу гречка с говядиной и карри.",
+      "en": "≈2650 kcal and 170 g protein a day. Beef bowl and creamy pasta on Monday, beef buckwheat and curry on Friday.",
+      "uk": "≈2650 ккал і 170 г білка на день. У понеділок боул з яловичиною й вершкова паста, у п'ятницю гречка з яловичиною й карі.",
+      "kk": "Күніне ≈2650 ккал және 170 г ақуыз. Дүйсенбіде сиыр етті боул мен кілегейлі паста, жұмада сиыр етті қарақұмық пен карри.",
+      "ka": "დღეში ≈2650 კკალ და 170 გ ცილა. ორშაბათს ბოული საქონლის ხორცით და ნაღებიანი პასტა, პარასკევს წიწიბურა საქონლის ხორცით და კარი.",
+      "es": "≈2650 kcal y 170 g de proteína al día. Bol de ternera y pasta cremosa el lunes; trigo sarraceno con ternera y curry el viernes.",
+      "de": "≈2650 kcal und 170 g Eiweiß pro Tag. Montags Rindfleisch-Bowl und cremige Pasta, freitags Buchweizen mit Rind und Curry.",
+      "fr": "≈2650 kcal et 170 g de protéines par jour. Bowl de bœuf et pâtes crémeuses le lundi, sarrasin au bœuf et curry le vendredi."
+    }
+  }
+]

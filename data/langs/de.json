@@ -1,0 +1,2052 @@
+{
+  "code": "de",
+  "native": "Deutsch",
+  "name": "German",
+  "ui": {
+    "sub": "Ersatzprodukte",
+    "ph": "Worauf hast du Lust? z. B. Pasta mit Hähnchen",
+    "all": "Alle",
+    "fav": "★ Favoriten",
+    "cats": "Kategorien",
+    "kcal": "kcal",
+    "p": "E",
+    "plus": "+ Protein",
+    "fl": "Filter und Sortierung",
+    "fk": "Kalorien",
+    "fp": "Eiweiß",
+    "fs": "Sortieren",
+    "any": "Beliebig",
+    "anyp": "Beliebig",
+    "k300": "bis 300",
+    "k500": "300 bis 500",
+    "k600": "über 500",
+    "p20": "ab 20 g",
+    "p30": "ab 30 g",
+    "p40": "ab 40 g",
+    "s0": "Standard",
+    "sp": "Meiste Eiweiß",
+    "sk": "Wenigste Kalorien",
+    "found": "Gefunden: ",
+    "none": "Nichts gefunden",
+    "none2": "Versuch ein anderes Wort oder entferne die Filter.",
+    "reset": "Alles zurücksetzen",
+    "back": "← Alle Rezepte",
+    "favAdd": "☆ Zu Favoriten",
+    "favOn": "★ In Favoriten",
+    "ver": "Variante",
+    "noP": "Ohne Proteinpulver",
+    "withP": "Mit Proteinpulver",
+    "g": ["kcal", "Eiweiß", "Fett", "Kohlenhydrate"],
+    "per": "Werte pro Portion. Rezept ergibt: ",
+    "est": "Werte geschätzt.",
+    "calc": "Aus den Zutaten berechnet.",
+    "auth": "Angaben des Rezeptautors.",
+    "ingh": "Zutaten (zum Abhaken antippen)",
+    "steph": "Zubereitung",
+    "stor": "Aufbewahrung:",
+    "vid": "▶ Zubereitung ansehen",
+    "st": "Ersatz für Zutaten",
+    "st2": "Eine Zutat gibt es im Laden nicht? Hier findest du einen Ersatz.",
+    "find": "Zutat suchen",
+    "th": ["Im Rezept", "Stattdessen"],
+    "nf": "Nichts gefunden",
+    "quickl": "Schnellsuche",
+    "base": "Hauptzutat",
+    "favaria": "Zu Favoriten",
+    "clear": "Suche löschen",
+    "foot": "Kalorien und Nährwerte gelten pro Portion. Bei den ersten Rezepten stammen die Werte von den Autoren, bei den übrigen sind sie aus den Zutaten berechnet, Abweichung etwa 10 %.",
+    "langT": "Sprache",
+    "look": "Darstellung",
+    "mode": "Design",
+    "auto": "System",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "palette": "Farbe",
+    "custom": "Eigene Farbe",
+    "resetLook": "Darstellung zurücksetzen",
+    "done": "Fertig",
+    "pal": {
+      "mint": "Minze",
+      "ocean": "Ozean",
+      "berry": "Beere",
+      "sunset": "Abendrot",
+      "lavender": "Lavendel",
+      "graphite": "Graphit"
+    },
+    "navR": "Rezepte",
+    "navDay": "Tag",
+    "navMine": "Meine",
+    "swapT": "Ersetzen durch",
+    "swapHint": "Fehlt eine Zutat? Tippe auf ⇄ daneben: Ich schlage Ersatz vor und rechne die Nährwerte neu.",
+    "swapBest": "ähnlichste Nährwerte",
+    "swapReset": "Original wiederherstellen",
+    "swapped": "mit Ersatz",
+    "resetSwaps": "Allen Ersatz zurücksetzen",
+    "perServ": "pro Portion",
+    "noSwap": "Für diese Zutat gibt es keinen Ersatz",
+    "addDay": "+ Zu meinem Tag",
+    "added": "Zu „Mein Tag“ hinzugefügt",
+    "today": "Heute",
+    "portions": "Port.",
+    "total": "Tagessumme",
+    "goal": "Tagesziel",
+    "goalK": "Kalorien",
+    "goalP": "Eiweiß, g",
+    "left": "Übrig",
+    "over": "Über dem Ziel um",
+    "emptyDay": "Noch leer. Füge ein Rezept, ein eigenes Gericht oder ein Produkt hinzu.",
+    "addProd": "+ Produkt",
+    "grams": "g",
+    "findProd": "Produkt suchen",
+    "addBtn": "Hinzufügen",
+    "remove": "Entfernen",
+    "newDish": "+ Gericht erstellen",
+    "myVersion": "Eigene Version erstellen",
+    "dishName": "Name des Gerichts",
+    "servings": "Portionen",
+    "ingredients": "Zutaten",
+    "addIng": "Zutat hinzufügen",
+    "customProd": "Eigenes Produkt",
+    "per100": "pro 100 g",
+    "name": "Name",
+    "save": "Speichern",
+    "saved": "Gespeichert",
+    "del": "Gericht löschen",
+    "delConfirm": "Sicher? Zum Löschen erneut tippen",
+    "whole": "Ganzes Gericht",
+    "oneServ": "1 Portion",
+    "emptyMine": "Noch keine Gerichte. Stell eins aus Produkten zusammen oder mach deine Version eines Rezepts.",
+    "untitled": "Ohne Namen",
+    "storageNote": "Deine Gerichte und dein Tagebuch werden nur auf diesem Gerät in diesem Browser gespeichert.",
+    "edit": "Bearbeiten",
+    "copySuffix": " (meine Version)",
+    "fL": "F",
+    "cL": "KH",
+    "noIng": "Füge mindestens eine Zutat hinzu",
+    "swapsShort": "Ersatz",
+    "genT": "Gericht erfinden",
+    "genPh": "z. B. Kalbfleischsalat ohne Tomaten",
+    "genBtn": "3 Varianten erfinden",
+    "genEx": [
+      "Kalbfleischsalat ohne Tomaten",
+      "proteinreiche Lachs-Bowl",
+      "Pasta mit Hähnchen und Pilzen",
+      "Bananen-Smoothie ohne Milch"
+    ],
+    "genUse": "Berücksichtigt",
+    "genNo": "Ohne",
+    "genUnknown": "Ich habe die Art des Gerichts nicht erkannt und einen Teller gemacht: Eiweiß, Beilage und Gemüse.",
+    "reroll": "Andere Variante",
+    "saveMine": "In meinen Gerichten speichern",
+    "oneServing": "1 Portion",
+    "photo": "Foto hochladen",
+    "photoDel": "Foto entfernen",
+    "photoNote": "Bild aus den Zutaten gezeichnet",
+    "photoFail": "Nicht genug Platz für das Foto, versuch ein kleineres",
+    "genHint": "Schreib, was du willst: Art des Gerichts, Zutaten und was nicht hinein soll.",
+    "navPlan": "Plan",
+    "navMe": "Ich",
+    "quickT": "Schnell 15-25 Min",
+    "prepT": "Meal Prep für die Woche",
+    "prepD": "Fertige Pläne: zweimal pro Woche kochen, Gerichte mit 4 Portionen halten sich in Dosen bis zu 3 Tage. Plan laden und sofort die Einkaufsliste bekommen.",
+    "cuisT": "Küche",
+    "allCu": "Alle",
+    "cu": {
+      "asian": "Asiatisch",
+      "georgian": "Georgisch",
+      "italian": "Italienisch",
+      "mexican": "Mexikanisch",
+      "mediterranean": "Mediterran",
+      "home": "Hausmannskost",
+      "american": "Amerikanisch"
+    },
+    "st0": "Am schnellsten",
+    "vegF": "Ernährung",
+    "vegetarian": "Vegetarisch",
+    "vegan": "Vegan",
+    "hiddenN": "Wegen deiner „Esse ich nicht“-Liste ausgeblendet: {n}.",
+    "showAll": "Alle zeigen",
+    "min": "Min",
+    "pcs": "Stk.",
+    "perOne": "Pro Portion",
+    "modeFit": "Nährwert-bewusst",
+    "modeClassic": "Klassisch",
+    "modeFitD": "Proteinreiche Version: leichtere Zutaten, Kalorien und Nährwerte im Griff.",
+    "modeClassicD": "Wie man es normalerweise kocht: fettere Milchprodukte und Fleisch, mehr Öl. Kalorien neu berechnet.",
+    "addPlan": "+ In den Plan",
+    "addShop": "+ Zum Einkauf",
+    "scaleNote": "Gramm sind für die Portionen umgerechnet. Löffel und Tassen bitte selbst prüfen.",
+    "notEatT": "Esse ich nicht",
+    "coachQ": "Schneller ans Ziel?",
+    "coachQd": "Ein persönliches Trainings- und Ernährungsprogramm vom Coach.",
+    "wantProg": "Ich will ein Programm",
+    "noGoal": "Kein Tagesziel gesetzt.",
+    "calcLink": "Bedarf berechnen",
+    "waterT": "Wasser",
+    "liters": "l",
+    "ml": "ml",
+    "planT": "Wochenplan",
+    "shopT": "Einkauf",
+    "slot": {"b": "Frühstück", "l": "Mittagessen", "d": "Abendessen", "s": "Snack"},
+    "planToShop": "Einkaufsliste für die Woche",
+    "planToDay": "Tag ins Tagebuch übernehmen",
+    "planClear": "Woche leeren",
+    "sureAgain": "Sicher? Nochmal tippen",
+    "load": "Laden",
+    "loaded": "Plan geladen",
+    "addedPlan": "Zum Plan hinzugefügt",
+    "addedShop": "Zum Einkauf hinzugefügt",
+    "shopMade": "Einkaufsliste erstellt",
+    "kg": "kg",
+    "shopCat": {
+      "meat": "Fleisch, Fisch, Tofu",
+      "dairy": "Milchprodukte und Eier",
+      "veg": "Gemüse und Kräuter",
+      "fruit": "Obst und Beeren",
+      "grain": "Getreide, Brot, Hülsenfrüchte",
+      "other": "Sonstiges"
+    },
+    "copy": "Kopieren",
+    "copied": "Liste kopiert",
+    "clearDone": "Gekauftes entfernen",
+    "clearAll": "Alles leeren",
+    "shopEmpty": "Die Liste ist leer. Füge ein Rezept mit „Zum Einkauf“ hinzu oder erstelle die Liste aus dem Wochenplan.",
+    "shopNote": "Einige Zutaten (Gewürze, Soßen) der ersten Rezepte fehlen in der Liste, bitte selbst prüfen:",
+    "normT": "Mein Tagesbedarf",
+    "normD": "Ich berechne Kalorien und Nährwerte für dein Ziel.",
+    "female": "Frau",
+    "male": "Mann",
+    "age": "Alter",
+    "height": "Größe, cm",
+    "weight": "Gewicht, kg",
+    "activity": "Aktivität",
+    "acts": ["Kaum Bewegung", "1-3 Trainings pro Woche", "3-5 Trainings pro Woche", "Fast täglich Training"],
+    "aims": {"lose": "Abnehmen", "maintain": "Gewicht halten", "gain": "Muskeln aufbauen"},
+    "normNote": "Du verbrauchst etwa {t} kcal am Tag. Defizit oder Überschuss sind sanft, ohne harte Einschnitte.",
+    "normFloor": "Auf ein sicheres Minimum angehoben.",
+    "setGoal": "Als Tagesziel setzen",
+    "goalSet": "Ziel gespeichert",
+    "normFill": "Alter, Größe und Gewicht ausfüllen.",
+    "normWarn": "Das ist eine Orientierung, keine Diagnose. Bei Krankheiten, Schwangerschaft oder Schwierigkeiten mit dem Essen die Werte mit einem Arzt festlegen.",
+    "weightT": "Gewicht",
+    "weightToday": "Gewicht heute, kg",
+    "weightChange": "Veränderung",
+    "notEatD": "Markiere, was du nicht isst: Diese Zutaten werden automatisch ersetzt, Rezepte ohne Ersatz werden ausgeblendet.",
+    "allerg": {
+      "lactose": "Ohne Milchprodukte",
+      "gluten": "Glutenfrei",
+      "nuts": "Ohne Nüsse",
+      "eggs": "Ohne Eier",
+      "fish": "Ohne Fisch und Meeresfrüchte",
+      "pork": "Ohne Schwein",
+      "meat": "Vegetarisch",
+      "vegan": "Vegan"
+    },
+    "notEatAdd": "Zutat hinzufügen, die du nicht isst",
+    "defModeT": "Standard-Rezeptversion",
+    "coachT": "Vom Coach",
+    "coachIntro": "Hi! Ich bin Kirill, Coach. Diese Rezepte habe ich ausgewählt, damit du lecker isst und trotzdem deinem Ziel näherkommst. Wenn du ein Trainings- und Ernährungsprogramm für dich willst, mit meiner Begleitung, schreib mir.",
+    "tips": [
+      "Eiweiß zu jeder Mahlzeit: So isst du leichter nicht zu viel.",
+      "Koche zweimal pro Woche für 3-4 Tage statt jeden Tag neu.",
+      "Kürze Kalorien nicht radikal: Langsamer Fortschritt hält länger.",
+      "Wiege dich 2-3-mal pro Woche morgens und achte auf den Trend, nicht auf einen Tag."
+    ],
+    "coachSoon": "Die Kontakte des Coaches erscheinen bald hier.",
+    "dayT": "Tag",
+    "mealT": "Mahlzeit"
+  },
+  "quick": ["Pasta", "Reis", "Hähnchen", "Quark", "Banane", "Schokolade"],
+  "stop": ["mit", "und", "der", "die", "das", "ein", "eine", "im", "in"],
+  "bases": {
+    "chicken": "Hähnchen",
+    "beef": "Rind",
+    "turkey": "Pute",
+    "fish": "Fisch & Meeresfrüchte",
+    "eggs": "Eier & Quark",
+    "veg": "Ohne Fleisch"
+  },
+  "cats": [
+    [
+      "Abendessen für mehrere Tage",
+      "Abendessen",
+      "Einmal für 3-4 Portionen kochen und mehrere Abende essen. Die Hauptmahlzeit des Tages."
+    ],
+    [
+      "Frühstück und schnelle Gerichte",
+      "Frühstück",
+      "Für Tage ohne Lust zu kochen. Viel Eiweiß, damit du bis zum Mittag satt bleibst."
+    ],
+    ["Haferflocken", "Hafer", "Fünf Varianten. Jede gibt es mit und ohne Proteinpulver."],
+    [
+      "Smoothies",
+      "Smoothies",
+      "Schnelle Mahlzeit oder Snack. Proteinpulver nach Wunsch dazu oder weglassen."
+    ],
+    ["Salate", "Salate", "Salate, die wirklich satt machen, weil jeder Eiweiß enthält."],
+    [
+      "Desserts und Süßes",
+      "Desserts",
+      "Süßes mit 200-250 kcal, damit du abends nicht schwach wirst."
+    ],
+    ["Soßen", "Soßen", "Geben Hähnchen, Rind, Reis und Salaten Geschmack, fast ohne Kalorien."],
+    ["Suppen", "Suppen", "Warme und kalte Suppen. Ein Topf reicht für 3-4 Tage."],
+    ["Snacks bis 200 kcal", "Snacks", "Damit du bis zur nächsten Mahlzeit durchhältst."],
+    ["Drinks und Shakes", "Drinks", "Proteinshakes, Limonaden und Sauermilchgetränke."],
+    ["Masseaufbau", "Masse", "Kalorienreiche Gerichte mit Eiweiß zum Zunehmen und Muskelaufbau."],
+    ["Festlich und für Gäste", "Festlich", "Gerichte für Gäste, die deinen Plan nicht sprengen."]
+  ],
+  "subs": [
+    [
+      "Hot Honey (scharfer Honig)",
+      "scharfe Soße (Sriracha, Chili) + Honig: 2 EL Honig und 1 TL scharfe Soße"
+    ],
+    [
+      "Hochland Protein+ Frischkäse, leichter Frischkäse",
+      "beliebiger Frischkäse aus dem Becher oder Quark 5 %, durch ein Sieb gestrichen"
+    ],
+    ["President Schmelzkäse", "beliebiger cremiger Schmelzkäse"],
+    ["Leichter Käse 30 %", "beliebiger Hartkäse mit 15-30 % Fett oder Mozzarella"],
+    ["Parmesan", "beliebiger Hartkäse, fein gerieben"],
+    ["Griechischer Joghurt", "dicker Naturjoghurt ohne Zucker, 2 %"],
+    ["Proteinjoghurt Vanille", "griechischer Joghurt + 1 TL Honig + ein Tropfen Vanille"],
+    ["Vanille-Proteinpulver", "ohne: mehr Joghurt oder Quark (etwas weniger Eiweiß)"],
+    ["Ahornsirup", "Honig oder Süßstoff"],
+    [
+      "Maracuja-Fruchtfleisch",
+      "Püree aus Kiwi, Himbeere, Erdbeere oder einer anderen säuerlichen Frucht"
+    ],
+    ["Austernsoße", "etwas mehr Sojasoße + eine Prise Zucker oder ein Tropfen Honig"],
+    ["Reisessig", "Apfelessig oder Zitronensaft"],
+    ["Evaporated Milk (leichte Kondensmilch)", "Sahne 10 % oder Milch 2,5 %"],
+    ["Ketchup ohne Zucker (ZERO)", "normaler Ketchup, etwas mehr Kalorien"],
+    ["Eiernudeln", "beliebige Nudeln oder Spaghetti"],
+    ["Getrocknete Tomaten", "1 EL Tomatenmark"],
+    ["Markenpasta (Barilla usw.)", "beliebige Pasta aus Hartweizen"]
+  ],
+  "rec": {
+    "1": [
+      "Tomaten-Alfredo-Hähnchen mit Spinat",
+      "4 Portionen",
+      [
+        "Hähnchenbrust: 525 g (2-3 Filets)",
+        "Tomaten-Pastasoße mit Basilikum: 360 g (1 Glas)",
+        "Sahne 10 %: 240 ml (1 Glas)",
+        "Frischkäse oder Quark 5 %: 160 g",
+        "Hartweizenpasta (Rigatoni, Penne): 225 g trocken",
+        "leichter Käse, gerieben: 100 g (3 streichholzschachtelgroße Stücke)",
+        "Spinat (frisch oder TK): 75 g (2 Handvoll)",
+        "Milch 1,5 %: 50 ml (3 EL)",
+        "getrockneter Knoblauch und Zwiebel, Pfeffer, Paprika, Kräuter der Provence, Petersilie, Dill, Salz"
+      ],
+      [
+        "Die ganzen Hähnchenfilets in einen Topf mit dickem Boden legen, Tomatensoße, Sahne, Frischkäse und alle Gewürze dazugeben. Zugedeckt 40-50 Minuten schmoren.",
+        "Das Hähnchen direkt in der Soße mit zwei Gabeln zerpflücken.",
+        "5 Minuten vor Ende den Spinat dazugeben (früher zerfällt er).",
+        "Die gekochte Pasta unterrühren (1-2 Minuten kürzer kochen als auf der Packung).",
+        "Milch dazugießen und cremig rühren. Die Hälfte des Käses unterrühren, den Rest darüberstreuen und 15 Minuten abdecken.",
+        "Auf 4 Dosen verteilen."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      ""
+    ],
+    "2": [
+      "Pasta mit Rind, Paprika und zwei Käsesorten",
+      "4 Portionen",
+      [
+        "mageres Rinderhack: 800 g",
+        "Pasta (Muscheln oder beliebige Hartweizenpasta): 225 g trocken",
+        "Paprika: 250 g (2 mittlere)",
+        "Tomaten: 250 g (2-3 mittlere)",
+        "Knoblauch: 20 g (4-5 Zehen)",
+        "leichter Käse, gerieben: 100 g",
+        "cremiger Schmelzkäse: 75 g",
+        "italienische Kräuter, geräuchertes Paprikapulver, Chiliflocken, getrockneter Knoblauch, Pfeffer, Salz"
+      ],
+      [
+        "Paprika und Tomaten grob schneiden, Knoblauch hacken. In einer trockenen Pfanne bei starker Hitze mit den Gewürzen 8-10 Minuten braten, bis die Paprika an den Rändern dunkel wird. Beiseitestellen.",
+        "Pasta 2 Minuten kürzer kochen als auf der Packung.",
+        "Das Hack in derselben Pfanne krümelig braten, mit Gewürzen, bis die Flüssigkeit verdampft ist.",
+        "Gemüse zurück zum Hack geben, Schmelzkäse und geriebenen Käse dazu und rühren, bis alles geschmolzen ist.",
+        "Pasta unterheben und auf 4 Dosen verteilen."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren. Vor dem Aufwärmen einen Löffel Milch darübergeben.",
+      "Kalorien und Eiweiß aus den Zutaten geschätzt; der Autor hat sie nicht angegeben."
+    ],
+    "3": [
+      "Alfredo mit Ofenhähnchen",
+      "4 Portionen",
+      [
+        "Hähnchenbrust: 800 g",
+        "Pasta (Fettuccine oder beliebige Hartweizenpasta): 220 g trocken",
+        "Hüttenkäse/Quark 2 %: 180 g",
+        "Milch 1,5 %: 150 ml",
+        "leichter Käse, gerieben: 50 g",
+        "Eier: 2-3",
+        "getrockneter Knoblauch, italienische Kräuter, geräuchertes Paprikapulver, Pfeffer, Salz"
+      ],
+      [
+        "Die ganzen Filets mit Paprika, Knoblauch, Salz und Pfeffer würzen. Bei 200 °C 20-25 Minuten im Ofen garen.",
+        "Eier 10 Minuten hart kochen und schälen.",
+        "Pasta 2 Minuten kürzer kochen als auf der Packung.",
+        "Quark, gekochte Eier, geriebenen Käse, Milch, Knoblauch, Kräuter, Salz und Pfeffer mit dem Mixer glatt pürieren.",
+        "Pasta etwas abkühlen lassen und die Soße unterrühren. Die Soße nicht erhitzen, sonst flockt der Quark aus.",
+        "Hähnchen in Streifen schneiden. In Dosen verteilen: Pasta mit Soße, Hähnchen obenauf."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      ""
+    ],
+    "4": [
+      "Pasta mit Rind, Speck und Paprika",
+      "4 Portionen",
+      [
+        "mageres Rinderhack: 550 g",
+        "Speck (beliebig geräuchert, auch Putenspeck): 140 g",
+        "Paprika: 325 g (2-3 Stück)",
+        "Zwiebel: 125 g (1 große)",
+        "Fusilli oder beliebige Hartweizenpasta: 180 g trocken",
+        "Soße: griechischer Joghurt 350 g, Milch 200 ml, leichter Käse 90 g, Frisch- oder Schmelzkäse 20-40 g, Parmesan oder Hartkäse 20 g, Honig 12 g (2 TL), Pfeffer"
+      ],
+      [
+        "Paprika und Zwiebel grob schneiden, in einer heißen Pfanne anbraten und würzen.",
+        "Das Hack dazugeben und krümelig braten.",
+        "Den Speck separat knusprig braten und mit dem ausgelassenen Fett zum Hack geben.",
+        "Pasta al dente kochen und abgießen.",
+        "Soße mit dem Schneebesen verrühren: Joghurt, Milch, Honig, Pfeffer. Den geriebenen Käse unterrühren, ohne Mixer.",
+        "Alles im Topf vermengen und bei kleiner Hitze erwärmen, nicht kochen lassen (der Joghurt würde gerinnen). Auf 4 Dosen verteilen."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren. Aus dem Gefrierfach: 1,5 Minuten, umrühren, weitere 45 Sekunden.",
+      ""
+    ],
+    "5": [
+      "Überbackene Pasta mit Hähnchen und karamellisierten Zwiebeln",
+      "4 Portionen (oder 5 zu 453 kcal)",
+      [
+        "Hähnchenbrust: 650 g (Gewürz: je 1 TL Paprika, Knoblauch- und Zwiebelpulver, Oregano, Salz, Pfeffer und ½ TL Chili)",
+        "Pflanzenöl: 1 EL",
+        "Zwiebeln: 1 große oder 2 mittlere, in Halbringen (mit einer Prise Paprika, Salz und italienischen Kräutern)",
+        "Knoblauch: 2 kleine Knollen (oben abschneiden)",
+        "getrocknete Tomaten: 2 EL (oder 1 EL Tomatenmark)",
+        "Sahne 10 % (statt leichter Kondensmilch): 250 ml",
+        "leichter Frischkäse: 150 g",
+        "Parmesan oder Hartkäse: 3 EL",
+        "Petersilie: 2 EL",
+        "Fusilli: 300 g trocken, ½ Zitrone"
+      ],
+      [
+        "Hähnchen und Zwiebeln mit Öl einreiben, salzen und mit den Knoblauchknollen in eine Auflaufform legen.",
+        "Mit Alufolie abdecken und bei 180 °C Umluft oder 200 °C backen. Hähnchen herausnehmen und prüfen (klarer Saft, innen 75 °C), bei Bedarf noch 5-10 Minuten. Mit Gabeln zerpflücken.",
+        "Getrocknete Tomaten in die Form geben und Zwiebeln und Knoblauch weitere 10-20 Minuten im Ofen karamellisieren (Knoblauch in Folie wickeln, falls er noch nicht weich ist).",
+        "In der warmen Form Sahne, Frischkäse, Parmesan und Petersilie zu einer Creme verrühren.",
+        "Gekochte Pasta (al dente) und Hähnchen dazugeben, Zitrone auspressen, mischen und auf Dosen verteilen."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      ""
+    ],
+    "6": [
+      "Hähnchen mit Reis und Brokkoli aus einer Form",
+      "4 Portionen",
+      [
+        "Hähnchenbrust, gewürfelt: 600 g",
+        "Basmatireis (oder anderer Langkornreis), gewaschen: 200 g trocken (1 Glas)",
+        "Brokkoli, gehackt: 600 g",
+        "Pesto: 60 g (4 EL)",
+        "griechischer Joghurt: 200 g",
+        "Hühnerbrühe (Würfel in Wasser): 500 ml",
+        "leichter Mozzarella: 150 g",
+        "Knoblauch- und Zwiebelpulver je 1 TL, Salz, Pfeffer"
+      ],
+      [
+        "Ofen auf 180 °C vorheizen.",
+        "Rohen gewaschenen Reis, Hähnchen, Pesto, Joghurt, Brokkoli, Brühe und Gewürze in eine große Auflaufform geben.",
+        "Gut mischen, damit der Reis ganz mit Flüssigkeit bedeckt ist. Mozzarella darüber verteilen.",
+        "Fest mit Alufolie abdecken und 45-55 Minuten backen, bis das Hähnchen gar und der Reis weich ist.",
+        "Folie abnehmen und weitere 10-15 Minuten goldbraun backen. In 4 Portionen teilen."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Etwa 5 g Ballaststoffe pro Portion.",
+      ""
+    ],
+    "7": [
+      "Hähnchen mit Nudeln und Gemüse in asiatischer Soße",
+      "4 Portionen",
+      [
+        "Hähnchenbrust: 900 g",
+        "Eiernudeln (oder beliebige): 225 g",
+        "Zucchini: 450 g (1 große)",
+        "Champignons: 350 g",
+        "Paprika: 200 g",
+        "Karotte: 100 g, Zwiebel: 100 g, Frühlingszwiebel: 20 g",
+        "Soße: Soja 60 g, Austernsoße 40 g (Ersatz: mehr Soja + eine Prise Zucker), Sriracha oder scharfe Soße 15 g, Knoblauch 12 g, Ingwer 10 g",
+        "Speisestärke: 1 gehäufter TL, in 50 ml kaltem Wasser angerührt",
+        "für das Hähnchen: geräuchertes Paprikapulver, getrockneter Knoblauch und Zwiebel, schwarzer Pfeffer, Salz"
+      ],
+      [
+        "Nudeln 1 Minute kürzer kochen als angegeben und kalt abspülen, sonst werden sie in ein paar Tagen matschig.",
+        "Hähnchen würfeln, in den Gewürzen wenden und portionsweise in einer trockenen, sehr heißen Pfanne 6-8 Minuten braun braten. Beiseitestellen.",
+        "Champignons grob schneiden und bei starker Hitze braten, bis das Wasser verdampft ist. Karotte in Streifen dazu, nach 2 Minuten Paprika und Zwiebel, weitere 2 Minuten. Zum Schluss Zucchini für 3-4 Minuten.",
+        "Soße: Soja, Austernsoße, Sriracha, geriebener Knoblauch und Ingwer. Die angerührte Stärke in die kochende Soße gießen.",
+        "Hähnchen zurück zum Gemüse geben, Soße dazu und erhitzen, bis sie glänzt. Vom Herd nehmen und Nudeln unterheben.",
+        "Auf 4 Dosen verteilen, Frühlingszwiebel darüber."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Kalorien und Eiweiß aus den Zutaten geschätzt; der Autor hat sie nicht angegeben."
+    ],
+    "8": [
+      "Süß-saures Hähnchen mit gebratenem Reis",
+      "4 Portionen",
+      [
+        "Hähnchenbrust: 900 g",
+        "Paprika: 300 g, Zwiebel: 150 g",
+        "Reis: 200 g trocken (1 Glas)",
+        "TK-Gemüsemischung: 500 g",
+        "Eier: 1 ganzes und 1-2 Eiweiß (oder 2 ganze)",
+        "Soße: Ketchup ohne Zucker 75 g (4 EL), Soja 40 g, Honig 30 g (1,5 EL), Sriracha 20 g, Reis- oder Apfelessig 20 ml, Knoblauch 10 g",
+        "Sojasoße für den Reis: 25 g, Speisestärke 1 TL, Frühlingszwiebel 20 g, Gewürze für das Hähnchen"
+      ],
+      [
+        "Reis mit Wasser bedecken (1 Glas Reis auf 2,25 Gläser Wasser), nach dem Aufkochen zugedeckt 20-25 Minuten garen. Abkühlen lassen (heißer Reis klebt in der Pfanne).",
+        "Hähnchen würfeln, in Gewürzen wenden und portionsweise in einer trockenen, sehr heißen Pfanne 6-8 Minuten braun braten. Beiseitestellen.",
+        "Paprika und Zwiebel in großen Würfeln bei starker Hitze 3-4 Minuten braten, damit sie innen knackig bleiben.",
+        "Soße: Ketchup, Soja, Honig, Sriracha, Essig, geriebener Knoblauch. Stärke in 50 ml kaltem Wasser anrühren und in die kochende Soße gießen.",
+        "Hähnchen zurück zur Paprika geben, Soße dazu und 2-3 Minuten glänzend erhitzen.",
+        "In einer sauberen Pfanne das Gemüse 5 Minuten erhitzen, zur Seite schieben, Eier hineingeben und zu Rührei braten. Reis und Sojasoße dazu und 3 Minuten mischen.",
+        "In Dosen verteilen: Reis mit Gemüse und Ei, darauf Hähnchen in Soße und Frühlingszwiebel."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Kalorien und Eiweiß aus den Zutaten geschätzt; der Autor hat sie nicht angegeben."
+    ],
+    "9": [
+      "Hähnchen in Orangen-Soja-Soße mit Reis",
+      "4 Portionen (laut Autor je 440 kcal)",
+      [
+        "Hähnchenbrust, gewürfelt: 800 g",
+        "Backpulver: 4 g (1 gestrichener TL, macht das Hähnchen zarter)",
+        "frischer Orangensaft: 60 ml, Sojasoße: 100 g, schwarzer Pfeffer: 2 g, Speisestärke: 12 g (1 EL)",
+        "Soße: Knoblauch 6 g, Ingwer 6 g, Orangensaft ohne Zucker 160 ml, Soja 60 g, Reis- oder Apfelessig 24 g, Zucker 14 g (3 TL, oder Süßstoff)",
+        "optional: Orangenschale, eine Prise Chiliflocken, 1 TL Öl",
+        "zum Servieren: Sesam, Frühlingszwiebel, gekochter Reis: 320 g für alle 4 Portionen (laut Autor 80 g pro Portion; mehr Reis bedeutet mehr Kalorien)"
+      ],
+      [
+        "Hähnchen mit Backpulver, Orangensaft, Sojasoße, Pfeffer und Stärke mischen und 15-20 Minuten ziehen lassen.",
+        "Hähnchen bei starker Hitze goldbraun braten.",
+        "Soße mischen (Knoblauch, Ingwer, Saft, Soja, Essig, Zucker) und dick einkochen.",
+        "Hähnchen mit der Soße vermengen und glänzend erhitzen. Mit Reis servieren, Sesam und Frühlingszwiebel darüber."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Im Video waren nur die Zutaten zu sehen; die Schritte folgen der üblichen Reihenfolge für so ein Gericht."
+    ],
+    "10": [
+      "Protein-Omelett mit Quark",
+      "1 Portion",
+      [
+        "Magerquark/Hüttenkäse 1 %: 200 g (1 Packung)",
+        "Eier: 3",
+        "leichter Käse, gerieben: 40 g",
+        "Kräuter nach Geschmack, Salz, Pfeffer"
+      ],
+      [
+        "Eier mit dem Quark per Gabel oder Mixer verquirlen, geriebenen Käse und Kräuter dazugeben.",
+        "In eine beschichtete Pfanne gießen und bei kleiner Hitze zugedeckt 8-10 Minuten garen (oder 3-4 Minuten in der Mikrowelle)."
+      ],
+      "",
+      "Die Schritte waren im Video nicht zu sehen, sie folgen der üblichen Reihenfolge."
+    ],
+    "11": [
+      "Protein-French-Toast mit Zimt",
+      "1 Portion (2 Scheiben)",
+      [
+        "Brot: 2-3 Scheiben",
+        "Ei: 1, Milch: 80 ml (⅓ Glas)",
+        "Vanille-Proteinpulver: ½ Messlöffel (15 g), ohne: ein Löffel Milchpulver oder einfach mehr Joghurt",
+        "Süßstoff oder Honig: 1 EL, Vanille ¼ TL, Zimt ¼ TL",
+        "Öl oder Spray für die Pfanne",
+        "Füllung: fettarmer griechischer Joghurt 85 g (⅓ Glas), Protein 15 g, ein Schuss Milch, Zimt"
+      ],
+      [
+        "Ei mit Milch, Protein, Süßstoff, Vanille und Zimt verquirlen.",
+        "Brot eintauchen, bis es sich ganz vollgesogen hat.",
+        "In einer gefetteten Pfanne pro Seite 1-2 Minuten goldbraun braten.",
+        "Joghurt mit dem Protein mischen, bei Bedarf etwas Milch dazu.",
+        "Toast schichtweise mit der Füllung anrichten, zwischen den Schichten und obendrauf Zimt streuen."
+      ],
+      "",
+      ""
+    ],
+    "12": [
+      "Gebackener Haferbrei Carrot Cake",
+      "8 Stücke",
+      [
+        "reife Bananen: 3 (zerdrückt)",
+        "Eier: 2",
+        "Milch: 180 ml (¾ Glas)",
+        "griechischer Joghurt: 120 g",
+        "Haferflocken: 180 g (2 Gläser)",
+        "Vanille-Proteinpulver: 60 g (ohne: fein gemahlene Haferflocken nehmen und mehr Creme)",
+        "geriebene Karotte: 100 g (1 mittlere)",
+        "Walnüsse oder Pekannüsse: 60 g",
+        "Honig: 2 EL, Zimt 1 TL, Ingwer und Muskat je ¼ TL, Backpulver 1 TL, eine Prise Salz",
+        "Creme: Quark 225 g, griechischer Joghurt 30 g, Honig 2 EL, Vanille, Zimt"
+      ],
+      [
+        "Ofen auf 180 °C vorheizen.",
+        "Alle Zutaten für den Haferbrei in einer Form von etwa 20 × 20 cm gut mischen.",
+        "30-35 Minuten goldbraun backen.",
+        "Creme glatt mixen. Haferbrei abkühlen lassen, Creme verstreichen und in 8 Stücke schneiden."
+      ],
+      "Hält sich 3-4 Tage im Kühlschrank.",
+      ""
+    ],
+    "13": [
+      "Quark-Grießkuchen mit Kirschkompott",
+      "Form ~600 g, 2 Portionen",
+      [
+        "Teig: weicher Magerquark 0,1 % 200 g, Weichweizengrieß 50 g, 1 Eigelb, 3 Eiweiß, Backpulver 4 g (1 TL), Milch 60 ml, Süßstoff nach Geschmack",
+        "Kompott: TK-Kirschen 150 g, Speisestärke 4 g (½ TL), Süßstoff nach Geschmack"
+      ],
+      [
+        "Alle Teigzutaten außer Backpulver und Eiweiß mischen. 30 Minuten quellen lassen.",
+        "Eiweiß steif schlagen. Backpulver in den Teig rühren, dann das Eiweiß vorsichtig unterheben.",
+        "In eine Form geben und bei 160 °C 30 Minuten backen. Ofen ausschalten und die Tür einen Spalt öffnen.",
+        "Kompott: Kirschen bei mittlerer Hitze in die Pfanne geben, bis Saft austritt. Stärke in einer Tasse mit 30 ml Wasser anrühren. Süßstoff dazu, Stärke einrühren und etwa 1 Minute rühren, bis es geliert.",
+        "Kompott über den Kuchen geben. Abkühlen lassen; man kann ihn über Nacht in den Kühlschrank stellen und morgens essen (oder sofort)."
+      ],
+      "",
+      "Der Autor hat die Werte für die ganze Form berechnet, für eine halbe Portion also halbieren."
+    ],
+    "14": [
+      "Protein-Cheesecake-Bowl mit Maracuja",
+      "1 Portion",
+      [
+        "Vanille-Proteinjoghurt: 160 g (Ersatz: griechischer Joghurt + 1 TL Honig + ein Tropfen Vanille)",
+        "Zitronensaft: 10 ml (2 TL)",
+        "Salz: eine Prise",
+        "Maracuja-Fruchtfleisch: 30 ml (Ersatz: Püree aus Kiwi, Himbeere oder einer anderen säuerlichen Frucht)",
+        "Butterkekse ohne Zucker: 4 (Ersatz: beliebige trockene Kekse)",
+        "Ahornsirup: 20 ml (Ersatz: 1 TL Honig oder Süßstoff)"
+      ],
+      [
+        "Joghurt, Zitronensaft und Salz mischen.",
+        "In ein mit Mulltuch oder sauberem Geschirrtuch ausgelegtes Sieb über einer Schüssel geben. Mit einer Tasse leicht beschweren und 24 Stunden in den Kühlschrank stellen, bis die Masse dick und cremig ist.",
+        "Vor dem Servieren leicht ausdrücken und mit zerbröselten Keksen und Fruchtpüree schichten."
+      ],
+      "",
+      ""
+    ],
+    "15": [
+      "Protein-Hot-Honey-Soße",
+      "8 Portionen (je 2 EL)",
+      [
+        "griechischer Joghurt 0 %: 220 g",
+        "leichte Mayonnaise: 40 g (2 EL)",
+        "Hot Honey: 40 g, bei uns: 2 EL Honig + 1 TL scharfe Soße (Sriracha, Chili)",
+        "Dijon- oder grober Senf: 15 g (1 EL)",
+        "Apfelessig: 10 g (2 TL)",
+        "Knoblauchpulver und geräuchertes Paprikapulver je ½ TL, Salz, Pfeffer"
+      ],
+      [
+        "Alle Zutaten in einen Mixer oder einen Becher mit Pürierstab geben.",
+        "Glatt und cremig mixen, abschmecken und bei Bedarf nachwürzen.",
+        "In eine Flasche oder Dose füllen und mindestens 30 Minuten kühlen. Passt zu Hähnchen, Rind und Reis."
+      ],
+      "Im Kühlschrank, gut verschlossen.",
+      ""
+    ],
+    "16": [
+      "Hähnchenbällchen in Tomatensoße mit Reis",
+      "4 Portionen",
+      [
+        "Hähnchenhack (aus Brust): 600 g",
+        "Haferflocken: 40 g (5 EL)",
+        "Ei: 55 g (1)",
+        "Zwiebel: 100 g (1 kleine)",
+        "Passata oder pürierte Dosentomaten: 500 g (2 Gläser)",
+        "Reis trocken: 200 g (1 Glas)",
+        "Olivenöl: 15 g (1 EL)",
+        "2 Knoblauchzehen, Salz, Pfeffer, getrocknetes Basilikum oder Oregano"
+      ],
+      [
+        "Reis nach Packungsanweisung kochen.",
+        "Hack mit Haferflocken, Ei, fein gehackter Zwiebel, Salz und Pfeffer mischen und Bällchen à 30-35 g formen.",
+        "Bällchen in Öl rundum 5 Minuten anbraten.",
+        "Tomaten dazugießen, Knoblauch und Kräuter dazu und zugedeckt 15 Minuten köcheln.",
+        "Reis und Bällchen mit Soße auf 4 Dosen verteilen."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "17": [
+      "Chili con Carne mit Reis",
+      "4 Portionen",
+      [
+        "mageres Rinderhack: 500 g",
+        "Zwiebel: 150 g (1 große)",
+        "Paprika: 200 g (1 große)",
+        "Passata oder Dosentomaten: 400 g (1,5 Gläser)",
+        "Kidneybohnen aus der Dose, abgetropft: 240 g (1 Dose)",
+        "Mais aus der Dose: 150 g (½ Dose)",
+        "Reis trocken: 160 g (¾ Glas)",
+        "Öl: 10 g (2 TL)",
+        "Gewürze: Paprika 2 TL, Kreuzkümmel 1 TL, Chili nach Geschmack, 3 Knoblauchzehen, Salz"
+      ],
+      [
+        "Zwiebel und Paprika in Öl 5 Minuten braten, Knoblauch und Gewürze 1 Minute mitbraten.",
+        "Hack dazugeben, mit dem Pfannenwender zerteilen und braten, bis es die Farbe ändert.",
+        "Tomaten dazugießen, Bohnen und Mais dazu und zugedeckt 25 Minuten köcheln.",
+        "Mit gekochtem Reis servieren, nach Wunsch mit einem Löffel Joghurt."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Ohne Kidneybohnen geht jede andere Dosenbohne. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "18": [
+      "Hähnchencurry mit Kichererbsen und Reis",
+      "4 Portionen",
+      [
+        "Hähnchenbrust, gewürfelt: 600 g",
+        "Kichererbsen aus der Dose, abgetropft: 240 g (1 Dose)",
+        "leichte Kokosmilch (Ersatz: Milch 2,5 % + 1 TL Öl): 200 g (¾ Glas)",
+        "Passata: 200 g (¾ Glas)",
+        "Zwiebel: 100 g (1 kleine)",
+        "Reis trocken: 200 g (1 Glas)",
+        "Öl: 10 g (2 TL)",
+        "Currypulver 1,5 EL, geriebener Ingwer und Knoblauch je 2 TL, Salz, Kräuter"
+      ],
+      [
+        "Zwiebel in Öl 4 Minuten braten, Ingwer, Knoblauch und Curry 1 Minute mitbraten.",
+        "Hähnchen dazugeben und 5 Minuten anbraten.",
+        "Passata und Kokosmilch dazugießen, Kichererbsen dazu und zugedeckt 15 Minuten köcheln.",
+        "Mit Reis servieren, Kräuter darüber."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Ohne Kokosmilch: Milch und etwas mehr Tomate nehmen, der Geschmack wird leichter. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "19": [
+      "Pasta mit Thunfisch und Tomaten",
+      "4 Portionen",
+      [
+        "Hartweizenpasta trocken: 320 g",
+        "Thunfisch im eigenen Saft, abgetropft: 360 g (3 kleine Dosen)",
+        "Passata: 400 g (1,5 Gläser)",
+        "Zwiebel: 100 g (1 kleine)",
+        "Oliven: 40 g (eine Handvoll)",
+        "Hartkäse: 40 g (streichholzschachtelgroß)",
+        "Olivenöl: 15 g (1 EL)",
+        "2 Knoblauchzehen, Chili, Salz, Pfeffer, Petersilie"
+      ],
+      [
+        "Pasta 1 Minute kürzer kochen als auf der Packung.",
+        "Zwiebel und Knoblauch in Öl anbraten, Passata dazu und 8 Minuten köcheln.",
+        "Thunfisch, Oliven und Gewürze dazugeben und 3 Minuten erwärmen.",
+        "Mit der Pasta und einem Löffel Kochwasser mischen, geriebenen Käse darüber."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "20": [
+      "Hähnchen-Burrito-Bowl",
+      "4 Portionen",
+      [
+        "Hähnchenbrust: 600 g",
+        "Reis trocken: 200 g (1 Glas)",
+        "Kidneybohnen aus der Dose: 240 g (1 Dose)",
+        "Mais: 120 g (5 EL)",
+        "Tomaten: 200 g (2 mittlere)",
+        "Avocado: 100 g (½ große)",
+        "griechischer Joghurt für die Soße: 160 g (⅔ Glas)",
+        "Paprika, Kreuzkümmel, Knoblauch, Limette oder Zitrone, Salz, Pfeffer"
+      ],
+      [
+        "Hähnchen in Streifen schneiden, in Paprika, Kreuzkümmel und Knoblauch wenden und goldbraun braten.",
+        "Reis kochen. Bohnen und Mais erwärmen.",
+        "Soße: Joghurt, Limettensaft, Knoblauch, Salz.",
+        "In Fächern auf Dosen verteilen: Reis, Hähnchen, Bohnen mit Mais, Tomaten. Avocado und Soße erst vor dem Essen dazugeben."
+      ],
+      "Hält sich 3 Tage im Kühlschrank. Avocado und Soße getrennt lagern und frisch dazugeben.",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "21": [
+      "Paprika gefüllt mit Pute und Reis",
+      "4 Portionen",
+      [
+        "große Paprika: 800 g (4 Stück)",
+        "Putenhack: 500 g",
+        "Reis trocken: 140 g (⅔ Glas)",
+        "Zwiebel: 100 g (1 kleine)",
+        "Passata: 300 g (1 Glas)",
+        "Schmand/saure Sahne 10 %: 100 g (5 EL)",
+        "Hartkäse: 60 g (2 streichholzschachtelgroße Stücke)",
+        "Salz, Pfeffer, Paprika, Kräuter"
+      ],
+      [
+        "Reis halb gar kochen. Bei den Paprika den Deckel abschneiden und die Kerne entfernen.",
+        "Hack, Reis, Zwiebel, Salz und Gewürze mischen und die Paprika füllen.",
+        "Soße: Passata mit saurer Sahne und einer Prise Salz. Paprika in eine Form stellen und mit der Soße übergießen.",
+        "Mit Folie abdecken, 40 Minuten bei 190 °C backen, dann mit Käse bestreuen und weitere 10 Minuten backen."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "22": [
+      "Ofenhähnchen mit Kartoffeln und Gemüse",
+      "4 Portionen",
+      [
+        "Hähnchenbrust oder Oberschenkel ohne Haut: 700 g",
+        "Kartoffeln: 800 g (5-6 mittlere)",
+        "Zucchini: 300 g (1 mittlere)",
+        "Paprika: 200 g (1 große)",
+        "griechischer Joghurt für die Marinade: 120 g (½ Glas)",
+        "Olivenöl: 20 g (1,5 EL)",
+        "Paprika, Knoblauchgranulat, Salz, Pfeffer, getrocknete Kräuter"
+      ],
+      [
+        "Hähnchen mit Joghurt und Gewürzen mischen und 20 Minuten ziehen lassen.",
+        "Kartoffeln in Spalten, Gemüse grob schneiden und alles mit Öl und Salz mischen.",
+        "Alles in einer Schicht auf ein Blech legen und 40-45 Minuten bei 200 °C backen, einmal wenden."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Das einfachste Rezept der Sammlung, für Tage ohne Energie zum Kochen. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "23": [
+      "Schnelle Lavash-Lasagne",
+      "4 Portionen",
+      [
+        "dünnes Lavash (oder Weizentortillas): 150 g (2 Blätter)",
+        "mageres Rinderhack: 500 g",
+        "Quark 5 %: 200 g (¾ Glas)",
+        "Passata: 400 g (1,5 Gläser)",
+        "Mozzarella: 120 g (½ Kugel)",
+        "Ei: 55 g (1)",
+        "Zwiebel: 100 g (1 kleine)",
+        "Knoblauch, Oregano, Salz, Pfeffer"
+      ],
+      [
+        "Hack mit Zwiebel anbraten, Passata dazugießen und 10 Minuten mit den Gewürzen köcheln.",
+        "Quark mit Ei und Salz verrühren.",
+        "In eine Form schichten: Lavash, Hackfleisch, Quarkmasse, wiederholen.",
+        "Mozzarella darüberreiben. 25 Minuten bei 190 °C goldbraun backen."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "24": [
+      "Garnelen mit gebratenem Reis und Gemüse",
+      "4 Portionen",
+      [
+        "geschälte Garnelen: 500 g",
+        "Reis trocken: 240 g (1 gehäuftes Glas)",
+        "Zucchini: 300 g (1 mittlere)",
+        "Paprika: 150 g (1 kleine)",
+        "Karotte: 100 g (1 mittlere)",
+        "Eier: 110 g (2)",
+        "Sojasoße: 40 g (2 EL)",
+        "Öl: 20 g (1,5 EL)",
+        "Knoblauch, Ingwer, Frühlingszwiebel"
+      ],
+      [
+        "Reis vorher kochen und abkühlen lassen (kalter Reis brät besser).",
+        "Gemüse klein schneiden und bei starker Hitze 4 Minuten braten, Knoblauch und Ingwer dazu.",
+        "Gemüse zur Seite schieben, Eier hineinschlagen und unter Rühren stocken lassen. Garnelen für 3 Minuten dazu.",
+        "Reis und Sojasoße unterrühren und erwärmen. Frühlingszwiebel darüber."
+      ],
+      "Hält sich bis zu 2 Tage im Kühlschrank.",
+      "Garnelen besser nicht länger als 2 Tage in der Dose aufbewahren. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "25": [
+      "Buchweizen mit Pute und Pilzen",
+      "4 Portionen",
+      [
+        "Buchweizen trocken: 240 g (1 gehäuftes Glas)",
+        "Putenhack: 500 g",
+        "Champignons: 300 g (10 mittlere)",
+        "Zwiebel: 100 g (1 kleine)",
+        "saure Sahne 10 %: 100 g (5 EL)",
+        "Öl: 15 g (1 EL)",
+        "Knoblauch, Salz, Pfeffer, Dill"
+      ],
+      [
+        "Buchweizen kochen.",
+        "Zwiebel und Pilze in Öl braten, bis das Wasser verdampft ist.",
+        "Hack dazu, 8 Minuten braten, saure Sahne mit Knoblauch dazugeben und 5 Minuten köcheln.",
+        "Mit Buchweizen und Dill mischen."
+      ],
+      "Hält sich 3 Tage im Kühlschrank, den Rest einfrieren. Über Nacht im Kühlschrank auftauen. 1,5 Minuten in der Mikrowelle erwärmen, umrühren.",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "26": [
+      "Shakshuka mit Feta",
+      "2 Portionen",
+      [
+        "Eier: 220 g (4)",
+        "Passata: 300 g (1 Glas)",
+        "Paprika: 150 g (1 kleine)",
+        "Zwiebel: 80 g (½ große)",
+        "Feta: 60 g (streichholzschachtelgroßes Stück)",
+        "Öl: 10 g (2 TL)",
+        "Brot zum Servieren: 100 g (2 Scheiben)",
+        "Paprika, Kreuzkümmel, Knoblauch, Salz, Kräuter"
+      ],
+      [
+        "Zwiebel und Paprika in Öl 5 Minuten braten, Knoblauch und Gewürze dazu.",
+        "Passata dazugießen und 7 Minuten köcheln.",
+        "Mulden machen, Eier hineinschlagen, zugedeckt 5-7 Minuten stocken lassen.",
+        "Feta und Kräuter darüber, mit Brot servieren."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "27": [
+      "Quarkpfannkuchen (Syrniki) mit Joghurt und Beeren",
+      "2 Portionen (6 Stück)",
+      [
+        "Quark 5 %: 400 g (1,5 Gläser)",
+        "Ei: 55 g (1)",
+        "Haferflocken, gemahlen: 50 g (6 EL)",
+        "Honig: 15 g (2 TL)",
+        "Öl für die Pfanne: 8 g (1,5 TL)",
+        "griechischer Joghurt zum Servieren: 100 g (⅓ Glas)",
+        "Beeren: 100 g (eine Handvoll)",
+        "Vanille, eine Prise Salz"
+      ],
+      [
+        "Haferflocken im Mixer zu Mehl mahlen.",
+        "Quark, Ei, Mehl, Honig, Vanille und Salz mischen und 6 Taler formen.",
+        "In einer leicht gefetteten Pfanne bei mittlerer Hitze pro Seite 3 Minuten braten.",
+        "Mit Joghurt und Beeren servieren."
+      ],
+      "",
+      "Noch mehr Eiweiß: Mehl durch 30 g Proteinpulver und 20 g Haferflocken ersetzen. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "28": [
+      "Bananen-Pancakes",
+      "1 Portion (3-4 Pancakes)",
+      [
+        "Banane: 100 g (1 kleine)",
+        "Ei: 55 g (1)",
+        "Haferflocken, gemahlen: 40 g (5 EL)",
+        "Milch: 50 g (3 EL)",
+        "Beeren zum Servieren: 80 g (eine Handvoll)",
+        "Honig: 10 g (1,5 TL)",
+        "½ TL Backpulver, Zimt",
+        "<b>Mit Protein zusätzlich:</b> Vanille-Proteinpulver (zum Mehl): 25 g (1 Messlöffel)",
+        "<b>Ohne Protein stattdessen:</b> griechischer Joghurt zum Servieren: 60 g (2 EL)"
+      ],
+      [
+        "Banane mit Gabel oder Mixer zerdrücken, Ei, Milch, Hafermehl und Backpulver dazugeben.",
+        "Kleine Pancakes in einer trockenen beschichteten Pfanne pro Seite 2 Minuten braten.",
+        "Mit Beeren und Honig servieren."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "29": [
+      "Quarkauflauf",
+      "4 Stücke",
+      [
+        "Quark 5 %: 500 g (2 Gläser)",
+        "Eier: 110 g (2)",
+        "Grieß: 40 g (3 EL)",
+        "Honig: 40 g (2 EL)",
+        "Beeren (TK geht auch): 150 g (1 Glas)",
+        "Vanille, eine Prise Salz"
+      ],
+      [
+        "Alles außer den Beeren glatt mixen und 15 Minuten quellen lassen, damit der Grieß aufquillt.",
+        "In eine Form geben, Beeren darauf.",
+        "35-40 Minuten bei 180 °C backen. Vor dem Schneiden abkühlen lassen."
+      ],
+      "Hält sich bis zu 4 Tage im Kühlschrank.",
+      "Mit einem Löffel Joghurt obendrauf ein vollwertiges Frühstück mit etwa 300 kcal. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "30": [
+      "Toast mit Avocado und Ei",
+      "1 Portion",
+      [
+        "Brot: 80 g (2 Scheiben)",
+        "Avocado: 70 g (½ kleine)",
+        "Eier: 110 g (2)",
+        "Tomate: 60 g (½ mittlere)",
+        "Zitrone, Salz, Pfeffer, Chiliflocken"
+      ],
+      [
+        "Brot im Toaster oder in einer trockenen Pfanne rösten.",
+        "Avocado mit Zitrone und Salz zerdrücken und aufs Brot streichen.",
+        "Eier weich kochen oder ohne Öl braten, darauflegen, Tomate und Gewürze dazu."
+      ],
+      "",
+      "Für mehr Eiweiß ein drittes Ei oder einen Löffel Quark aufs Brot geben. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "31": [
+      "Haferbrei mit Banane und Erdnussbutter",
+      "1 Portion",
+      [
+        "Haferflocken: 50 g (5 EL)",
+        "Milch: 200 g (1 Glas)",
+        "Banane: 100 g (1 kleine)",
+        "Erdnussbutter: 15 g (1 EL)",
+        "<b>Mit Protein zusätzlich:</b> Vanille-Proteinpulver (nach dem Kochen unterrühren, wenn der Brei etwas abgekühlt ist): 25 g (1 Messlöffel)",
+        "<b>Ohne Protein stattdessen:</b> griechischer Joghurt obendrauf: 100 g (⅓ Glas)"
+      ],
+      [
+        "Haferflocken mit Milch übergießen und unter Rühren 5 Minuten bei mittlerer Hitze kochen.",
+        "Vom Herd nehmen, die Hälfte der Banane und ggf. das Protein unterrühren.",
+        "Restliche Banane und Erdnussbutter obendrauf."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "32": [
+      "Schoko-Haferbrei",
+      "1 Portion",
+      [
+        "Haferflocken: 50 g (5 EL)",
+        "Milch: 200 g (1 Glas)",
+        "Banane: 80 g (½ große)",
+        "Kakao: 8 g (1 EL)",
+        "Honig: 10 g (2 TL)",
+        "<b>Mit Protein zusätzlich:</b> Schoko- oder Vanille-Proteinpulver: 25 g (1 Messlöffel)",
+        "<b>Ohne Protein stattdessen:</b> griechischer Joghurt obendrauf: 100 g (⅓ Glas)"
+      ],
+      [
+        "Haferflocken mit Kakao und Milch 5 Minuten kochen.",
+        "Honig und die Hälfte der Banane dazu und zerdrücken.",
+        "Restliche Bananenscheiben obendrauf."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "33": [
+      "Haferbrei „Apfelkuchen“",
+      "1 Portion",
+      [
+        "Haferflocken: 50 g (5 EL)",
+        "Milch: 200 g (1 Glas)",
+        "Apfel: 150 g (1 mittlerer)",
+        "Walnüsse: 15 g (2-3 Nüsse)",
+        "Honig: 10 g (2 TL)",
+        "Zimt 1 TL",
+        "<b>Mit Protein zusätzlich:</b> Vanille-Proteinpulver: 25 g (1 Messlöffel)",
+        "<b>Ohne Protein stattdessen:</b> griechischer Joghurt obendrauf: 100 g (⅓ Glas)"
+      ],
+      [
+        "Apfel würfeln und 3 Minuten mit Zimt in einer trockenen Pfanne dünsten.",
+        "Haferflocken 5 Minuten in Milch kochen.",
+        "Mit dem Apfel mischen, Nüsse und Honig darüber."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "34": [
+      "Overnight Oats mit Beeren und Joghurt",
+      "1 Glas",
+      [
+        "Haferflocken: 45 g (4,5 EL)",
+        "Milch: 100 g (½ Glas)",
+        "griechischer Joghurt: 150 g (½ Glas)",
+        "Chiasamen: 8 g (2 TL)",
+        "Beeren (TK geht auch): 100 g (eine Handvoll)",
+        "Honig: 10 g (2 TL)",
+        "<b>Mit Protein zusätzlich:</b> Vanille-Proteinpulver (glatt mit der Milch verrühren): 20 g (¾ Messlöffel)",
+        "<b>Ohne Protein:</b> einfach weglassen, Eiweiß ist schon genug drin"
+      ],
+      [
+        "Alles außer den Beeren in einem Glas mischen, Beeren obendrauf.",
+        "Mindestens 6 Stunden, besser über Nacht in den Kühlschrank stellen.",
+        "Morgens umrühren und kalt essen."
+      ],
+      "",
+      "Gleich 3 Gläser für mehrere Tage vorbereiten, sie halten bis zu 3 Tage. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "35": [
+      "Gebackener Haferbrei mit Kirschen",
+      "1 Portion",
+      [
+        "Haferflocken: 50 g (5 EL)",
+        "Ei: 55 g (1)",
+        "Milch: 100 g (½ Glas)",
+        "Kirschen (TK geht auch): 100 g (½ Glas)",
+        "Honig: 10 g (2 TL)",
+        "½ TL Backpulver, Zimt",
+        "<b>Mit Protein zusätzlich:</b> Vanille-Proteinpulver (mit den Haferflocken in die Masse): 20 g (¾ Messlöffel)",
+        "<b>Ohne Protein stattdessen:</b> griechischer Joghurt obendrauf: 80 g (3 EL)"
+      ],
+      [
+        "Ofen auf 180 °C vorheizen.",
+        "Haferflocken, Ei, Milch, Backpulver und Honig mischen, die Hälfte der Kirschen dazu.",
+        "In eine kleine Form gießen, restliche Kirschen darauf.",
+        "20-25 Minuten goldbraun backen."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "36": [
+      "Schoko-Bananen-Smoothie mit Erdnussbutter",
+      "1 Glas (~400 ml)",
+      [
+        "Milch: 250 g (1 Glas)",
+        "gefrorene Banane: 120 g (1 mittlere)",
+        "Erdnussbutter: 15 g (1 EL)",
+        "Kakao: 5 g (1 gehäufter TL)",
+        "Eis nach Wunsch",
+        "<b>Mit Protein zusätzlich:</b> Schoko- oder Vanille-Proteinpulver: 25 g (1 Messlöffel)",
+        "<b>Ohne Protein stattdessen:</b> griechischer Joghurt: 100 g (⅓ Glas)"
+      ],
+      ["Alles in den Mixer geben und 1 Minute glatt mixen."],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "37": [
+      "Erdbeer-Joghurt-Smoothie",
+      "1 Glas (~400 ml)",
+      [
+        "Erdbeeren (TK geht auch): 200 g (1,5 Gläser)",
+        "griechischer Joghurt: 150 g (½ Glas)",
+        "Milch: 100 g (½ Glas)",
+        "Honig: 10 g (2 TL)",
+        "<b>Mit Protein zusätzlich:</b> Vanille-Proteinpulver: 20 g (¾ Messlöffel)",
+        "<b>Ohne Protein:</b> einfach weglassen, Eiweiß ist schon genug drin"
+      ],
+      ["Alles glatt mixen. Wenn es zu dick ist, etwas Milch dazugeben."],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "38": [
+      "Grüner Smoothie mit Spinat und Ananas",
+      "1 Glas (~400 ml)",
+      [
+        "frischer Spinat: 40 g (2 Handvoll)",
+        "Banane: 100 g (1 kleine)",
+        "Ananas (TK oder frisch): 100 g (3-4 Scheiben)",
+        "Milch: 200 g (1 Glas)",
+        "griechischer Joghurt: 100 g (⅓ Glas)",
+        "<b>Mit Protein zusätzlich:</b> Vanille-Proteinpulver: 20 g (¾ Messlöffel)",
+        "<b>Ohne Protein:</b> einfach weglassen, Eiweiß ist schon genug drin"
+      ],
+      [
+        "Zuerst Spinat mit Milch mixen, dann den Rest dazugeben und gleichmäßig mixen. Den Spinat schmeckt man kaum."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "39": [
+      "Beeren-Hafer-Smoothie",
+      "1 Glas (~400 ml)",
+      [
+        "gefrorene Beeren: 150 g (1 Glas)",
+        "griechischer Joghurt: 150 g (½ Glas)",
+        "Milch: 150 g (⅔ Glas)",
+        "Haferflocken: 25 g (2,5 EL)",
+        "Honig: 10 g (2 TL)",
+        "<b>Mit Protein zusätzlich:</b> Vanille-Proteinpulver: 20 g (¾ Messlöffel)",
+        "<b>Ohne Protein:</b> einfach weglassen, Eiweiß ist schon genug drin"
+      ],
+      ["Die Haferflocken kannst du 5 Minuten in der Milch einweichen. Alles glatt mixen."],
+      "",
+      "Der Hafer macht den Smoothie dick und sättigend, er geht als leichtes Frühstück durch. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "40": [
+      "Caesar Salad mit Hähnchen und Joghurtdressing",
+      "1 Portion",
+      [
+        "Hähnchenbrust (Rohgewicht): 150 g (1 kleine)",
+        "Römersalat oder Eisbergsalat: 120 g (eine große Handvoll)",
+        "Brot für Croutons: 30 g (1 Scheibe)",
+        "Hartkäse, gerieben: 20 g (1 EL)",
+        "Kirschtomaten: 80 g (5-6)",
+        "griechischer Joghurt für das Dressing: 60 g (2 EL)",
+        "leichte Mayonnaise: 15 g (1 gehäufter TL)",
+        "für das Dressing: Knoblauch, 1 TL Senf, Zitronensaft, Salz"
+      ],
+      [
+        "Hähnchen in einer trockenen Pfanne 6-7 Minuten braten und aufschneiden. Brot würfeln und in Pfanne oder Ofen rösten.",
+        "Dressing mit der Gabel verrühren: Joghurt, Mayonnaise, Senf, Knoblauch, Zitrone.",
+        "Salat anrichten, Hähnchen, Croutons und Käse darauf."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "41": [
+      "Griechischer Salat mit Kichererbsen",
+      "1 Portion",
+      [
+        "Kichererbsen aus der Dose, abgetropft: 120 g (½ Dose)",
+        "Gurke: 150 g (1 große)",
+        "Tomaten: 150 g (1-2 mittlere)",
+        "Paprika: 80 g (½ kleine)",
+        "Feta: 50 g (ein Stück)",
+        "Oliven: 30 g (7-8)",
+        "rote Zwiebel: 30 g (¼)",
+        "Olivenöl: 10 g (2 TL)",
+        "Zitronensaft, Oregano, Salz"
+      ],
+      [
+        "Gemüse grob schneiden, Kichererbsen abspülen.",
+        "Alles mischen und mit Öl, Zitrone und Oregano anmachen. Feta obendrauf."
+      ],
+      "",
+      "Ohne Fleisch, aber mit Eiweiß aus Kichererbsen und Feta. Für mehr einfach 100 g Hähnchen dazu. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "42": [
+      "Thunfisch-Bohnen-Salat",
+      "1 Portion",
+      [
+        "Thunfisch im eigenen Saft, abgetropft: 120 g (1 kleine Dose)",
+        "Bohnen aus der Dose: 120 g (½ Dose)",
+        "Tomaten: 120 g (1 mittlere)",
+        "rote Zwiebel: 30 g (¼)",
+        "Rucola oder anderes Grün: 40 g (2 Handvoll)",
+        "gekochtes Ei: 55 g (1)",
+        "Olivenöl: 10 g (2 TL)",
+        "Zitronensaft, Salz, Pfeffer"
+      ],
+      [
+        "Alles schneiden, Bohnen und Thunfisch mit der Gabel leicht zerdrücken, Ei vierteln.",
+        "Mischen und mit Öl und Zitrone anmachen."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "43": [
+      "Garnelen-Avocado-Salat",
+      "1 Portion",
+      [
+        "geschälte Garnelen: 150 g (10-12)",
+        "Avocado: 80 g (½ kleine)",
+        "Gurke: 100 g (1 kleine)",
+        "Salatblätter: 80 g (2 Handvoll)",
+        "Mais: 50 g (2 EL)",
+        "Olivenöl: 5 g (1 TL)",
+        "griechischer Joghurt für das Dressing: 50 g (2 EL)",
+        "Knoblauch, Limette oder Zitrone, Salz, Pfeffer"
+      ],
+      [
+        "Garnelen in Öl mit Knoblauch 2-3 Minuten braten.",
+        "Gemüse und Avocado schneiden und mit Salat und Mais mischen.",
+        "Joghurt mit Limettensaft und Salz verrühren, über den Salat geben, Garnelen darauf."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "44": [
+      "Mexikanischer Salat mit Hähnchen und Bohnen",
+      "1 Portion",
+      [
+        "Hähnchenbrust (Rohgewicht): 150 g (1 kleine)",
+        "Kidneybohnen aus der Dose: 80 g (3 EL)",
+        "Mais: 60 g (3 EL)",
+        "Tomate: 100 g (1 kleine)",
+        "Salatblätter: 80 g (2 Handvoll)",
+        "Avocado: 50 g (⅓ kleine)",
+        "griechischer Joghurt für das Dressing: 60 g (2 EL)",
+        "Paprika, Kreuzkümmel, Limette, Salz, Chili nach Geschmack"
+      ],
+      [
+        "Hähnchen in Paprika und Kreuzkümmel wenden, braten und in Streifen schneiden.",
+        "Salat, Tomate, Bohnen, Mais und Avocado in einer Schüssel mischen.",
+        "Joghurt mit Limette und Salz verrühren, darübergeben und das Hähnchen obendrauf legen."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "45": [
+      "Schoko-Quark-Mousse",
+      "2 Portionen",
+      [
+        "Magerquark 1 %: 300 g (1 gehäuftes Glas)",
+        "Kakao: 15 g (1,5 EL)",
+        "Honig: 25 g (1 EL)",
+        "Milch: 50 g (3 EL)",
+        "Zartbitterschokolade zum Bestreuen: 15 g (3 Stückchen)"
+      ],
+      [
+        "Quark, Kakao, Honig und Milch mit dem Mixer ganz glatt mixen.",
+        "In Gläser füllen und 30 Minuten kühlen.",
+        "Vor dem Servieren Schokolade darüberreiben."
+      ],
+      "",
+      "Mit Quark 5 % wird es cremiger, hat aber mehr Kalorien. Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "46": [
+      "Bananen-Hafer-Brownies",
+      "6 Stücke",
+      [
+        "reife Bananen: 250 g (2 große)",
+        "Haferflocken, gemahlen: 100 g (10 EL)",
+        "Kakao: 25 g (2,5 EL)",
+        "Eier: 110 g (2)",
+        "griechischer Joghurt: 100 g (⅓ Glas)",
+        "Zartbitterschokolade, in Stücken: 40 g (½ Tafel)",
+        "Honig: 20 g (1 EL)",
+        "1 TL Backpulver, eine Prise Salz",
+        "<b>Mit Protein zusätzlich:</b> Schoko-Proteinpulver (zu den trockenen Zutaten): 30 g (1,5 Messlöffel)",
+        "<b>Ohne Protein:</b> weglassen, das Rezept klappt trotzdem, nur mit weniger Eiweiß"
+      ],
+      [
+        "Ofen auf 180 °C vorheizen. Bananen zerdrücken, Eier, Joghurt und Honig dazugeben.",
+        "Hafermehl, Kakao, Backpulver und die Hälfte der Schokolade unterrühren.",
+        "In eine Form von 18 × 18 cm geben, restliche Schokolade darauf.",
+        "25 Minuten backen. Abkühlen lassen und in 6 Stücke schneiden."
+      ],
+      "Hält sich bis zu 4 Tage im Kühlschrank.",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "47": [
+      "Chiapudding mit Mango",
+      "2 Portionen",
+      [
+        "Chiasamen: 40 g (4 EL)",
+        "Milch: 300 g (1 gehäuftes Glas)",
+        "Mango (TK geht auch): 150 g (1 kleine)",
+        "Honig: 15 g (2 TL)",
+        "<b>Mit Protein zusätzlich:</b> Vanille-Proteinpulver (vor den Chiasamen in die Milch rühren): 20 g (¾ Messlöffel)",
+        "<b>Ohne Protein stattdessen:</b> griechischer Joghurt obendrauf: 100 g (⅓ Glas)"
+      ],
+      [
+        "Chiasamen mit Milch und der Hälfte des Honigs mischen und im Abstand von 5 Minuten zweimal umrühren, damit nichts verklumpt.",
+        "4 Stunden oder über Nacht kühlen.",
+        "Mango pürieren und mit dem Pudding schichten."
+      ],
+      "Hält sich bis zu 3 Tage im Kühlschrank.",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "48": [
+      "Bratäpfel mit Quark",
+      "2 Portionen",
+      [
+        "große Äpfel: 400 g (2)",
+        "Quark 5 %: 150 g (½ Glas)",
+        "Honig: 20 g (2 TL)",
+        "Walnüsse: 10 g (1-2 Nüsse)",
+        "Zimt, Vanille"
+      ],
+      [
+        "Bei den Äpfeln oben einen Deckel abschneiden und vorsichtig entkernen, den Boden stehen lassen.",
+        "Quark mit Honig, Zimt und Vanille verrühren, die Äpfel füllen, Nüsse darauf.",
+        "25 Minuten bei 180 °C backen."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "49": [
+      "Joghurteis mit Beeren",
+      "2 Portionen",
+      [
+        "griechischer Joghurt: 300 g (1 Glas)",
+        "gefrorene Beeren: 200 g (1,5 Gläser)",
+        "Honig: 25 g (1 EL)",
+        "<b>Mit Protein zusätzlich:</b> Vanille-Proteinpulver: 20 g (¾ Messlöffel)",
+        "<b>Ohne Protein:</b> einfach weglassen, Eiweiß ist schon genug drin"
+      ],
+      [
+        "Alles zu einer dicken Masse mixen.",
+        "Für festeres Eis 1-2 Stunden ins Gefrierfach stellen und nach einer Stunde umrühren."
+      ],
+      "",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "50": [
+      "Joghurt-Knoblauch-Soße",
+      "4 Portionen (je 3 EL)",
+      [
+        "griechischer Joghurt 0 %: 200 g (¾ Glas)",
+        "1-2 Knoblauchzehen, Saft von ½ Zitrone, Dill, Salz, Pfeffer"
+      ],
+      [
+        "Alles verrühren und 15 Minuten ziehen lassen. Passt zu Hähnchen, Kartoffeln, der Burrito-Bowl und Salaten."
+      ],
+      "Hält sich bis zu 4 Tage im Kühlschrank.",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "51": [
+      "Leichtes Caesar-Dressing",
+      "4 Portionen (je 2 EL)",
+      [
+        "griechischer Joghurt 0 %: 100 g (⅓ Glas)",
+        "leichte Mayonnaise: 30 g (1,5 EL)",
+        "geriebener Hartkäse: 20 g (1 EL)",
+        "Senf 1 TL, 1 Knoblauchzehe, Saft von ½ Zitrone, Salz, Pfeffer"
+      ],
+      ["Alles glatt verrühren. Wenn es zu dick ist, Wasser dazugeben."],
+      "Hält sich bis zu 4 Tage im Kühlschrank.",
+      "Nährwerte aus den Zutaten berechnet, Abweichung etwa 10 %."
+    ],
+    "52": [
+      "Hühnersuppe mit Nudeln",
+      null,
+      null,
+      [
+        "Hähnchen mit Brühe oder Wasser bedecken, aufkochen, abschäumen und 20 Minuten köcheln. Herausnehmen und klein schneiden.",
+        "Kartoffeln, Karotten und Zwiebel dazugeben und 10 Minuten kochen.",
+        "Nudeln hineingeben, Hähnchen zurück in den Topf und noch 7-8 Minuten kochen. Salzen, mit Kräutern bestreuen."
+      ],
+      null,
+      null
+    ],
+    "53": [
+      "Linsensuppe",
+      null,
+      null,
+      [
+        "Zwiebel, Karotte und Knoblauch 5 Minuten im Öl anbraten.",
+        "Gewaschene rote Linsen, Tomaten und Brühe dazugeben. 20 Minuten köcheln, bis die Linsen zerfallen.",
+        "Die Hälfte pürieren, salzen und Zitronensaft dazugeben."
+      ],
+      null,
+      null
+    ],
+    "54": [
+      "Tomatensuppe mit Bohnen und Pute",
+      null,
+      null,
+      [
+        "Pute würfeln und mit Zwiebel und Knoblauch 5 Minuten anbraten.",
+        "Paprika, Tomaten, Bohnen und Brühe dazugeben.",
+        "15 Minuten köcheln, salzen und pfeffern."
+      ],
+      null,
+      null
+    ],
+    "55": [
+      "Brokkoli-Cremesuppe",
+      null,
+      null,
+      [
+        "Kartoffeln, Zwiebel und Brokkoli mit Brühe bedecken und 15 Minuten kochen.",
+        "Milch dazugießen und glatt pürieren.",
+        "Geriebenen Käse unterrühren, unter Rühren erhitzen und salzen."
+      ],
+      null,
+      null
+    ],
+    "56": [
+      "Leichtes Chartscho",
+      null,
+      null,
+      [
+        "Rindfleisch in Stücke schneiden, mit Wasser bedecken und 35 Minuten köcheln, dabei abschäumen.",
+        "Reis, Zwiebel und Tomaten dazugeben und 12 Minuten kochen.",
+        "Gemahlene Walnüsse, Tkemali, Knoblauch und Chmeli-Suneli einrühren, 3 Minuten kochen und mit Koriander bestreuen."
+      ],
+      null,
+      null
+    ],
+    "57": [
+      "Okroschka mit Kefir",
+      null,
+      null,
+      [
+        "Hähnchen, Eier und Pellkartoffeln kochen und abkühlen lassen.",
+        "Alles mit Gurken, Frühlingszwiebeln und Dill würfeln.",
+        "Mit kaltem, mit Wasser verdünntem Kefir übergießen und salzen. Kalt servieren."
+      ],
+      null,
+      null
+    ],
+    "58": [
+      "Asiatische Hühnersuppe mit Reisnudeln",
+      null,
+      null,
+      [
+        "Hähnchen in Brühe mit Ingwer und Knoblauch 15 Minuten köcheln, dann in dünne Scheiben schneiden.",
+        "Pilze und Karotte dazugeben, 5 Minuten kochen und Sojasoße einrühren.",
+        "Nudeln und Spinat hineingeben, nach 3 Minuten das Hähnchen zurückgeben und mit Frühlingszwiebeln bestreuen."
+      ],
+      null,
+      null
+    ],
+    "59": [
+      "Proteinriegel ohne Backen",
+      null,
+      null,
+      [
+        "Haferflocken und Proteinpulver mischen, Erdnussbutter, Honig und Milch dazugeben und zu einer festen Masse kneten.",
+        "1,5 cm dick in eine ausgelegte Form drücken und mit geschmolzener Schokolade beträufeln.",
+        "1 Stunde kühlen und in 8 Riegel schneiden."
+      ],
+      null,
+      null
+    ],
+    "60": [
+      "Hummus mit Gemüsesticks",
+      null,
+      null,
+      [
+        "Kichererbsen mit Tahini, Zitronensaft, Knoblauch und Wasser cremig pürieren und salzen.",
+        "Karotte, Gurke und Paprika in Sticks schneiden.",
+        "Gemüse in den Hummus dippen. Er hält sich 4 Tage im Kühlschrank."
+      ],
+      null,
+      null
+    ],
+    "61": [
+      "Quarkbällchen in Kokos",
+      null,
+      null,
+      [
+        "Quark mit Proteinpulver und Honig zu einer festen Masse zerdrücken.",
+        "Mit nassen Händen 12 Bällchen rollen.",
+        "In Kokosraspeln oder Kakao wälzen und 20 Minuten kühlen. Eine Portion sind 3 Bällchen."
+      ],
+      null,
+      null
+    ],
+    "62": [
+      "Eier mit Gurke und Joghurt",
+      null,
+      null,
+      [
+        "Eier 9 Minuten hart kochen und in kaltem Wasser abschrecken.",
+        "Eier und Gurke in Scheiben schneiden.",
+        "Mit Kräuterjoghurt beträufeln, salzen und pfeffern."
+      ],
+      null,
+      null
+    ],
+    "63": [
+      "Puten-Käse-Röllchen",
+      null,
+      null,
+      [
+        "Putenschinkenscheiben auslegen.",
+        "Auf jede ein Stück Käse, einen Gurkenstick und ein Salatblatt legen.",
+        "Aufrollen und mit einem Zahnstocher feststecken."
+      ],
+      null,
+      null
+    ],
+    "64": [
+      "Joghurt mit Beeren und Chia",
+      null,
+      null,
+      [
+        "Joghurt in eine Schale geben.",
+        "Frische oder aufgetaute Beeren dazugeben.",
+        "Mit Honig beträufeln und mit Chiasamen bestreuen."
+      ],
+      null,
+      null
+    ],
+    "65": [
+      "Apfel mit Erdnussbutter",
+      null,
+      null,
+      [
+        "Apfel entkernen und in Spalten schneiden.",
+        "Etwa 15 g Erdnussbutter abmessen, einen Löffel.",
+        "Spalten eintauchen, nach Wunsch mit Zimt bestäuben."
+      ],
+      null,
+      null
+    ],
+    "66": [
+      "Knusprige Ofen-Kichererbsen",
+      null,
+      null,
+      [
+        "Kichererbsen aus der Dose mit einem Tuch trocken tupfen.",
+        "Mit Öl, Salz, Paprika und Knoblauchpulver mischen.",
+        "Bei 200 °C 30 Minuten rösten und alle 10 Minuten schütteln. Beim Abkühlen werden sie knusprig."
+      ],
+      null,
+      null
+    ],
+    "67": [
+      "Protein-Kaffee-Shake",
+      null,
+      null,
+      [
+        "Espresso oder starken Kaffee kochen und abkühlen lassen.",
+        "Kaffee mit Milch, Proteinpulver und Süßstoff mixen.",
+        "Auf Eis servieren."
+      ],
+      null,
+      null
+    ],
+    "68": [
+      "Heißer Protein-Kakao",
+      null,
+      null,
+      [
+        "Milch fast bis zum Kochen erhitzen.",
+        "Kakao und Proteinpulver separat mit 3 Esslöffeln warmer Milch glatt rühren.",
+        "Restliche Milch dazugießen, aufschlagen und süßen. Nach dem Protein nicht mehr kochen."
+      ],
+      null,
+      null
+    ],
+    "69": [
+      "Ingwer-Minz-Limonade",
+      null,
+      null,
+      [
+        "Ingwer reiben, mit 300 ml heißem Wasser und dem Honig übergießen und 10 Minuten ziehen lassen.",
+        "Abseihen, Zitronensaft und kaltes Wasser dazugeben.",
+        "Minze und Eis hinzufügen. Hält sich 2 Tage im Kühlschrank."
+      ],
+      null,
+      null
+    ],
+    "70": [
+      "Kefir-Beeren-Drink",
+      null,
+      null,
+      [
+        "Kefir und Beeren in den Mixer geben.",
+        "30 Sekunden mixen und nach Geschmack süßen.",
+        "Sofort trinken, solange er schaumig ist."
+      ],
+      null,
+      null
+    ],
+    "71": [
+      "Mango-Lassi",
+      null,
+      null,
+      [
+        "Mango schälen und würfeln.",
+        "Mit Joghurt, Milch und einer Prise Kardamom mixen.",
+        "Kalt servieren, nach Wunsch mit Eis."
+      ],
+      null,
+      null
+    ],
+    "72": [
+      "Tan mit Gurke und Minze",
+      null,
+      null,
+      [
+        "Matsoni mit kaltem Wasser und einer Prise Salz verquirlen.",
+        "Gurke reiben und Minze fein hacken.",
+        "Alles mischen und auf Eis servieren. Sehr erfrischend."
+      ],
+      null,
+      null
+    ],
+    "73": [
+      "Große Rindfleisch-Reis-Bowl",
+      null,
+      null,
+      [
+        "Reis kochen. Rindfleisch in dünne Streifen schneiden.",
+        "Fleisch bei starker Hitze 3 Minuten anbraten, dann Paprika und Brokkoli 4 Minuten mitbraten.",
+        "Sojasoße mit Honig und Knoblauch dazugeben und erhitzen. Auf dem Reis mit Sesam servieren."
+      ],
+      null,
+      null
+    ],
+    "74": [
+      "Cremige Pasta mit Hähnchen und Pilzen",
+      null,
+      null,
+      [
+        "Pasta kochen. Hähnchen würfeln und im Öl 6 Minuten braten.",
+        "Pilze und Knoblauch dazugeben und 5 Minuten braten.",
+        "Sahne angießen, geriebenen Käse und Pasta unterrühren und 2 Minuten erhitzen."
+      ],
+      null,
+      null
+    ],
+    "75": [
+      "Selbstgemachter Weight Gainer",
+      null,
+      null,
+      [
+        "Haferflocken im Mixer zu Mehl mahlen.",
+        "Milch, Banane, Erdnussbutter, Proteinpulver und Honig dazugeben.",
+        "Glatt mixen. Etwa 800 kcal, praktisch zwischen den Mahlzeiten beim Masseaufbau."
+      ],
+      null,
+      null
+    ],
+    "76": [
+      "Buchweizen mit Rind, Ei und Gemüse",
+      null,
+      null,
+      [
+        "Buchweizen kochen. Rindfleisch würfeln.",
+        "Fleisch mit Zwiebel und Karotte im Öl 10 Minuten braten, etwas Wasser angießen und 10 Minuten schmoren.",
+        "Mit Buchweizen und Butter mischen und ein gekochtes oder Spiegelei darauf legen."
+      ],
+      null,
+      null
+    ],
+    "77": [
+      "Haferbrei für den Masseaufbau",
+      null,
+      null,
+      [
+        "Haferflocken 5 Minuten in der Milch kochen.",
+        "Bananenscheiben und Erdnussbutter dazugeben.",
+        "Mit Walnüssen bestreuen und mit Honig beträufeln."
+      ],
+      null,
+      null
+    ],
+    "78": [
+      "Ofenlachs mit Zitrone und Kräutern",
+      null,
+      null,
+      [
+        "Kartoffeln in Spalten schneiden, mit der Hälfte des Öls beträufeln und bei 200 °C 15 Minuten backen.",
+        "Lachs mit Salz, Knoblauch und Kräutern einreiben, mit Zitronenscheiben und dem restlichen Öl belegen.",
+        "Fisch zu den Kartoffeln legen und weitere 15 Minuten backen."
+      ],
+      null,
+      null
+    ],
+    "79": [
+      "Hähnchenspieße in Joghurtmarinade",
+      null,
+      null,
+      [
+        "Hähnchen in Stücke schneiden und mindestens 1 Stunde in Joghurt mit Knoblauch, Zitrone und Gewürzen marinieren.",
+        "Mit Paprika und Zwiebel auf Spieße stecken.",
+        "Grillen oder bei 220 °C 15-18 Minuten backen und dabei wenden. Mit Tkemali servieren."
+      ],
+      null,
+      null
+    ],
+    "80": [
+      "Champignons gefüllt mit Hähnchen und Käse",
+      null,
+      null,
+      [
+        "Pilzstiele entfernen, mit der Zwiebel fein hacken und 5 Minuten braten.",
+        "Mit fein gehacktem Hähnchen, Joghurt, Knoblauch und Kräutern mischen und salzen.",
+        "Die Köpfe füllen, mit Käse bestreuen und bei 190 °C 20 Minuten backen."
+      ],
+      null,
+      null
+    ],
+    "81": [
+      "Leichter Olivier-Salat",
+      null,
+      null,
+      [
+        "Hähnchen, Kartoffeln, Karotte und Eier kochen und abkühlen lassen.",
+        "Alles mit den Gewürzgurken würfeln und die Erbsen dazugeben.",
+        "Mit Joghurt und einem Löffel Mayo anmachen, salzen und mit Dill bestreuen."
+      ],
+      null,
+      null
+    ],
+    "82": [
+      "Käsekuchen ohne Backen",
+      null,
+      null,
+      [
+        "Haferflocken mahlen, mit geschmolzener Butter und Honig mischen und in die Form drücken.",
+        "Quark, Frischkäse, Joghurt, Proteinpulver und Süßstoff glatt mixen und auf dem Boden verteilen.",
+        "Mindestens 4 Stunden kühlen. Mit Beeren servieren."
+      ],
+      null,
+      null
+    ],
+    "83": [
+      "Hähnchen-Tschachochbili",
+      null,
+      null,
+      [
+        "Hähnchenstücke in einer trockenen Pfanne 8 Minuten anbräunen.",
+        "Zwiebel und Öl dazugeben, nach 5 Minuten geriebene Tomaten und Paprika hinzufügen und zugedeckt 25 Minuten schmoren.",
+        "Knoblauch, Chmeli-Suneli und viele Kräuter einrühren und 5 Minuten ziehen lassen."
+      ],
+      null,
+      null
+    ],
+    "84": [
+      "Lobio",
+      null,
+      null,
+      [
+        "Zwiebel im Öl 7 Minuten braten.",
+        "Bohnen mit etwas Flüssigkeit dazugeben, einen Teil zerdrücken und 10 Minuten köcheln.",
+        "Gemahlene Walnüsse, Knoblauch, Chmeli-Suneli, Tkemali und Koriander einrühren. Schmeckt warm und kalt."
+      ],
+      null,
+      null
+    ],
+    "85": [
+      "Spinat-Pchali",
+      null,
+      null,
+      [
+        "Spinat 1 Minute in kochendem Wasser blanchieren, abgießen und gut ausdrücken.",
+        "Walnüsse mit Knoblauch, Zwiebel, Koriander, Chmeli-Suneli und Zitronensaft zu einer Paste mixen.",
+        "Mit dem Spinat mischen, zu Bällchen formen und mit Granatapfelkernen garnieren."
+      ],
+      null,
+      null
+    ],
+    "86": [
+      "Adschapsandali",
+      null,
+      null,
+      [
+        "Aubergine und Zucchini würfeln und in der Hälfte des Öls 8 Minuten braten.",
+        "Im Topf Zwiebel und Paprika 5 Minuten dünsten, dann Kartoffeln, gebratenes Gemüse und geriebene Tomaten dazugeben.",
+        "Zugedeckt 30 Minuten schmoren, zum Schluss Knoblauch und Kräuter einrühren. Am nächsten Tag noch besser."
+      ],
+      null,
+      null
+    ],
+    "87": [
+      "Leichtes Lavash-Chatschapuri",
+      null,
+      null,
+      [
+        "Geriebenen Käse, Quark und ein Ei mischen.",
+        "Füllung auf dem Lavash verteilen, zu einem Päckchen falten und mit dem zweiten verquirlten Ei bestreichen.",
+        "Bei 200 °C 10-12 Minuten goldbraun backen."
+      ],
+      null,
+      null
+    ],
+    "88": [
+      "Leichtes Tschkmeruli",
+      null,
+      null,
+      [
+        "Hähnchen salzen und bei 210 °C 25-30 Minuten goldbraun braten.",
+        "Milch mit zerdrücktem Knoblauch und Butter erwärmen, nicht kochen, und salzen.",
+        "Knoblauchsoße über das Hähnchen gießen und weitere 7 Minuten backen. Mit Kräutern bestreuen."
+      ],
+      null,
+      null
+    ],
+    "89": [
+      "Teriyaki-Hähnchen mit Reis und Brokkoli",
+      null,
+      null,
+      [
+        "Reis kochen und Brokkoli 5 Minuten dämpfen.",
+        "Hähnchenstücke im Öl 8 Minuten braten.",
+        "Sojasoße mit Honig, Ingwer und Knoblauch dazugeben und 3 Minuten glänzend einkochen. Mit Sesam bestreuen."
+      ],
+      null,
+      null
+    ],
+    "90": [
+      "Lachs-Poke-Bowl",
+      null,
+      null,
+      [
+        "Reis kochen und lauwarm abkühlen lassen.",
+        "Lachs würfeln und 10 Minuten in Sojasoße mit Zitronensaft marinieren.",
+        "Schalen anrichten: Reis, Lachs, Avocado, Gurke und Karotte. Mit Sesam und Frühlingszwiebeln bestreuen. Lachs in Sushi-Qualität verwenden."
+      ],
+      null,
+      null
+    ]
+  },
+  "food": {
+    "chicken": "Hähnchenbrust",
+    "chicken_mince": "Hähnchenhack",
+    "turkey": "Pute",
+    "beef": "Mageres Rind",
+    "veal": "Kalbfleisch",
+    "pork": "Mageres Schwein",
+    "bacon": "Speck",
+    "shrimp": "Garnelen",
+    "tuna": "Thunfisch (Dose)",
+    "salmon": "Lachs",
+    "whitefish": "Weißfisch (Kabeljau, Seehecht)",
+    "tofu": "Tofu",
+    "egg": "Ei",
+    "eggwhite": "Eiweiß (Eiklar)",
+    "tvorog1": "Magerquark 1%",
+    "tvorog2": "Quark 2%",
+    "tvorog5": "Quark 5%",
+    "greek0": "Griechischer Joghurt 0%",
+    "greek2": "Griechischer Joghurt 2%",
+    "skyr": "Skyr",
+    "yogurt": "Naturjoghurt 2,5%",
+    "kefir": "Kefir 1%",
+    "milk": "Milch 2,5%",
+    "milkskim": "Magermilch",
+    "oatmilk": "Haferdrink",
+    "almondmilk": "Mandeldrink ungesüßt",
+    "soymilk": "Sojadrink",
+    "cream10": "Sahne 10%",
+    "sour": "Saure Sahne 10%",
+    "coconut": "Leichte Kokosmilch",
+    "hard": "Hartkäse",
+    "lightcheese": "Leichter Käse 30%",
+    "mozz": "Leichter Mozzarella",
+    "feta": "Feta",
+    "suluguni": "Sulguni-Käse",
+    "procheese": "Schmelzkäse",
+    "creamcheese": "Leichter Frischkäse",
+    "oats": "Haferflocken",
+    "rice": "Reis (trocken)",
+    "ricecooked": "Reis (gekocht)",
+    "buckwheat": "Buchweizen (trocken)",
+    "buckwheatcooked": "Buchweizen (gekocht)",
+    "pasta": "Pasta (trocken)",
+    "pastacooked": "Pasta (gekocht)",
+    "bulgur": "Bulgur (trocken)",
+    "quinoa": "Quinoa (trocken)",
+    "couscous": "Couscous (trocken)",
+    "potato": "Kartoffel",
+    "sweetpotato": "Süßkartoffel",
+    "bread": "Brot",
+    "lavash": "Lavash",
+    "tortilla": "Weizentortilla",
+    "semolina": "Grieß",
+    "beans": "Bohnen (Dose)",
+    "chickpeas": "Kichererbsen (Dose)",
+    "lentils": "Linsen (gekocht)",
+    "corn": "Mais (Dose)",
+    "pepper": "Paprika",
+    "zucchini": "Zucchini",
+    "broccoli": "Brokkoli",
+    "cauliflower": "Blumenkohl",
+    "mushroom": "Champignons",
+    "spinach": "Spinat",
+    "carrot": "Karotte",
+    "tomato": "Tomaten",
+    "passata": "Passata",
+    "cucumber": "Gurke",
+    "onion": "Zwiebel",
+    "eggplant": "Aubergine",
+    "greenbeans": "Grüne Bohnen",
+    "vegmix": "TK-Gemüsemischung",
+    "lettuce": "Salatblätter",
+    "arugula": "Rucola",
+    "banana": "Banane",
+    "apple": "Apfel",
+    "pear": "Birne",
+    "berries": "Beerenmischung",
+    "strawberry": "Erdbeeren",
+    "mango": "Mango",
+    "cherry": "Kirschen",
+    "pineapple": "Ananas",
+    "kiwi": "Kiwi",
+    "persimmon": "Kaki",
+    "avocado": "Avocado",
+    "olives": "Oliven",
+    "oil": "Öl (Oliven-/Pflanzenöl)",
+    "pb": "Erdnussbutter",
+    "walnut": "Walnüsse",
+    "almonds": "Mandeln",
+    "chia": "Chiasamen",
+    "honey": "Honig",
+    "maple": "Ahornsirup",
+    "sugar": "Zucker",
+    "sweetener": "Süßstoff",
+    "cocoa": "Kakaopulver",
+    "choc": "Zartbitterschokolade",
+    "protein": "Whey-Protein",
+    "mayo": "Leichte Mayonnaise",
+    "soy": "Sojasoße",
+    "ketchup": "Ketchup",
+    "chickenthigh": "Hähnchenschenkel ohne Haut",
+    "beef20": "Rinderhack 20%",
+    "turkeyham": "Putenschinken",
+    "sour20": "Saure Sahne 20%",
+    "tvorog9": "Quark 9%",
+    "mozzfull": "Mozzarella",
+    "milk32": "Vollmilch 3,2%",
+    "cream20": "Sahne 20%",
+    "mayofull": "Mayonnaise",
+    "creamcheesefull": "Frischkäse (Doppelrahm)",
+    "butter": "Butter",
+    "matsoni": "Matsoni (Joghurt)",
+    "imeruli": "Imeruli-Käse",
+    "flour": "Weizenmehl",
+    "granola": "Granola",
+    "ricenoodles": "Reisnudeln (trocken)",
+    "lentilsdry": "Linsen (trocken)",
+    "beet": "Rote Bete",
+    "cabbage": "Kohl",
+    "pumpkin": "Kürbis",
+    "celery": "Sellerie",
+    "greenpeas": "Erbsen",
+    "pickles": "Gewürzgurken",
+    "dates": "Datteln",
+    "pomegranate": "Granatapfel",
+    "lemon": "Zitrone",
+    "peanuts": "Erdnüsse",
+    "sesame": "Sesam",
+    "tahini": "Tahini",
+    "coconutflakes": "Kokosraspeln",
+    "tkemali": "Tkemali (Pflaumensoße)",
+    "garlic": "Knoblauch",
+    "ginger": "Ingwer",
+    "herbs": "Frische Kräuter (Koriander, Petersilie, Dill)",
+    "greenonion": "Frühlingszwiebel",
+    "mint": "Minze",
+    "khmeli": "Khmeli Suneli",
+    "spices": "Salz und Gewürze nach Geschmack",
+    "broth": "Brühe oder Wasser",
+    "water": "Wasser",
+    "coffee": "Kaffee (Espresso)"
+  },
+  "gen": {
+    "types": ["Salat", "Bowl", "Pasta", "Wrap", "Omelett", "Haferbrei", "Smoothie", "Teller"],
+    "kw": [
+      ["salat"],
+      ["bowl", "poke", "schüssel"],
+      ["pasta", "nudel", "spaghet"],
+      ["wrap", "burrito", "döner"],
+      ["omelett", "rührei"],
+      ["haferbrei", "porridge", "haferflocken"],
+      ["smoothie", "shake"],
+      ["abendessen", "mittagessen"]
+    ],
+    "neg": ["ohne", "außer", "kein", "keine", "keinen"],
+    "negAfter": [],
+    "negSuffix": ["frei"],
+    "cat": {
+      "meat": ["fleisch"],
+      "dairy": ["milchprodukt", "laktose"],
+      "gluten": ["gluten"],
+      "fish": ["fisch"]
+    },
+    "var": [
+      ["Klassisch", "Lecker und sättigend, Kalorien egal"],
+      ["Proteinreich", "Maximal Eiweiß, minimal Fett"],
+      ["Ausgewogen", "Kluge Kalorien und Nährwerte, nahrhafte Zutaten"]
+    ],
+    "steps": {
+      "salad": [
+        "{P} zubereiten: braten, backen oder kochen und schneiden.",
+        "{V} schneiden und mit dem Grün mischen.",
+        "Restliche Zutaten dazu, anmachen und sofort servieren."
+      ],
+      "bowl": [
+        "{G} kochen.",
+        "{P} zubereiten, {V} schneiden.",
+        "Alles in Abschnitten in eine Schüssel geben und mit Soße beträufeln."
+      ],
+      "pasta": [
+        "{G} 1 Minute kürzer kochen als auf der Packung.",
+        "{P} mit {V} 8-10 Minuten braten.",
+        "Mit der Pasta mischen, Käse und Soße dazu und 2 Minuten erwärmen."
+      ],
+      "wrap": [
+        "{P} zubereiten und in Streifen schneiden.",
+        "{V} schneiden.",
+        "Fladen mit Soße bestreichen, Füllung darauf und fest einrollen."
+      ],
+      "omelet": [
+        "Eier mit dem Milchprodukt und einer Prise Salz verquirlen.",
+        "{V} 3-4 Minuten braten.",
+        "Eier darübergießen und zugedeckt bei kleiner Hitze 5-7 Minuten stocken lassen."
+      ],
+      "oatmeal": [
+        "Haferflocken in der Flüssigkeit 5 Minuten unter Rühren kochen.",
+        "Vom Herd nehmen und die Extras unterrühren.",
+        "Obst darauf geben."
+      ],
+      "smoothie": [
+        "Alle Zutaten in den Mixer geben.",
+        "1 Minute glatt mixen.",
+        "Wenn es zu dick ist, etwas Flüssigkeit dazugeben."
+      ],
+      "plate": [
+        "Beilage zubereiten: {G}.",
+        "{P} braten oder backen, bis es gar ist.",
+        "{V} dünsten oder rösten und alles zusammen servieren."
+      ]
+    }
+  }
+}

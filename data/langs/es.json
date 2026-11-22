@@ -1,0 +1,2056 @@
+{
+  "code": "es",
+  "native": "Español",
+  "name": "Spanish",
+  "ui": {
+    "sub": "Sustituciones",
+    "ph": "¿Qué te apetece? Ej.: pasta con pollo",
+    "all": "Todas",
+    "fav": "★ Favoritas",
+    "cats": "Categorías",
+    "kcal": "kcal",
+    "p": "P",
+    "plus": "+ proteína",
+    "fl": "Filtros y orden",
+    "fk": "Calorías",
+    "fp": "Proteína",
+    "fs": "Ordenar",
+    "any": "Cualquiera",
+    "anyp": "Cualquiera",
+    "k300": "hasta 300",
+    "k500": "de 300 a 500",
+    "k600": "más de 500",
+    "p20": "desde 20 g",
+    "p30": "desde 30 g",
+    "p40": "desde 40 g",
+    "s0": "Orden por defecto",
+    "sp": "Más proteína",
+    "sk": "Menos calorías",
+    "found": "Encontradas: ",
+    "none": "No se encontró nada",
+    "none2": "Prueba otra palabra o quita los filtros.",
+    "reset": "Restablecer todo",
+    "back": "← Todas las recetas",
+    "favAdd": "☆ Añadir a favoritas",
+    "favOn": "★ En favoritas",
+    "ver": "Versión",
+    "noP": "Sin proteína en polvo",
+    "withP": "Con proteína en polvo",
+    "g": ["kcal", "proteína", "grasa", "carbohidratos"],
+    "per": "Valores por ración. La receta rinde: ",
+    "est": "Valores estimados.",
+    "calc": "Calculado a partir de los ingredientes.",
+    "auth": "Datos del autor de la receta.",
+    "ingh": "Ingredientes (toca para marcar)",
+    "steph": "Preparación",
+    "stor": "Conservación:",
+    "vid": "▶ Ver cómo se prepara",
+    "st": "Sustituciones de ingredientes",
+    "st2": "¿No encuentras un ingrediente? Mira aquí con qué cambiarlo.",
+    "find": "Buscar ingrediente",
+    "th": ["En la receta", "Usa en su lugar"],
+    "nf": "No se encontró nada",
+    "quickl": "Búsqueda rápida",
+    "base": "Ingrediente principal",
+    "favaria": "Añadir a favoritas",
+    "clear": "Borrar búsqueda",
+    "foot": "Las calorías y macros son por ración. En el primer grupo de recetas los valores son de los autores; en el resto están calculados a partir de los ingredientes, con un margen de error de aprox. 10%.",
+    "langT": "Idioma",
+    "look": "Apariencia",
+    "mode": "Tema",
+    "auto": "Sistema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "palette": "Color",
+    "custom": "Color propio",
+    "resetLook": "Restablecer apariencia",
+    "done": "Listo",
+    "pal": {
+      "mint": "Menta",
+      "ocean": "Océano",
+      "berry": "Frutos rojos",
+      "sunset": "Atardecer",
+      "lavender": "Lavanda",
+      "graphite": "Grafito"
+    },
+    "navR": "Recetas",
+    "navDay": "Día",
+    "navMine": "Míos",
+    "swapT": "Cambiar por",
+    "swapHint": "¿Te falta un ingrediente? Toca ⇄ a su lado: te propongo un sustituto y recalculo los macros.",
+    "swapBest": "macros más parecidos",
+    "swapReset": "Volver al original",
+    "swapped": "con cambios",
+    "resetSwaps": "Quitar todos los cambios",
+    "perServ": "por ración",
+    "noSwap": "No hay sustituto para este ingrediente",
+    "addDay": "+ A mi día",
+    "added": "Añadido a «Mi día»",
+    "today": "Hoy",
+    "portions": "rac.",
+    "total": "Total del día",
+    "goal": "Objetivo diario",
+    "goalK": "Calorías",
+    "goalP": "Proteína, g",
+    "left": "Quedan",
+    "over": "Por encima del objetivo",
+    "emptyDay": "Aún vacío. Añade una receta, un plato tuyo o un producto.",
+    "addProd": "+ Producto",
+    "grams": "g",
+    "findProd": "Buscar producto",
+    "addBtn": "Añadir",
+    "remove": "Quitar",
+    "newDish": "+ Crear plato",
+    "myVersion": "Hacer mi versión",
+    "dishName": "Nombre del plato",
+    "servings": "Raciones",
+    "ingredients": "Ingredientes",
+    "addIng": "Añadir ingrediente",
+    "customProd": "Producto propio",
+    "per100": "por 100 g",
+    "name": "Nombre",
+    "save": "Guardar",
+    "saved": "Guardado",
+    "del": "Borrar plato",
+    "delConfirm": "¿Seguro? Toca otra vez para borrar",
+    "whole": "Plato entero",
+    "oneServ": "1 ración",
+    "emptyMine": "Aún no tienes platos. Crea uno con productos o haz tu versión de cualquier receta.",
+    "untitled": "Sin nombre",
+    "storageNote": "Tus platos y tu diario se guardan solo en este dispositivo, en este navegador.",
+    "edit": "Editar",
+    "copySuffix": " (mi versión)",
+    "fL": "G",
+    "cL": "C",
+    "noIng": "Añade al menos un ingrediente",
+    "swapsShort": "cambios",
+    "genT": "Inventar un plato",
+    "genPh": "Ej.: ensalada de ternera sin tomate",
+    "genBtn": "Inventar 3 opciones",
+    "genEx": [
+      "ensalada de ternera sin tomate",
+      "bowl proteico de salmón",
+      "pasta con pollo y champiñones",
+      "batido de plátano sin leche"
+    ],
+    "genUse": "Incluido",
+    "genNo": "Sin",
+    "genUnknown": "No reconocí el tipo de plato, así que hice un plato combinado: proteína, guarnición y verduras.",
+    "reroll": "Otra opción",
+    "saveMine": "Guardar en mis platos",
+    "oneServing": "1 ración",
+    "photo": "Subir foto",
+    "photoDel": "Quitar foto",
+    "photoNote": "Imagen dibujada según los ingredientes",
+    "photoFail": "No hay espacio para la foto, prueba con una más pequeña",
+    "genHint": "Escribe lo que quieres: tipo de plato, ingredientes y qué no debe llevar.",
+    "navPlan": "Plan",
+    "navMe": "Yo",
+    "quickT": "Rápidas 15-25 min",
+    "prepT": "Táperes para la semana",
+    "prepD": "Planes listos: cocinas 2 veces por semana y los platos de 4 raciones se guardan en táperes hasta 3 días. Carga un plan y obtén la lista de la compra al momento.",
+    "cuisT": "Cocina",
+    "allCu": "Todas",
+    "cu": {
+      "asian": "Asiática",
+      "georgian": "Georgiana",
+      "italian": "Italiana",
+      "mexican": "Mexicana",
+      "mediterranean": "Mediterránea",
+      "home": "Casera",
+      "american": "Americana"
+    },
+    "st0": "Más rápidas",
+    "vegF": "Dieta",
+    "vegetarian": "Vegetariano",
+    "vegan": "Vegano",
+    "hiddenN": "Recetas ocultas por tu lista «No como»: {n}.",
+    "showAll": "Mostrar todas",
+    "min": "min",
+    "pcs": "ud.",
+    "perOne": "Por ración",
+    "modeFit": "Con macros",
+    "modeClassic": "Clásico",
+    "modeFitD": "Versión proteica: productos más ligeros, calorías y macros bajo control.",
+    "modeClassicD": "Como se hace normalmente: lácteos y carne más grasos, más aceite. Calorías recalculadas.",
+    "addPlan": "+ Al plan",
+    "addShop": "+ A la compra",
+    "scaleNote": "Los gramos se recalculan según las raciones. Revisa tú las cucharadas y vasos.",
+    "notEatT": "No como",
+    "coachQ": "¿Quieres resultados más rápido?",
+    "coachQd": "Un programa personal de entrenamiento y alimentación del entrenador.",
+    "wantProg": "Quiero un programa",
+    "noGoal": "No hay objetivo diario.",
+    "calcLink": "Calcular mis necesidades",
+    "waterT": "Agua",
+    "liters": "l",
+    "ml": "ml",
+    "planT": "Plan semanal",
+    "shopT": "Compra",
+    "slot": {"b": "Desayuno", "l": "Comida", "d": "Cena", "s": "Merienda"},
+    "planToShop": "Lista de la compra de la semana",
+    "planToDay": "Pasar el día al diario",
+    "planClear": "Vaciar la semana",
+    "sureAgain": "¿Seguro? Toca otra vez",
+    "load": "Cargar",
+    "loaded": "Plan cargado",
+    "addedPlan": "Añadido al plan",
+    "addedShop": "Añadido a la compra",
+    "shopMade": "Lista de la compra lista",
+    "kg": "kg",
+    "shopCat": {
+      "meat": "Carne, pescado, tofu",
+      "dairy": "Lácteos y huevos",
+      "veg": "Verduras y hierbas",
+      "fruit": "Frutas y bayas",
+      "grain": "Cereales, pan, legumbres",
+      "other": "Otros"
+    },
+    "copy": "Copiar",
+    "copied": "Lista copiada",
+    "clearDone": "Quitar lo comprado",
+    "clearAll": "Vaciar todo",
+    "shopEmpty": "La lista está vacía. Añade una receta con «A la compra» o crea la lista desde el plan semanal.",
+    "shopNote": "Algunos ingredientes (especias, salsas) de las recetas del primer grupo no están en la lista, revísalos tú:",
+    "normT": "Mis necesidades diarias",
+    "normD": "Calculo las calorías y macros para tu objetivo.",
+    "female": "Mujer",
+    "male": "Hombre",
+    "age": "Edad",
+    "height": "Altura, cm",
+    "weight": "Peso, kg",
+    "activity": "Actividad",
+    "acts": [
+      "Casi sin moverme",
+      "1-3 entrenos por semana",
+      "3-5 entrenos por semana",
+      "Entreno casi a diario"
+    ],
+    "aims": {"lose": "Perder peso", "maintain": "Mantener", "gain": "Ganar masa"},
+    "normNote": "Gastas unas {t} kcal al día. El déficit o superávit es suave, sin recortes drásticos.",
+    "normFloor": "Subido a un mínimo seguro.",
+    "setGoal": "Usar como objetivo diario",
+    "goalSet": "Objetivo guardado",
+    "normFill": "Rellena edad, altura y peso.",
+    "normWarn": "Es una orientación, no un diagnóstico. Con enfermedades, embarazo o dificultades con la comida, ajusta las cifras con un médico.",
+    "weightT": "Peso",
+    "weightToday": "Peso de hoy, kg",
+    "weightChange": "Cambio",
+    "notEatD": "Marca lo que no comes: esos productos se sustituyen solos y las recetas sin sustituto se ocultan.",
+    "allerg": {
+      "lactose": "Sin lácteos",
+      "gluten": "Sin gluten",
+      "nuts": "Sin frutos secos",
+      "eggs": "Sin huevo",
+      "fish": "Sin pescado ni marisco",
+      "pork": "Sin cerdo",
+      "meat": "Vegetariano",
+      "vegan": "Vegano"
+    },
+    "notEatAdd": "Añadir un producto que no comes",
+    "defModeT": "Versión de receta por defecto",
+    "coachT": "Del entrenador",
+    "coachIntro": "¡Hola! Soy Kirill, entrenador. Elegí estas recetas para que comas rico y aun así avances hacia tu objetivo. Si quieres un programa de entrenamiento y alimentación hecho para ti, con mi acompañamiento, escríbeme.",
+    "tips": [
+      "Proteína en cada comida: así es más fácil no comer de más.",
+      "Cocina 2 veces por semana para 3-4 días en lugar de empezar cada día de cero.",
+      "No recortes calorías de golpe: el progreso lento dura más.",
+      "Pésate por la mañana 2-3 veces por semana y mira la tendencia, no un solo día."
+    ],
+    "coachSoon": "Los contactos del entrenador aparecerán aquí pronto.",
+    "dayT": "Día",
+    "mealT": "Comida"
+  },
+  "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
+  "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],
+  "bases": {
+    "chicken": "Pollo",
+    "beef": "Ternera",
+    "turkey": "Pavo",
+    "fish": "Pescado y marisco",
+    "eggs": "Huevos y requesón",
+    "veg": "Sin carne"
+  },
+  "cats": [
+    [
+      "Cenas para varios días",
+      "Cenas",
+      "Cocinas una vez para 3-4 raciones y comes varias noches. La comida principal del día."
+    ],
+    [
+      "Desayunos y platos rápidos",
+      "Desayunos",
+      "Para los días sin ganas de cocinar. Mucha proteína para aguantar hasta la comida."
+    ],
+    ["Avena", "Avena", "Cinco tipos. Cada una con versión con proteína en polvo y sin ella."],
+    [
+      "Batidos",
+      "Batidos",
+      "Una comida rápida o un tentempié. Puedes añadir proteína en polvo o no."
+    ],
+    ["Ensaladas", "Ensaladas", "Ensaladas que de verdad llenan, porque todas llevan proteína."],
+    ["Postres y dulces", "Postres", "Dulces de 200-250 kcal para no caer por la noche."],
+    [
+      "Salsas",
+      "Salsas",
+      "Dan sabor al pollo, la ternera, el arroz y las ensaladas casi sin calorías."
+    ],
+    ["Sopas", "Sopas", "Sopas calientes y frías. Cocinas una olla para 3-4 días."],
+    [
+      "Snacks de hasta 200 kcal",
+      "Snacks",
+      "Para aguantar hasta la siguiente comida sin picar de más."
+    ],
+    ["Bebidas y batidos", "Bebidas", "Batidos de proteína, limonadas y bebidas fermentadas."],
+    ["Para ganar masa", "Masa", "Platos calóricos con proteína para ganar peso y músculo."],
+    ["Festivo y para invitados", "Fiesta", "Platos para invitados que no rompen tu plan."]
+  ],
+  "subs": [
+    [
+      "Hot honey (miel picante)",
+      "salsa picante (sriracha, chile) + miel: 2 cucharadas de miel y 1 cucharadita de salsa picante"
+    ],
+    [
+      "Queso crema Hochland Protein+, queso crema light",
+      "cualquier queso crema de tarrina o requesón 5% pasado por un colador"
+    ],
+    ["Queso fundido President", "cualquier queso fundido cremoso"],
+    ["Queso light 30%", "cualquier queso curado de 15-30% de grasa o mozzarella"],
+    ["Parmesano", "cualquier queso curado rallado fino"],
+    ["Yogur griego", "yogur natural espeso sin azúcar 2%"],
+    ["Yogur proteico de vainilla", "yogur griego + 1 cucharadita de miel + una gota de vainilla"],
+    ["Proteína de vainilla en polvo", "sin ella: más yogur o requesón (algo menos de proteína)"],
+    ["Sirope de arce", "miel o edulcorante"],
+    ["Pulpa de maracuyá", "puré de kiwi, frambuesa, fresa o cualquier fruta ácida"],
+    ["Salsa de ostras", "un poco más de salsa de soja + una pizca de azúcar o una gota de miel"],
+    ["Vinagre de arroz", "vinagre de manzana o zumo de limón"],
+    ["Evaporated milk (leche evaporada light)", "nata 10% o leche 2,5%"],
+    ["Kétchup sin azúcar (ZERO)", "kétchup normal, algunas calorías más"],
+    ["Fideos de huevo", "cualquier fideo o espaguetis"],
+    ["Tomates secos", "1 cucharada de tomate concentrado"],
+    ["Pasta de marca (Barilla, etc.)", "cualquier pasta de trigo duro"]
+  ],
+  "rec": {
+    "1": [
+      "Pollo al tomate alfredo con espinacas",
+      "4 raciones",
+      [
+        "pechuga de pollo: 525 g (2-3 filetes)",
+        "salsa de tomate con albahaca para pasta: 360 g (1 bote)",
+        "nata 10%: 240 ml (1 vaso)",
+        "queso crema o requesón 5%: 160 g",
+        "pasta de trigo duro (rigatoni, penne): 225 g en seco",
+        "queso light rallado: 100 g (3 trozos del tamaño de una caja de cerillas)",
+        "espinacas (frescas o congeladas): 75 g (2 puñados)",
+        "leche 1,5%: 50 ml (3 cucharadas)",
+        "ajo y cebolla secos, pimienta, pimentón, hierbas provenzales, perejil, eneldo, sal"
+      ],
+      [
+        "Pon las pechugas enteras en una olla de fondo grueso, añade la salsa de tomate, la nata, el queso crema y todas las especias. Cocina tapado 40-50 minutos.",
+        "Desmenuza el pollo con dos tenedores dentro de la salsa.",
+        "Añade las espinacas 5 minutos antes del final (antes se deshacen).",
+        "Incorpora la pasta cocida (cuécela 1-2 minutos menos de lo que indica el paquete).",
+        "Añade la leche y remueve hasta que quede cremoso. Mezcla la mitad del queso, espolvorea el resto por encima y tapa 15 minutos.",
+        "Reparte en 4 táperes."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      ""
+    ],
+    "2": [
+      "Pasta con ternera, pimiento y dos quesos",
+      "4 raciones",
+      [
+        "carne picada de ternera magra: 800 g",
+        "pasta (conchas o cualquiera de trigo duro): 225 g en seco",
+        "pimiento: 250 g (2 medianos)",
+        "tomates: 250 g (2-3 medianos)",
+        "ajo: 20 g (4-5 dientes)",
+        "queso light rallado: 100 g",
+        "queso fundido cremoso: 75 g",
+        "hierbas italianas, pimentón ahumado, copos de chile, ajo seco, pimienta, sal"
+      ],
+      [
+        "Corta en trozos grandes el pimiento y el tomate y pica el ajo. Saltéalos en una sartén seca a fuego fuerte con las especias 8-10 minutos, hasta que el pimiento se dore en los bordes. Reserva.",
+        "Cuece la pasta 2 minutos menos de lo que indica el paquete.",
+        "En la misma sartén pon la carne, deshaz los grumos y fríe con especias hasta que se evapore el agua.",
+        "Devuelve las verduras a la carne, añade el queso fundido y el queso rallado y mezcla hasta que se derritan.",
+        "Incorpora la pasta y reparte en 4 táperes."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve. Antes de calentar, pon una cucharada de leche por encima.",
+      "Calorías y proteína estimadas a partir de los ingredientes; el autor no las mostró."
+    ],
+    "3": [
+      "Alfredo con pollo al horno",
+      "4 raciones",
+      [
+        "pechuga de pollo: 800 g",
+        "pasta (fettuccine o cualquiera de trigo duro): 220 g en seco",
+        "requesón 2%: 180 g",
+        "leche 1,5%: 150 ml",
+        "queso light rallado: 50 g",
+        "huevos: 2-3",
+        "ajo seco, hierbas italianas, pimentón ahumado, pimienta, sal"
+      ],
+      [
+        "Sazona las pechugas enteras con pimentón, ajo, sal y pimienta. Hornea a 200 °C 20-25 minutos hasta que estén hechas.",
+        "Cuece los huevos 10 minutos y pélalos.",
+        "Cuece la pasta 2 minutos menos de lo que indica el paquete.",
+        "Tritura con la batidora el requesón, los huevos cocidos, el queso rallado, la leche, el ajo, las hierbas, la sal y la pimienta hasta que quede liso.",
+        "Deja que la pasta se temple un poco y mezcla con la salsa. No calientes la salsa o el requesón se cortará.",
+        "Corta el pollo en tiras. Reparte en táperes: pasta con salsa y el pollo por encima."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      ""
+    ],
+    "4": [
+      "Pasta con ternera, beicon y pimiento dulce",
+      "4 raciones",
+      [
+        "carne picada de ternera magra: 550 g",
+        "beicon (cualquier ahumado, vale el de pavo): 140 g",
+        "pimiento: 325 g (2-3)",
+        "cebolla: 125 g (1 grande)",
+        "fusilli o cualquier pasta de trigo duro: 180 g en seco",
+        "salsa: yogur griego 350 g, leche 200 ml, queso light 90 g, queso crema o fundido 20-40 g, parmesano o queso curado 20 g, miel 12 g (2 cucharaditas), pimienta"
+      ],
+      [
+        "Corta el pimiento y la cebolla en trozos grandes, saltéalos en una sartén caliente y sazona.",
+        "Añade la carne en la misma sartén y deshaz los grumos.",
+        "Fríe el beicon aparte hasta que esté crujiente y añádelo a la carne con su grasa.",
+        "Cuece la pasta al dente y escúrrela.",
+        "Bate la salsa con varillas: yogur, leche, miel, pimienta. Incorpora los quesos rallados, no hace falta batidora.",
+        "Junta todo en una olla y calienta a fuego bajo sin que hierva (el yogur se cortaría). Reparte en 4 táperes."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve. Desde el congelador: 1,5 minutos, remueve y 45 segundos más.",
+      ""
+    ],
+    "5": [
+      "Pasta al horno con pollo y cebolla caramelizada",
+      "4 raciones (o 5 de 453 kcal)",
+      [
+        "pechuga de pollo: 650 g (adobo: 1 cucharadita de pimentón, ajo y cebolla en polvo, orégano, sal y pimienta, y ½ cucharadita de chile)",
+        "aceite vegetal: 1 cucharada",
+        "cebolla: 1 grande o 2 medianas, en juliana (con una pizca de pimentón, sal y hierbas italianas)",
+        "ajo: 2 cabezas pequeñas (corta la parte de arriba)",
+        "tomates secos: 2 cucharadas (o 1 cucharada de tomate concentrado)",
+        "nata 10% (en lugar de leche evaporada light): 250 ml",
+        "queso crema light: 150 g",
+        "parmesano o queso curado: 3 cucharadas",
+        "perejil: 2 cucharadas",
+        "fusilli: 300 g en seco, ½ limón"
+      ],
+      [
+        "Unta el pollo y la cebolla con aceite, sala y colócalos en una fuente junto con las cabezas de ajo.",
+        "Tapa con papel de aluminio y hornea a 180 °C (con ventilador) o 200 °C. Saca el pollo y comprueba que esté hecho (jugos transparentes, 75 °C por dentro); si hace falta, 5-10 minutos más. Desmenúzalo con tenedores.",
+        "Añade los tomates secos a la fuente y devuelve la cebolla y el ajo al horno 10-20 minutos hasta que se caramelicen (si el ajo no está listo, envuélvelo en papel de aluminio).",
+        "En la fuente aún caliente mezcla la nata, el queso crema, el parmesano y el perejil hasta formar una crema.",
+        "Añade la pasta cocida (al dente) y el pollo, exprime el limón, mezcla y reparte en táperes."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      ""
+    ],
+    "6": [
+      "Pollo con arroz y brócoli en una sola fuente",
+      "4 raciones",
+      [
+        "pechuga de pollo en dados: 600 g",
+        "arroz basmati (o cualquier grano largo), lavado: 200 g en seco (1 vaso)",
+        "brócoli troceado: 600 g",
+        "pesto: 60 g (4 cucharadas)",
+        "yogur griego: 200 g",
+        "caldo de pollo (pastilla en agua): 500 ml",
+        "mozzarella light: 150 g",
+        "ajo y cebolla en polvo, 1 cucharadita de cada, sal, pimienta"
+      ],
+      [
+        "Precalienta el horno a 180 °C.",
+        "Pon en una fuente grande el arroz crudo lavado, el pollo, el pesto, el yogur, el brócoli, el caldo y las especias.",
+        "Mezcla bien para que el arroz quede cubierto de líquido. Reparte la mozzarella por encima.",
+        "Tapa bien con papel de aluminio y hornea 45-55 minutos, hasta que el pollo esté hecho y el arroz tierno.",
+        "Quita el aluminio y hornea 10-15 minutos más hasta que se dore. Divide en 4 raciones."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Unos 5 g de fibra por ración.",
+      ""
+    ],
+    "7": [
+      "Pollo con fideos y verduras en salsa asiática",
+      "4 raciones",
+      [
+        "pechuga de pollo: 900 g",
+        "fideos de huevo (o cualquiera): 225 g",
+        "calabacín: 450 g (1 grande)",
+        "champiñones: 350 g",
+        "pimiento: 200 g",
+        "zanahoria: 100 g, cebolla: 100 g, cebolleta: 20 g",
+        "salsa: soja 60 g, salsa de ostras 40 g (o más soja + una pizca de azúcar), sriracha o salsa picante 15 g, ajo 12 g, jengibre 10 g",
+        "maicena: 1 cucharadita colmada disuelta en 50 ml de agua fría",
+        "para el pollo: pimentón ahumado, ajo y cebolla secos, pimienta negra, sal"
+      ],
+      [
+        "Cuece los fideos 1 minuto menos de lo indicado y acláralos con agua fría; si no, en unos días se ablandan.",
+        "Corta el pollo en dados, rebózalo en las especias y fríelo en una sartén seca muy caliente por tandas, 6-8 minutos, hasta que se dore. Reserva.",
+        "Corta los champiñones en trozos grandes y saltéalos a fuego fuerte hasta que se evapore el agua. Añade la zanahoria en tiras, a los 2 minutos el pimiento y la cebolla, 2 minutos más. Al final el calabacín, 3-4 minutos.",
+        "Salsa: soja, ostras, sriracha, ajo y jengibre rallados. Echa la maicena disuelta en la salsa hirviendo.",
+        "Devuelve el pollo a las verduras, añade la salsa y calienta hasta que brille. Retira del fuego e incorpora los fideos.",
+        "Reparte en 4 táperes con cebolleta por encima."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "Calorías y proteína estimadas a partir de los ingredientes; el autor no las mostró."
+    ],
+    "8": [
+      "Pollo agridulce con arroz frito",
+      "4 raciones",
+      [
+        "pechuga de pollo: 900 g",
+        "pimiento: 300 g, cebolla: 150 g",
+        "arroz: 200 g en seco (1 vaso)",
+        "mezcla de verduras congeladas: 500 g",
+        "huevos: 1 entero y 1-2 claras (o 2 enteros)",
+        "salsa: kétchup sin azúcar 75 g (4 cucharadas), soja 40 g, miel 30 g (1,5 cucharadas), sriracha 20 g, vinagre de arroz o de manzana 20 ml, ajo 10 g",
+        "soja para el arroz: 25 g, maicena 1 cucharadita, cebolleta 20 g, especias para el pollo"
+      ],
+      [
+        "Cubre el arroz con agua (1 vaso de arroz por 2,25 de agua) y, cuando hierva, cuece tapado 20-25 minutos. Deja enfriar (el arroz caliente se apelmaza en la sartén).",
+        "Corta el pollo en dados, rebózalo en especias y fríelo en una sartén seca muy caliente por tandas, 6-8 minutos, hasta que se dore. Reserva.",
+        "Saltea el pimiento y la cebolla en dados grandes a fuego fuerte 3-4 minutos para que queden crujientes por dentro.",
+        "Salsa: kétchup, soja, miel, sriracha, vinagre y ajo rallado. Disuelve la maicena en 50 ml de agua fría y échala en la salsa cuando hierva.",
+        "Devuelve el pollo al pimiento, añade la salsa y calienta 2-3 minutos hasta que brille.",
+        "En otra sartén calienta las verduras 5 minutos, apártalas a un lado, echa los huevos y haz un revuelto. Añade el arroz y la soja y saltea 3 minutos.",
+        "Reparte en táperes: arroz con verduras y huevo, el pollo en salsa por encima y cebolleta."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "Calorías y proteína estimadas a partir de los ingredientes; el autor no las mostró."
+    ],
+    "9": [
+      "Pollo en salsa de naranja y soja con arroz",
+      "4 raciones (440 kcal cada una según el autor)",
+      [
+        "pechuga de pollo en dados: 800 g",
+        "levadura química: 4 g (1 cucharadita rasa, deja el pollo más tierno)",
+        "zumo de naranja natural: 60 ml, salsa de soja: 100 g, pimienta negra: 2 g, maicena: 12 g (1 cucharada)",
+        "salsa: ajo 6 g, jengibre 6 g, zumo de naranja sin azúcar 160 ml, soja 60 g, vinagre de arroz o de manzana 24 g, azúcar 14 g (3 cucharaditas, o edulcorante)",
+        "opcional: ralladura de naranja, una pizca de copos de chile, 1 cucharadita de aceite",
+        "para servir: sésamo, cebolleta, arroz cocido: 320 g para las 4 raciones (80 g por ración según el autor; más arroz significa más calorías)"
+      ],
+      [
+        "Mezcla el pollo con la levadura, el zumo de naranja, la soja, la pimienta y la maicena y deja reposar 15-20 minutos.",
+        "Saltea el pollo a fuego fuerte hasta que esté dorado.",
+        "Mezcla la salsa (ajo, jengibre, zumo, soja, vinagre, azúcar) y redúcela hasta que espese.",
+        "Junta el pollo con la salsa y calienta hasta que brille. Sirve con arroz, sésamo y cebolleta por encima."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "En el vídeo solo se ven los ingredientes; los pasos siguen el orden habitual para este tipo de plato."
+    ],
+    "10": [
+      "Tortilla proteica con requesón",
+      "1 ración",
+      [
+        "requesón 1%: 200 g (1 paquete)",
+        "huevos: 3",
+        "queso light rallado: 40 g",
+        "hierbas al gusto, sal, pimienta"
+      ],
+      [
+        "Bate los huevos con el requesón con un tenedor o batidora y añade el queso rallado y las hierbas.",
+        "Vierte en una sartén antiadherente y cocina a fuego bajo, tapado, 8-10 minutos (o 3-4 minutos en el microondas)."
+      ],
+      "",
+      "En el vídeo no se veían los pasos; están escritos en el orden habitual."
+    ],
+    "11": [
+      "Tostada francesa proteica con canela",
+      "1 ración (2 rebanadas)",
+      [
+        "pan: 2-3 rebanadas",
+        "huevo: 1, leche: 80 ml (⅓ de vaso)",
+        "proteína de vainilla en polvo: ½ cacito (15 g); sin ella: una cucharada de leche en polvo o simplemente más yogur",
+        "edulcorante o miel: 1 cucharada, vainilla ¼ de cucharadita, canela ¼ de cucharadita",
+        "aceite o espray para la sartén",
+        "relleno: yogur griego 0% 85 g (⅓ de vaso), proteína 15 g, un chorrito de leche, canela"
+      ],
+      [
+        "Bate el huevo con la leche, la proteína, el edulcorante, la vainilla y la canela.",
+        "Moja el pan para que se empape bien.",
+        "Dóralo en una sartén engrasada 1-2 minutos por cada lado.",
+        "Mezcla el yogur con la proteína; si hace falta, añade un poco de leche.",
+        "Monta la tostada por capas con el relleno, espolvorea canela entre capas y por encima."
+      ],
+      "",
+      ""
+    ],
+    "12": [
+      "Avena al horno Carrot cake",
+      "8 porciones",
+      [
+        "plátanos maduros: 3 (machacados)",
+        "huevos: 2",
+        "leche: 180 ml (¾ de vaso)",
+        "yogur griego: 120 g",
+        "copos de avena: 180 g (2 vasos)",
+        "proteína de vainilla en polvo: 60 g (sin ella, usa avena molida fina y añade más crema)",
+        "zanahoria rallada: 100 g (1 mediana)",
+        "nueces o pecanas: 60 g",
+        "miel: 2 cucharadas, canela 1 cucharadita, jengibre y nuez moscada ¼ de cucharadita de cada, levadura química 1 cucharadita, una pizca de sal",
+        "crema: requesón 225 g, yogur griego 30 g, miel 2 cucharadas, vainilla, canela"
+      ],
+      [
+        "Precalienta el horno a 180 °C.",
+        "Mezcla bien todos los ingredientes de la avena en un molde de unos 20 × 20 cm.",
+        "Hornea 30-35 minutos hasta que se dore.",
+        "Tritura la crema hasta que quede lisa. Deja enfriar la avena, unta la crema y corta en 8 porciones."
+      ],
+      "Se conserva 3-4 días en la nevera.",
+      ""
+    ],
+    "13": [
+      "Bizcocho de requesón y sémola con mermelada de cereza",
+      "molde de ~600 g, 2 raciones",
+      [
+        "masa: requesón suave 0,1% 200 g, sémola de trigo 50 g, 1 yema, 3 claras, levadura química 4 g (1 cucharadita), leche 60 ml, edulcorante al gusto",
+        "mermelada: cerezas congeladas 150 g, maicena 4 g (½ cucharadita), edulcorante al gusto"
+      ],
+      [
+        "Mezcla todos los ingredientes de la masa excepto la levadura y las claras. Deja reposar 30 minutos.",
+        "Monta las claras a punto de nieve firme. Añade la levadura a la masa, mezcla y luego incorpora las claras con cuidado.",
+        "Pon en un molde y hornea a 160 °C 30 minutos. Apaga el horno y deja la puerta entreabierta.",
+        "Mermelada: pon las cerezas en una sartén a fuego medio hasta que suelten jugo. Disuelve la maicena en una taza con 30 ml de agua. Añade el edulcorante, echa la maicena y remueve 1 minuto hasta que quede como gelatina.",
+        "Cubre el bizcocho con la mermelada. Deja enfriar; puedes dejarlo en la nevera toda la noche y comerlo por la mañana (o al momento)."
+      ],
+      "",
+      "El autor calculó los macros para todo el molde, así que para media porción hay que dividir entre dos."
+    ],
+    "14": [
+      "Bowl de cheesecake proteico con maracuyá",
+      "1 ración",
+      [
+        "yogur proteico de vainilla: 160 g (o yogur griego + 1 cucharadita de miel + una gota de vainilla)",
+        "zumo de limón: 10 ml (2 cucharaditas)",
+        "sal: una pizca",
+        "pulpa de maracuyá: 30 ml (o puré de kiwi, frambuesa u otra fruta ácida)",
+        "galletas María sin azúcar: 4 (o cualquier galleta seca)",
+        "sirope de arce: 20 ml (o 1 cucharadita de miel o edulcorante)"
+      ],
+      [
+        "Mezcla el yogur, el zumo de limón y la sal.",
+        "Ponlo en un colador forrado con una gasa o un paño limpio sobre un bol. Presiona un poco con una taza y deja en la nevera 24 horas hasta que quede espeso y cremoso.",
+        "Antes de servir escúrrelo un poco y móntalo por capas con las galletas desmigadas y el puré de fruta."
+      ],
+      "",
+      ""
+    ],
+    "15": [
+      "Salsa proteica de miel picante",
+      "8 raciones (2 cucharadas cada una)",
+      [
+        "yogur griego 0%: 220 g",
+        "mayonesa light: 40 g (2 cucharadas)",
+        "hot honey: 40 g; aquí: 2 cucharadas de miel + 1 cucharadita de salsa picante (sriracha, chile)",
+        "mostaza de Dijon o antigua: 15 g (1 cucharada)",
+        "vinagre de manzana: 10 g (2 cucharaditas)",
+        "ajo en polvo y pimentón ahumado ½ cucharadita de cada, sal, pimienta"
+      ],
+      [
+        "Pon todos los ingredientes en la batidora o en un vaso con accesorio.",
+        "Bate hasta que quede liso y cremoso, prueba y ajusta el sabor.",
+        "Pásalo a un bote o táper y déjalo en la nevera al menos 30 minutos. Va bien con pollo, ternera y arroz."
+      ],
+      "En la nevera, en un recipiente cerrado.",
+      ""
+    ],
+    "16": [
+      "Albóndigas de pollo en salsa de tomate con arroz",
+      "4 raciones",
+      [
+        "carne picada de pollo (de pechuga): 600 g",
+        "copos de avena: 40 g (5 cucharadas)",
+        "huevo: 55 g (1)",
+        "cebolla: 100 g (1 pequeña)",
+        "tomate triturado o passata: 500 g (2 vasos)",
+        "arroz en seco: 200 g (1 vaso)",
+        "aceite de oliva: 15 g (1 cucharada)",
+        "2 dientes de ajo, sal, pimienta, albahaca u orégano secos"
+      ],
+      [
+        "Cuece el arroz según el paquete.",
+        "Mezcla la carne con la avena, el huevo, la cebolla picada fina, sal y pimienta y forma bolas de 30-35 g.",
+        "Dora las albóndigas en el aceite por todos los lados 5 minutos.",
+        "Añade el tomate, el ajo y las hierbas y cocina tapado 15 minutos.",
+        "Reparte el arroz y las albóndigas con salsa en 4 táperes."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "17": [
+      "Chili con carne de ternera con arroz",
+      "4 raciones",
+      [
+        "carne picada de ternera magra: 500 g",
+        "cebolla: 150 g (1 grande)",
+        "pimiento: 200 g (1 grande)",
+        "tomate triturado o en conserva: 400 g (1,5 vasos)",
+        "alubias rojas en conserva, escurridas: 240 g (1 bote)",
+        "maíz en conserva: 150 g (medio bote)",
+        "arroz en seco: 160 g (¾ de vaso)",
+        "aceite: 10 g (2 cucharaditas)",
+        "especias: pimentón 2 cucharaditas, comino 1 cucharadita, chile molido al gusto, 3 dientes de ajo, sal"
+      ],
+      [
+        "Sofríe la cebolla y el pimiento en aceite 5 minutos y añade el ajo y las especias 1 minuto.",
+        "Añade la carne, deshazla con una espátula y fríe hasta que cambie de color.",
+        "Añade el tomate, las alubias y el maíz y cocina tapado 25 minutos.",
+        "Sirve con arroz cocido y, si quieres, una cucharada de yogur por encima."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "Si no tienes alubias rojas, sirve cualquier legumbre en conserva. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "18": [
+      "Curry de pollo con garbanzos y arroz",
+      "4 raciones",
+      [
+        "pechuga de pollo en dados: 600 g",
+        "garbanzos cocidos, escurridos: 240 g (1 bote)",
+        "leche de coco light (o leche 2,5% + 1 cucharadita de aceite): 200 g (¾ de vaso)",
+        "tomate triturado: 200 g (¾ de vaso)",
+        "cebolla: 100 g (1 pequeña)",
+        "arroz en seco: 200 g (1 vaso)",
+        "aceite: 10 g (2 cucharaditas)",
+        "curry en polvo 1,5 cucharadas, jengibre y ajo rallados 2 cucharaditas de cada, sal, hierbas frescas"
+      ],
+      [
+        "Sofríe la cebolla en aceite 4 minutos y añade el jengibre, el ajo y el curry 1 minuto.",
+        "Añade el pollo y dóralo 5 minutos.",
+        "Añade el tomate, la leche de coco y los garbanzos y cocina tapado 15 minutos.",
+        "Sirve con arroz y hierbas frescas por encima."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "Sin leche de coco: usa leche y algo más de tomate; el sabor será más ligero. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "19": [
+      "Pasta con atún y tomate",
+      "4 raciones",
+      [
+        "pasta de trigo duro en seco: 320 g",
+        "atún al natural, escurrido: 360 g (3 latas pequeñas)",
+        "tomate triturado: 400 g (1,5 vasos)",
+        "cebolla: 100 g (1 pequeña)",
+        "aceitunas negras: 40 g (un puñado)",
+        "queso curado: 40 g (tamaño caja de cerillas)",
+        "aceite de oliva: 15 g (1 cucharada)",
+        "2 dientes de ajo, chile, sal, pimienta, perejil"
+      ],
+      [
+        "Cuece la pasta 1 minuto menos de lo que indica el paquete.",
+        "Sofríe la cebolla y el ajo en aceite, añade el tomate y cocina 8 minutos.",
+        "Añade el atún, las aceitunas y las especias y calienta 3 minutos.",
+        "Mezcla con la pasta y una cucharada del agua de cocción; queso rallado por encima."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "20": [
+      "Burrito bowl de pollo",
+      "4 raciones",
+      [
+        "pechuga de pollo: 600 g",
+        "arroz en seco: 200 g (1 vaso)",
+        "alubias rojas en conserva: 240 g (1 bote)",
+        "maíz: 120 g (5 cucharadas)",
+        "tomates: 200 g (2 medianos)",
+        "aguacate: 100 g (½ grande)",
+        "yogur griego para la salsa: 160 g (⅔ de vaso)",
+        "pimentón, comino, ajo, lima o limón, sal, pimienta"
+      ],
+      [
+        "Corta el pollo en tiras, rebózalo en pimentón, comino y ajo y dóralo.",
+        "Cuece el arroz. Calienta las alubias y el maíz.",
+        "Salsa: yogur, zumo de lima, ajo, sal.",
+        "Reparte en táperes por secciones: arroz, pollo, alubias con maíz, tomate. Añade el aguacate y la salsa justo antes de comer."
+      ],
+      "Se conserva 3 días en la nevera. Guarda el aguacate y la salsa aparte y añádelos frescos al comer.",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "21": [
+      "Pimientos rellenos de pavo y arroz",
+      "4 raciones",
+      [
+        "pimientos grandes: 800 g (4)",
+        "carne picada de pavo: 500 g",
+        "arroz en seco: 140 g (⅔ de vaso)",
+        "cebolla: 100 g (1 pequeña)",
+        "tomate triturado: 300 g (1 vaso)",
+        "nata agria 10%: 100 g (5 cucharadas)",
+        "queso curado: 60 g (2 trozos tamaño caja de cerillas)",
+        "sal, pimienta, pimentón, hierbas"
+      ],
+      [
+        "Cuece el arroz a medias. Corta la parte de arriba de los pimientos y quita las semillas.",
+        "Mezcla la carne, el arroz, la cebolla, la sal y las especias y rellena los pimientos.",
+        "Salsa: tomate con nata agria y una pizca de sal. Pon los pimientos en una fuente y cúbrelos con la salsa.",
+        "Tapa con aluminio y hornea 40 minutos a 190 °C; luego espolvorea queso y hornea 10 minutos más."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "22": [
+      "Pollo al horno con patatas y verduras",
+      "4 raciones",
+      [
+        "pechuga o contramuslo de pollo sin piel: 700 g",
+        "patatas: 800 g (5-6 medianas)",
+        "calabacín: 300 g (1 mediano)",
+        "pimiento: 200 g (1 grande)",
+        "yogur griego para marinar: 120 g (½ vaso)",
+        "aceite de oliva: 20 g (1,5 cucharadas)",
+        "pimentón, ajo granulado, sal, pimienta, hierbas secas"
+      ],
+      [
+        "Mezcla el pollo con el yogur y las especias y deja reposar 20 minutos.",
+        "Corta las patatas en gajos y las verduras en trozos grandes y mézclalo todo con aceite y sal.",
+        "Extiéndelo en una bandeja en una sola capa y hornea 40-45 minutos a 200 °C, removiendo una vez."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "La receta más fácil de la colección, para cuando no tienes fuerzas para cocinar. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "23": [
+      "Lasaña rápida de pan lavash",
+      "4 raciones",
+      [
+        "pan lavash fino (o tortillas de trigo): 150 g (2 láminas)",
+        "carne picada de ternera magra: 500 g",
+        "requesón 5%: 200 g (¾ de vaso)",
+        "tomate triturado: 400 g (1,5 vasos)",
+        "mozzarella: 120 g (½ bola)",
+        "huevo: 55 g (1)",
+        "cebolla: 100 g (1 pequeña)",
+        "ajo, orégano, sal, pimienta"
+      ],
+      [
+        "Sofríe la carne con la cebolla, añade el tomate y cocina 10 minutos con las especias.",
+        "Mezcla el requesón con el huevo y la sal.",
+        "Monta en una fuente por capas: lavash, carne, mezcla de requesón; repite.",
+        "Ralla la mozzarella por encima. Hornea 25 minutos a 190 °C hasta que se dore."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "24": [
+      "Gambas con arroz frito y verduras",
+      "4 raciones",
+      [
+        "gambas peladas: 500 g",
+        "arroz en seco: 240 g (1 vaso colmado)",
+        "calabacín: 300 g (1 mediano)",
+        "pimiento: 150 g (1 pequeño)",
+        "zanahoria: 100 g (1 mediana)",
+        "huevos: 110 g (2)",
+        "salsa de soja: 40 g (2 cucharadas)",
+        "aceite: 20 g (1,5 cucharadas)",
+        "ajo, jengibre, cebolleta"
+      ],
+      [
+        "Cuece el arroz con antelación y deja que se enfríe (el arroz frío se fríe mejor).",
+        "Pica las verduras pequeñas y saltéalas a fuego fuerte 4 minutos; añade el ajo y el jengibre.",
+        "Aparta las verduras, casca los huevos y remueve hasta que cuajen. Añade las gambas 3 minutos.",
+        "Incorpora el arroz y la soja y calienta. Cebolleta por encima."
+      ],
+      "Se conserva hasta 2 días en la nevera.",
+      "Mejor no guardar las gambas más de 2 días en el táper. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "25": [
+      "Trigo sarraceno con pavo y champiñones",
+      "4 raciones",
+      [
+        "trigo sarraceno en seco: 240 g (1 vaso colmado)",
+        "carne picada de pavo: 500 g",
+        "champiñones: 300 g (10 medianos)",
+        "cebolla: 100 g (1 pequeña)",
+        "nata agria 10%: 100 g (5 cucharadas)",
+        "aceite: 15 g (1 cucharada)",
+        "ajo, sal, pimienta, eneldo"
+      ],
+      [
+        "Cuece el trigo sarraceno.",
+        "Sofríe la cebolla y los champiñones en aceite hasta que se evapore el agua.",
+        "Añade la carne, fríe 8 minutos, incorpora la nata agria con ajo y cocina 5 minutos.",
+        "Mezcla con el trigo sarraceno y el eneldo."
+      ],
+      "Se conserva 3 días en la nevera, congela el resto. Descongela la noche anterior en la nevera. Calienta 1,5 minutos en el microondas y remueve.",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "26": [
+      "Shakshuka con feta",
+      "2 raciones",
+      [
+        "huevos: 220 g (4)",
+        "tomate triturado: 300 g (1 vaso)",
+        "pimiento: 150 g (1 pequeño)",
+        "cebolla: 80 g (½ grande)",
+        "queso feta: 60 g (trozo tamaño caja de cerillas)",
+        "aceite: 10 g (2 cucharaditas)",
+        "pan para servir: 100 g (2 rebanadas)",
+        "pimentón, comino, ajo, sal, hierbas frescas"
+      ],
+      [
+        "Sofríe la cebolla y el pimiento en aceite 5 minutos y añade el ajo y las especias.",
+        "Añade el tomate y cocina 7 minutos.",
+        "Haz huecos, casca los huevos y tapa 5-7 minutos.",
+        "Feta y hierbas por encima; sirve con pan."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "27": [
+      "Tortitas de requesón (syrniki) con yogur y frutos rojos",
+      "2 raciones (6 tortitas)",
+      [
+        "requesón 5%: 400 g (1,5 vasos)",
+        "huevo: 55 g (1)",
+        "copos de avena molidos: 50 g (6 cucharadas)",
+        "miel: 15 g (2 cucharaditas)",
+        "aceite para la sartén: 8 g (1,5 cucharaditas)",
+        "yogur griego para servir: 100 g (⅓ de vaso)",
+        "frutos rojos: 100 g (un puñado)",
+        "vainilla, una pizca de sal"
+      ],
+      [
+        "Muele la avena hasta hacer harina.",
+        "Mezcla el requesón, el huevo, la harina, la miel, la vainilla y la sal y forma 6 tortitas.",
+        "Fríelas en una sartén apenas engrasada 3 minutos por lado a fuego medio.",
+        "Sirve con yogur y frutos rojos."
+      ],
+      "",
+      "¿Quieres aún más proteína? Cambia la harina por 30 g de proteína en polvo y 20 g de avena. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "28": [
+      "Tortitas de plátano",
+      "1 ración (3-4 tortitas)",
+      [
+        "plátano: 100 g (1 pequeño)",
+        "huevo: 55 g (1)",
+        "copos de avena molidos: 40 g (5 cucharadas)",
+        "leche: 50 g (3 cucharadas)",
+        "frutos rojos para servir: 80 g (un puñado)",
+        "miel: 10 g (1,5 cucharaditas)",
+        "½ cucharadita de levadura química, canela",
+        "<b>Con proteína añade:</b> proteína de vainilla en polvo (junto con la harina): 25 g (1 cacito)",
+        "<b>Sin proteína, añade en su lugar:</b> yogur griego para servir: 60 g (2 cucharadas)"
+      ],
+      [
+        "Machaca el plátano con un tenedor o batidora y añade el huevo, la leche, la harina de avena y la levadura.",
+        "Haz tortitas pequeñas en una sartén antiadherente sin aceite, 2 minutos por lado.",
+        "Sirve con frutos rojos y miel."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "29": [
+      "Pastel de requesón al horno",
+      "4 porciones",
+      [
+        "requesón 5%: 500 g (2 vasos)",
+        "huevos: 110 g (2)",
+        "sémola de trigo: 40 g (3 cucharadas)",
+        "miel: 40 g (2 cucharadas)",
+        "frutos rojos (congelados sirven): 150 g (1 vaso)",
+        "vainilla, una pizca de sal"
+      ],
+      [
+        "Tritura todo excepto los frutos rojos hasta que quede liso y deja reposar 15 minutos para que la sémola se hidrate.",
+        "Pásalo a un molde con los frutos rojos por encima.",
+        "Hornea 35-40 minutos a 180 °C. Deja enfriar antes de cortar."
+      ],
+      "Se conserva hasta 4 días en la nevera.",
+      "Con una cucharada de yogur por encima es un desayuno completo de unas 300 kcal. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "30": [
+      "Tostada de aguacate y huevo",
+      "1 ración",
+      [
+        "pan: 80 g (2 rebanadas)",
+        "aguacate: 70 g (½ pequeño)",
+        "huevos: 110 g (2)",
+        "tomate: 60 g (½ mediano)",
+        "limón, sal, pimienta, copos de chile"
+      ],
+      [
+        "Tuesta el pan en la tostadora o en una sartén seca.",
+        "Machaca el aguacate con limón y sal y úntalo en el pan.",
+        "Cuece los huevos pasados por agua o fríelos sin aceite, ponlos encima y añade el tomate y las especias."
+      ],
+      "",
+      "Para más proteína, añade un tercer huevo o una cucharada de requesón en el pan. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "31": [
+      "Avena con plátano y crema de cacahuete",
+      "1 ración",
+      [
+        "copos de avena: 50 g (5 cucharadas)",
+        "leche: 200 g (1 vaso)",
+        "plátano: 100 g (1 pequeño)",
+        "crema de cacahuete: 15 g (1 cucharada)",
+        "<b>Con proteína añade:</b> proteína de vainilla en polvo (mézclala tras cocer, cuando la avena se haya templado): 25 g (1 cacito)",
+        "<b>Sin proteína, añade en su lugar:</b> yogur griego por encima: 100 g (⅓ de vaso)"
+      ],
+      [
+        "Cubre la avena con la leche y cuece 5 minutos a fuego medio, removiendo.",
+        "Retira del fuego e incorpora la mitad del plátano y la proteína, si la usas.",
+        "Por encima, el resto del plátano y la crema de cacahuete."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "32": [
+      "Avena de chocolate",
+      "1 ración",
+      [
+        "copos de avena: 50 g (5 cucharadas)",
+        "leche: 200 g (1 vaso)",
+        "plátano: 80 g (½ grande)",
+        "cacao: 8 g (1 cucharada)",
+        "miel: 10 g (2 cucharaditas)",
+        "<b>Con proteína añade:</b> proteína de chocolate o vainilla en polvo: 25 g (1 cacito)",
+        "<b>Sin proteína, añade en su lugar:</b> yogur griego por encima: 100 g (⅓ de vaso)"
+      ],
+      [
+        "Cuece la avena con el cacao y la leche 5 minutos.",
+        "Añade la miel y la mitad del plátano y machaca.",
+        "Por encima, el resto del plátano en rodajas."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "33": [
+      "Avena «tarta de manzana»",
+      "1 ración",
+      [
+        "copos de avena: 50 g (5 cucharadas)",
+        "leche: 200 g (1 vaso)",
+        "manzana: 150 g (1 mediana)",
+        "nueces: 15 g (2-3 nueces)",
+        "miel: 10 g (2 cucharaditas)",
+        "canela 1 cucharadita",
+        "<b>Con proteína añade:</b> proteína de vainilla en polvo: 25 g (1 cacito)",
+        "<b>Sin proteína, añade en su lugar:</b> yogur griego por encima: 100 g (⅓ de vaso)"
+      ],
+      [
+        "Corta la manzana en dados y cocínala 3 minutos en una sartén seca con canela.",
+        "Cuece la avena en la leche 5 minutos.",
+        "Mezcla con la manzana y pon por encima las nueces y la miel."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "34": [
+      "Overnight oats con frutos rojos y yogur",
+      "1 tarro",
+      [
+        "copos de avena: 45 g (4,5 cucharadas)",
+        "leche: 100 g (½ vaso)",
+        "yogur griego: 150 g (½ vaso)",
+        "semillas de chía: 8 g (2 cucharaditas)",
+        "frutos rojos (congelados sirven): 100 g (un puñado)",
+        "miel: 10 g (2 cucharaditas)",
+        "<b>Con proteína añade:</b> proteína de vainilla en polvo (mézclala con la leche hasta que no haya grumos): 20 g (¾ de cacito)",
+        "<b>Sin proteína:</b> simplemente omítela, ya hay suficiente proteína"
+      ],
+      [
+        "Mezcla todo menos los frutos rojos en un tarro y ponlos encima.",
+        "Deja en la nevera al menos 6 horas, mejor toda la noche.",
+        "Por la mañana remueve y cómelo frío."
+      ],
+      "",
+      "Prepara 3 tarros de una vez para varios días; se conservan hasta 3 días. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "35": [
+      "Avena al horno con cerezas",
+      "1 ración",
+      [
+        "copos de avena: 50 g (5 cucharadas)",
+        "huevo: 55 g (1)",
+        "leche: 100 g (½ vaso)",
+        "cerezas (congeladas sirven): 100 g (medio vaso)",
+        "miel: 10 g (2 cucharaditas)",
+        "½ cucharadita de levadura química, canela",
+        "<b>Con proteína añade:</b> proteína de vainilla en polvo (en la mezcla con la avena): 20 g (¾ de cacito)",
+        "<b>Sin proteína, añade en su lugar:</b> yogur griego por encima: 80 g (3 cucharadas)"
+      ],
+      [
+        "Precalienta el horno a 180 °C.",
+        "Mezcla la avena, el huevo, la leche, la levadura y la miel y añade la mitad de las cerezas.",
+        "Vierte en un molde pequeño con el resto de las cerezas por encima.",
+        "Hornea 20-25 minutos hasta que se dore."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "36": [
+      "Batido de chocolate, plátano y crema de cacahuete",
+      "1 vaso (~400 ml)",
+      [
+        "leche: 250 g (1 vaso)",
+        "plátano congelado: 120 g (1 mediano)",
+        "crema de cacahuete: 15 g (1 cucharada)",
+        "cacao: 5 g (1 cucharadita colmada)",
+        "hielo si quieres",
+        "<b>Con proteína añade:</b> proteína de chocolate o vainilla en polvo: 25 g (1 cacito)",
+        "<b>Sin proteína, añade en su lugar:</b> yogur griego: 100 g (⅓ de vaso)"
+      ],
+      ["Pon todo en la batidora y bate 1 minuto hasta que quede liso."],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "37": [
+      "Batido de fresa y yogur",
+      "1 vaso (~400 ml)",
+      [
+        "fresas (congeladas sirven): 200 g (1,5 vasos)",
+        "yogur griego: 150 g (½ vaso)",
+        "leche: 100 g (½ vaso)",
+        "miel: 10 g (2 cucharaditas)",
+        "<b>Con proteína añade:</b> proteína de vainilla en polvo: 20 g (¾ de cacito)",
+        "<b>Sin proteína:</b> simplemente omítela, ya hay suficiente proteína"
+      ],
+      ["Bate todo hasta que quede liso. Si está muy espeso, añade un poco de leche."],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "38": [
+      "Batido verde de espinacas y piña",
+      "1 vaso (~400 ml)",
+      [
+        "espinacas frescas: 40 g (2 puñados)",
+        "plátano: 100 g (1 pequeño)",
+        "piña (congelada o fresca): 100 g (3-4 rodajas)",
+        "leche: 200 g (1 vaso)",
+        "yogur griego: 100 g (⅓ de vaso)",
+        "<b>Con proteína añade:</b> proteína de vainilla en polvo: 20 g (¾ de cacito)",
+        "<b>Sin proteína:</b> simplemente omítela, ya hay suficiente proteína"
+      ],
+      [
+        "Primero bate las espinacas con la leche, luego añade el resto y bate hasta que quede homogéneo. Las espinacas casi no se notan."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "39": [
+      "Batido de frutos rojos y avena",
+      "1 vaso (~400 ml)",
+      [
+        "frutos rojos congelados: 150 g (1 vaso)",
+        "yogur griego: 150 g (½ vaso)",
+        "leche: 150 g (⅔ de vaso)",
+        "copos de avena: 25 g (2,5 cucharadas)",
+        "miel: 10 g (2 cucharaditas)",
+        "<b>Con proteína añade:</b> proteína de vainilla en polvo: 20 g (¾ de cacito)",
+        "<b>Sin proteína:</b> simplemente omítela, ya hay suficiente proteína"
+      ],
+      ["Puedes remojar la avena en la leche 5 minutos. Bate todo hasta que quede liso."],
+      "",
+      "La avena hace el batido espeso y saciante; puedes tomarlo como desayuno ligero. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "40": [
+      "César de pollo con aliño de yogur",
+      "1 ración",
+      [
+        "pechuga de pollo (peso en crudo): 150 g (1 pequeña)",
+        "lechuga romana o iceberg: 120 g (un buen puñado)",
+        "pan para picatostes: 30 g (1 rebanada)",
+        "queso curado rallado: 20 g (1 cucharada)",
+        "tomates cherry: 80 g (5-6)",
+        "yogur griego para el aliño: 60 g (2 cucharadas)",
+        "mayonesa light: 15 g (1 cucharadita colmada)",
+        "para el aliño: ajo, 1 cucharadita de mostaza, zumo de limón, sal"
+      ],
+      [
+        "Haz el pollo en una sartén seca 6-7 minutos y córtalo. Corta el pan en dados y tuéstalo en la sartén o el horno.",
+        "Bate el aliño con un tenedor: yogur, mayonesa, mostaza, ajo y limón.",
+        "Monta la ensalada con el pollo, los picatostes y el queso por encima."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "41": [
+      "Ensalada griega con garbanzos",
+      "1 ración",
+      [
+        "garbanzos cocidos, escurridos: 120 g (½ bote)",
+        "pepino: 150 g (1 grande)",
+        "tomates: 150 g (1-2 medianos)",
+        "pimiento: 80 g (½ pequeño)",
+        "queso feta: 50 g (un trozo)",
+        "aceitunas: 30 g (7-8)",
+        "cebolla morada: 30 g (¼)",
+        "aceite de oliva: 10 g (2 cucharaditas)",
+        "zumo de limón, orégano, sal"
+      ],
+      [
+        "Corta las verduras en trozos grandes y enjuaga los garbanzos.",
+        "Mezcla todo y aliña con aceite, limón y orégano. Pon la feta encima."
+      ],
+      "",
+      "Sin carne, pero con proteína de los garbanzos y la feta. Si necesitas más, añade 100 g de pollo. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "42": [
+      "Ensalada de atún y alubias",
+      "1 ración",
+      [
+        "atún al natural, escurrido: 120 g (1 lata pequeña)",
+        "alubias en conserva: 120 g (½ bote)",
+        "tomates: 120 g (1 mediano)",
+        "cebolla morada: 30 g (¼)",
+        "rúcula u otras hojas: 40 g (2 puñados)",
+        "huevo cocido: 55 g (1)",
+        "aceite de oliva: 10 g (2 cucharaditas)",
+        "zumo de limón, sal, pimienta"
+      ],
+      [
+        "Corta todo, aplasta un poco las alubias y el atún con un tenedor y parte el huevo en cuartos.",
+        "Mezcla y aliña con aceite y limón."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "43": [
+      "Ensalada de gambas y aguacate",
+      "1 ración",
+      [
+        "gambas peladas: 150 g (10-12)",
+        "aguacate: 80 g (½ pequeño)",
+        "pepino: 100 g (1 pequeño)",
+        "hojas de ensalada: 80 g (2 puñados)",
+        "maíz: 50 g (2 cucharadas)",
+        "aceite de oliva: 5 g (1 cucharadita)",
+        "yogur griego para el aliño: 50 g (2 cucharadas)",
+        "ajo, lima o limón, sal, pimienta"
+      ],
+      [
+        "Saltea las gambas en aceite con ajo 2-3 minutos.",
+        "Corta las verduras y el aguacate y mézclalos con las hojas y el maíz.",
+        "Mezcla el yogur con zumo de lima y sal, aliña la ensalada y pon las gambas encima."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "44": [
+      "Ensalada mexicana de pollo y alubias",
+      "1 ración",
+      [
+        "pechuga de pollo (peso en crudo): 150 g (1 pequeña)",
+        "alubias rojas en conserva: 80 g (3 cucharadas)",
+        "maíz: 60 g (3 cucharadas)",
+        "tomate: 100 g (1 pequeño)",
+        "hojas de ensalada: 80 g (2 puñados)",
+        "aguacate: 50 g (⅓ pequeño)",
+        "yogur griego para el aliño: 60 g (2 cucharadas)",
+        "pimentón, comino, lima, sal, chile al gusto"
+      ],
+      [
+        "Reboza el pollo en pimentón y comino, hazlo a la plancha y córtalo en tiras.",
+        "Mezcla en un bol las hojas, el tomate, las alubias, el maíz y el aguacate.",
+        "Mezcla el yogur con lima y sal, aliña y pon el pollo encima."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "45": [
+      "Mousse de chocolate y requesón",
+      "2 raciones",
+      [
+        "requesón 1%: 300 g (1 vaso colmado)",
+        "cacao: 15 g (1,5 cucharadas)",
+        "miel: 25 g (1 cucharada)",
+        "leche: 50 g (3 cucharadas)",
+        "chocolate negro para decorar: 15 g (3 onzas)"
+      ],
+      [
+        "Tritura el requesón, el cacao, la miel y la leche hasta que quede totalmente liso.",
+        "Reparte en vasos y deja 30 minutos en la nevera.",
+        "Ralla el chocolate por encima antes de servir."
+      ],
+      "",
+      "Con requesón 5% la textura es más suave, pero tiene más calorías. Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "46": [
+      "Brownies de plátano y avena",
+      "6 porciones",
+      [
+        "plátanos maduros: 250 g (2 grandes)",
+        "copos de avena molidos: 100 g (10 cucharadas)",
+        "cacao: 25 g (2,5 cucharadas)",
+        "huevos: 110 g (2)",
+        "yogur griego: 100 g (⅓ de vaso)",
+        "chocolate negro en trozos: 40 g (½ tableta)",
+        "miel: 20 g (1 cucharada)",
+        "1 cucharadita de levadura química, una pizca de sal",
+        "<b>Con proteína añade:</b> proteína de chocolate en polvo (con los ingredientes secos): 30 g (1,5 cacitos)",
+        "<b>Sin proteína:</b> no la añadas, el plato sale bien, solo con menos proteína"
+      ],
+      [
+        "Precalienta el horno a 180 °C. Machaca los plátanos y añade los huevos, el yogur y la miel.",
+        "Incorpora la harina de avena, el cacao, la levadura y la mitad del chocolate.",
+        "Vierte en un molde de 18 × 18 cm con el resto del chocolate por encima.",
+        "Hornea 25 minutos. Deja enfriar y corta en 6 porciones."
+      ],
+      "Se conserva hasta 4 días en la nevera.",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "47": [
+      "Pudin de chía con mango",
+      "2 raciones",
+      [
+        "semillas de chía: 40 g (4 cucharadas)",
+        "leche: 300 g (1 vaso colmado)",
+        "mango (congelado sirve): 150 g (1 pequeño)",
+        "miel: 15 g (2 cucharaditas)",
+        "<b>Con proteína añade:</b> proteína de vainilla en polvo (mézclala con la leche antes de la chía): 20 g (¾ de cacito)",
+        "<b>Sin proteína, añade en su lugar:</b> yogur griego por encima: 100 g (⅓ de vaso)"
+      ],
+      [
+        "Mezcla la chía con la leche y la mitad de la miel y remueve dos veces con 5 minutos de intervalo para que no se apelmace.",
+        "Deja en la nevera 4 horas o toda la noche.",
+        "Tritura el mango en puré y móntalo por capas con el pudin."
+      ],
+      "Se conserva hasta 3 días en la nevera.",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "48": [
+      "Manzanas asadas con requesón",
+      "2 raciones",
+      [
+        "manzanas grandes: 400 g (2)",
+        "requesón 5%: 150 g (½ vaso)",
+        "miel: 20 g (2 cucharaditas)",
+        "nueces: 10 g (1-2 nueces)",
+        "canela, vainilla"
+      ],
+      [
+        "Corta la parte de arriba de las manzanas y vacíalas con cuidado sin romper la base.",
+        "Mezcla el requesón con la miel, la canela y la vainilla, rellena las manzanas y pon las nueces encima.",
+        "Hornea 25 minutos a 180 °C."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "49": [
+      "Helado de yogur con frutos rojos",
+      "2 raciones",
+      [
+        "yogur griego: 300 g (1 vaso)",
+        "frutos rojos congelados: 200 g (1,5 vasos)",
+        "miel: 25 g (1 cucharada)",
+        "<b>Con proteína añade:</b> proteína de vainilla en polvo: 20 g (¾ de cacito)",
+        "<b>Sin proteína:</b> simplemente omítela, ya hay suficiente proteína"
+      ],
+      [
+        "Tritura todo hasta obtener una crema espesa.",
+        "Si lo quieres más firme, mételo en el congelador 1-2 horas y remueve a la hora."
+      ],
+      "",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "50": [
+      "Salsa de yogur y ajo",
+      "4 raciones (3 cucharadas cada una)",
+      [
+        "yogur griego 0%: 200 g (¾ de vaso)",
+        "1-2 dientes de ajo, zumo de ½ limón, eneldo, sal, pimienta"
+      ],
+      ["Mezcla todo y deja reposar 15 minutos. Va con pollo, patatas, el burrito bowl y ensaladas."],
+      "Se conserva hasta 4 días en la nevera.",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "51": [
+      "Aliño César ligero",
+      "4 raciones (2 cucharadas cada una)",
+      [
+        "yogur griego 0%: 100 g (⅓ de vaso)",
+        "mayonesa light: 30 g (1,5 cucharadas)",
+        "queso curado rallado: 20 g (1 cucharada)",
+        "mostaza 1 cucharadita, 1 diente de ajo, zumo de ½ limón, sal, pimienta"
+      ],
+      ["Mezcla todo hasta que quede liso. Si está muy espeso, añade agua."],
+      "Se conserva hasta 4 días en la nevera.",
+      "Los macros están calculados a partir de los ingredientes, con un margen de error de aprox. 10%."
+    ],
+    "52": [
+      "Sopa de pollo con fideos",
+      null,
+      null,
+      [
+        "Cubre el pollo con caldo o agua, lleva a ebullición, espuma y cuece 20 minutos. Sácalo y córtalo.",
+        "Añade la patata, la zanahoria y la cebolla y cuece 10 minutos.",
+        "Añade los fideos, vuelve a poner el pollo y cuece 7-8 minutos más. Sala y espolvorea hierbas."
+      ],
+      null,
+      null
+    ],
+    "53": [
+      "Sopa de lentejas",
+      null,
+      null,
+      [
+        "Sofríe la cebolla, la zanahoria y el ajo en el aceite 5 minutos.",
+        "Añade las lentejas rojas lavadas, el tomate y el caldo. Cuece 20 minutos hasta que se deshagan.",
+        "Tritura la mitad, sala y añade zumo de limón."
+      ],
+      null,
+      null
+    ],
+    "54": [
+      "Sopa de tomate con alubias y pavo",
+      null,
+      null,
+      [
+        "Corta el pavo en dados y dóralo con la cebolla y el ajo 5 minutos.",
+        "Añade el pimiento, el tomate, las alubias y el caldo.",
+        "Cuece 15 minutos y salpimienta."
+      ],
+      null,
+      null
+    ],
+    "55": [
+      "Crema de brócoli",
+      null,
+      null,
+      [
+        "Cubre la patata, la cebolla y el brócoli con caldo y cuece 15 minutos.",
+        "Añade la leche y tritura hasta que quede fino.",
+        "Incorpora el queso rallado, calienta removiendo y sala."
+      ],
+      null,
+      null
+    ],
+    "56": [
+      "Kharcho ligero",
+      null,
+      null,
+      [
+        "Corta la ternera en trozos, cúbrela con agua y cuece 35 minutos, espumando.",
+        "Añade el arroz, la cebolla y el tomate y cuece 12 minutos.",
+        "Incorpora las nueces molidas, el tkemali, el ajo y el khmeli-suneli, cuece 3 minutos y espolvorea cilantro."
+      ],
+      null,
+      null
+    ],
+    "57": [
+      "Okroshka con kéfir",
+      null,
+      null,
+      [
+        "Cuece el pollo, los huevos y las patatas con piel y deja enfriar.",
+        "Córtalo todo en dados junto con el pepino, la cebolleta y el eneldo.",
+        "Cubre con kéfir frío aclarado con agua y sala. Sirve bien fría."
+      ],
+      null,
+      null
+    ],
+    "58": [
+      "Sopa asiática de pollo con fideos de arroz",
+      null,
+      null,
+      [
+        "Cuece el pollo en el caldo con jengibre y ajo 15 minutos y córtalo fino.",
+        "Añade las setas y la zanahoria, cuece 5 minutos y agrega la salsa de soja.",
+        "Añade los fideos y las espinacas; a los 3 minutos vuelve a poner el pollo y espolvorea cebolleta."
+      ],
+      null,
+      null
+    ],
+    "59": [
+      "Barritas de proteína sin horno",
+      null,
+      null,
+      [
+        "Mezcla la avena y la proteína, añade la crema de cacahuete, la miel y la leche y amasa una pasta firme.",
+        "Presiona en un molde forrado con 1,5 cm de grosor y cubre con chocolate fundido.",
+        "Refrigera 1 hora y corta en 8 barritas."
+      ],
+      null,
+      null
+    ],
+    "60": [
+      "Hummus con bastones de verdura",
+      null,
+      null,
+      [
+        "Tritura los garbanzos con tahini, zumo de limón, ajo y agua hasta obtener una crema y sala.",
+        "Corta la zanahoria, el pepino y el pimiento en bastones.",
+        "Moja las verduras en el hummus. Aguanta 4 días en la nevera."
+      ],
+      null,
+      null
+    ],
+    "61": [
+      "Bolitas de requesón con coco",
+      null,
+      null,
+      [
+        "Aplasta el requesón con la proteína y la miel hasta obtener una masa firme.",
+        "Forma 12 bolitas con las manos húmedas.",
+        "Rebózalas en coco rallado o cacao y enfría 20 minutos. Una ración son 3 bolitas."
+      ],
+      null,
+      null
+    ],
+    "62": [
+      "Huevos con pepino y yogur",
+      null,
+      null,
+      [
+        "Cuece los huevos 9 minutos y enfríalos en agua fría.",
+        "Corta los huevos y el pepino.",
+        "Cubre con yogur con hierbas y salpimienta."
+      ],
+      null,
+      null
+    ],
+    "63": [
+      "Rollitos de pavo y queso",
+      null,
+      null,
+      [
+        "Extiende las lonchas de jamón de pavo.",
+        "Pon en cada una una tira de queso, un bastón de pepino y una hoja de lechuga.",
+        "Enrolla y sujeta con un palillo."
+      ],
+      null,
+      null
+    ],
+    "64": [
+      "Yogur con frutos rojos y chía",
+      null,
+      null,
+      [
+        "Pon el yogur en un bol.",
+        "Añade los frutos rojos, frescos o descongelados.",
+        "Riega con miel y espolvorea chía."
+      ],
+      null,
+      null
+    ],
+    "65": [
+      "Manzana con crema de cacahuete",
+      null,
+      null,
+      [
+        "Quita el corazón a la manzana y córtala en gajos.",
+        "Mide unos 15 g de crema de cacahuete, una cucharada.",
+        "Moja los gajos y espolvorea canela si quieres."
+      ],
+      null,
+      null
+    ],
+    "66": [
+      "Garbanzos crujientes al horno",
+      null,
+      null,
+      [
+        "Seca bien los garbanzos de bote con un paño.",
+        "Mézclalos con el aceite, sal, pimentón y ajo en polvo.",
+        "Hornea a 200 °C 30 minutos, removiendo cada 10. Se vuelven crujientes al enfriarse."
+      ],
+      null,
+      null
+    ],
+    "67": [
+      "Batido proteico de café",
+      null,
+      null,
+      [
+        "Prepara un espresso o un café fuerte y deja que se enfríe.",
+        "Bate el café con la leche, la proteína y el edulcorante.",
+        "Sirve con hielo."
+      ],
+      null,
+      null
+    ],
+    "68": [
+      "Cacao caliente con proteína",
+      null,
+      null,
+      [
+        "Calienta la leche casi hasta hervir.",
+        "Aparte, mezcla el cacao y la proteína con 3 cucharadas de leche tibia hasta formar una pasta.",
+        "Añade el resto de la leche, bate y endulza. No hiervas una vez añadida la proteína."
+      ],
+      null,
+      null
+    ],
+    "69": [
+      "Limonada de jengibre y menta",
+      null,
+      null,
+      [
+        "Ralla el jengibre, vierte 300 ml de agua caliente con la miel y deja reposar 10 minutos.",
+        "Cuela y añade el zumo de limón y el agua fría.",
+        "Añade menta y hielo. Aguanta 2 días en la nevera."
+      ],
+      null,
+      null
+    ],
+    "70": [
+      "Bebida de kéfir y frutos rojos",
+      null,
+      null,
+      [
+        "Pon el kéfir y los frutos rojos en la batidora.",
+        "Bate 30 segundos y endulza al gusto.",
+        "Bébelo enseguida, mientras tiene espuma."
+      ],
+      null,
+      null
+    ],
+    "71": [
+      "Lassi de mango",
+      null,
+      null,
+      [
+        "Pela el mango y córtalo en dados.",
+        "Bátelo con el yogur, la leche y una pizca de cardamomo.",
+        "Sírvelo frío, con hielo si quieres."
+      ],
+      null,
+      null
+    ],
+    "72": [
+      "Tan con pepino y menta",
+      null,
+      null,
+      [
+        "Bate el matsoni con agua fría y una pizca de sal.",
+        "Ralla el pepino y pica fina la menta.",
+        "Mézclalo todo y sirve con hielo. Muy refrescante."
+      ],
+      null,
+      null
+    ],
+    "73": [
+      "Bol grande de ternera y arroz",
+      null,
+      null,
+      [
+        "Cuece el arroz. Corta la ternera en tiras finas.",
+        "Saltea la ternera a fuego fuerte 3 minutos y añade el pimiento y el brócoli 4 minutos más.",
+        "Agrega la soja con miel y ajo y calienta. Sirve sobre el arroz con sésamo."
+      ],
+      null,
+      null
+    ],
+    "74": [
+      "Pasta cremosa con pollo y champiñones",
+      null,
+      null,
+      [
+        "Cuece la pasta. Corta el pollo y fríelo en el aceite 6 minutos.",
+        "Añade los champiñones y el ajo y fríe 5 minutos.",
+        "Vierte la nata, incorpora el queso rallado y la pasta y calienta 2 minutos."
+      ],
+      null,
+      null
+    ],
+    "75": [
+      "Gainer casero",
+      null,
+      null,
+      [
+        "Tritura la avena en la batidora hasta hacer harina.",
+        "Añade la leche, el plátano, la crema de cacahuete, la proteína y la miel.",
+        "Bate hasta que quede fino. Unas 800 kcal, práctico entre comidas en volumen."
+      ],
+      null,
+      null
+    ],
+    "76": [
+      "Trigo sarraceno con ternera, huevo y verduras",
+      null,
+      null,
+      [
+        "Cuece el trigo sarraceno. Corta la ternera en dados.",
+        "Fríe la ternera con la cebolla y la zanahoria en el aceite 10 minutos, añade un chorrito de agua y guisa 10 minutos.",
+        "Mezcla con el trigo sarraceno y la mantequilla y corona con un huevo cocido o frito."
+      ],
+      null,
+      null
+    ],
+    "77": [
+      "Avena para ganar masa",
+      null,
+      null,
+      [
+        "Cuece la avena en la leche 5 minutos.",
+        "Añade el plátano en rodajas y la crema de cacahuete.",
+        "Espolvorea nueces y riega con miel."
+      ],
+      null,
+      null
+    ],
+    "78": [
+      "Salmón al horno con limón y hierbas",
+      null,
+      null,
+      [
+        "Corta las patatas en gajos, riega con la mitad del aceite y hornea a 200 °C 15 minutos.",
+        "Frota el salmón con sal, ajo y hierbas y cúbrelo con rodajas de limón y el resto del aceite.",
+        "Pon el pescado junto a las patatas y hornea 15 minutos más."
+      ],
+      null,
+      null
+    ],
+    "79": [
+      "Brochetas de pollo marinadas en yogur",
+      null,
+      null,
+      [
+        "Corta el pollo en trozos y marínalo en yogur con ajo, limón y especias al menos 1 hora.",
+        "Ensártalo en brochetas con el pimiento y la cebolla.",
+        "Hazlas a la parrilla o al horno a 220 °C 15-18 minutos, dándoles la vuelta. Sirve con tkemali."
+      ],
+      null,
+      null
+    ],
+    "80": [
+      "Champiñones rellenos de pollo y queso",
+      null,
+      null,
+      [
+        "Quita los pies a los champiñones, pícalos finos con la cebolla y sofríe 5 minutos.",
+        "Mezcla con el pollo picado fino, el yogur, el ajo y las hierbas y sala.",
+        "Rellena los sombreros, cubre con queso y hornea a 190 °C 20 minutos."
+      ],
+      null,
+      null
+    ],
+    "81": [
+      "Ensalada Olivier ligera",
+      null,
+      null,
+      [
+        "Cuece el pollo, las patatas, la zanahoria y los huevos y deja enfriar.",
+        "Córtalo todo en dados con los pepinillos y añade los guisantes.",
+        "Aliña con yogur y una cucharada de mayonesa, sala y espolvorea eneldo."
+      ],
+      null,
+      null
+    ],
+    "82": [
+      "Tarta de queso sin horno",
+      null,
+      null,
+      [
+        "Tritura la avena, mézclala con la mantequilla fundida y la miel y presiona en la base del molde.",
+        "Bate el requesón, el queso crema, el yogur, la proteína y el edulcorante hasta que quede fino y extiéndelo sobre la base.",
+        "Refrigera al menos 4 horas. Sirve con frutos rojos."
+      ],
+      null,
+      null
+    ],
+    "83": [
+      "Chakhokhbili de pollo",
+      null,
+      null,
+      [
+        "Dora los trozos de pollo en una sartén sin aceite 8 minutos.",
+        "Añade la cebolla y el aceite; a los 5 minutos agrega el tomate rallado y el pimiento y guisa tapado 25 minutos.",
+        "Incorpora el ajo, el khmeli-suneli y muchas hierbas y cuece 5 minutos."
+      ],
+      null,
+      null
+    ],
+    "84": [
+      "Lobio",
+      null,
+      null,
+      [
+        "Sofríe la cebolla en el aceite 7 minutos.",
+        "Añade las alubias con un poco de su líquido, aplasta una parte y cuece 10 minutos.",
+        "Incorpora las nueces molidas, el ajo, el khmeli-suneli, el tkemali y el cilantro. Rico caliente o frío."
+      ],
+      null,
+      null
+    ],
+    "85": [
+      "Pkhali de espinacas",
+      null,
+      null,
+      [
+        "Escalda las espinacas 1 minuto, escúrrelas y estrújalas bien.",
+        "Tritura las nueces con ajo, cebolla, cilantro, khmeli-suneli y zumo de limón hasta hacer una pasta.",
+        "Mezcla con las espinacas, forma bolitas y decora con granada."
+      ],
+      null,
+      null
+    ],
+    "86": [
+      "Ajapsandali",
+      null,
+      null,
+      [
+        "Corta la berenjena y el calabacín en dados y fríelos en la mitad del aceite 8 minutos.",
+        "En una olla, pocha la cebolla y el pimiento 5 minutos y añade las patatas, las verduras fritas y el tomate rallado.",
+        "Guisa tapado 30 minutos y termina con ajo y hierbas. Está aún mejor al día siguiente."
+      ],
+      null,
+      null
+    ],
+    "87": [
+      "Khachapuri ligero de lavash",
+      null,
+      null,
+      [
+        "Mezcla el queso rallado, el requesón y un huevo.",
+        "Reparte el relleno sobre el lavash, dóblalo como un sobre y píntalo con el segundo huevo batido.",
+        "Hornea a 200 °C 10-12 minutos hasta que se dore."
+      ],
+      null,
+      null
+    ],
+    "88": [
+      "Chkmeruli ligero",
+      null,
+      null,
+      [
+        "Sala el pollo y hornéalo a 210 °C 25-30 minutos hasta que se dore.",
+        "Calienta la leche con ajo machacado y mantequilla sin que hierva y sala.",
+        "Vierte la salsa de ajo sobre el pollo y hornea 7 minutos más. Espolvorea hierbas."
+      ],
+      null,
+      null
+    ],
+    "89": [
+      "Pollo teriyaki con arroz y brócoli",
+      null,
+      null,
+      [
+        "Cuece el arroz y cocina el brócoli al vapor 5 minutos.",
+        "Fríe los trozos de pollo en el aceite 8 minutos.",
+        "Añade la soja con miel, jengibre y ajo y reduce 3 minutos hasta que brille. Espolvorea sésamo."
+      ],
+      null,
+      null
+    ],
+    "90": [
+      "Poke de salmón",
+      null,
+      null,
+      [
+        "Cuece el arroz y deja que se temple.",
+        "Corta el salmón en dados y marínalo en soja con zumo de limón 10 minutos.",
+        "Monta los boles: arroz, salmón, aguacate, pepino y zanahoria. Termina con sésamo y cebolleta. Usa salmón apto para comer crudo."
+      ],
+      null,
+      null
+    ]
+  },
+  "food": {
+    "chicken": "Pechuga de pollo",
+    "chicken_mince": "Carne picada de pollo",
+    "turkey": "Pavo",
+    "beef": "Carne de vacuno magra",
+    "veal": "Ternera",
+    "pork": "Cerdo magro",
+    "bacon": "Beicon",
+    "shrimp": "Gambas",
+    "tuna": "Atún en lata",
+    "salmon": "Salmón",
+    "whitefish": "Pescado blanco (bacalao, merluza)",
+    "tofu": "Tofu",
+    "egg": "Huevo",
+    "eggwhite": "Clara de huevo",
+    "tvorog1": "Requesón 1%",
+    "tvorog2": "Requesón 2%",
+    "tvorog5": "Requesón 5%",
+    "greek0": "Yogur griego 0%",
+    "greek2": "Yogur griego 2%",
+    "skyr": "Skyr",
+    "yogurt": "Yogur natural 2,5%",
+    "kefir": "Kéfir 1%",
+    "milk": "Leche 2,5%",
+    "milkskim": "Leche desnatada",
+    "oatmilk": "Bebida de avena",
+    "almondmilk": "Bebida de almendra sin azúcar",
+    "soymilk": "Bebida de soja",
+    "cream10": "Nata 10%",
+    "sour": "Nata agria 10%",
+    "coconut": "Leche de coco light",
+    "hard": "Queso curado",
+    "lightcheese": "Queso light 30%",
+    "mozz": "Mozzarella light",
+    "feta": "Queso feta",
+    "suluguni": "Queso sulguni",
+    "procheese": "Queso fundido",
+    "creamcheese": "Queso crema light",
+    "oats": "Copos de avena",
+    "rice": "Arroz (en seco)",
+    "ricecooked": "Arroz cocido",
+    "buckwheat": "Trigo sarraceno (en seco)",
+    "buckwheatcooked": "Trigo sarraceno cocido",
+    "pasta": "Pasta (en seco)",
+    "pastacooked": "Pasta cocida",
+    "bulgur": "Bulgur (en seco)",
+    "quinoa": "Quinoa (en seco)",
+    "couscous": "Cuscús (en seco)",
+    "potato": "Patata",
+    "sweetpotato": "Boniato",
+    "bread": "Pan",
+    "lavash": "Pan lavash",
+    "tortilla": "Tortilla de trigo",
+    "semolina": "Sémola",
+    "beans": "Alubias en conserva",
+    "chickpeas": "Garbanzos cocidos",
+    "lentils": "Lentejas cocidas",
+    "corn": "Maíz en conserva",
+    "pepper": "Pimiento",
+    "zucchini": "Calabacín",
+    "broccoli": "Brócoli",
+    "cauliflower": "Coliflor",
+    "mushroom": "Champiñones",
+    "spinach": "Espinacas",
+    "carrot": "Zanahoria",
+    "tomato": "Tomate",
+    "passata": "Tomate triturado",
+    "cucumber": "Pepino",
+    "onion": "Cebolla",
+    "eggplant": "Berenjena",
+    "greenbeans": "Judías verdes",
+    "vegmix": "Mezcla de verduras congeladas",
+    "lettuce": "Hojas de ensalada",
+    "arugula": "Rúcula",
+    "banana": "Plátano",
+    "apple": "Manzana",
+    "pear": "Pera",
+    "berries": "Frutos rojos",
+    "strawberry": "Fresas",
+    "mango": "Mango",
+    "cherry": "Cerezas",
+    "pineapple": "Piña",
+    "kiwi": "Kiwi",
+    "persimmon": "Caqui",
+    "avocado": "Aguacate",
+    "olives": "Aceitunas",
+    "oil": "Aceite (oliva/vegetal)",
+    "pb": "Crema de cacahuete",
+    "walnut": "Nueces",
+    "almonds": "Almendras",
+    "chia": "Semillas de chía",
+    "honey": "Miel",
+    "maple": "Sirope de arce",
+    "sugar": "Azúcar",
+    "sweetener": "Edulcorante",
+    "cocoa": "Cacao en polvo",
+    "choc": "Chocolate negro",
+    "protein": "Proteína de suero",
+    "mayo": "Mayonesa light",
+    "soy": "Salsa de soja",
+    "ketchup": "Kétchup",
+    "chickenthigh": "Muslo de pollo sin piel",
+    "beef20": "Carne picada de vacuno 20%",
+    "turkeyham": "Jamón de pavo",
+    "sour20": "Nata agria 20%",
+    "tvorog9": "Requesón 9%",
+    "mozzfull": "Mozzarella",
+    "milk32": "Leche entera",
+    "cream20": "Nata 20%",
+    "mayofull": "Mayonesa",
+    "creamcheesefull": "Queso crema",
+    "butter": "Mantequilla",
+    "matsoni": "Matsoni (yogur)",
+    "imeruli": "Queso imeruli",
+    "flour": "Harina de trigo",
+    "granola": "Granola",
+    "ricenoodles": "Fideos de arroz (en seco)",
+    "lentilsdry": "Lentejas (en seco)",
+    "beet": "Remolacha",
+    "cabbage": "Col",
+    "pumpkin": "Calabaza",
+    "celery": "Apio",
+    "greenpeas": "Guisantes",
+    "pickles": "Pepinillos",
+    "dates": "Dátiles",
+    "pomegranate": "Granada",
+    "lemon": "Limón",
+    "peanuts": "Cacahuetes",
+    "sesame": "Sésamo",
+    "tahini": "Tahini",
+    "coconutflakes": "Coco rallado",
+    "tkemali": "Tkemali (salsa de ciruela)",
+    "garlic": "Ajo",
+    "ginger": "Jengibre",
+    "herbs": "Hierbas frescas (cilantro, perejil, eneldo)",
+    "greenonion": "Cebolleta",
+    "mint": "Menta",
+    "khmeli": "Khmeli suneli",
+    "spices": "Sal y especias al gusto",
+    "broth": "Caldo o agua",
+    "water": "Agua",
+    "coffee": "Café (espresso)"
+  },
+  "gen": {
+    "types": ["Ensalada", "Bowl", "Pasta", "Wrap", "Tortilla", "Avena", "Batido", "Plato"],
+    "kw": [
+      ["ensalad"],
+      ["bowl", "poke", "bol"],
+      ["pasta", "espagu", "macarr", "fideo"],
+      ["wrap", "burrit", "shawarma"],
+      ["tortilla", "omelet", "revuelto"],
+      ["avena", "porridge", "gachas"],
+      ["batido", "smoothie"],
+      ["cena", "almuerzo", "comida"]
+    ],
+    "neg": ["sin", "excepto", "menos"],
+    "negAfter": [],
+    "negSuffix": [],
+    "cat": {
+      "meat": ["carne"],
+      "dairy": ["lácteo", "lacteo", "lactosa"],
+      "gluten": ["gluten"],
+      "fish": ["pescado"]
+    },
+    "var": [
+      ["Clásico", "Rico y saciante, sin contar calorías"],
+      ["Proteico", "Máxima proteína, mínima grasa"],
+      ["Equilibrado", "Calorías y macros bien ajustados, alimentos nutritivos"]
+    ],
+    "steps": {
+      "salad": [
+        "Prepara {P}: a la plancha, al horno o cocido, y córtalo.",
+        "Corta {V} y mézclalo con las hojas.",
+        "Añade el resto, aliña y sirve enseguida."
+      ],
+      "bowl": [
+        "Cuece {G}.",
+        "Prepara {P} y corta {V}.",
+        "Coloca todo en un bol por secciones y añade la salsa."
+      ],
+      "pasta": [
+        "Cuece {G} 1 minuto menos de lo que indica el paquete.",
+        "Saltea {P} con {V} 8-10 minutos.",
+        "Mezcla con la pasta, añade el queso y la salsa y calienta 2 minutos."
+      ],
+      "wrap": [
+        "Prepara {P} y córtalo en tiras.",
+        "Corta {V}.",
+        "Unta la salsa en el pan, pon el relleno y enrolla bien."
+      ],
+      "omelet": [
+        "Bate los huevos con el lácteo y una pizca de sal.",
+        "Saltea {V} 3-4 minutos.",
+        "Añade los huevos y cocina tapado a fuego bajo 5-7 minutos."
+      ],
+      "oatmeal": [
+        "Cuece la avena en el líquido 5 minutos, removiendo.",
+        "Retira del fuego e incorpora los extras.",
+        "Pon la fruta por encima."
+      ],
+      "smoothie": [
+        "Pon todos los ingredientes en la batidora.",
+        "Bate 1 minuto hasta que quede liso.",
+        "Si está muy espeso, añade un poco de líquido."
+      ],
+      "plate": [
+        "Prepara la guarnición: {G}.",
+        "Haz {P} a la plancha o al horno.",
+        "Saltea u hornea {V} y sirve todo junto."
+      ]
+    }
+  }
+}

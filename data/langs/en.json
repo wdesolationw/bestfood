@@ -1,0 +1,2034 @@
+{
+  "code": "en",
+  "native": "English",
+  "name": "English",
+  "ui": {
+    "sub": "Substitutions",
+    "ph": "What do you want? e.g. chicken pasta",
+    "all": "All",
+    "fav": "★ Favorites",
+    "cats": "Categories",
+    "kcal": "kcal",
+    "p": "P",
+    "plus": "+ protein",
+    "fl": "Filters and sorting",
+    "fk": "Calories",
+    "fp": "Protein",
+    "fs": "Sort by",
+    "any": "Any",
+    "anyp": "Any",
+    "k300": "up to 300",
+    "k500": "300 to 500",
+    "k600": "over 500",
+    "p20": "20 g+",
+    "p30": "30 g+",
+    "p40": "40 g+",
+    "s0": "Default order",
+    "sp": "Most protein",
+    "sk": "Fewest calories",
+    "found": "Found: ",
+    "none": "Nothing found",
+    "none2": "Try another word or clear the filters.",
+    "reset": "Reset all",
+    "back": "← All recipes",
+    "favAdd": "☆ Add to favorites",
+    "favOn": "★ In favorites",
+    "ver": "Version",
+    "noP": "No protein powder",
+    "withP": "With protein powder",
+    "g": ["kcal", "protein", "fat", "carbs"],
+    "per": "Values per serving. Recipe makes: ",
+    "est": "Values are estimated.",
+    "calc": "Calculated from the ingredients.",
+    "auth": "Data from the recipe author.",
+    "ingh": "Ingredients (tap to check off)",
+    "steph": "Method",
+    "stor": "Storage:",
+    "vid": "▶ Watch how to cook it",
+    "st": "Ingredient substitutions",
+    "st2": "Can't find an ingredient in the store? Look up a swap here.",
+    "find": "Find an ingredient",
+    "th": ["In the recipe", "Use instead"],
+    "nf": "Nothing found",
+    "quickl": "Quick search",
+    "base": "Main ingredient",
+    "favaria": "Add to favorites",
+    "clear": "Clear search",
+    "foot": "Calories and macros are per serving. For the first set of recipes the values come from the authors, for the rest they are calculated from the ingredients, accuracy about 10%.",
+    "langT": "Language",
+    "look": "Appearance",
+    "mode": "Theme",
+    "auto": "System",
+    "light": "Light",
+    "dark": "Dark",
+    "palette": "Color",
+    "custom": "Custom color",
+    "resetLook": "Reset appearance",
+    "done": "Done",
+    "pal": {
+      "mint": "Mint",
+      "ocean": "Ocean",
+      "berry": "Berry",
+      "sunset": "Sunset",
+      "lavender": "Lavender",
+      "graphite": "Graphite"
+    },
+    "navR": "Recipes",
+    "navDay": "Day",
+    "navMine": "Mine",
+    "swapT": "Swap for",
+    "swapHint": "Missing an ingredient? Tap ⇄ next to it to get a swap with recalculated macros.",
+    "swapBest": "closest macros",
+    "swapReset": "Back to the original",
+    "swapped": "with swaps",
+    "resetSwaps": "Reset all swaps",
+    "perServ": "per serving",
+    "noSwap": "No swap for this ingredient",
+    "addDay": "+ Add to my day",
+    "added": "Added to “My day”",
+    "today": "Today",
+    "portions": "serv.",
+    "total": "Day total",
+    "goal": "Daily goal",
+    "goalK": "Calories",
+    "goalP": "Protein, g",
+    "left": "Left",
+    "over": "Over goal by",
+    "emptyDay": "Nothing yet. Add a recipe, your own dish or a product.",
+    "addProd": "+ Product",
+    "grams": "g",
+    "findProd": "Find a product",
+    "addBtn": "Add",
+    "remove": "Remove",
+    "newDish": "+ Create a dish",
+    "myVersion": "Make my version",
+    "dishName": "Dish name",
+    "servings": "Servings",
+    "ingredients": "Ingredients",
+    "addIng": "Add ingredient",
+    "customProd": "Custom product",
+    "per100": "per 100 g",
+    "name": "Name",
+    "save": "Save",
+    "saved": "Saved",
+    "del": "Delete dish",
+    "delConfirm": "Sure? Tap again to delete",
+    "whole": "Whole dish",
+    "oneServ": "1 serving",
+    "emptyMine": "No dishes yet. Build one from products or make your own version of any recipe.",
+    "untitled": "Untitled",
+    "storageNote": "Your dishes and diary are stored only on this device, in this browser.",
+    "edit": "Edit",
+    "copySuffix": " (my version)",
+    "fL": "F",
+    "cL": "C",
+    "noIng": "Add at least one ingredient",
+    "swapsShort": "swaps",
+    "genT": "Create a dish",
+    "genPh": "e.g. veal salad without tomatoes",
+    "genBtn": "Create 3 options",
+    "genEx": [
+      "veal salad without tomatoes",
+      "high-protein salmon bowl",
+      "chicken pasta with mushrooms",
+      "banana smoothie without milk"
+    ],
+    "genUse": "Included",
+    "genNo": "Without",
+    "genUnknown": "I didn't recognise the dish type, so I made a plate: protein, side and vegetables.",
+    "reroll": "Another option",
+    "saveMine": "Save to my dishes",
+    "oneServing": "1 serving",
+    "photo": "Upload photo",
+    "photoDel": "Remove photo",
+    "photoNote": "Picture drawn from the dish ingredients",
+    "photoFail": "Not enough space for the photo, try a smaller one",
+    "genHint": "Write what you want: dish type, ingredients and what to leave out.",
+    "navPlan": "Plan",
+    "navMe": "Me",
+    "quickT": "Quick 15-25 min",
+    "prepT": "Meal prep for the week",
+    "prepD": "Ready plans: cook twice a week, 4-serving dishes keep in containers for up to 3 days. Load a plan and get the shopping list right away.",
+    "cuisT": "Cuisine",
+    "allCu": "All",
+    "cu": {
+      "asian": "Asian",
+      "georgian": "Georgian",
+      "italian": "Italian",
+      "mexican": "Mexican",
+      "mediterranean": "Mediterranean",
+      "home": "Home-style",
+      "american": "American"
+    },
+    "st0": "Quickest first",
+    "vegF": "Diet",
+    "vegetarian": "Vegetarian",
+    "vegan": "Vegan",
+    "hiddenN": "Recipes hidden because of your “Don't eat” list: {n}.",
+    "showAll": "Show all",
+    "min": "min",
+    "pcs": "pcs",
+    "perOne": "Per serving",
+    "modeFit": "Macro-friendly",
+    "modeClassic": "Classic",
+    "modeFitD": "High-protein version: lighter products, calories and macros under control.",
+    "modeClassicD": "The usual way: fattier dairy and meat, more oil. Calories recalculated.",
+    "addPlan": "+ To plan",
+    "addShop": "+ To shopping",
+    "scaleNote": "Grams are recalculated for the servings. Check spoons and cups yourself.",
+    "notEatT": "Don't eat",
+    "coachQ": "Want results faster?",
+    "coachQd": "A personal training and nutrition program from the coach.",
+    "wantProg": "I want a program",
+    "noGoal": "No daily goal set.",
+    "calcLink": "Calculate my needs",
+    "waterT": "Water",
+    "liters": "L",
+    "ml": "ml",
+    "planT": "Week plan",
+    "shopT": "Shopping",
+    "slot": {"b": "Breakfast", "l": "Lunch", "d": "Dinner", "s": "Snack"},
+    "planToShop": "Shopping list for the week",
+    "planToDay": "Copy day to diary",
+    "planClear": "Clear the week",
+    "sureAgain": "Sure? Tap again",
+    "load": "Load",
+    "loaded": "Plan loaded",
+    "addedPlan": "Added to plan",
+    "addedShop": "Added to shopping",
+    "shopMade": "Shopping list ready",
+    "kg": "kg",
+    "shopCat": {
+      "meat": "Meat, fish, tofu",
+      "dairy": "Dairy and eggs",
+      "veg": "Vegetables and herbs",
+      "fruit": "Fruit and berries",
+      "grain": "Grains, bread, legumes",
+      "other": "Other"
+    },
+    "copy": "Copy",
+    "copied": "List copied",
+    "clearDone": "Remove bought",
+    "clearAll": "Clear all",
+    "shopEmpty": "The list is empty. Add a recipe with “To shopping” or build the list from the week plan.",
+    "shopNote": "Some ingredients (spices, sauces) of the first-set recipes aren't in the list, check them yourself:",
+    "normT": "My daily needs",
+    "normD": "I'll calculate calories and macros for your goal.",
+    "female": "Female",
+    "male": "Male",
+    "age": "Age",
+    "height": "Height, cm",
+    "weight": "Weight, kg",
+    "activity": "Activity",
+    "acts": ["Mostly sitting", "1-3 workouts a week", "3-5 workouts a week", "Training almost daily"],
+    "aims": {"lose": "Lose weight", "maintain": "Maintain", "gain": "Gain muscle"},
+    "normNote": "You burn about {t} kcal a day. The deficit or surplus is gentle, no harsh cuts.",
+    "normFloor": "Raised to a safe minimum.",
+    "setGoal": "Make it my daily goal",
+    "goalSet": "Goal saved",
+    "normFill": "Fill in age, height and weight.",
+    "normWarn": "This is a guide, not a diagnosis. With health conditions, pregnancy or eating difficulties, work out the numbers with a doctor.",
+    "weightT": "Weight",
+    "weightToday": "Today's weight, kg",
+    "weightChange": "Change",
+    "notEatD": "Mark what you don't eat: those products are swapped automatically, and recipes without a swap are hidden.",
+    "allerg": {
+      "lactose": "No dairy",
+      "gluten": "Gluten-free",
+      "nuts": "No nuts",
+      "eggs": "No eggs",
+      "fish": "No fish or seafood",
+      "pork": "No pork",
+      "meat": "Vegetarian",
+      "vegan": "Vegan"
+    },
+    "notEatAdd": "Add a product you don't eat",
+    "defModeT": "Default recipe version",
+    "coachT": "From the coach",
+    "coachIntro": "Hi! I'm Kirill, a coach. I picked these recipes so you eat tasty food and still move toward your goal. If you want a training and nutrition program built for you, with my support, message me.",
+    "tips": [
+      "Protein at every meal makes it easier not to overeat.",
+      "Cook twice a week for 3-4 days instead of from scratch every day.",
+      "Don't slash calories: slow progress lasts longer.",
+      "Weigh in the morning 2-3 times a week and watch the trend, not one day."
+    ],
+    "coachSoon": "The coach's contacts will appear here soon.",
+    "dayT": "Day",
+    "mealT": "Meal"
+  },
+  "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
+  "stop": ["with", "and", "the", "a", "of", "in"],
+  "bases": {
+    "chicken": "Chicken",
+    "beef": "Beef",
+    "turkey": "Turkey",
+    "fish": "Fish & seafood",
+    "eggs": "Eggs & cottage cheese",
+    "veg": "No meat"
+  },
+  "cats": [
+    [
+      "Dinners for several days",
+      "Dinners",
+      "Cook once for 3-4 servings and eat over several evenings. Main meal of the day."
+    ],
+    [
+      "Breakfasts and quick dishes",
+      "Breakfasts",
+      "For days you don't feel like cooking. Plenty of protein to keep you full until lunch."
+    ],
+    ["Oatmeal", "Oatmeal", "Five kinds. Each comes with a with-protein and a no-protein version."],
+    ["Smoothies", "Smoothies", "A quick meal or snack. Add protein powder or leave it out."],
+    ["Salads", "Salads", "Salads you can actually get full on, since each has protein."],
+    [
+      "Desserts and sweets",
+      "Desserts",
+      "Sweet things at 200-250 kcal so you don't break in the evening."
+    ],
+    ["Sauces", "Sauces", "Add flavor to chicken, beef, rice and salads for almost no calories."],
+    ["Soups", "Soups", "Hot and cold soups. Cook a pot for 3-4 days."],
+    ["Snacks up to 200 kcal", "Snacks", "To hold out until the next meal without grabbing junk."],
+    ["Drinks and shakes", "Drinks", "Protein shakes, lemonades and cultured milk drinks."],
+    ["Mass gain", "Mass", "Calorie-dense dishes with protein for gaining weight and muscle."],
+    ["Festive and for guests", "Festive", "Dishes for guests that don't wreck your plan."]
+  ],
+  "subs": [
+    ["Hot honey", "hot sauce (sriracha, chili) + honey: 2 tbsp honey and 1 tsp hot sauce"],
+    [
+      "Hochland Protein+ cream cheese, light cream cheese",
+      "any cream cheese in a tub, or 5% cottage cheese pushed through a sieve"
+    ],
+    ["President processed cheese", "any creamy processed cheese"],
+    ["Light cheese 30%", "any hard cheese with 15-30% fat, or mozzarella"],
+    ["Parmesan", "any hard cheese, grated finely"],
+    ["Greek yogurt", "thick plain yogurt with no sugar, 2%"],
+    ["Vanilla protein yogurt", "Greek yogurt + 1 tsp honey + a drop of vanilla"],
+    ["Vanilla protein powder", "without it: more yogurt or cottage cheese (a bit less protein)"],
+    ["Maple syrup", "honey or sweetener"],
+    ["Passion fruit pulp", "puree of kiwi, raspberry, strawberry or any tart berry"],
+    ["Oyster sauce", "a bit more soy sauce + a pinch of sugar or a drop of honey"],
+    ["Rice vinegar", "apple cider vinegar or lemon juice"],
+    ["Evaporated milk (light condensed)", "cream 10% or milk 2.5%"],
+    ["Sugar-free ketchup (ZERO)", "regular ketchup, a few more calories"],
+    ["Egg noodles", "any noodles or spaghetti"],
+    ["Sun-dried tomatoes", "1 tbsp tomato paste"],
+    ["Branded pasta (Barilla etc.)", "any durum wheat pasta"]
+  ],
+  "rec": {
+    "1": [
+      "Tomato Alfredo Chicken with Spinach",
+      "4 servings",
+      [
+        "chicken breast: 525 g (2-3 fillets)",
+        "basil pasta tomato sauce: 360 g (1 jar)",
+        "cream 10%: 240 ml (1 cup)",
+        "cream cheese or 5% cottage cheese: 160 g",
+        "durum pasta (rigatoni, penne): 225 g dry",
+        "light cheese, grated: 100 g (3 matchbox-sized pieces)",
+        "spinach (fresh or frozen): 75 g (2 handfuls)",
+        "milk 1.5%: 50 ml (3 tbsp)",
+        "dried garlic and onion, pepper, paprika, Provençal herbs, parsley, dill, salt"
+      ],
+      [
+        "Put the whole chicken fillets in a heavy pot, add the tomato sauce, cream, cream cheese and all the spices. Simmer covered for 40-50 minutes.",
+        "Shred the chicken with forks right in the sauce.",
+        "Add the spinach 5 minutes before the end (earlier and it overcooks).",
+        "Stir in the cooked pasta (boil it 1-2 minutes less than the package says).",
+        "Pour in the milk and stir until creamy. Mix in half of the cheese, sprinkle the rest on top and cover for 15 minutes.",
+        "Divide into 4 containers."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      ""
+    ],
+    "2": [
+      "Beef Pasta with Peppers and Two Cheeses",
+      "4 servings",
+      [
+        "lean ground beef: 800 g",
+        "pasta (shells or any durum): 225 g dry",
+        "bell pepper: 250 g (2 medium)",
+        "tomatoes: 250 g (2-3 medium)",
+        "garlic: 20 g (4-5 cloves)",
+        "light cheese, grated: 100 g",
+        "processed cream cheese: 75 g",
+        "Italian herbs, smoked paprika, chili flakes, dried garlic, pepper, salt"
+      ],
+      [
+        "Chop the peppers and tomatoes roughly, mince the garlic. Fry in a dry pan over high heat with the spices for 8-10 minutes until the pepper darkens at the edges. Set aside.",
+        "Boil the pasta 2 minutes less than the package says.",
+        "Put the beef in the same pan, break up the lumps and fry with spices until the liquid is gone.",
+        "Return the vegetables to the beef, add the processed cheese and grated light cheese, stir until melted.",
+        "Mix in the pasta and divide into 4 containers."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir. Add a spoon of milk on top before reheating.",
+      "Calories and protein are estimated from the ingredients; the author did not show them."
+    ],
+    "3": [
+      "Baked Chicken Alfredo",
+      "4 servings",
+      [
+        "chicken breast: 800 g",
+        "pasta (fettuccine or any durum): 220 g dry",
+        "cottage cheese 2%: 180 g",
+        "milk 1.5%: 150 ml",
+        "light cheese, grated: 50 g",
+        "eggs: 2-3",
+        "dried garlic, Italian herbs, smoked paprika, pepper, salt"
+      ],
+      [
+        "Season the whole fillets with paprika, garlic, salt and pepper. Bake at 200 °C for 20-25 minutes until done.",
+        "Hard-boil the eggs (10 minutes) and peel them.",
+        "Boil the pasta 2 minutes less than the package says.",
+        "Blend the cottage cheese, boiled eggs, grated cheese, milk, garlic, herbs, salt and pepper until smooth.",
+        "Let the pasta cool slightly and stir in the sauce. Don't heat the sauce, or the cottage cheese will curdle.",
+        "Slice the chicken into strips. Pack the pasta with sauce in containers and put the chicken on top."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      ""
+    ],
+    "4": [
+      "Beef, Bacon and Sweet Pepper Pasta",
+      "4 servings",
+      [
+        "lean ground beef: 550 g",
+        "bacon (any smoked, turkey is fine): 140 g",
+        "bell pepper: 325 g (2-3)",
+        "onion: 125 g (1 large)",
+        "fusilli or any durum pasta: 180 g dry",
+        "sauce: Greek yogurt 350 g, milk 200 ml, light cheese 90 g, cream or processed cheese 20-40 g, Parmesan or hard cheese 20 g, honey 12 g (2 tsp), pepper"
+      ],
+      [
+        "Chop the pepper and onion roughly, fry in a hot pan, season.",
+        "Add the beef to the same pan and break up the lumps.",
+        "Fry the bacon separately until crisp and add to the beef together with the rendered fat.",
+        "Boil the pasta al dente and drain.",
+        "Whisk the sauce: yogurt, milk, honey, pepper. Stir in the grated cheeses, no blender needed.",
+        "Combine everything in a pot and warm over low heat without boiling (the yogurt would curdle). Divide into 4 containers."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir. From frozen: 1.5 minutes, stir, another 45 seconds.",
+      ""
+    ],
+    "5": [
+      "Baked Chicken Pasta with Caramelized Onion",
+      "4 servings (or 5 at 453 kcal)",
+      [
+        "chicken breast: 650 g (seasoning: 1 tsp each of paprika, garlic and onion powder, oregano, salt, pepper and ½ tsp chili)",
+        "vegetable oil: 1 tbsp",
+        "onion: 1 large or 2 medium, in half rings (with a pinch of paprika, salt and Italian herbs)",
+        "garlic: 2 small heads (cut off the tops)",
+        "sun-dried tomatoes: 2 tbsp (or 1 tbsp tomato paste)",
+        "cream 10% (instead of light condensed milk): 250 ml",
+        "light cream cheese: 150 g",
+        "Parmesan or hard cheese: 3 tbsp",
+        "parsley: 2 tbsp",
+        "fusilli: 300 g dry, ½ lemon"
+      ],
+      [
+        "Brush the chicken and onion with oil, salt them and put in a baking dish together with the garlic heads.",
+        "Cover with foil and bake at 180 °C (fan) or 200 °C. Take out the chicken and check it is done (clear juices, 75 °C inside); return for 5-10 minutes if needed. Shred with forks.",
+        "Add the sun-dried tomatoes to the dish and put the onion and garlic back in the oven for 10-20 minutes until caramelized (wrap the garlic in foil if it isn't ready).",
+        "In the warm dish stir in the cream, cream cheese, Parmesan and parsley into a creamy mass.",
+        "Add the cooked pasta (al dente) and the chicken, squeeze in the lemon, stir and divide into containers."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      ""
+    ],
+    "6": [
+      "One-Dish Chicken, Rice and Broccoli Bake",
+      "4 servings",
+      [
+        "chicken breast, cubed: 600 g",
+        "basmati rice (or any long-grain), rinsed: 200 g dry (1 cup)",
+        "broccoli, chopped: 600 g",
+        "pesto: 60 g (4 tbsp)",
+        "Greek yogurt: 200 g",
+        "chicken stock (cube in water): 500 ml",
+        "light mozzarella: 150 g",
+        "garlic and onion powder 1 tsp each, salt, pepper"
+      ],
+      [
+        "Heat the oven to 180 °C.",
+        "Put the raw rinsed rice, chicken, pesto, yogurt, broccoli, stock and spices in a large baking dish.",
+        "Mix well so the rice is fully under the liquid. Spread the mozzarella on top.",
+        "Cover tightly with foil and bake 45-55 minutes until the chicken is cooked and the rice is soft.",
+        "Remove the foil and bake 10-15 more minutes until golden. Divide into 4 servings."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. About 5 g of fiber per serving.",
+      ""
+    ],
+    "7": [
+      "Chicken Noodles with Vegetables in Asian Sauce",
+      "4 servings",
+      [
+        "chicken breast: 900 g",
+        "egg noodles (or any): 225 g",
+        "zucchini: 450 g (1 large)",
+        "mushrooms: 350 g",
+        "bell pepper: 200 g",
+        "carrot: 100 g, onion: 100 g, green onion: 20 g",
+        "sauce: soy 60 g, oyster sauce 40 g (substitute: more soy + a pinch of sugar), sriracha or hot sauce 15 g, garlic 12 g, ginger 10 g",
+        "cornstarch: 1 heaping tsp, dissolved in 50 ml cold water",
+        "for the chicken: smoked paprika, dried garlic and onion, black pepper, salt"
+      ],
+      [
+        "Boil the noodles 1 minute less than the package says and rinse with cold water, otherwise they go soggy over a few days.",
+        "Cube the chicken, coat in the spices and fry in a dry very hot pan in batches, 6-8 minutes, until browned. Set aside.",
+        "Slice the mushrooms roughly and fry over high heat until the water evaporates. Add julienned carrot, after 2 minutes the pepper and onion, 2 more minutes. Zucchini goes in for the last 3-4 minutes.",
+        "Sauce: soy, oyster, sriracha, grated garlic and ginger. Pour the starch slurry into the boiling sauce.",
+        "Return the chicken to the vegetables, pour in the sauce and warm until glossy. Take off the heat and stir in the noodles.",
+        "Divide into 4 containers, top with green onion."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "Calories and protein are estimated from the ingredients; the author did not show them."
+    ],
+    "8": [
+      "Sweet and Sour Chicken with Fried Rice",
+      "4 servings",
+      [
+        "chicken breast: 900 g",
+        "bell pepper: 300 g, onion: 150 g",
+        "rice: 200 g dry (1 cup)",
+        "frozen vegetable mix: 500 g",
+        "eggs: 1 whole and 1-2 whites (or 2 whole)",
+        "sauce: sugar-free ketchup 75 g (4 tbsp), soy 40 g, honey 30 g (1.5 tbsp), sriracha 20 g, rice or apple vinegar 20 ml, garlic 10 g",
+        "soy sauce for the rice: 25 g, cornstarch 1 tsp, green onion 20 g, chicken spices"
+      ],
+      [
+        "Cover the rice with water (1 cup of rice to 2.25 cups of water) and cook covered 20-25 minutes after it boils. Let it cool (hot rice clumps in the pan).",
+        "Cube the chicken, coat in spices and fry in a dry very hot pan in batches, 6-8 minutes, until browned. Set aside.",
+        "Fry the pepper and onion in large cubes over high heat for 3-4 minutes so they stay crunchy inside.",
+        "Sauce: ketchup, soy, honey, sriracha, vinegar, grated garlic. Dissolve the starch in 50 ml cold water and pour into the boiling sauce.",
+        "Return the chicken to the pepper, pour in the sauce and warm for 2-3 minutes until glossy.",
+        "In a clean pan warm the vegetable mix for 5 minutes, push to the side, pour in the eggs and scramble. Add the rice and soy sauce and stir for 3 minutes.",
+        "Divide into containers: rice with vegetables and egg, chicken in sauce on top, then green onion."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "Calories and protein are estimated from the ingredients; the author did not show them."
+    ],
+    "9": [
+      "Orange Soy Chicken with Rice",
+      "4 servings (440 kcal each per the author)",
+      [
+        "chicken breast, cubed: 800 g",
+        "baking powder: 4 g (1 level tsp, makes the chicken more tender)",
+        "fresh orange juice: 60 ml, soy sauce: 100 g, black pepper: 2 g, cornstarch: 12 g (1 tbsp)",
+        "sauce: garlic 6 g, ginger 6 g, sugar-free orange juice 160 ml, soy 60 g, rice or apple vinegar 24 g, sugar 14 g (3 tsp, or sweetener)",
+        "optional: orange zest, a pinch of chili flakes, 1 tsp oil",
+        "to serve: sesame, green onion, cooked rice: 320 g for all 4 servings (80 g per serving per the author; more rice means more calories)"
+      ],
+      [
+        "Mix the chicken with baking powder, orange juice, soy sauce, pepper and starch, let it sit 15-20 minutes.",
+        "Fry the chicken over high heat until browned.",
+        "Mix the sauce (garlic, ginger, juice, soy, vinegar, sugar) and reduce until thick.",
+        "Combine the chicken with the sauce, warm until glossy. Serve with rice, topped with sesame and green onion."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "Only the ingredients were visible in the source, the steps are written in the standard order for this kind of dish."
+    ],
+    "10": [
+      "Protein Cottage Cheese Omelet",
+      "1 serving",
+      [
+        "cottage cheese 1%: 200 g (1 pack)",
+        "eggs: 3",
+        "light cheese, grated: 40 g",
+        "herbs to taste, salt, pepper"
+      ],
+      [
+        "Whisk the eggs with the cottage cheese using a fork or blender, add the grated cheese and herbs.",
+        "Pour into a non-stick pan and cook over low heat, covered, for 8-10 minutes (or 3-4 minutes in the microwave)."
+      ],
+      "",
+      "The steps were not visible in the source, written in the standard order."
+    ],
+    "11": [
+      "Protein Cinnamon French Toast",
+      "1 serving (2 slices)",
+      [
+        "bread: 2-3 slices",
+        "egg: 1, milk: 80 ml (⅓ cup)",
+        "vanilla protein powder: ½ scoop (15 g), without it: a spoon of milk powder or just more yogurt",
+        "sweetener or honey: 1 tbsp, vanilla ¼ tsp, cinnamon ¼ tsp",
+        "oil or cooking spray",
+        "filling: fat-free Greek yogurt 85 g (⅓ cup), protein 15 g, a splash of milk, cinnamon"
+      ],
+      [
+        "Whisk the egg with the milk, protein, sweetener, vanilla and cinnamon.",
+        "Dip the bread so it soaks through completely.",
+        "Fry in a greased pan 1-2 minutes per side until golden.",
+        "Mix the yogurt with the protein, add a little milk if needed.",
+        "Build the toast in layers with the filling, sprinkle cinnamon between layers and on top."
+      ],
+      "",
+      ""
+    ],
+    "12": [
+      "Baked Oatmeal Carrot Cake",
+      "8 pieces",
+      [
+        "ripe bananas: 3 (mashed)",
+        "eggs: 2",
+        "milk: 180 ml (¾ cup)",
+        "Greek yogurt: 120 g",
+        "rolled oats: 180 g (2 cups)",
+        "vanilla protein powder: 60 g (without it use finely ground oats and add more frosting)",
+        "grated carrot: 100 g (1 medium)",
+        "walnuts or pecans: 60 g",
+        "honey: 2 tbsp, cinnamon 1 tsp, ginger and nutmeg ¼ tsp each, baking powder 1 tsp, pinch of salt",
+        "frosting: cottage cheese 225 g, Greek yogurt 30 g, honey 2 tbsp, vanilla, cinnamon"
+      ],
+      [
+        "Heat the oven to 180 °C.",
+        "Mix all the oatmeal ingredients well in a dish about 20 × 20 cm.",
+        "Bake 30-35 minutes until golden.",
+        "Blend the frosting until smooth. Cool the oatmeal, spread the frosting on and cut into 8 pieces."
+      ],
+      "Keeps in the fridge 3-4 days.",
+      ""
+    ],
+    "13": [
+      "Cottage Cheese Semolina Cake with Cherry Jam",
+      "pan ~600 g, 2 servings",
+      [
+        "batter: soft 0.1% cottage cheese 200 g, semolina 50 g, 1 egg yolk, 3 egg whites, baking powder 4 g (1 tsp), milk 60 ml, sweetener to taste",
+        "jam: frozen cherries 150 g, cornstarch 4 g (½ tsp), sweetener to taste"
+      ],
+      [
+        "Mix all the batter ingredients except the baking powder and whites. Let it rest 30 minutes.",
+        "Whip the whites to stiff peaks. Stir the baking powder into the batter, then gently fold in the whites.",
+        "Pour into a pan and bake at 160 °C for 30 minutes. Turn the oven off and open the door slightly.",
+        "Jam: put the cherries in a pan over medium heat and wait for the juice. Stir the starch into 30 ml water in a cup. Add sweetener, pour in the starch and stir about 1 minute until jelly-like.",
+        "Pour the jam over the cake. Cool; you can leave it in the fridge overnight and eat it in the morning (or right away)."
+      ],
+      "",
+      "The author counted macros for the whole pan, so divide by two for half."
+    ],
+    "14": [
+      "Protein Cheesecake Bowl with Passion Fruit",
+      "1 serving",
+      [
+        "vanilla protein yogurt: 160 g (substitute: Greek yogurt + 1 tsp honey + a drop of vanilla)",
+        "lemon juice: 10 ml (2 tsp)",
+        "salt: a pinch",
+        "passion fruit pulp: 30 ml (substitute: puree of kiwi, raspberry or another tart berry)",
+        "plain dry biscuits without sugar: 4 (substitute: any dry biscuit)",
+        "maple syrup: 20 ml (substitute: 1 tsp honey or sweetener)"
+      ],
+      [
+        "Mix the yogurt, lemon juice and salt.",
+        "Put in a sieve lined with cheesecloth or a clean kitchen towel over a bowl. Press lightly with a cup and refrigerate 24 hours until thick and creamy.",
+        "Before serving squeeze out lightly and layer with the crushed biscuits and fruit puree."
+      ],
+      "",
+      ""
+    ],
+    "15": [
+      "Protein Hot Honey Sauce",
+      "8 servings (2 tbsp each)",
+      [
+        "0% Greek yogurt: 220 g",
+        "light mayonnaise: 40 g (2 tbsp)",
+        "hot honey: 40 g, ours: 2 tbsp honey + 1 tsp hot sauce (sriracha, chili)",
+        "Dijon or whole-grain mustard: 15 g (1 tbsp)",
+        "apple cider vinegar: 10 g (2 tsp)",
+        "garlic powder and smoked paprika ½ tsp each, salt, pepper"
+      ],
+      [
+        "Put all the ingredients in a blender or a bowl with a blending attachment.",
+        "Blend until smooth and creamy, taste and adjust.",
+        "Pour into a bottle or container and refrigerate at least 30 minutes. Goes with chicken, beef and rice."
+      ],
+      "Keep refrigerated in a closed container.",
+      ""
+    ],
+    "16": [
+      "Chicken Meatballs in Tomato Sauce with Rice",
+      "4 servings",
+      [
+        "ground chicken (from breast): 600 g",
+        "rolled oats: 40 g (5 tbsp)",
+        "egg: 55 g (1)",
+        "onion: 100 g (1 small)",
+        "tomato passata or crushed canned tomatoes: 500 g (2 cups)",
+        "dry rice: 200 g (1 cup)",
+        "olive oil: 15 g (1 tbsp)",
+        "garlic 2 cloves, salt, pepper, dried basil or oregano"
+      ],
+      [
+        "Cook the rice according to the package.",
+        "Mix the mince with the oats, egg, finely chopped onion, salt and pepper, shape into balls of 30-35 g.",
+        "Fry the balls in oil on all sides for 5 minutes.",
+        "Pour in the tomatoes, add the garlic and herbs, simmer covered for 15 minutes.",
+        "Divide the rice and meatballs with sauce into 4 containers."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "17": [
+      "Beef Chili con Carne with Rice",
+      "4 servings",
+      [
+        "lean ground beef: 500 g",
+        "onion: 150 g (1 large)",
+        "bell pepper: 200 g (1 large)",
+        "tomato passata or canned tomatoes: 400 g (1.5 cups)",
+        "canned red beans, drained: 240 g (1 can)",
+        "canned corn: 150 g (half a can)",
+        "dry rice: 160 g (¾ cup)",
+        "oil: 10 g (2 tsp)",
+        "spices: paprika 2 tsp, cumin 1 tsp, ground chili to taste, garlic 3 cloves, salt"
+      ],
+      [
+        "Fry the onion and pepper in oil for 5 minutes, add the garlic and spices for 1 minute.",
+        "Add the beef, break it up with a spatula and fry until it changes color.",
+        "Pour in the tomatoes, add the beans and corn, simmer covered for 25 minutes.",
+        "Serve with cooked rice, with a spoon of yogurt on top if you like."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "If you have no red beans, any canned beans work. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "18": [
+      "Chicken Curry with Chickpeas and Rice",
+      "4 servings",
+      [
+        "chicken breast, cubed: 600 g",
+        "canned chickpeas, drained: 240 g (1 can)",
+        "light coconut milk (substitute: 2.5% milk + 1 tsp oil): 200 g (¾ cup)",
+        "tomato passata: 200 g (¾ cup)",
+        "onion: 100 g (1 small)",
+        "dry rice: 200 g (1 cup)",
+        "oil: 10 g (2 tsp)",
+        "curry powder 1.5 tbsp, grated ginger and garlic 2 tsp each, salt, herbs"
+      ],
+      [
+        "Fry the onion in oil for 4 minutes, add the ginger, garlic and curry for a minute.",
+        "Add the chicken, fry 5 minutes.",
+        "Pour in the passata and coconut milk, add the chickpeas, simmer covered for 15 minutes.",
+        "Serve with rice, herbs on top."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "No coconut milk: use milk and a bit more tomato, the flavor will be lighter. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "19": [
+      "Tuna and Tomato Pasta",
+      "4 servings",
+      [
+        "durum pasta, dry: 320 g",
+        "tuna in its own juice, drained: 360 g (3 small cans)",
+        "tomato passata: 400 g (1.5 cups)",
+        "onion: 100 g (1 small)",
+        "olives: 40 g (a handful)",
+        "hard cheese: 40 g (matchbox-sized piece)",
+        "olive oil: 15 g (1 tbsp)",
+        "garlic 2 cloves, chili, salt, pepper, parsley"
+      ],
+      [
+        "Boil the pasta 1 minute less than the package says.",
+        "Fry the onion and garlic in oil, pour in the passata, simmer 8 minutes.",
+        "Add the tuna, olives and spices, warm 3 minutes.",
+        "Combine with the pasta and a spoon of the cooking water, grated cheese on top."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "20": [
+      "Chicken Burrito Bowl",
+      "4 servings",
+      [
+        "chicken breast: 600 g",
+        "dry rice: 200 g (1 cup)",
+        "canned red beans: 240 g (1 can)",
+        "corn: 120 g (5 tbsp)",
+        "tomatoes: 200 g (2 medium)",
+        "avocado: 100 g (½ large)",
+        "Greek yogurt for the sauce: 160 g (⅔ cup)",
+        "paprika, cumin, garlic, lime or lemon, salt, pepper"
+      ],
+      [
+        "Slice the chicken into strips, coat in paprika, cumin and garlic, fry until golden.",
+        "Cook the rice. Warm the beans and corn.",
+        "Sauce: yogurt, lime juice, garlic, salt.",
+        "Divide into containers by section: rice, chicken, beans with corn, tomatoes. Add the avocado and sauce just before eating."
+      ],
+      "Keeps in the fridge for 3 days. Store the avocado and sauce separately and add them fresh before eating.",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "21": [
+      "Turkey and Rice Stuffed Peppers",
+      "4 servings",
+      [
+        "large bell peppers: 800 g (4)",
+        "ground turkey: 500 g",
+        "dry rice: 140 g (⅔ cup)",
+        "onion: 100 g (1 small)",
+        "tomato passata: 300 g (1 cup)",
+        "sour cream 10%: 100 g (5 tbsp)",
+        "hard cheese: 60 g (2 matchbox-sized pieces)",
+        "salt, pepper, paprika, herbs"
+      ],
+      [
+        "Cook the rice until half done. Cut the tops off the peppers and remove the seeds.",
+        "Mix the mince, rice, onion, salt and spices, stuff the peppers.",
+        "Sauce: passata with sour cream and a pinch of salt. Put the peppers in a dish and pour the sauce over.",
+        "Cover with foil and bake 40 minutes at 190 °C, then sprinkle with cheese and bake 10 more minutes."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "22": [
+      "Oven Chicken with Potatoes and Vegetables",
+      "4 servings",
+      [
+        "chicken breast or skinless thighs: 700 g",
+        "potatoes: 800 g (5-6 medium)",
+        "zucchini: 300 g (1 medium)",
+        "bell pepper: 200 g (1 large)",
+        "Greek yogurt for the marinade: 120 g (½ cup)",
+        "olive oil: 20 g (1.5 tbsp)",
+        "paprika, granulated garlic, salt, pepper, dried herbs"
+      ],
+      [
+        "Mix the chicken with the yogurt and spices, leave 20 minutes.",
+        "Cut the potatoes into wedges and the vegetables roughly, toss everything with oil and salt.",
+        "Spread everything on a baking tray in one layer, bake 40-45 minutes at 200 °C, stirring once."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "The simplest recipe in the collection, for when you have no energy to cook. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "23": [
+      "Lazy Lavash Lasagna",
+      "4 servings",
+      [
+        "thin lavash: 150 g (2 sheets)",
+        "lean ground beef: 500 g",
+        "5% cottage cheese: 200 g (¾ cup)",
+        "tomato passata: 400 g (1.5 cups)",
+        "mozzarella: 120 g (½ ball)",
+        "egg: 55 g (1)",
+        "onion: 100 g (1 small)",
+        "garlic, oregano, salt, pepper"
+      ],
+      [
+        "Fry the beef with the onion, pour in the passata and simmer 10 minutes with the spices.",
+        "Mix the cottage cheese with the egg and salt.",
+        "Layer in a dish: lavash, meat, cottage cheese mixture, repeat.",
+        "Grate the mozzarella on top. Bake 25 minutes at 190 °C until browned."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "24": [
+      "Shrimp with Fried Rice and Vegetables",
+      "4 servings",
+      [
+        "peeled shrimp: 500 g",
+        "dry rice: 240 g (1 heaping cup)",
+        "zucchini: 300 g (1 medium)",
+        "bell pepper: 150 g (1 small)",
+        "carrot: 100 g (1 medium)",
+        "eggs: 110 g (2)",
+        "soy sauce: 40 g (2 tbsp)",
+        "oil: 20 g (1.5 tbsp)",
+        "garlic, ginger, green onion"
+      ],
+      [
+        "Cook the rice ahead and let it cool (cold rice fries better).",
+        "Chop the vegetables small and fry over high heat for 4 minutes, add the garlic and ginger.",
+        "Push the vegetables aside, crack in the eggs and stir until done. Add the shrimp for 3 minutes.",
+        "Stir in the rice and soy sauce, warm through. Green onion on top."
+      ],
+      "Keeps in the fridge up to 2 days.",
+      "Better not to keep shrimp in a container longer than 2 days. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "25": [
+      "Buckwheat with Turkey and Mushrooms",
+      "4 servings",
+      [
+        "dry buckwheat: 240 g (1 heaping cup)",
+        "ground turkey: 500 g",
+        "mushrooms: 300 g (10 medium)",
+        "onion: 100 g (1 small)",
+        "sour cream 10%: 100 g (5 tbsp)",
+        "oil: 15 g (1 tbsp)",
+        "garlic, salt, pepper, dill"
+      ],
+      [
+        "Cook the buckwheat.",
+        "Fry the onion and mushrooms in oil until the water evaporates.",
+        "Add the mince, fry 8 minutes, pour in the sour cream with garlic and simmer 5 minutes.",
+        "Mix with the buckwheat and dill."
+      ],
+      "Keeps in the fridge for 3 days, freeze the rest. Thaw overnight in the fridge. Reheat 1.5 minutes in the microwave, stir.",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "26": [
+      "Shakshuka with Feta",
+      "2 servings",
+      [
+        "eggs: 220 g (4)",
+        "tomato passata: 300 g (1 cup)",
+        "bell pepper: 150 g (1 small)",
+        "onion: 80 g (½ large)",
+        "feta: 60 g (a piece the size of a matchbox)",
+        "oil: 10 g (2 tsp)",
+        "bread to serve: 100 g (2 slices)",
+        "paprika, cumin, garlic, salt, herbs"
+      ],
+      [
+        "Fry the onion and pepper in oil for 5 minutes, add the garlic and spices.",
+        "Pour in the passata, simmer 7 minutes.",
+        "Make wells, crack in the eggs, cover and cook 5-7 minutes.",
+        "Feta and herbs on top, serve with bread."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "27": [
+      "Cottage Cheese Pancakes with Yogurt and Berries",
+      "2 servings (6 pancakes)",
+      [
+        "5% cottage cheese: 400 g (1.5 cups)",
+        "egg: 55 g (1)",
+        "oats, ground: 50 g (6 tbsp)",
+        "honey: 15 g (2 tsp)",
+        "oil for the pan: 8 g (1.5 tsp)",
+        "Greek yogurt to serve: 100 g (⅓ cup)",
+        "berries: 100 g (a handful)",
+        "vanilla, a pinch of salt"
+      ],
+      [
+        "Grind the oats into flour in a blender.",
+        "Mix the cottage cheese, egg, flour, honey, vanilla and salt, shape 6 patties.",
+        "Fry in a lightly greased pan 3 minutes per side over medium heat.",
+        "Serve with yogurt and berries."
+      ],
+      "",
+      "Want even more protein: replace the flour with 30 g protein powder and 20 g oats. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "28": [
+      "Banana Pancakes",
+      "1 serving (3-4 pancakes)",
+      [
+        "banana: 100 g (1 small)",
+        "egg: 55 g (1)",
+        "oats, ground: 40 g (5 tbsp)",
+        "milk: 50 g (3 tbsp)",
+        "berries to serve: 80 g (a handful)",
+        "honey: 10 g (1.5 tsp)",
+        "½ tsp baking powder, cinnamon",
+        "<b>With protein add:</b> vanilla protein powder (together with the flour): 25 g (1 scoop)",
+        "<b>Without protein add instead:</b> Greek yogurt to serve: 60 g (2 tbsp)"
+      ],
+      [
+        "Mash the banana with a fork or blender, add the egg, milk, oat flour and baking powder.",
+        "Fry small pancakes in a dry non-stick pan, 2 minutes per side.",
+        "Serve with berries and honey."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "29": [
+      "Cottage Cheese Casserole",
+      "4 slices",
+      [
+        "5% cottage cheese: 500 g (2 cups)",
+        "eggs: 110 g (2)",
+        "semolina: 40 g (3 tbsp)",
+        "honey: 40 g (2 tbsp)",
+        "berries (frozen is fine): 150 g (1 cup)",
+        "vanilla, a pinch of salt"
+      ],
+      [
+        "Blend everything except the berries until smooth, let it sit 15 minutes so the semolina swells.",
+        "Pour into a dish, berries on top.",
+        "Bake 35-40 minutes at 180 °C. Cool before slicing."
+      ],
+      "Keeps in the fridge up to 4 days.",
+      "With a spoon of yogurt on top it is a full breakfast at about 300 kcal. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "30": [
+      "Avocado and Egg Toast",
+      "1 serving",
+      [
+        "bread: 80 g (2 slices)",
+        "avocado: 70 g (½ small)",
+        "eggs: 110 g (2)",
+        "tomato: 60 g (½ medium)",
+        "lemon, salt, pepper, chili flakes"
+      ],
+      [
+        "Toast the bread in a toaster or dry pan.",
+        "Mash the avocado with lemon and salt, spread on the bread.",
+        "Soft-boil or fry the eggs without oil, put on top, add the tomato and spices."
+      ],
+      "",
+      "For more protein add a third egg or a spoon of cottage cheese on the bread. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "31": [
+      "Banana Peanut Butter Oatmeal",
+      "1 serving",
+      [
+        "rolled oats: 50 g (5 tbsp)",
+        "milk: 200 g (1 cup)",
+        "banana: 100 g (1 small)",
+        "peanut butter: 15 g (1 tbsp)",
+        "<b>With protein add:</b> vanilla protein powder (stir in after cooking, when the porridge has cooled slightly): 25 g (1 scoop)",
+        "<b>Without protein add instead:</b> Greek yogurt on top: 100 g (⅓ cup)"
+      ],
+      [
+        "Pour the milk over the oats and cook 5 minutes over medium heat, stirring.",
+        "Take off the heat, stir in half the banana and the protein if using.",
+        "Top with the remaining banana and peanut butter."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "32": [
+      "Chocolate Oatmeal",
+      "1 serving",
+      [
+        "rolled oats: 50 g (5 tbsp)",
+        "milk: 200 g (1 cup)",
+        "banana: 80 g (½ large)",
+        "cocoa: 8 g (1 tbsp)",
+        "honey: 10 g (2 tsp)",
+        "<b>With protein add:</b> chocolate or vanilla protein powder: 25 g (1 scoop)",
+        "<b>Without protein add instead:</b> Greek yogurt on top: 100 g (⅓ cup)"
+      ],
+      [
+        "Cook the oats with the cocoa and milk for 5 minutes.",
+        "Add the honey and half the banana, mash.",
+        "Top with the remaining banana slices."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "33": [
+      "Apple Pie Oatmeal",
+      "1 serving",
+      [
+        "rolled oats: 50 g (5 tbsp)",
+        "milk: 200 g (1 cup)",
+        "apple: 150 g (1 medium)",
+        "walnuts: 15 g (2-3 nuts)",
+        "honey: 10 g (2 tsp)",
+        "cinnamon 1 tsp",
+        "<b>With protein add:</b> vanilla protein powder: 25 g (1 scoop)",
+        "<b>Without protein add instead:</b> Greek yogurt on top: 100 g (⅓ cup)"
+      ],
+      [
+        "Dice the apple and stew 3 minutes in a dry pan with the cinnamon.",
+        "Cook the oats in the milk for 5 minutes.",
+        "Mix with the apple, top with walnuts and honey."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "34": [
+      "Overnight Oats with Berries and Yogurt",
+      "1 jar",
+      [
+        "rolled oats: 45 g (4.5 tbsp)",
+        "milk: 100 g (½ cup)",
+        "Greek yogurt: 150 g (½ cup)",
+        "chia seeds: 8 g (2 tsp)",
+        "berries (frozen is fine): 100 g (a handful)",
+        "honey: 10 g (2 tsp)",
+        "<b>With protein add:</b> vanilla protein powder (mix with the milk until smooth): 20 g (¾ scoop)",
+        "<b>Without protein:</b> just skip it, there is enough protein already"
+      ],
+      [
+        "Mix everything except the berries in a jar, berries on top.",
+        "Refrigerate at least 6 hours, ideally overnight.",
+        "In the morning stir and eat cold."
+      ],
+      "",
+      "Make 3 jars at once for several days, they keep up to 3 days. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "35": [
+      "Baked Cherry Oatmeal",
+      "1 serving",
+      [
+        "rolled oats: 50 g (5 tbsp)",
+        "egg: 55 g (1)",
+        "milk: 100 g (½ cup)",
+        "cherries (frozen is fine): 100 g (half a cup)",
+        "honey: 10 g (2 tsp)",
+        "½ tsp baking powder, cinnamon",
+        "<b>With protein add:</b> vanilla protein powder (into the mix together with the oats): 20 g (¾ scoop)",
+        "<b>Without protein add instead:</b> Greek yogurt on top: 80 g (3 tbsp)"
+      ],
+      [
+        "Heat the oven to 180 °C.",
+        "Mix the oats, egg, milk, baking powder and honey, add half the cherries.",
+        "Pour into a small dish, remaining cherries on top.",
+        "Bake 20-25 minutes until golden."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "36": [
+      "Chocolate Banana Peanut Butter Smoothie",
+      "1 glass (~400 ml)",
+      [
+        "milk: 250 g (1 cup)",
+        "frozen banana: 120 g (1 medium)",
+        "peanut butter: 15 g (1 tbsp)",
+        "cocoa: 5 g (1 heaping tsp)",
+        "ice if you like",
+        "<b>With protein add:</b> chocolate or vanilla protein powder: 25 g (1 scoop)",
+        "<b>Without protein add instead:</b> Greek yogurt: 100 g (⅓ cup)"
+      ],
+      ["Put everything in a blender and blend 1 minute until smooth."],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "37": [
+      "Strawberry Yogurt Smoothie",
+      "1 glass (~400 ml)",
+      [
+        "strawberries (frozen is fine): 200 g (1.5 cups)",
+        "Greek yogurt: 150 g (½ cup)",
+        "milk: 100 g (½ cup)",
+        "honey: 10 g (2 tsp)",
+        "<b>With protein add:</b> vanilla protein powder: 20 g (¾ scoop)",
+        "<b>Without protein:</b> just skip it, there is enough protein already"
+      ],
+      ["Blend everything until smooth. If it is too thick, add a little milk."],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "38": [
+      "Green Spinach and Pineapple Smoothie",
+      "1 glass (~400 ml)",
+      [
+        "fresh spinach: 40 g (2 handfuls)",
+        "banana: 100 g (1 small)",
+        "pineapple (frozen or fresh): 100 g (3-4 rings)",
+        "milk: 200 g (1 cup)",
+        "Greek yogurt: 100 g (⅓ cup)",
+        "<b>With protein add:</b> vanilla protein powder: 20 g (¾ scoop)",
+        "<b>Without protein:</b> just skip it, there is enough protein already"
+      ],
+      [
+        "First blend the spinach with the milk, then add the rest and blend until uniform. You can barely taste the spinach."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "39": [
+      "Berry Oat Smoothie",
+      "1 glass (~400 ml)",
+      [
+        "frozen berries: 150 g (1 cup)",
+        "Greek yogurt: 150 g (½ cup)",
+        "milk: 150 g (⅔ cup)",
+        "rolled oats: 25 g (2.5 tbsp)",
+        "honey: 10 g (2 tsp)",
+        "<b>With protein add:</b> vanilla protein powder: 20 g (¾ scoop)",
+        "<b>Without protein:</b> just skip it, there is enough protein already"
+      ],
+      ["You can soak the oats in the milk for 5 minutes. Blend everything until smooth."],
+      "",
+      "The oats make the smoothie thick and filling, you can drink it as a light breakfast. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "40": [
+      "Chicken Caesar with Yogurt Dressing",
+      "1 serving",
+      [
+        "chicken breast (raw weight): 150 g (1 small)",
+        "romaine or iceberg lettuce: 120 g (a big handful)",
+        "bread for croutons: 30 g (1 slice)",
+        "hard cheese, grated: 20 g (1 tbsp)",
+        "cherry tomatoes: 80 g (5-6)",
+        "Greek yogurt for the dressing: 60 g (2 tbsp)",
+        "light mayonnaise: 15 g (a heaping tsp)",
+        "for the dressing: garlic, 1 tsp mustard, lemon juice, salt"
+      ],
+      [
+        "Fry the chicken in a dry pan for 6-7 minutes, slice. Cube the bread and dry it in a pan or the oven.",
+        "Whisk the dressing with a fork from the yogurt, mayonnaise, mustard, garlic and lemon.",
+        "Assemble the salad, top with chicken, croutons and cheese."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "41": [
+      "Greek Salad with Chickpeas",
+      "1 serving",
+      [
+        "canned chickpeas, drained: 120 g (½ can)",
+        "cucumber: 150 g (1 large)",
+        "tomatoes: 150 g (1-2 medium)",
+        "bell pepper: 80 g (½ small)",
+        "feta: 50 g (a piece)",
+        "olives: 30 g (7-8)",
+        "red onion: 30 g (¼)",
+        "olive oil: 10 g (2 tsp)",
+        "lemon juice, oregano, salt"
+      ],
+      [
+        "Chop the vegetables roughly, rinse the chickpeas.",
+        "Mix everything, dress with oil, lemon and oregano. Put the feta on top."
+      ],
+      "",
+      "Meat-free, but with protein from the chickpeas and feta. Add 100 g of chicken if you need more. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "42": [
+      "Tuna and Bean Salad",
+      "1 serving",
+      [
+        "tuna in its own juice, drained: 120 g (1 small can)",
+        "canned beans: 120 g (½ can)",
+        "tomatoes: 120 g (1 medium)",
+        "red onion: 30 g (¼)",
+        "arugula or any greens: 40 g (2 handfuls)",
+        "boiled egg: 55 g (1)",
+        "olive oil: 10 g (2 tsp)",
+        "lemon juice, salt, pepper"
+      ],
+      [
+        "Chop everything, mash the beans and tuna with a fork, quarter the egg.",
+        "Mix and dress with oil and lemon."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "43": [
+      "Shrimp and Avocado Salad",
+      "1 serving",
+      [
+        "peeled shrimp: 150 g (10-12)",
+        "avocado: 80 g (½ small)",
+        "cucumber: 100 g (1 small)",
+        "salad leaves: 80 g (2 handfuls)",
+        "corn: 50 g (2 tbsp)",
+        "olive oil: 5 g (1 tsp)",
+        "Greek yogurt for the dressing: 50 g (2 tbsp)",
+        "garlic, lime or lemon, salt, pepper"
+      ],
+      [
+        "Fry the shrimp in oil for 2-3 minutes with garlic.",
+        "Chop the vegetables and avocado, mix with the leaves and corn.",
+        "Mix the yogurt with lime juice and salt, pour over the salad, shrimp on top."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "44": [
+      "Mexican Chicken and Bean Salad",
+      "1 serving",
+      [
+        "chicken breast (raw weight): 150 g (1 small)",
+        "canned red beans: 80 g (3 tbsp)",
+        "corn: 60 g (3 tbsp)",
+        "tomato: 100 g (1 small)",
+        "salad leaves: 80 g (2 handfuls)",
+        "avocado: 50 g (⅓ small)",
+        "Greek yogurt for the dressing: 60 g (2 tbsp)",
+        "paprika, cumin, lime, salt, chili to taste"
+      ],
+      [
+        "Coat the chicken in paprika and cumin, fry, slice into strips.",
+        "Mix the leaves, tomato, beans, corn and avocado in a bowl.",
+        "Mix the yogurt with lime and salt, pour over and put the chicken on top."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "45": [
+      "Chocolate Cottage Cheese Mousse",
+      "2 servings",
+      [
+        "1% cottage cheese: 300 g (1 heaping cup)",
+        "cocoa: 15 g (1.5 tbsp)",
+        "honey: 25 g (1 tbsp)",
+        "milk: 50 g (3 tbsp)",
+        "dark chocolate for topping: 15 g (3 squares)"
+      ],
+      [
+        "Blend the cottage cheese, cocoa, honey and milk until perfectly smooth.",
+        "Divide into glasses and refrigerate for 30 minutes.",
+        "Grate the chocolate on top before serving."
+      ],
+      "",
+      "With 5% cottage cheese the texture is silkier, but there are more calories. Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "46": [
+      "Banana Oat Brownies",
+      "6 pieces",
+      [
+        "ripe bananas: 250 g (2 large)",
+        "oats, ground: 100 g (10 tbsp)",
+        "cocoa: 25 g (2.5 tbsp)",
+        "eggs: 110 g (2)",
+        "Greek yogurt: 100 g (⅓ cup)",
+        "dark chocolate, in pieces: 40 g (½ bar)",
+        "honey: 20 g (1 tbsp)",
+        "1 tsp baking powder, a pinch of salt",
+        "<b>With protein add:</b> chocolate protein powder (add to the dry ingredients): 30 g (1.5 scoops)",
+        "<b>Without protein:</b> don't add it, the dish turns out fine, just with less protein"
+      ],
+      [
+        "Heat the oven to 180 °C. Mash the bananas, add the eggs, yogurt and honey.",
+        "Stir in the oat flour, cocoa, baking powder and half the chocolate.",
+        "Pour into an 18 × 18 cm pan, remaining chocolate on top.",
+        "Bake 25 minutes. Cool and cut into 6 pieces."
+      ],
+      "Keeps in the fridge up to 4 days.",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "47": [
+      "Mango Chia Pudding",
+      "2 servings",
+      [
+        "chia seeds: 40 g (4 tbsp)",
+        "milk: 300 g (1 heaping cup)",
+        "mango (frozen is fine): 150 g (1 small)",
+        "honey: 15 g (2 tsp)",
+        "<b>With protein add:</b> vanilla protein powder (stir into the milk before the chia): 20 g (¾ scoop)",
+        "<b>Without protein add instead:</b> Greek yogurt on top: 100 g (⅓ cup)"
+      ],
+      [
+        "Mix the chia with the milk and half the honey, stir twice at 5-minute intervals so it doesn't clump.",
+        "Refrigerate 4 hours or overnight.",
+        "Blend the mango into a puree and layer with the pudding."
+      ],
+      "Keeps in the fridge up to 3 days.",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "48": [
+      "Baked Apples with Cottage Cheese",
+      "2 servings",
+      [
+        "large apples: 400 g (2)",
+        "5% cottage cheese: 150 g (½ cup)",
+        "honey: 20 g (2 tsp)",
+        "walnuts: 10 g (1-2 nuts)",
+        "cinnamon, vanilla"
+      ],
+      [
+        "Cut the tops off the apples and carefully core them, leaving the bottom.",
+        "Mix the cottage cheese with the honey, cinnamon and vanilla, fill the apples, walnuts on top.",
+        "Bake 25 minutes at 180 °C."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "49": [
+      "Yogurt Ice Cream with Berries",
+      "2 servings",
+      [
+        "Greek yogurt: 300 g (1 cup)",
+        "frozen berries: 200 g (1.5 cups)",
+        "honey: 25 g (1 tbsp)",
+        "<b>With protein add:</b> vanilla protein powder: 20 g (¾ scoop)",
+        "<b>Without protein:</b> just skip it, there is enough protein already"
+      ],
+      [
+        "Blend everything into a thick mass.",
+        "For firmer ice cream, put it in the freezer for 1-2 hours and stir after an hour."
+      ],
+      "",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "50": [
+      "Yogurt Garlic Sauce",
+      "4 servings (3 tbsp each)",
+      ["0% Greek yogurt: 200 g (¾ cup)", "garlic 1-2 cloves, juice of ½ lemon, dill, salt, pepper"],
+      [
+        "Mix everything and let it stand 15 minutes. Goes with chicken, potatoes, the burrito bowl and salads."
+      ],
+      "Keeps in the fridge up to 4 days.",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "51": [
+      "Lighter Caesar Dressing",
+      "4 servings (2 tbsp each)",
+      [
+        "0% Greek yogurt: 100 g (⅓ cup)",
+        "light mayonnaise: 30 g (1.5 tbsp)",
+        "grated hard cheese: 20 g (1 tbsp)",
+        "mustard 1 tsp, garlic 1 clove, juice of ½ lemon, salt, pepper"
+      ],
+      ["Mix until smooth. If it is too thick, add water."],
+      "Keeps in the fridge up to 4 days.",
+      "Macros are calculated from the ingredients, accuracy about 10%."
+    ],
+    "52": [
+      "Chicken noodle soup",
+      null,
+      null,
+      [
+        "Cover the chicken with broth or water, bring to a boil, skim and simmer 20 minutes. Take it out and chop.",
+        "Add potato, carrot and onion and cook 10 minutes.",
+        "Add the noodles, return the chicken and cook 7-8 minutes more. Season and top with herbs."
+      ],
+      null,
+      null
+    ],
+    "53": [
+      "Lentil soup",
+      null,
+      null,
+      [
+        "Sauté the onion, carrot and garlic in the oil for 5 minutes.",
+        "Add the rinsed red lentils, tomatoes and broth. Simmer 20 minutes until the lentils fall apart.",
+        "Blend half of it, season and add lemon juice."
+      ],
+      null,
+      null
+    ],
+    "54": [
+      "Tomato bean soup with turkey",
+      null,
+      null,
+      [
+        "Dice the turkey and brown it with the onion and garlic for 5 minutes.",
+        "Add the pepper, tomatoes, beans and broth.",
+        "Simmer 15 minutes, then season with salt and pepper."
+      ],
+      null,
+      null
+    ],
+    "55": [
+      "Creamy broccoli soup",
+      null,
+      null,
+      [
+        "Cover the potato, onion and broccoli with broth and cook 15 minutes.",
+        "Pour in the milk and blend until smooth.",
+        "Stir in the grated cheese, heat through and season."
+      ],
+      null,
+      null
+    ],
+    "56": [
+      "Lighter kharcho",
+      null,
+      null,
+      [
+        "Cut the beef into pieces, cover with water and simmer 35 minutes, skimming.",
+        "Add the rice, onion and tomatoes and cook 12 minutes.",
+        "Stir in the ground walnuts, tkemali, garlic and khmeli-suneli, cook 3 minutes and top with coriander."
+      ],
+      null,
+      null
+    ],
+    "57": [
+      "Okroshka on kefir",
+      null,
+      null,
+      [
+        "Boil the chicken, eggs and potatoes in their skins and cool.",
+        "Dice everything together with the cucumbers, green onion and dill.",
+        "Pour over cold kefir thinned with water and salt. Serve chilled."
+      ],
+      null,
+      null
+    ],
+    "58": [
+      "Asian chicken rice-noodle soup",
+      null,
+      null,
+      [
+        "Simmer the chicken in broth with ginger and garlic for 15 minutes, then slice thinly.",
+        "Add the mushrooms and carrot, cook 5 minutes and pour in the soy sauce.",
+        "Add the noodles and spinach; after 3 minutes return the chicken and top with green onion."
+      ],
+      null,
+      null
+    ],
+    "59": [
+      "No-bake protein bars",
+      null,
+      null,
+      [
+        "Mix the oats and protein, add the peanut butter, honey and milk and knead into a firm mass.",
+        "Press into a lined tin about 1.5 cm thick and drizzle with melted chocolate.",
+        "Chill for 1 hour and cut into 8 bars."
+      ],
+      null,
+      null
+    ],
+    "60": [
+      "Hummus with veggie sticks",
+      null,
+      null,
+      [
+        "Blend the chickpeas with tahini, lemon juice, garlic and water into a smooth paste and season.",
+        "Cut the carrot, cucumber and pepper into sticks.",
+        "Dip the veggies in the hummus. It keeps 4 days in the fridge."
+      ],
+      null,
+      null
+    ],
+    "61": [
+      "Cottage cheese coconut balls",
+      null,
+      null,
+      [
+        "Mash the cottage cheese with protein and honey into a firm mass.",
+        "Roll 12 balls with wet hands.",
+        "Coat in coconut flakes or cocoa and chill 20 minutes. One serving is 3 balls."
+      ],
+      null,
+      null
+    ],
+    "62": [
+      "Eggs with cucumber and yogurt",
+      null,
+      null,
+      [
+        "Hard-boil the eggs for 9 minutes and cool in cold water.",
+        "Slice the eggs and cucumber.",
+        "Top with yogurt and herbs, salt and pepper."
+      ],
+      null,
+      null
+    ],
+    "63": [
+      "Turkey and cheese roll-ups",
+      null,
+      null,
+      [
+        "Lay out the turkey ham slices.",
+        "Put a strip of cheese, a cucumber stick and a lettuce leaf on each.",
+        "Roll up and secure with a toothpick."
+      ],
+      null,
+      null
+    ],
+    "64": [
+      "Yogurt with berries and chia",
+      null,
+      null,
+      [
+        "Spoon the yogurt into a bowl.",
+        "Add the berries, fresh or thawed.",
+        "Drizzle with honey and sprinkle with chia."
+      ],
+      null,
+      null
+    ],
+    "65": [
+      "Apple with peanut butter",
+      null,
+      null,
+      [
+        "Core the apple and cut it into wedges.",
+        "Measure about 15 g of peanut butter, one spoonful.",
+        "Dip the wedges in it and dust with cinnamon if you like."
+      ],
+      null,
+      null
+    ],
+    "66": [
+      "Crispy roasted chickpeas",
+      null,
+      null,
+      [
+        "Pat the canned chickpeas dry with a towel.",
+        "Toss with the oil, salt, paprika and garlic powder.",
+        "Roast at 200 °C for 30 minutes, shaking every 10 minutes. They crisp up as they cool."
+      ],
+      null,
+      null
+    ],
+    "67": [
+      "Protein coffee shake",
+      null,
+      null,
+      [
+        "Brew an espresso or strong coffee and let it cool.",
+        "Blend the coffee with milk, protein and sweetener.",
+        "Serve over ice."
+      ],
+      null,
+      null
+    ],
+    "68": [
+      "Hot protein cocoa",
+      null,
+      null,
+      [
+        "Heat the milk until almost boiling.",
+        "Separately stir the cocoa and protein with 3 tablespoons of warm milk into a smooth paste.",
+        "Pour in the rest of the milk, whisk and sweeten. Don't boil it once the protein is in."
+      ],
+      null,
+      null
+    ],
+    "69": [
+      "Ginger mint lemonade",
+      null,
+      null,
+      [
+        "Grate the ginger, pour over 300 ml of hot water with the honey and steep 10 minutes.",
+        "Strain, then add the lemon juice and cold water.",
+        "Add mint and ice. Keeps 2 days in the fridge."
+      ],
+      null,
+      null
+    ],
+    "70": [
+      "Kefir berry drink",
+      null,
+      null,
+      [
+        "Put the kefir and berries in a blender.",
+        "Blend 30 seconds and sweeten to taste.",
+        "Drink right away while it's frothy."
+      ],
+      null,
+      null
+    ],
+    "71": [
+      "Mango lassi",
+      null,
+      null,
+      [
+        "Peel the mango and dice it.",
+        "Blend with the yogurt, milk and a pinch of cardamom.",
+        "Serve cold, with ice if you like."
+      ],
+      null,
+      null
+    ],
+    "72": [
+      "Tan with cucumber and mint",
+      null,
+      null,
+      [
+        "Whisk the matsoni with cold water and a pinch of salt.",
+        "Grate the cucumber and finely chop the mint.",
+        "Mix everything and serve over ice. Very refreshing."
+      ],
+      null,
+      null
+    ],
+    "73": [
+      "Big beef and rice bowl",
+      null,
+      null,
+      [
+        "Cook the rice. Slice the beef into thin strips.",
+        "Sear the beef on high heat for 3 minutes, then add the pepper and broccoli for 4 more.",
+        "Pour in the soy sauce with honey and garlic and heat through. Serve over rice with sesame."
+      ],
+      null,
+      null
+    ],
+    "74": [
+      "Creamy chicken and mushroom pasta",
+      null,
+      null,
+      [
+        "Cook the pasta. Dice the chicken and fry it in the oil for 6 minutes.",
+        "Add the mushrooms and garlic and fry 5 minutes.",
+        "Pour in the cream, stir in the grated cheese and pasta and heat 2 minutes."
+      ],
+      null,
+      null
+    ],
+    "75": [
+      "Homemade mass gainer",
+      null,
+      null,
+      [
+        "Blitz the oats in a blender into flour.",
+        "Add the milk, banana, peanut butter, protein and honey.",
+        "Blend until smooth. About 800 kcal, handy between meals when bulking."
+      ],
+      null,
+      null
+    ],
+    "76": [
+      "Buckwheat with beef, egg and vegetables",
+      null,
+      null,
+      [
+        "Cook the buckwheat. Dice the beef.",
+        "Fry the beef with the onion and carrot in the oil for 10 minutes, add a splash of water and braise 10 minutes.",
+        "Mix with the buckwheat and butter and top with a boiled or fried egg."
+      ],
+      null,
+      null
+    ],
+    "77": [
+      "Mass-gain oatmeal",
+      null,
+      null,
+      [
+        "Cook the oats in the milk for 5 minutes.",
+        "Add the sliced banana and peanut butter.",
+        "Top with walnuts and drizzle with honey."
+      ],
+      null,
+      null
+    ],
+    "78": [
+      "Baked salmon with lemon and herbs",
+      null,
+      null,
+      [
+        "Cut the potatoes into wedges, drizzle with half the oil and roast at 200 °C for 15 minutes.",
+        "Rub the salmon with salt, garlic and herbs and top with lemon slices and the rest of the oil.",
+        "Add the fish to the potatoes and roast 15 minutes more."
+      ],
+      null,
+      null
+    ],
+    "79": [
+      "Yogurt-marinated chicken skewers",
+      null,
+      null,
+      [
+        "Cut the chicken into pieces and marinate in yogurt with garlic, lemon and spices for at least 1 hour.",
+        "Thread onto skewers with the pepper and onion.",
+        "Grill or bake at 220 °C for 15-18 minutes, turning. Serve with tkemali."
+      ],
+      null,
+      null
+    ],
+    "80": [
+      "Mushrooms stuffed with chicken and cheese",
+      null,
+      null,
+      [
+        "Remove the mushroom stems, chop them finely with the onion and fry 5 minutes.",
+        "Mix with finely chopped chicken, yogurt, garlic and herbs and season.",
+        "Fill the caps, top with cheese and bake at 190 °C for 20 minutes."
+      ],
+      null,
+      null
+    ],
+    "81": [
+      "Lighter Olivier salad",
+      null,
+      null,
+      [
+        "Boil the chicken, potatoes, carrot and eggs and cool.",
+        "Dice everything with the pickles and add the peas.",
+        "Dress with yogurt and a spoon of mayo, season and sprinkle with dill."
+      ],
+      null,
+      null
+    ],
+    "82": [
+      "No-bake cheesecake",
+      null,
+      null,
+      [
+        "Grind the oats, mix with the melted butter and honey and press into the base of a tin.",
+        "Blend the cottage cheese, cream cheese, yogurt, protein and sweetener until smooth and spread over the base.",
+        "Chill at least 4 hours. Serve with berries."
+      ],
+      null,
+      null
+    ],
+    "83": [
+      "Chicken chakhokhbili",
+      null,
+      null,
+      [
+        "Brown the chicken pieces in a dry pan for 8 minutes.",
+        "Add the onion and oil; after 5 minutes add the grated tomatoes and pepper and braise covered for 25 minutes.",
+        "Stir in the garlic, khmeli-suneli and lots of herbs and simmer 5 minutes."
+      ],
+      null,
+      null
+    ],
+    "84": [
+      "Lobio",
+      null,
+      null,
+      [
+        "Fry the onion in the oil for 7 minutes.",
+        "Add the beans with a little of their liquid, mash some of them and simmer 10 minutes.",
+        "Stir in the ground walnuts, garlic, khmeli-suneli, tkemali and coriander. Good hot or cold."
+      ],
+      null,
+      null
+    ],
+    "85": [
+      "Spinach pkhali",
+      null,
+      null,
+      [
+        "Blanch the spinach in boiling water for 1 minute, drain and squeeze well.",
+        "Blend the walnuts with garlic, onion, coriander, khmeli-suneli and lemon juice into a paste.",
+        "Mix with the spinach, shape into balls and top with pomegranate seeds."
+      ],
+      null,
+      null
+    ],
+    "86": [
+      "Ajapsandali",
+      null,
+      null,
+      [
+        "Dice the eggplant and zucchini and fry in half the oil for 8 minutes.",
+        "In a pot, soften the onion and pepper for 5 minutes, then add the potatoes, fried vegetables and grated tomatoes.",
+        "Braise covered for 30 minutes and finish with garlic and herbs. It's even better the next day."
+      ],
+      null,
+      null
+    ],
+    "87": [
+      "Light lavash khachapuri",
+      null,
+      null,
+      [
+        "Mix the grated cheese, cottage cheese and one egg.",
+        "Spread the filling on the lavash, fold into a parcel and brush with the second beaten egg.",
+        "Bake at 200 °C for 10-12 minutes until golden."
+      ],
+      null,
+      null
+    ],
+    "88": [
+      "Lighter chkmeruli",
+      null,
+      null,
+      [
+        "Salt the chicken and roast at 210 °C for 25-30 minutes until golden.",
+        "Warm the milk with crushed garlic and butter without boiling and season.",
+        "Pour the garlic sauce over the chicken and roast 7 minutes more. Sprinkle with herbs."
+      ],
+      null,
+      null
+    ],
+    "89": [
+      "Teriyaki chicken with rice and broccoli",
+      null,
+      null,
+      [
+        "Cook the rice and steam the broccoli for 5 minutes.",
+        "Fry the chicken pieces in the oil for 8 minutes.",
+        "Add the soy sauce with honey, ginger and garlic and reduce 3 minutes until glossy. Sprinkle with sesame."
+      ],
+      null,
+      null
+    ],
+    "90": [
+      "Salmon poke bowl",
+      null,
+      null,
+      [
+        "Cook the rice and let it cool to warm.",
+        "Dice the salmon and marinate in soy sauce with lemon juice for 10 minutes.",
+        "Build the bowls: rice, salmon, avocado, cucumber and carrot. Top with sesame and green onion. Use sashimi-grade salmon."
+      ],
+      null,
+      null
+    ]
+  },
+  "food": {
+    "chicken": "Chicken breast",
+    "chicken_mince": "Ground chicken",
+    "turkey": "Turkey",
+    "beef": "Lean beef",
+    "veal": "Veal",
+    "pork": "Lean pork",
+    "bacon": "Bacon",
+    "shrimp": "Shrimp",
+    "tuna": "Canned tuna",
+    "salmon": "Salmon",
+    "whitefish": "White fish (cod, hake)",
+    "tofu": "Tofu",
+    "egg": "Egg",
+    "eggwhite": "Egg white",
+    "tvorog1": "Cottage cheese 1%",
+    "tvorog2": "Cottage cheese 2%",
+    "tvorog5": "Cottage cheese 5%",
+    "greek0": "Greek yogurt 0%",
+    "greek2": "Greek yogurt 2%",
+    "skyr": "Skyr",
+    "yogurt": "Plain yogurt 2.5%",
+    "kefir": "Kefir 1%",
+    "milk": "Milk 2.5%",
+    "milkskim": "Skim milk",
+    "oatmilk": "Oat milk",
+    "almondmilk": "Unsweetened almond milk",
+    "soymilk": "Soy milk",
+    "cream10": "Cream 10%",
+    "sour": "Sour cream 10%",
+    "coconut": "Light coconut milk",
+    "hard": "Hard cheese",
+    "lightcheese": "Light cheese 30%",
+    "mozz": "Light mozzarella",
+    "feta": "Feta",
+    "suluguni": "Sulguni",
+    "procheese": "Processed cheese",
+    "creamcheese": "Light cream cheese",
+    "oats": "Rolled oats",
+    "rice": "Rice (dry)",
+    "ricecooked": "Cooked rice",
+    "buckwheat": "Buckwheat (dry)",
+    "buckwheatcooked": "Cooked buckwheat",
+    "pasta": "Pasta (dry)",
+    "pastacooked": "Cooked pasta",
+    "bulgur": "Bulgur (dry)",
+    "quinoa": "Quinoa (dry)",
+    "couscous": "Couscous (dry)",
+    "potato": "Potato",
+    "sweetpotato": "Sweet potato",
+    "bread": "Bread",
+    "lavash": "Lavash",
+    "tortilla": "Wheat tortilla",
+    "semolina": "Semolina",
+    "beans": "Canned beans",
+    "chickpeas": "Canned chickpeas",
+    "lentils": "Cooked lentils",
+    "corn": "Canned corn",
+    "pepper": "Bell pepper",
+    "zucchini": "Zucchini",
+    "broccoli": "Broccoli",
+    "cauliflower": "Cauliflower",
+    "mushroom": "Mushrooms",
+    "spinach": "Spinach",
+    "carrot": "Carrot",
+    "tomato": "Tomatoes",
+    "passata": "Tomato passata",
+    "cucumber": "Cucumber",
+    "onion": "Onion",
+    "eggplant": "Eggplant",
+    "greenbeans": "Green beans",
+    "vegmix": "Frozen vegetable mix",
+    "lettuce": "Salad leaves",
+    "arugula": "Arugula",
+    "banana": "Banana",
+    "apple": "Apple",
+    "pear": "Pear",
+    "berries": "Mixed berries",
+    "strawberry": "Strawberries",
+    "mango": "Mango",
+    "cherry": "Cherries",
+    "pineapple": "Pineapple",
+    "kiwi": "Kiwi",
+    "persimmon": "Persimmon",
+    "avocado": "Avocado",
+    "olives": "Olives",
+    "oil": "Oil (olive/vegetable)",
+    "pb": "Peanut butter",
+    "walnut": "Walnuts",
+    "almonds": "Almonds",
+    "chia": "Chia seeds",
+    "honey": "Honey",
+    "maple": "Maple syrup",
+    "sugar": "Sugar",
+    "sweetener": "Sweetener",
+    "cocoa": "Cocoa powder",
+    "choc": "Dark chocolate",
+    "protein": "Whey protein",
+    "mayo": "Light mayonnaise",
+    "soy": "Soy sauce",
+    "ketchup": "Ketchup",
+    "chickenthigh": "Chicken thigh (skinless)",
+    "beef20": "Ground beef 20%",
+    "turkeyham": "Turkey ham",
+    "sour20": "Sour cream 20%",
+    "tvorog9": "Cottage cheese 9%",
+    "mozzfull": "Mozzarella",
+    "milk32": "Whole milk 3.2%",
+    "cream20": "Cream 20%",
+    "mayofull": "Mayonnaise",
+    "creamcheesefull": "Full-fat cream cheese",
+    "butter": "Butter",
+    "matsoni": "Matsoni (yogurt)",
+    "imeruli": "Imeruli cheese",
+    "flour": "Wheat flour",
+    "granola": "Granola",
+    "ricenoodles": "Rice noodles (dry)",
+    "lentilsdry": "Lentils (dry)",
+    "beet": "Beetroot",
+    "cabbage": "Cabbage",
+    "pumpkin": "Pumpkin",
+    "celery": "Celery",
+    "greenpeas": "Green peas",
+    "pickles": "Pickles",
+    "dates": "Dates",
+    "pomegranate": "Pomegranate",
+    "lemon": "Lemon",
+    "peanuts": "Peanuts",
+    "sesame": "Sesame seeds",
+    "tahini": "Tahini",
+    "coconutflakes": "Desiccated coconut",
+    "tkemali": "Tkemali (plum sauce)",
+    "garlic": "Garlic",
+    "ginger": "Ginger",
+    "herbs": "Fresh herbs (coriander, parsley, dill)",
+    "greenonion": "Green onion",
+    "mint": "Mint",
+    "khmeli": "Khmeli suneli",
+    "spices": "Salt and spices to taste",
+    "broth": "Stock or water",
+    "water": "Water",
+    "coffee": "Coffee (espresso)"
+  },
+  "gen": {
+    "types": ["Salad", "Bowl", "Pasta", "Wrap", "Omelet", "Oatmeal", "Smoothie", "Plate"],
+    "kw": [
+      ["salad"],
+      ["bowl", "poke"],
+      ["pasta", "spaghet", "noodle", "macaroni"],
+      ["wrap", "burrito", "shawarma"],
+      ["omelet", "omelette", "scramble"],
+      ["oatmeal", "porridge", "oats"],
+      ["smoothie", "shake"],
+      ["dinner", "lunch", "meal"]
+    ],
+    "neg": ["without", "no", "except", "minus"],
+    "negAfter": [],
+    "negSuffix": ["-free"],
+    "cat": {"meat": ["meat"], "dairy": ["dairy", "lactose"], "gluten": ["gluten"], "fish": ["fish"]},
+    "var": [
+      ["Classic", "Tasty and filling, calories don't matter"],
+      ["High-protein", "Maximum protein, minimum fat"],
+      ["Balanced", "Smart calories and macros, nutritious food"]
+    ],
+    "steps": {
+      "salad": [
+        "Cook {P}: pan-fry, bake or boil until done, then slice.",
+        "Chop {V} and toss with the greens.",
+        "Add the rest, dress and serve right away."
+      ],
+      "bowl": [
+        "Cook {G}.",
+        "Cook {P} and chop {V}.",
+        "Arrange everything in a bowl in sections and drizzle with the sauce."
+      ],
+      "pasta": [
+        "Boil {G} 1 minute less than the package says.",
+        "Fry {P} with {V} for 8-10 minutes.",
+        "Toss with the pasta, add the cheese and sauce, warm for 2 minutes."
+      ],
+      "wrap": [
+        "Cook {P} and slice into strips.",
+        "Chop {V}.",
+        "Spread the sauce on the wrap, add the filling and roll tightly."
+      ],
+      "omelet": [
+        "Whisk the eggs with the dairy and a pinch of salt.",
+        "Fry {V} for 3-4 minutes.",
+        "Pour in the eggs and cook covered over low heat for 5-7 minutes."
+      ],
+      "oatmeal": [
+        "Cook the oats in the liquid for 5 minutes, stirring.",
+        "Take off the heat and stir in the extras.",
+        "Top with the fruit."
+      ],
+      "smoothie": [
+        "Put all the ingredients in a blender.",
+        "Blend for 1 minute until smooth.",
+        "If it's too thick, add a little liquid."
+      ],
+      "plate": [
+        "Cook the side: {G}.",
+        "Pan-fry or bake {P} until done.",
+        "Sauté or roast {V} and serve everything together."
+      ]
+    }
+  }
+}
