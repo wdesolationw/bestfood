@@ -280,7 +280,8 @@ function renderRecipe(id) {
     return `<li class="${note ? "note" : done[id].has(i) ? "done" : ""}" data-i="${i}"><span>${txt}${warn}</span>${btn}</li>`;
   }).join("") + `</ul>`;
   if (hasSwaps(r)) h += `<button class="linkbtn" id="swReset">${esc(T.resetSwaps)}</button>`;
-  h += `<h3>${esc(T.steph)}</h3><ol class="steps">` + x.steps.map(s => `<li><span>${esc(s)}</span></li>`).join("") + `</ol>`;
+  h += `<h3>${esc(T.steph)}</h3><ol class="steps">` + x.steps.map(s => { const m = /^\[\[(.+?)\]\]\s*/.exec(s);
+    return `<li><span>${m ? `<em class="stt">${esc(m[1])}</em>` : ""}${esc(m ? s.slice(m[0].length) : s)}</span></li>`; }).join("") + `</ol>`;
   if (x.storage) h += `<div class="box"><b>${esc(T.stor)}</b> ${esc(x.storage)}</div>`;
   if (x.note) h += `<div class="box">${esc(x.note)}</div>`;
   h += coachMini();
