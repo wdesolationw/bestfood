@@ -10,7 +10,7 @@
   src/app.js         — код приложения
   data/*.json        — рецепты, продукты, замены и прочие справочники
   data/langs/*.json  — переводы, по файлу на язык
-  data/images/*.png  — картинки (встраиваются как data:URI, ключ = имя файла)
+  data/photos/<id>.webp — фото блюд (id рецепта = имя файла), встраиваются как data:URI
 """
 import base64, json, os, sys, time
 
@@ -57,9 +57,11 @@ def build():
             codes = [c for c in LANG_ORDER if c in files] + [c for c in files if c not in LANG_ORDER]
             data[k] = {c: load_json("data", "langs", c + ".json") for c in codes}
         elif k == "imgs":
-            names = sorted(f[:-4] for f in os.listdir(os.path.join(ROOT, "data", "images")) if f.endswith(".png"))
-            data[k] = {n: "data:image/png;base64," + base64.b64encode(read("data", "images", n + ".png", mode="rb")).decode()
-                       for n in names}
+            mime = {".webp": "image/webp", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png"}
+            files = sorted((f for f in os.listdir(os.path.join(ROOT, "data", "photos")) if os.path.splitext(f)[1].lower() in mime),
+                           key=lambda f: (len(f), f))
+            data[k] = {os.path.splitext(f)[0]: f"data:{mime[os.path.splitext(f)[1].lower()]};base64,"
+                       + base64.b64encode(read("data", "photos", f, mode="rb")).decode() for f in files}
         else:
             data[k] = load_json("data", k + ".json")
     js_data = "const DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ";"

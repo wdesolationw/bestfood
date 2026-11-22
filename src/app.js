@@ -174,9 +174,12 @@ function findFood(q) {
 }
 let toastT = null;
 function toast(msg) { const el = $("#toast"); el.textContent = msg; el.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => el.hidden = true, 2200); }
-const recImg = r => r.kind && r.kind.startsWith("svg:") ? dishSVG(r.items.map(([i, k, g]) => ({key: k, g})), r.kind.slice(4), "r" + r.id) : `<img src="${IMGS[r.kind]}" alt="" loading="lazy">`;
+const recImg = r => IMGS[r.id] ? `<img src="${IMGS[r.id]}" alt="" loading="lazy" decoding="async">` : r.kind && r.kind.startsWith("svg:") ? dishSVG(r.items.map(([i, k, g]) => ({key: k, g})), r.kind.slice(4), "r" + r.id) : "";
 const timeLbl = r => r.time >= 600 ? "" : `<span class="pill o">${r.time} ${esc(t().min)}</span>`;
-const vegLbl = r => r.veg === 2 ? `<span class="pill vg">${esc(t().vegan)}</span>` : r.veg === 1 ? `<span class="pill vg">${esc(t().vegetarian)}</span>` : "";
+const VEGI = {
+  1: '<path d="M5.5 18.5C5.5 10 10.5 5.5 19 5c0 8.5-4.5 13.5-13.5 13.5z"/><path d="M5.5 18.5 14 10"/>',
+  2: '<path d="M12 21v-8.5"/><path d="M12 12.5C12 7.5 9 4.5 3.5 4.5c0 5 3.3 8 8.5 8z"/><path d="M12 10.5c0-4 2.8-6.5 8.5-6.5 0 4.2-3 6.5-8.5 6.5z"/>'};
+const vegLbl = r => r.veg ? `<span class="vgi v${r.veg}" role="img" title="${esc(r.veg === 2 ? t().vegan : t().vegetarian)}" aria-label="${esc(r.veg === 2 ? t().vegan : t().vegetarian)}"><svg viewBox="0 0 24 24" aria-hidden="true">${VEGI[r.veg]}</svg></span>` : "";
 
 /* ---------- chrome & list ---------- */
 function chrome(route) {
@@ -479,9 +482,9 @@ function itemMac(it) { return it.key ? mac(it.key, it.g) : (it.c || [0, 0, 0, 0]
 function dishTotal(d) { let s = [0, 0, 0, 0]; d.items.forEach(it => s = add4(s, itemMac(it))); return s; }
 function renderMine() {
   const T = t();
-  let h = `<section class="genbox"><h2>✨ ${esc(T.genT)}</h2><p class="hint">${esc(T.genHint)}</p>
+  let h = `<section class="genbox"><div class="genhd"><span class="genic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><div><h2>${esc(T.genT)}</h2><p class="hint">${esc(T.genHint)}</p></div></div>
     <div class="genrow"><input id="gq" type="text" placeholder="${esc(T.genPh)}" aria-label="${esc(T.genT)}" value="${esc(gen ? gen.text : "")}" autocomplete="off"><button class="btn main" id="genGo">${esc(T.genBtn)}</button></div>
-    <div class="quick" style="margin-top:8px">${T.genEx.map(x => `<button class="chip" data-gex="${esc(x)}">${esc(x)}</button>`).join("")}</div></section><div id="genOut"></div>`;
+    <div class="quick genex">${T.genEx.map(x => `<button class="chip" data-gex="${esc(x)}">${esc(x)}</button>`).join("")}</div></section><div id="genOut"></div>`;
   h += `<div class="row2" style="margin-top:22px"><a class="btn main" href="#dish-new">${esc(T.newDish)}</a></div>`;
   if (!dishes.length) h += `<div class="empty">${esc(T.emptyMine)}</div>`;
   else h += `<div class="list">` + dishes.map(d => {

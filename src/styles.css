@@ -355,7 +355,7 @@ details.fl[open] summary{box-shadow:inset 0 0 0 1.5px var(--accent)}
 /* recipe page */
 .hero{display:block}
 .hero .dimg.big{width:100%;height:auto;aspect-ratio:4/3;max-height:340px;border-radius:22px;box-shadow:var(--shadow)}
-.hero .dimg.big img,.hero .dimg.big svg{object-fit:contain}
+.hero .dimg.big svg{object-fit:contain}
 .hbody{margin-top:14px}
 .hero h2{font-size:24px;letter-spacing:-.02em}
 @media (max-width:420px){.hero h2{font-size:21px}.hero .dimg.big{width:100%;height:auto}}
@@ -431,3 +431,26 @@ ul.shop li{border-radius:12px}
 
 /* bottom bar */
 .bnav{border-top:0;box-shadow:0 -1px 0 var(--line),0 -6px 20px rgba(16,24,40,.05)}
+/* vegetarian / vegan icons */
+.vgi{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#E3F2DA;color:#2F7A1F;flex:none}
+.vgi svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vgi.v2{background:#2F7A1F;color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .vgi{background:#21351B;color:#A6DB8C}:root:not([data-theme="light"]) .vgi.v2{background:#7BC46A;color:#0E1A0B}}
+:root[data-theme="dark"] .vgi{background:#21351B;color:#A6DB8C}
+:root[data-theme="dark"] .vgi.v2{background:#7BC46A;color:#0E1A0B}
+/* dish generator */
+.genbox{border:0;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--soft),var(--surface) 70%)}
+.genhd{display:flex;gap:12px;align-items:flex-start}
+.genic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}
+.genic svg{width:22px;height:22px;fill:currentColor}
+.genbox h2{font-size:18px;margin:2px 0 2px}
+.genbox .hint{margin:0}
+.genrow{margin-top:14px;gap:8px;flex-wrap:nowrap}
+.genrow input{flex:1 1 auto;height:48px;border-radius:14px;background:var(--surface);box-shadow:inset 0 0 0 1.5px var(--line)}
+.genrow input:focus{box-shadow:inset 0 0 0 2px var(--accent);outline:0}
+.genrow .btn{flex:none;height:48px;border-radius:14px;padding:0 16px}
+@media (max-width:480px){.genrow{flex-wrap:wrap}.genrow .btn{width:100%}}
+.genex{margin:12px -18px 0;padding:0 18px 2px}
+.genex .chip{background:var(--surface);box-shadow:inset 0 0 0 1.5px var(--line);font-weight:700;color:var(--muted)}
+.genex .chip:hover{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--accent)}

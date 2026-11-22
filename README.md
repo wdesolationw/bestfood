@@ -24,6 +24,6 @@ python3 build.py --watch   # пересобирать при каждом изм
 | `data/allerg.json`, `veglevel.json`, `shopcat.json` | аллергены, уровень вегетарианства, отделы для списка покупок |
 | `data/presets.json` | готовые планы питания |
 | `data/langs/<код>.json` | переводы интерфейса, рецептов и продуктов (ru, en, uk, kk, ka, es, de, fr) |
-| `data/images/<имя>.png` | картинки; имя файла — ключ в `DATA.imgs` |
+| `data/photos/<id>.webp` | фото блюд, имя файла = id рецепта; источники в `CREDITS.md` |
 
 Порядок языков и ключей `DATA` задан в начале `build.py`. Новый язык подхватится автоматически, если положить файл в `data/langs/`.
