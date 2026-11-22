@@ -259,7 +259,8 @@
     ],
     "coachSoon": "Les contacts du coach apparaîtront bientôt ici.",
     "dayT": "Jour",
-    "mealT": "Repas"
+    "mealT": "Repas",
+    "navFood": "Journal"
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],

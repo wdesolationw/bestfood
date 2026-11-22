@@ -254,7 +254,8 @@
     ],
     "coachSoon": "The coach's contacts will appear here soon.",
     "dayT": "Day",
-    "mealT": "Meal"
+    "mealT": "Meal",
+    "navFood": "Diary"
   },
   "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
   "stop": ["with", "and", "the", "a", "of", "in"],

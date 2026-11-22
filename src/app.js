@@ -185,8 +185,8 @@ function chrome(route) {
   $("#q").placeholder = T.ph; $("#q").setAttribute("aria-label", T.ph);
   $("#qx").setAttribute("aria-label", T.clear); $("#tabs").setAttribute("aria-label", T.cats); $("#foot").textContent = T.foot;
   $("#langCode").textContent = lang.toUpperCase(); $("#langBtn").setAttribute("aria-label", T.langT); $("#lookBtn").setAttribute("aria-label", T.look);
-  const names = {r: T.navR, day: T.navDay, plan: T.navPlan, mine: T.navMine, me: T.navMe};
-  document.querySelectorAll("[data-nav]").forEach(a => { a.textContent = names[a.dataset.nav]; if (a.dataset.nav === route) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  const names = {r: T.navR, day: T.navFood, mine: T.navMine, me: T.navMe};
+  document.querySelectorAll("[data-nav]").forEach(a => { a.querySelector("span").textContent = names[a.dataset.nav]; if (a.dataset.nav === route) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
 }
 function renderTabs() {
   const T = t(), allOn = state.cat < 0 && !state.fav && !state.quick;
@@ -198,16 +198,16 @@ function renderTabs() {
 function renderList() {
   const T = t(), A = filtered(), hidden = BANNED.size && !state.showAll ? filtered(true).length - A.length : 0;
   let h = "";
-  h += `<div class="quick" role="group" aria-label="${esc(T.cuisT)}"><span class="qlbl">${esc(T.cuisT)}:</span>` + [null, ...CUIS].map(c => `<button class="chip" data-cu="${c || ""}" aria-pressed="${state.cuis === c}">${esc(c ? T.cu[c] : T.allCu)}</button>`).join("") + `</div>`;
-  const nf = (state.base ? 1 : 0) + (state.kcal !== "any" ? 1 : 0) + (state.prot !== "any" ? 1 : 0) + (state.sort !== "def" ? 1 : 0) + (state.veg !== "any" ? 1 : 0);
-  if (!state.q) h += `<div class="quick" role="group" aria-label="${esc(T.quickl)}">` + L().quick.map(w => `<button class="chip" data-w="${esc(w)}" aria-pressed="false">${esc(w)}</button>`).join("") + `</div>`;
+  const nf = (state.cuis ? 1 : 0) + (state.base ? 1 : 0) + (state.kcal !== "any" ? 1 : 0) + (state.prot !== "any" ? 1 : 0) + (state.sort !== "def" ? 1 : 0) + (state.veg !== "any" ? 1 : 0);
   h += `<details class="fl" id="fl"${state.fopen ? " open" : ""}><summary>${esc(T.fl)} ${nf ? `<b>${nf}</b>` : ""}</summary>
     <div class="filters">
     <label>${esc(T.fk)}<select id="fk"><option value="any">${esc(T.any)}</option><option value="300">${esc(T.k300)}</option><option value="500">${esc(T.k500)}</option><option value="600">${esc(T.k600)}</option></select></label>
     <label>${esc(T.fp)}<select id="fp"><option value="any">${esc(T.anyp)}</option><option value="20">${esc(T.p20)}</option><option value="30">${esc(T.p30)}</option><option value="40">${esc(T.p40)}</option></select></label>
     <label>${esc(T.fs)}<select id="fs"><option value="def">${esc(T.s0)}</option><option value="p">${esc(T.sp)}</option><option value="k">${esc(T.sk)}</option><option value="t">${esc(T.st0)}</option></select></label>
     <label>${esc(T.vegF)}<select id="fv"><option value="any">${esc(T.any)}</option><option value="veg">${esc(T.vegetarian)}</option><option value="vegan">${esc(T.vegan)}</option></select></label></div>
-    <div class="chips" role="group" aria-label="${esc(T.base)}">` + BASES.map(b => `<button class="chip" data-b="${b}" aria-pressed="${state.base === b}">${esc(L().bases[b])}</button>`).join("") + `</div></details>`;
+    <p class="flbl">${esc(T.cuisT)}</p><div class="chips" role="group" aria-label="${esc(T.cuisT)}">` + [null, ...CUIS].map(c => `<button class="chip" data-cu="${c || ""}" aria-pressed="${state.cuis === c}">${esc(c ? T.cu[c] : T.allCu)}</button>`).join("") + `</div>
+    <p class="flbl">${esc(T.base)}</p><div class="chips" role="group" aria-label="${esc(T.base)}">` + BASES.map(b => `<button class="chip" data-b="${b}" aria-pressed="${state.base === b}">${esc(L().bases[b])}</button>`).join("") + `</div>
+    <p class="flbl">${esc(T.quickl)}</p><div class="chips" role="group" aria-label="${esc(T.quickl)}">` + L().quick.map(w => `<button class="chip" data-w="${esc(w)}" aria-pressed="${state.q === w}">${esc(w)}</button>`).join("") + `</div></details>`;
   h += (state.cat >= 0 && !state.fav && !state.quick) ? `<p class="sub">${esc(catSub(state.cat))}</p>` : `<p class="sub">${esc(T.found)}${A.length}</p>`;
   if (hidden) h += `<p class="hint">${esc(T.hiddenN.replace("{n}", hidden))} <button class="linkbtn" id="showAll" style="padding:0">${esc(T.showAll)}</button></p>`;
   if (!A.length) h += `<div class="empty"><b>${esc(T.none)}</b>${esc(T.none2)}<br><br><button class="btn" id="reset">${esc(T.reset)}</button></div>`;
@@ -319,14 +319,14 @@ function goalBars(tot, compact) {
 function renderDay() {
   const T = t(), list = diary[state.date] || [];
   let tot = [0, 0, 0, 0]; list.forEach(e => tot = add4(tot, entryMacros(e)));
-  let h = `<div class="daynav"><button class="iconbtn" id="dPrev" aria-label="←">‹</button><b>${esc(dateLabel())}</b><button class="iconbtn" id="dNext" aria-label="→">›</button></div>`;
+  let h = foodSeg("day") + `<div class="daynav"><button class="iconbtn" id="dPrev" aria-label="←">‹</button><b>${esc(dateLabel())}</b><button class="iconbtn" id="dNext" aria-label="→">›</button></div>`;
   h += `<p class="lbl" style="margin-top:4px">${esc(T.total)}</p><div class="macros">${tot.map((v, i) => `<div class="${i === 1 ? "p" : ""}"><b>${r0(v)}</b><span>${esc(T.g[i])}</span></div>`).join("")}</div>`;
   h += goalBars(tot);
   if (!(+goal.k > 0)) h += `<p class="hint" style="margin-top:10px">${esc(T.noGoal)} <a href="#me">${esc(T.calcLink)}</a></p>`;
   const wv = water[state.date] || 0, wg = waterGoal();
   h += `<div class="water"><div><b>${esc(T.waterT)}</b><span class="subtle">${fnum(wv / 1000)} / ${fnum(wg / 1000)} ${esc(T.liters)}</span></div><div class="bar"><i style="width:${Math.min(100, wv / wg * 100)}%;background:#3E8ED0"></i></div>
     <div class="qty"><button data-wt="-250" aria-label="−">−</button><span class="subtle">250 ${esc(T.ml)}</span><button data-wt="250" aria-label="+">+</button></div></div>`;
-  h += `<div class="row2"><button class="btn main" id="addProd">${esc(T.addProd)}</button><a class="btn" href="#">${esc(T.navR)}</a><a class="btn" href="#plan">${esc(T.navPlan)}</a><a class="btn" href="#mine">${esc(T.navMine)}</a></div>`;
+  h += `<div class="row2"><button class="btn main" id="addProd">${esc(T.addProd)}</button><a class="btn" href="#mine">${esc(T.navMine)}</a></div>`;
   if (!list.length) h += `<div class="empty">${esc(T.emptyDay)}</div>`;
   else h += `<div class="entries">` + list.map((e, i) => {
     const m = entryMacros(e);
@@ -338,6 +338,8 @@ function renderDay() {
   h += `<p class="note2">${esc(T.storageNote)}</p>`;
   $("#app").innerHTML = h;
 }
+
+const foodSeg = cur => `<div class="seg3">` + [["day", t().today], ["plan", t().navPlan], ["shop", t().shopT]].map(([k, l]) => `<a href="#${k}"${k === cur ? ' aria-current="page"' : ""}>${esc(l)}</a>`).join("") + `</div>`;
 
 /* ---------- week plan ---------- */
 const SLOTS = ["b", "l", "d", "s"];
@@ -352,7 +354,7 @@ function dayTotal(i) { let s = [0, 0, 0, 0]; SLOTS.forEach(sl => plan.d[i][sl].f
 function renderPlan(showPresets) {
   showPresets = showPresets || planEmpty();
   const T = t(), di = state.planDay, day = plan.d[di];
-  let h = `<div class="seg2"><a href="#plan" aria-current="page">${esc(T.planT)}</a><a href="#shop">${esc(T.shopT)}</a></div>`;
+  let h = foodSeg("plan");
   h += `<div class="wdays">` + [0, 1, 2, 3, 4, 5, 6].map(i => { const k = r0(dayTotal(i)[0]); return `<button data-pd="${i}" aria-pressed="${i === di}"><b>${esc(wdName(i))}</b><small>${k || "–"}</small></button>`; }).join("") + `</div>`;
   const tot = dayTotal(di);
   h += `<div class="macros">${tot.map((v, i) => `<div class="${i === 1 ? "p" : ""}"><b>${r0(v)}</b><span>${esc(T.g[i])}</span></div>`).join("")}</div>` + goalBars(tot);
@@ -385,7 +387,7 @@ const gfmt = g => g >= 1000 ? fnum(Math.round(g / 100) / 10) + " " + t().kg : fn
 function shopText() { const T = t(); return SHOPORDER.map(c => { const ks = Object.keys(shop.items).filter(k => SHOPCAT[k] === c); return ks.length ? `${T.shopCat[c]}:\n` + ks.map(k => `- ${fname(k)}: ${gfmt(shop.items[k])}`).join("\n") : ""; }).filter(Boolean).join("\n\n"); }
 function renderShop() {
   const T = t(), ks = Object.keys(shop.items);
-  let h = `<div class="seg2"><a href="#plan">${esc(T.planT)}</a><a href="#shop" aria-current="page">${esc(T.shopT)}</a></div>`;
+  let h = foodSeg("shop");
   h += `<div class="row2"><button class="btn main" id="shopAdd">${esc(T.addProd)}</button><button class="btn" id="shopCopy">${esc(T.copy)}</button><button class="btn" id="shopDone">${esc(T.clearDone)}</button><button class="btn danger" id="shopClear">${esc(state.presetArm === "shop" ? T.sureAgain : T.clearAll)}</button></div>`;
   if (!ks.length) h += `<div class="empty">${esc(T.shopEmpty)}</div>`;
   else h += SHOPORDER.map(c => { const kk = ks.filter(k => SHOPCAT[k] === c).sort((a, b) => fname(a).localeCompare(fname(b))); if (!kk.length) return "";
@@ -818,7 +820,7 @@ function renderGenOut() {
 /* ---------- routing ---------- */
 function route() {
   const h = location.hash, home = (h === "" || h === "#");
-  const nav = h === "#day" ? "day" : /^#(plan|shop|prep)$/.test(h) ? "plan" : /^#(mine|dish-)/.test(h) ? "mine" : /^#me/.test(h) ? "me" : "r";
+  const nav = /^#(day|plan|shop|prep)$/.test(h) ? "day" : /^#(mine|dish-)/.test(h) ? "mine" : /^#me/.test(h) ? "me" : "r";
   chrome(nav);
   $("#tabs").hidden = !home; $("#searchBox").hidden = !home;
   if (/^#recipe-\d+$/.test(h)) renderRecipe(+h.slice(8));
@@ -937,10 +939,10 @@ document.addEventListener("click", e => {
     if (/^#recipe/.test(location.hash)) { f.setAttribute("aria-pressed", favs.has(id)); f.textContent = favs.has(id) ? T.favOn : T.favAdd; } else { renderTabs(); renderList(); } return; }
   const tab = el.closest(".tab");
   if (tab && tab.tagName === "BUTTON") { state.fav = !!tab.dataset.fav && !state.fav; state.quick = !!tab.dataset.quick && !state.quick; state.cat = tab.dataset.c != null ? +tab.dataset.c : -1; renderTabs(); renderList(); return; }
-  const cu = el.closest("[data-cu]"); if (cu) { state.cuis = cu.dataset.cu || null; renderList(); return; }
+  const cu = el.closest("[data-cu]"); if (cu) { state.cuis = cu.dataset.cu || null; state.fopen = true; renderList(); return; }
   if (el.closest("#showAll")) { state.showAll = true; renderList(); return; }
   const b = el.closest("[data-b]"); if (b) { state.base = state.base === b.dataset.b ? null : b.dataset.b; state.fopen = true; renderList(); return; }
-  const w = el.closest("[data-w]"); if (w) { $("#q").value = state.q = w.dataset.w; $("#qx").hidden = false; renderList(); return; }
+  const w = el.closest("[data-w]"); if (w) { state.q = state.q === w.dataset.w ? "" : w.dataset.w; $("#q").value = state.q; $("#qx").hidden = !state.q; state.fopen = true; renderList(); return; }
   const card = el.closest(".card[data-id]"); if (card) { location.hash = "recipe-" + card.dataset.id; return; }
   if (el.closest("#back")) { location.hash = ""; return; }
   if (el.closest("#reset")) { Object.assign(state, {cat: -1, quick: false, cuis: null, veg: "any", base: null, kcal: "any", prot: "any", sort: "def", q: "", fav: false}); $("#q").value = ""; $("#qx").hidden = true; renderTabs(); renderList(); return; }

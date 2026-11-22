@@ -259,7 +259,8 @@
     ],
     "coachSoon": "Los contactos del entrenador aparecerán aquí pronto.",
     "dayT": "Día",
-    "mealT": "Comida"
+    "mealT": "Comida",
+    "navFood": "Diario"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],
