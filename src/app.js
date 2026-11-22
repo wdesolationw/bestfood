@@ -53,8 +53,8 @@ function applyLook() {
   }
   const k = look.pal === "graphite" && !look.custom ? .25 : 1;
   const T = dark
-    ? {bg: hsl(h, 25 * k, 7), surface: hsl(h, 20 * k, 11), ink: hsl(h, 18 * k, 92), muted: hsl(h, 12 * k, 63), line: hsl(h, 15 * k, 21), hot: "#FF8A66", hotSoft: "#3A2119"}
-    : {bg: hsl(h, 28 * k, 96), surface: "#FFFFFF", ink: hsl(h, 30 * k, 11), muted: hsl(h, 14 * k, 38), line: hsl(h, 18 * k, 85), hot: "#D9482B", hotSoft: "#FBE7E1"};
+    ? {bg: hsl(h, 10 * k, 6), surface: hsl(h, 9 * k, 11), ink: hsl(h, 10 * k, 93), muted: hsl(h, 7 * k, 64), line: hsl(h, 8 * k, 19), hot: "#FF8A66", hotSoft: "#3A2119"}
+    : {bg: hsl(h, 14 * k, 96), surface: "#FFFFFF", ink: hsl(h, 20 * k, 12), muted: hsl(h, 8 * k, 42), line: hsl(h, 12 * k, 90), hot: "#D9482B", hotSoft: "#FBE7E1"};
   const st = document.documentElement.style;
   st.setProperty("--bg", T.bg); st.setProperty("--surface", T.surface); st.setProperty("--ink", T.ink); st.setProperty("--muted", T.muted);
   st.setProperty("--line", T.line); st.setProperty("--hot", T.hot); st.setProperty("--hot-soft", T.hotSoft);
@@ -215,22 +215,34 @@ function renderList() {
     const x = RX(r), m = recipeMacros(r), w = warnOf(r);
     const vn = r.var ? `<span class="pill o">${esc(T.plus)}</span>` : "", sw = hasSwaps(r) || autoOf(r) ? `<span class="pill o">⇄</span>` : "", wn = w.length ? `<span class="pill p">⚠</span>` : "";
     return `<div class="card" role="link" tabindex="0" data-id="${r.id}">
-      <div class="dimg">${recImg(r)}</div>
-      <div><p class="t">${esc(x.title)}</p><div class="c">${esc(catName(r.cat))} · ${esc(x.serv)}</div>
-      <div class="meta"><span class="pill">${r0(m[0])} ${esc(T.kcal)}</span><span class="pill p">${esc(T.p)} ${r.base.p == null ? "?" : r0(m[1])}</span>${timeLbl(r)}${vegLbl(r)}${vn}${sw}${wn}</div></div>
-      <button class="fav" data-f="${r.id}" aria-pressed="${favs.has(r.id)}" aria-label="${esc(T.favaria)}">${favs.has(r.id) ? "★" : "☆"}</button></div>`;
+      <div class="dimg">${recImg(r)}<button class="fav" data-f="${r.id}" aria-pressed="${favs.has(r.id)}" aria-label="${esc(T.favaria)}">${favs.has(r.id) ? "★" : "☆"}</button>${r.time < 600 ? `<span class="ctime">${r.time} ${esc(T.min)}</span>` : ""}</div>
+      <div class="cbody"><p class="t">${esc(x.title)}</p><div class="c">${esc(catName(r.cat))}</div>
+      <div class="meta"><span class="kc">${r0(m[0])} <small>${esc(T.kcal)}</small></span><span class="pill p">${esc(T.p)} ${r.base.p == null ? "?" : r0(m[1])}</span>${vegLbl(r)}${vn}${sw}${wn}</div></div></div>`;
   }).join("") + `</div>`;
   $("#app").innerHTML = h;
   $("#fl").addEventListener("toggle", e => { state.fopen = e.target.open; });
   $("#fk").value = state.kcal; $("#fp").value = state.prot; $("#fs").value = state.sort; $("#fv").value = state.veg;
 }
 
+/* ---------- rings ---------- */
+const MACC = ["var(--c-p)", "var(--c-f)", "var(--c-c)"];
+// parts: [[value, color], ...]; total: full circle value (defaults to sum of parts)
+function donut(parts, total, cls) {
+  const R0 = 42, C = 2 * Math.PI * R0, sum = total || parts.reduce((a, [v]) => a + v, 0);
+  let off = 0, arcs = "";
+  if (sum > 0) parts.forEach(([v, col]) => { const len = Math.max(0, Math.min(v, sum - off)) / sum * C; if (len > 0) arcs += `<circle r="${R0}" cx="50" cy="50" stroke="${col}" stroke-dasharray="${len} ${C - len}" stroke-dashoffset="${-off / sum * C}"/>`; off += v; });
+  return `<svg class="${cls || "donut"}" viewBox="0 0 100 100" aria-hidden="true"><circle r="${R0}" cx="50" cy="50" class="trk"/>${arcs}</svg>`;
+}
+const macName = i => (t().mac || LANGS.en.ui.mac)[i];
+
 /* ---------- recipe ---------- */
 function macroBlock(r) {
   const T = t(), mode = modeOf(r), m = recipeMacros(r), raw = r.var ? (mode === "fit" && state.protOn[r.id] ? r.var.on : r.var.off) : r.base, k = servOf(r);
   const cells = [m[0], raw.p == null ? null : m[1], raw.f == null ? null : m[2], raw.c == null ? null : m[3]];
   const src = mode === "classic" ? T.calc : T[r.src];
-  return `<div class="macros">${cells.map((c, i) => `<div class="${i === 1 ? "p" : ""}"><b>${c == null ? "–" : r0(c)}</b><span>${esc(T.g[i])}</span></div>`).join("")}</div>
+  const kc = [cells[1] * 4, cells[2] * 9, cells[3] * 4], ok = cells.slice(1).every(c => c != null), ks = ok ? kc.reduce((a, b) => a + b, 0) : 0;
+  return `<div class="mcard"><div class="ring">${donut(ok ? kc.map((v, i) => [v, MACC[i]]) : [])}<div class="rc"><b>${r0(m[0])}</b><span>${esc(T.kcal)}</span></div></div>
+    <div class="mleg">${[1, 2, 3].map(i => `<div class="ml"><i style="background:${MACC[i - 1]}"></i><span>${esc(macName(i - 1))}</span><b>${cells[i] == null ? "–" : r0(cells[i]) + " " + esc(T.grams)}</b><small>${ok && ks ? Math.round(kc[i - 1] / ks * 100) + "%" : ""}</small></div>`).join("")}</div></div>
   <p class="macnote">${esc(T.perOne)} · ${esc(T.whole)} (${k}): ${r0(m[0] * k)} ${esc(T.kcal)}. ${esc(src)}</p>`;
 }
 function renderRecipe(id) {
@@ -239,7 +251,7 @@ function renderRecipe(id) {
   eff.forEach(e => byIdx[e.idx] = e);
   done[id] = done[id] || new Set();
   let h = `<button class="back" id="back">${esc(T.back)}</button>
-  <div class="hero"><div class="dimg big">${recImg(r)}</div><div><h2>${esc(x.title)}</h2><div class="c">${esc(catName(r.cat))}${r.time < 600 ? " · " + r.time + " " + esc(T.min) : ""}</div>
+  <div class="hero"><div class="dimg big">${recImg(r)}</div><div class="hbody"><h2>${esc(x.title)}</h2><div class="c">${esc(catName(r.cat))}${r.time < 600 ? " · " + r.time + " " + esc(T.min) : ""}</div>
   <div class="meta" style="margin-top:6px">${vegLbl(r)}${r.cuis.map(c => `<span class="pill o">${esc(T.cu[c])}</span>`).join("")}</div>
   <div class="actions"><button class="btn" data-f="${r.id}" aria-pressed="${favs.has(r.id)}">${esc(favs.has(r.id) ? T.favOn : T.favAdd)}</button></div></div></div>`;
   h += `<div class="seg" role="group" aria-label="${esc(T.ver)}"><button data-md="fit" aria-pressed="${mode === "fit"}">${esc(T.modeFit)}</button><button data-md="classic" aria-pressed="${mode === "classic"}">${esc(T.modeClassic)}</button></div>`;
@@ -316,12 +328,22 @@ function goalBars(tot, compact) {
     return `<div class="goalrow"><div><span>${esc(n)}: ${r0(v)} / ${r0(g)}</span><span class="${over ? "up" : ""}">${esc(over ? T.over : T.left)} ${r0(Math.abs(g - v))} ${esc(u)}</span></div><div class="bar${over ? " over" : ""}"><i style="width:${pct}%"></i></div></div>`;
   }).join("") + `</div>`;
 }
+function daySummary(tot) {
+  const T = t(), gk = +goal.k || 0, left = gk - tot[0], over = left < 0;
+  const ring = gk ? donut([[tot[0], over ? "var(--hot)" : "var(--accent)"]], gk, "donut big") : donut([[tot[1] * 4, MACC[0]], [tot[2] * 9, MACC[1]], [tot[3] * 4, MACC[2]]], 0, "donut big");
+  const center = gk ? `<b class="${over ? "up" : ""}">${r0(Math.abs(left))}</b><span>${esc(over ? T.over : T.left)}</span>` : `<b>${r0(tot[0])}</b><span>${esc(T.kcal)}</span>`;
+  const rows = gk ? [[T.goal, gk], [T.eaten || LANGS.en.ui.eaten, tot[0]], [over ? T.over : T.left, Math.abs(left)]] : [[T.eaten || LANGS.en.ui.eaten, tot[0]]];
+  const gm = [+goal.p || 0, +goal.f || 0, +goal.c || 0];
+  return `<div class="sumcard"><div class="sumtop"><div class="ring big">${ring}<div class="rc">${center}</div></div>
+    <div class="sumrows">${rows.map(([n, v]) => `<div><span>${esc(n)}</span><b>${r0(v)} <small>${esc(T.kcal)}</small></b></div>`).join("")}</div></div>
+    <div class="mbars">${[0, 1, 2].map(i => { const v = tot[i + 1], g = gm[i], pct = g ? Math.min(100, v / g * 100) : 0;
+      return `<div class="mb"><div class="mbh"><span>${esc(macName(i))}</span><b>${r0(v)}${g ? " / " + r0(g) : ""} ${esc(T.grams)}</b></div><div class="bar"><i style="width:${g ? pct : (v > 0 ? 100 : 0)}%;background:${MACC[i]}${g ? "" : ";opacity:.35"}"></i></div></div>`; }).join("")}</div></div>`;
+}
 function renderDay() {
   const T = t(), list = diary[state.date] || [];
   let tot = [0, 0, 0, 0]; list.forEach(e => tot = add4(tot, entryMacros(e)));
   let h = foodSeg("day") + `<div class="daynav"><button class="iconbtn" id="dPrev" aria-label="←">‹</button><b>${esc(dateLabel())}</b><button class="iconbtn" id="dNext" aria-label="→">›</button></div>`;
-  h += `<p class="lbl" style="margin-top:4px">${esc(T.total)}</p><div class="macros">${tot.map((v, i) => `<div class="${i === 1 ? "p" : ""}"><b>${r0(v)}</b><span>${esc(T.g[i])}</span></div>`).join("")}</div>`;
-  h += goalBars(tot);
+  h += daySummary(tot);
   if (!(+goal.k > 0)) h += `<p class="hint" style="margin-top:10px">${esc(T.noGoal)} <a href="#me">${esc(T.calcLink)}</a></p>`;
   const wv = water[state.date] || 0, wg = waterGoal();
   h += `<div class="water"><div><b>${esc(T.waterT)}</b><span class="subtle">${fnum(wv / 1000)} / ${fnum(wg / 1000)} ${esc(T.liters)}</span></div><div class="bar"><i style="width:${Math.min(100, wv / wg * 100)}%;background:#3E8ED0"></i></div>
@@ -425,8 +447,10 @@ function normOut() {
   return h;
 }
 function renderMe(focus) {
-  const T = t(), n = calcNorm();
-  let h = `<section class="mebox"><h2>${esc(T.normT)}</h2><p class="hint">${esc(T.normD)}</p>
+  const T = t(), n = calcNorm(), gk = +goal.k || 0, lw = lastWeight();
+  let h = `<section class="mehead"><div class="ava"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.6 4-5.4 7.5-5.4s6.3 1.8 7.5 5.4"/></svg></div>
+    <div class="mhs"><div><b>${gk ? r0(gk) : "–"}</b><span>${esc(T.goalK)}</span></div><div><b>${+goal.p ? r0(+goal.p) : "–"}</b><span>${esc(macName(0))}, ${esc(T.grams)}</span></div><div><b>${lw ? fnum(lw) : "–"}</b><span>${esc(T.weightT)}, ${esc(T.kg)}</span></div></div></section>`;
+  h += `<section class="mebox"><h2>${esc(T.normT)}</h2><p class="hint">${esc(T.normD)}</p>
     <div class="modes" style="grid-template-columns:1fr 1fr"><button data-sex="f" aria-pressed="${prof.sex === "f"}">${esc(T.female)}</button><button data-sex="m" aria-pressed="${prof.sex === "m"}">${esc(T.male)}</button></div>
     <div class="grid4" style="grid-template-columns:repeat(3,1fr);margin-top:8px"><label class="field">${esc(T.age)}<input id="pa" type="number" inputmode="numeric" value="${esc(prof.age)}"></label><label class="field">${esc(T.height)}<input id="ph" type="number" inputmode="numeric" value="${esc(prof.h)}"></label><label class="field">${esc(T.weight)}<input id="pw" type="number" inputmode="decimal" value="${esc(prof.w)}"></label></div>
     <label class="field" style="margin-top:8px">${esc(T.activity)}<select id="pact" class="sel">${T.acts.map((a, i) => `<option value="${[1.2, 1.375, 1.55, 1.725][i]}">${esc(a)}</option>`).join("")}</select></label>
