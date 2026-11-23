@@ -201,6 +201,50 @@ function renderTabs() {
   const on = $("#tabs .tab[aria-pressed=\"true\"]"), box = $("#tabs");
   if (on && box) box.scrollLeft = Math.max(0, on.offsetLeft - (box.clientWidth - on.offsetWidth) / 2);
 }
+function dishOfDay(A) {
+  const T = t(), pool = A.filter(r => IMGS[r.id]); if (!pool.length) return "";
+  const s = todayIso(); let hsh = 0; for (const ch of s) hsh = (hsh * 31 + ch.charCodeAt(0)) >>> 0;
+  const r = pool[hsh % pool.length], x = RX(r), m = recipeMacros(r);
+  return `<section class="dotd"><div class="card rcard wide" role="link" tabindex="0" data-id="${r.id}"><div class="dimg">${recImg(r)}</div>
+    <span class="dtag">${esc(T.dotd)}</span>
+    <div class="ov"><p class="t">${esc(x.title)}</p><div class="m"><b>${r0(m[0])}</b> ${esc(T.kcal)} · ${esc(T.p)} ${r.base.p == null ? "?" : r0(m[1])}${r.time < 600 ? ` · ${r.time} ${esc(T.min)}` : ""}</div></div></div></section>`;
+}
+/* ---------- cooking mode ---------- */
+const cook = {on: false, i: 0, rid: null, timer: null, wake: null};
+function stepMinutes(s) { const m = /^\[\[(\d+)(?:[–-](\d+))?\s*([^\]]*)\]\]/.exec(s); if (!m) return 0; const v = +m[1]; return /ч|h|год|сағ|სთ|Std/.test(m[3]) ? v * 60 : v; }
+const mmss = sec => { sec = Math.max(0, Math.round(sec)); const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60), s2 = sec % 60; return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(s2).padStart(2, "0"); };
+function timerLeft() { const tm = cook.timer; if (!tm) return 0; return tm.paused ? tm.left : (tm.end - Date.now()) / 1000; }
+function beep() { try { const ac = new (window.AudioContext || window.webkitAudioContext)(); [0, .35, .7].forEach(o => { const g = ac.createGain(), os = ac.createOscillator(); os.frequency.value = 880; os.connect(g); g.connect(ac.destination); g.gain.setValueAtTime(.0001, ac.currentTime + o); g.gain.exponentialRampToValueAtTime(.3, ac.currentTime + o + .02); g.gain.exponentialRampToValueAtTime(.0001, ac.currentTime + o + .3); os.start(ac.currentTime + o); os.stop(ac.currentTime + o + .32); }); } catch (e) {} try { navigator.vibrate && navigator.vibrate([300, 150, 300]); } catch (e) {} }
+function openCook(rid) {
+  cook.on = true; cook.rid = rid; cook.i = 0;
+  let el = $("#cook"); if (!el) { el = document.createElement("div"); el.id = "cook"; el.setAttribute("role", "dialog"); el.setAttribute("aria-modal", "true"); document.body.appendChild(el); }
+  el.hidden = false; document.body.classList.add("cooking"); renderCook();
+  try { navigator.wakeLock && navigator.wakeLock.request("screen").then(w => cook.wake = w).catch(() => {}); } catch (e) {}
+}
+function closeCook() { cook.on = false; const el = $("#cook"); if (el) el.hidden = true; document.body.classList.remove("cooking"); try { cook.wake && cook.wake.release(); } catch (e) {} cook.wake = null; }
+function renderCook() {
+  const el = $("#cook"); if (!el || !cook.on) return; const r = R.find(x => x.id === cook.rid); if (!r) return closeCook();
+  const T = t(), x = RX(r), steps = x.steps, n = steps.length, i = cook.i, s = steps[i], mm = /^\[\[(.+?)\]\]\s*/.exec(s), txt = mm ? s.slice(mm[0].length) : s, mins = stepMinutes(s);
+  const tm = cook.timer, run = tm && tm.step === i;
+  let tbtn = "";
+  if (mins) tbtn = run ? `<div class="ctimer${tm.paused ? " paused" : ""}"><b id="ctLeft">${mmss(timerLeft())}</b><button class="btn" id="ctPause">${esc(tm.paused ? T.tGo : T.tPause)}</button><button class="btn" id="ctReset">${esc(T.tReset)}</button></div>`
+    : `<button class="btn main ctstart" id="ctStart" data-min="${mins}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2.5h5"/></svg>${esc(T.tStart.replace("{t}", mmss(mins * 60)))}</button>`;
+  const other = tm && tm.step !== i ? `<button class="ctmini" data-cgo="${tm.step}">⏱ <b id="ctLeft">${mmss(timerLeft())}</b> · ${esc(T.cookStep.replace("{n}", tm.step + 1).replace("{m}", n))}</button>` : "";
+  el.innerHTML = `<div class="ckbar"><button class="rbtn" id="ckClose" aria-label="${esc(T.done)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div class="ckt"><b>${esc(x.title)}</b><span>${esc(T.cookStep.replace("{n}", i + 1).replace("{m}", n))}</span></div>
+      <button class="rbtn" id="ckIng" aria-label="${esc(T.ingT)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg></button></div>
+    <div class="ckprog"><i style="width:${(i + 1) / n * 100}%"></i></div>
+    ${other}
+    <div class="ckbody">${mm ? `<em class="stt">${esc(mm[1])}</em>` : ""}<p class="cktext">${esc(txt)}</p>${tbtn}</div>
+    ${cook.ing ? `<div class="cking"><h3>${esc(T.ingT)}</h3><ul>${x.ing.map(z => `<li>${/^<b>/.test(z) ? z : esc(z.replace(/<[^>]+>/g, ""))}</li>`).join("")}</ul></div>` : ""}
+    <div class="cknav"><button class="btn" id="ckPrev"${i ? "" : " disabled"}>${esc(T.prevS)}</button>${i < n - 1 ? `<button class="btn main" id="ckNext">${esc(T.nextS)}</button>` : `<button class="btn main" id="ckFin">${esc(T.done)}</button>`}</div>`;
+}
+setInterval(() => { const tm = cook.timer; if (!tm || tm.paused) return; const left = timerLeft();
+  document.querySelectorAll("#ctLeft").forEach(e => e.textContent = mmss(left));
+  if (left <= 0 && !tm.rang) { tm.rang = true; beep(); toast(t().tDone.replace("{n}", tm.step + 1)); cook.timer = null; renderCook(); } }, 500);
+document.addEventListener("keydown", e => { if (!cook.on) return; if (e.key === "Escape") closeCook(); else if (e.key === "ArrowRight") $("#ckNext") && $("#ckNext").click(); else if (e.key === "ArrowLeft") $("#ckPrev") && $("#ckPrev").click(); });
+(() => { let x0 = null; document.addEventListener("touchstart", e => { if (cook.on && e.target.closest("#cook .ckbody")) x0 = e.touches[0].clientX; }, {passive: true});
+  document.addEventListener("touchend", e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 60) { const b = $(dx < 0 ? "#ckNext" : "#ckPrev"); b && !b.disabled && b.click(); } }, {passive: true}); })();
 function recCard(r) {
   const T = t(), x = RX(r), m = recipeMacros(r), w = warnOf(r);
   const badges = (r.var ? `<span class="bdg">${esc(T.plus)}</span>` : "") + (hasSwaps(r) || autoOf(r) ? `<span class="bdg">⇄</span>` : "") + (w.length ? `<span class="bdg w">⚠</span>` : "") + vegLbl(r);
@@ -229,7 +273,7 @@ function renderList() {
   if (!lanes) h += (state.cat >= 0 && !state.fav && !state.quick) ? `<p class="sub">${esc(catSub(state.cat))}</p>` : `<p class="sub">${esc(T.found)}${A.length}</p>`;
   if (hidden) h += `<p class="hint">${esc(T.hiddenN.replace("{n}", hidden))} <button class="linkbtn" id="showAll" style="padding:0">${esc(T.showAll)}</button></p>`;
   if (!A.length) h += `<div class="empty"><b>${esc(T.none)}</b>${esc(T.none2)}<br><br><button class="btn" id="reset">${esc(T.reset)}</button></div>`;
-  else if (lanes) h += CATORDER.map(i => { const L2 = A.filter(r => r.cat === i); if (!L2.length) return "";
+  else if (lanes) h += dishOfDay(A) + CATORDER.map(i => { const L2 = A.filter(r => r.cat === i); if (!L2.length) return "";
     return `<section class="lsec"><div class="lhd"><h3>${esc(catName(i))}</h3><button class="lmore" data-lane="${i}">${esc(T.all)} ${L2.length} ›</button></div>
       <div class="lane" data-ln="${i}">${L2.map(recCard).join("")}</div></section>`; }).join("");
   else h += `<div class="list">` + A.map(recCard).join("") + `</div>`;
@@ -301,7 +345,7 @@ function renderRecipe(id) {
     return `<li class="${note ? "note" : done[id].has(i) ? "done" : ""}" data-i="${i}"><span>${txt}${warn}</span>${btn}</li>`;
   }).join("") + `</ul>`;
   if (hasSwaps(r)) h += `<button class="linkbtn" id="swReset">${esc(T.resetSwaps)}</button>`;
-  h += `<h3>${esc(T.steph)}</h3><ol class="steps">` + x.steps.map(s => { const m = /^\[\[(.+?)\]\]\s*/.exec(s);
+  h += `<div class="sthd"><h3>${esc(T.steph)}</h3><button class="btn main" id="cookGo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>${esc(T.cookBtn)}</button></div><ol class="steps">` + x.steps.map(s => { const m = /^\[\[(.+?)\]\]\s*/.exec(s);
     return `<li><span>${m ? `<em class="stt">${esc(m[1])}</em>` : ""}${esc(m ? s.slice(m[0].length) : s)}</span></li>`; }).join("") + `</ol>`;
   if (x.storage) h += `<div class="box"><b>${esc(T.stor)}</b> ${esc(x.storage)}</div>`;
   if (x.note) h += `<div class="box">${esc(x.note)}</div>`;
@@ -1025,6 +1069,16 @@ document.addEventListener("click", e => {
   const al = el.closest("[data-alt]"); if (al) { const {rid, idx} = sheetCtx; (swaps[rid] = swaps[rid] || {})[idx] = al.dataset.alt; saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   if (el.closest("#altReset")) { const {rid, idx} = sheetCtx; if (swaps[rid]) { delete swaps[rid][idx]; if (!Object.keys(swaps[rid]).length) delete swaps[rid]; } saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   const pk = el.closest("[data-pk]"); if (pk) { sheetCtx.key = pk.dataset.pk; sheetCtx.g = +pk.dataset.pg || PORTION[pk.dataset.pk] || 100; renderSheet(); const g = $("#pg"); g && g.focus(); return; }
+  if (el.closest("#cookGo")) { openCook(curRecipeId()); return; }
+  if (el.closest("#ckClose")) { closeCook(); return; }
+  if (el.closest("#ckNext")) { cook.i++; renderCook(); return; }
+  if (el.closest("#ckPrev")) { cook.i = Math.max(0, cook.i - 1); renderCook(); return; }
+  if (el.closest("#ckFin")) { closeCook(); toast(t().cookDone); return; }
+  if (el.closest("#ckIng")) { cook.ing = !cook.ing; renderCook(); return; }
+  const cgo = el.closest("[data-cgo]"); if (cgo) { cook.i = +cgo.dataset.cgo; renderCook(); return; }
+  const cts = el.closest("#ctStart"); if (cts) { cook.timer = {step: cook.i, end: Date.now() + +cts.dataset.min * 60000, paused: false}; renderCook(); return; }
+  if (el.closest("#ctPause")) { const tm = cook.timer; if (tm) { if (tm.paused) { tm.end = Date.now() + tm.left * 1000; tm.paused = false; } else { tm.left = timerLeft(); tm.paused = true; } } renderCook(); return; }
+  if (el.closest("#ctReset")) { cook.timer = null; renderCook(); return; }
   if (el.closest("#rpCopy")) { copyText(coachReport(), t().reportCopied); return; }
   if (el.closest("#rpTg")) { window.open("https://t.me/share/url?url=%20&text=" + encodeURIComponent(coachReport()), "_blank", "noopener"); return; }
   if (el.closest("#bkSave")) { const b = new Blob([backupJSON()], {type: "application/json"}), a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "bestfood-" + todayIso() + ".json"; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500); return; }
