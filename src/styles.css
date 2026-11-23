@@ -655,3 +655,6 @@ ul.shop li.done::before{background:var(--ink);border-color:var(--ink)}
 .phreset{display:block;padding:8px 0 0}
 .dimg > img.own{filter:none}
 .dtag.in{position:static;justify-self:start;margin-bottom:4px;font-size:11.5px;padding:3px 9px}
+/* cafes & fast food */
+.brandpick{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 8px}
+.results em.est{display:block;font-style:normal;font-size:11.5px;color:var(--muted);font-weight:600}

@@ -1,5 +1,5 @@
 const IMGS = DATA.imgs, R = DATA.recipes, LANGS = DATA.langs, ORDER = DATA.order, FOOD = DATA.food, SUBS = DATA.subs;
-const PORTION = DATA.portion || {}, LOCAL = Object.keys(DATA.portion || {});
+const PORTION = DATA.portion || {}, LOCAL = Object.keys(DATA.portion || {}).filter(k => !Object.values(DATA.brands || {}).some(b => b.items.includes(k)));
 const CLASSIC = DATA.classic, ALLERG = DATA.allerg, SHOPCAT = DATA.shopcat, VEGL = DATA.veglevel, PRESETS = DATA.presets, CUIS = DATA.cuisines, COACH = DATA.coach;
 const RATIO = {}; DATA.ratio.forEach(([a, b, r]) => RATIO[a + ">" + b] = r);
 const $ = s => document.querySelector(s);
@@ -16,7 +16,8 @@ let lang = (() => {
 })();
 const L = () => LANGS[lang];
 const t = () => L().ui;
-const fname = k => L().food[k] || LANGS.en.food[k] || k;
+const BRANDS = DATA.brands || {}, BRANDOF = {}; Object.entries(BRANDS).forEach(([b, v]) => v.items.forEach(k => BRANDOF[k] = b));
+const fname = k => (BRANDOF[k] && BRANDOF[k] !== "pizza" ? BRANDS[BRANDOF[k]].name + " · " : "") + (L().food[k] || LANGS.en.food[k] || k);
 const NUMC = () => ["en", "ka"].includes(lang) ? "." : ",";
 const fnum = v => { const s = Math.abs(v - Math.round(v)) < .05 ? String(Math.round(v)) : v.toFixed(1); return s.replace(".", NUMC()); };
 function RX(r) {
@@ -169,9 +170,10 @@ const inCat = i => R.filter(r => r.cat === i).length;
 function findFood(q) {
   q = norm(q.trim()); if (!q) return [];
   const keys = Object.keys(FOOD);
-  const hit = keys.filter(k => norm(fname(k)).includes(q) || norm(LANGS.en.food[k]).includes(q));
-  hit.sort((a, b) => norm(fname(a)).indexOf(q) - norm(fname(b)).indexOf(q));
-  return hit.slice(0, 8);
+  const brandHit = new Set(Object.entries(BRANDS).filter(([b, v]) => q.split(" ").some(w => w.length > 1 && norm(v.name + " " + v.alias).split(" ").some(a => a.startsWith(w)))).flatMap(([b, v]) => v.items));
+  const hit = keys.filter(k => brandHit.has(k) || norm(fname(k)).includes(q) || norm(LANGS.en.food[k]).includes(q));
+  hit.sort((a, b) => (brandHit.has(b) - brandHit.has(a)) || (norm(fname(a)).indexOf(q) - norm(fname(b)).indexOf(q)));
+  return hit.slice(0, brandHit.size ? 16 : 8);
 }
 let toastT = null;
 function toast(msg) { const el = $("#toast"); el.textContent = msg; el.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => el.hidden = true, 2200); }
@@ -765,12 +767,15 @@ function renderSheet() {
   if (sheetKind === "prod") fillProd();
   if (sheetKind === "pick") fillPick();
 }
-function resultsHTML(keys, attr) { return keys.map(k => `<button ${attr}="${k}"><span>${esc(fname(k))}</span><small>${r0(FOOD[k][0])} ${esc(t().kcal)} · ${esc(t().p)} ${r0(FOOD[k][1])} / 100 ${esc(t().grams)}</small></button>`).join(""); }
+function resultsHTML(keys, attr) { const T = t(); return keys.map(k => { const pg = PORTION[k], est = BRANDOF[k] && BRANDS[BRANDOF[k]].est;
+  return `<button ${attr}="${k}"><span>${esc(fname(k))}${est ? `<em class="est">≈ ${esc(T.estT)}</em>` : ""}</span><small>${pg ? `${pg} ${esc(T.grams)} · ${r0(FOOD[k][0] * pg / 100)} ${esc(T.kcal)} · ${esc(T.p)} ${r0(FOOD[k][1] * pg / 100)}` : `${r0(FOOD[k][0])} ${esc(T.kcal)} · ${esc(T.p)} ${r0(FOOD[k][1])} / 100 ${esc(T.grams)}`}</small></button>`; }).join(""); }
 function fillProd() {
   const el = $("#pres"); if (!el) return; const T = t();
   if ((sheetCtx.q || "").trim()) { el.innerHTML = resultsHTML(findFood(sheetCtx.q), "data-pk"); return; }
   const rec = recentFoods();
   el.innerHTML = (rec.length ? `<p class="lbl">${esc(T.recent)}</p>` + rec.map(([k, g]) => `<button data-pk="${k}" data-pg="${r0(g)}"><span>${esc(fname(k))}</span><small>${r0(g)} ${esc(T.grams)} · ${r0(FOOD[k][0] * g / 100)} ${esc(T.kcal)}</small></button>`).join("") : "") +
+    `<p class="lbl">${esc(T.cafesT)}</p><div class="brandpick">` + Object.entries(BRANDS).map(([b, v]) => `<button class="chip" data-brand="${b}" aria-pressed="${sheetCtx.brand === b}">${esc(v.name === "Pizza" ? T.cafesPizza || "Pizza" : v.name)}</button>`).join("") + `</div>` +
+    (sheetCtx.brand && BRANDS[sheetCtx.brand] ? resultsHTML(BRANDS[sheetCtx.brand].items, "data-pk") : "") +
     `<p class="lbl">${esc(T.localT)}</p>` + LOCAL.map(k => `<button data-pk="${k}"><span>${esc(fname(k))}</span><small>1 ${esc(T.pcs)} ≈ ${PORTION[k]} ${esc(T.grams)} · ${r0(FOOD[k][0] * PORTION[k] / 100)} ${esc(T.kcal)}</small></button>`).join("");
 }
 function fillPick() {
@@ -1117,6 +1122,7 @@ document.addEventListener("click", e => {
   if (el.closest("#bkRestore")) { const v = ($("#bkIn") || {}).value || ""; if (!v.trim()) return; if (!state.bkArm) { state.bkArm = true; el.closest("#bkRestore").textContent = t().bkSure; return; } state.bkArm = false; restoreBackup(v); return; }
   const snb = el.closest("[data-sn]"); if (snb) { state.statN = +snb.dataset.sn; renderStats(); return; }
   const cha = el.closest("#chkApply"); if (cha) { const k = +cha.dataset.k, dk = k - +goal.k; goal = Object.assign({}, goal, {k, c: Math.max(0, r0(+goal.c + dk / 4))}); store.set("brfy-goal", JSON.stringify(goal)); store.set("brfy-checkin", JSON.stringify(todayIso())); toast(t().chkApplied); renderStats(); return; }
+  const brb = el.closest("[data-brand]"); if (brb) { sheetCtx.brand = sheetCtx.brand === brb.dataset.brand ? null : brb.dataset.brand; fillProd(); return; }
   const psl = el.closest("[data-psl]"); if (psl) { sheetCtx.slot = psl.dataset.psl; renderSheet(); return; }
   const amb = el.closest("[data-addm]"); if (amb) { openSheet("prod", {q: "", slot: amb.dataset.addm}); return; }
   if (el.closest("#copyY")) { const [y, mo, d] = state.date.split("-").map(Number), yd = iso(new Date(y, mo - 1, d - 1)), src = diary[yd] || [];

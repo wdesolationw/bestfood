@@ -23,7 +23,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Порядок ключей в объекте DATA и порядок языков (влияет на порядок в переключателе).
 KEYS = ["food", "subs", "ratio", "recipes", "imgs", "order", "langs", "classic", "allerg",
-        "shopcat", "veglevel", "presets", "cuisines", "coach", "portion"]
+        "shopcat", "veglevel", "presets", "cuisines", "coach", "portion", "brands"]
 LANG_ORDER = ["ru", "en", "uk", "kk", "ka", "es", "de", "fr"]
 MIME = {".webp": "image/webp", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png"}
 APP_NAME, SHORT_NAME, THEME = "Best Recipes For You", "BestFood", "#1D5A4B"

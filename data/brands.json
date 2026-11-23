@@ -1,0 +1,78 @@
+{
+  "mcd": {
+    "name": "McDonald's",
+    "alias": "макдональдс макдак мак mcdonalds mcdonald мкд мак-доналдс",
+    "est": false,
+    "items": [
+      "mcd_bigmac",
+      "mcd_cheese",
+      "mcd_ham",
+      "mcd_dcheese",
+      "mcd_qpc",
+      "mcd_mcchicken",
+      "mcd_fish",
+      "mcd_nug6",
+      "mcd_fries_m",
+      "mcd_fries_s",
+      "mcd_mcflurry",
+      "mcd_cola"
+    ]
+  },
+  "kfc": {
+    "name": "KFC",
+    "alias": "кфс kfc кентукки ростикс rostics",
+    "est": false,
+    "items": [
+      "kfc_orig",
+      "kfc_wings3",
+      "kfc_strips3",
+      "kfc_zinger",
+      "kfc_twister",
+      "kfc_boxmaster",
+      "kfc_fries",
+      "kfc_coleslaw"
+    ]
+  },
+  "bk": {
+    "name": "Burger King",
+    "alias": "бургер кинг бк burgerking bk",
+    "est": false,
+    "items": ["bk_whopper", "bk_whopperjr", "bk_chicken"]
+  },
+  "subway": {
+    "name": "Subway",
+    "alias": "сабвэй сабвей subway",
+    "est": false,
+    "items": ["sub_turkey", "sub_teriyaki", "sub_tuna"]
+  },
+  "sbux": {
+    "name": "Starbucks",
+    "alias": "старбакс starbucks",
+    "est": false,
+    "items": ["sbux_latte", "sbux_capp", "sbux_frapp"]
+  },
+  "pizza": {
+    "name": "Pizza",
+    "alias": "пицца domino's dominos papa johns доминос папа джонс пиццерия",
+    "est": false,
+    "items": ["pz_pepperoni", "pz_margherita"]
+  },
+  "dunkin": {
+    "name": "Dunkin'",
+    "alias": "данкин донатс dunkin donuts пончик",
+    "est": false,
+    "items": ["dk_glazed", "dk_choc"]
+  },
+  "ska": {
+    "name": "SKA",
+    "alias": "ска ska",
+    "est": true,
+    "items": ["ska_chsand", "ska_wrap", "ska_bowl", "ska_shake", "ska_juice"]
+  },
+  "entree": {
+    "name": "Entrée",
+    "alias": "антре entree entrée",
+    "est": true,
+    "items": ["ent_crois", "ent_croisham", "ent_sand", "ent_eclair", "ent_capp"]
+  }
+}
