@@ -348,7 +348,8 @@
     "estT": "aprox., estimado",
     "portionT": "porción",
     "cafesPizza": "Pizza",
-    "westT": "peso aprox., macros del menú"
+    "westT": "peso aprox., macros del menú",
+    "genSkip": "No está en la lista de alimentos"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],

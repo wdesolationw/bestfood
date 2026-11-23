@@ -348,7 +348,8 @@
     "estT": "env., estimé",
     "portionT": "portion",
     "cafesPizza": "Pizza",
-    "westT": "poids approx., valeurs du menu"
+    "westT": "poids approx., valeurs du menu",
+    "genSkip": "Absent de la liste d'aliments"
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],

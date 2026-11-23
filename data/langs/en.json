@@ -343,7 +343,8 @@
     "estT": "approx., estimated",
     "portionT": "portion",
     "cafesPizza": "Pizza",
-    "westT": "approx. weight, KBJU from the menu"
+    "westT": "approx. weight, KBJU from the menu",
+    "genSkip": "Not found in the food list"
   },
   "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
   "stop": ["with", "and", "the", "a", "of", "in"],
