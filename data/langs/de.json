@@ -2355,16 +2355,17 @@
     "ska_j_berry": "Berry Jumble (juice)"
   },
   "gen": {
-    "types": ["Salat", "Bowl", "Pasta", "Wrap", "Omelett", "Haferbrei", "Smoothie", "Teller"],
+    "types": ["Salat", "Bowl", "Pasta", "Wrap", "Omelett", "Haferbrei", "Smoothie", "Teller", "Sandwich"],
     "kw": [
       ["salat"],
       ["bowl", "poke", "schüssel"],
       ["pasta", "nudel", "spaghet"],
-      ["wrap", "burrito", "döner"],
+      ["wrap", "burrito", "döner", "lavash", "tortilla"],
       ["omelett", "rührei"],
       ["haferbrei", "porridge", "haferflocken"],
       ["smoothie", "shake"],
-      ["abendessen", "mittagessen"]
+      ["abendessen", "mittagessen"],
+      ["sandwich", "toast", "burger", "stulle", "belegte"]
     ],
     "neg": ["ohne", "außer", "kein", "keine", "keinen"],
     "negAfter": [],
@@ -2420,6 +2421,11 @@
         "Beilage zubereiten: {G}.",
         "{P} braten oder backen, bis es gar ist.",
         "{V} dünsten oder rösten und alles zusammen servieren."
+      ],
+      "sandwich": [
+        "{P} zubereiten: braten, backen oder fertig aufschneiden.",
+        "Brot im Toaster oder in einer trockenen Pfanne rösten; {V} schneiden.",
+        "Brot mit Soße bestreichen, Füllung schichten, mit der zweiten Scheibe abdecken und halbieren."
       ]
     }
   }

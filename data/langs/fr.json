@@ -2375,16 +2375,17 @@
     "ska_j_berry": "Berry Jumble (juice)"
   },
   "gen": {
-    "types": ["Salade", "Bowl", "Pâtes", "Wrap", "Omelette", "Porridge", "Smoothie", "Assiette"],
+    "types": ["Salade", "Bowl", "Pâtes", "Wrap", "Omelette", "Porridge", "Smoothie", "Assiette", "Sandwich"],
     "kw": [
       ["salade"],
       ["bowl", "poke"],
       ["pâtes", "pates", "spaghet", "nouille"],
-      ["wrap", "burrito", "kebab"],
+      ["wrap", "burrito", "kebab", "lavash", "tortilla"],
       ["omelette", "brouill"],
       ["porridge", "avoine"],
       ["smoothie", "milkshake"],
-      ["dîner", "diner", "déjeuner", "dejeuner"]
+      ["dîner", "diner", "déjeuner", "dejeuner"],
+      ["sandwich", "tartine", "toast", "burger", "croque"]
     ],
     "neg": ["sans", "sauf", "pas"],
     "negAfter": [],
@@ -2435,6 +2436,11 @@
         "Prépare l'accompagnement : {G}.",
         "Fais poêler ou rôtir {P} jusqu'à cuisson.",
         "Fais sauter ou rôtir {V} et sers le tout ensemble."
+      ],
+      "sandwich": [
+        "Prépare le {P} : poêlé, au four ou tranché s'il est déjà cuit.",
+        "Toaste le pain au grille-pain ou à la poêle sèche ; coupe {V}.",
+        "Tartine la sauce, superpose la garniture, couvre de la seconde tranche et coupe en deux."
       ]
     }
   }

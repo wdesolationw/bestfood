@@ -2361,16 +2361,17 @@
     "ska_j_berry": "Berry Jumble (juice)"
   },
   "gen": {
-    "types": ["Ensalada", "Bowl", "Pasta", "Wrap", "Tortilla", "Avena", "Batido", "Plato"],
+    "types": ["Ensalada", "Bowl", "Pasta", "Wrap", "Tortilla", "Avena", "Batido", "Plato", "Sándwich"],
     "kw": [
       ["ensalad"],
       ["bowl", "poke", "bol"],
       ["pasta", "espagu", "macarr", "fideo"],
-      ["wrap", "burrit", "shawarma"],
+      ["wrap", "burrit", "shawarma", "tortilla", "lavash"],
       ["tortilla", "omelet", "revuelto"],
       ["avena", "porridge", "gachas"],
       ["batido", "smoothie"],
-      ["cena", "almuerzo", "comida"]
+      ["cena", "almuerzo", "comida"],
+      ["sándwich", "sandwich", "bocadillo", "tostada", "hamburguesa"]
     ],
     "neg": ["sin", "excepto", "menos"],
     "negAfter": [],
@@ -2426,6 +2427,11 @@
         "Prepara la guarnición: {G}.",
         "Haz {P} a la plancha o al horno.",
         "Saltea u hornea {V} y sirve todo junto."
+      ],
+      "sandwich": [
+        "Prepara el {P}: a la plancha, al horno o en lonchas si ya está hecho.",
+        "Tuesta el pan en tostadora o sartén seca; corta {V}.",
+        "Unta la salsa, coloca el relleno en capas, cubre con la otra rebanada y corta por la mitad."
       ]
     }
   }

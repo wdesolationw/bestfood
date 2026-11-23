@@ -2342,16 +2342,17 @@
     "ska_j_berry": "Berry Jumble (juice)"
   },
   "gen": {
-    "types": ["Salad", "Bowl", "Pasta", "Wrap", "Omelet", "Oatmeal", "Smoothie", "Plate"],
+    "types": ["Salad", "Bowl", "Pasta", "Wrap", "Omelet", "Oatmeal", "Smoothie", "Plate", "Sandwich"],
     "kw": [
       ["salad"],
       ["bowl", "poke"],
       ["pasta", "spaghet", "noodle", "macaroni"],
-      ["wrap", "burrito", "shawarma"],
+      ["wrap", "burrito", "shawarma", "lavash", "tortilla"],
       ["omelet", "omelette", "scramble"],
       ["oatmeal", "porridge", "oats"],
       ["smoothie", "shake"],
-      ["dinner", "lunch", "meal"]
+      ["dinner", "lunch", "meal"],
+      ["sandwich", "toast", "burger", "panini"]
     ],
     "neg": ["without", "no", "except", "minus"],
     "negAfter": [],
@@ -2402,6 +2403,11 @@
         "Cook the side: {G}.",
         "Pan-fry or bake {P} until done.",
         "Sauté or roast {V} and serve everything together."
+      ],
+      "sandwich": [
+        "Prepare the {P}: pan-fry, bake or slice it if ready-made.",
+        "Toast the bread in a toaster or dry pan; slice the {V}.",
+        "Spread the sauce, layer the filling, top with the second slice and cut in half."
       ]
     }
   }

@@ -903,7 +903,8 @@ const PROTS = ["chicken", "turkey", "veal", "beef", "pork", "chicken_mince", "sa
 const VEGS = ["cucumber", "tomato", "pepper", "carrot", "corn", "mushroom", "broccoli", "zucchini", "spinach", "cauliflower", "eggplant", "greenbeans", "onion"];
 const FRUITS = ["banana", "berries", "strawberry", "mango", "apple", "pear", "cherry", "pineapple", "kiwi", "persimmon"];
 const MATCH = new Set([...PROTS, ...VEGS, ...FRUITS, "lettuce", "arugula", "rice", "buckwheat", "pasta", "bulgur", "quinoa", "couscous", "potato", "sweetpotato", "oats", "bread", "lavash", "tortilla",
-  "beans", "chickpeas", "lentils", "tvorog5", "greek2", "skyr", "feta", "mozz", "hard", "suluguni", "avocado", "olives", "walnut", "almonds", "pb", "honey", "choc", "cocoa", "milk", "oatmilk", "almondmilk", "soymilk", "kefir", "protein", "passata"]);
+  "beans", "chickpeas", "lentils", "tvorog5", "greek2", "skyr", "feta", "mozz", "hard", "suluguni", "avocado", "olives", "walnut", "almonds", "pb", "honey", "choc", "cocoa", "milk", "oatmilk", "almondmilk", "soymilk", "kefir", "protein", "passata",
+  "turkeyham", "chickenthigh", "pickles", "cabbage", "beet", "pumpkin", "greenpeas", "garlic", "herbs", "lemon", "granola", "peanuts", "creamcheese", "lightcheese", "sour", "ricenoodles", "yogurt", "imeruli", "matsoni"]);
 const CATK = {meat: ["chicken", "chicken_mince", "turkey", "veal", "beef", "pork", "bacon"], fish: ["whitefish", "salmon", "shrimp", "tuna"],
   dairy: ["milk", "milkskim", "kefir", "yogurt", "greek0", "greek2", "skyr", "tvorog1", "tvorog2", "tvorog5", "hard", "lightcheese", "mozz", "feta", "suluguni", "procheese", "creamcheese", "cream10", "sour", "protein"],
   gluten: ["pasta", "pastacooked", "bread", "lavash", "tortilla", "bulgur", "couscous", "semolina", "oats"]};
@@ -927,36 +928,52 @@ const TEMPL = {
     S(["pb"], [15, 0, 0], {s: [0]}), S(["honey", "maple"], [15, 0, 8], {s: [0, 2]}), S(["protein"], [0, 30, 0], {s: [1]}), S(["greek0", "skyr"], [0, 100, 0], {s: [1]}), S(["greek2", "skyr"], [0, 0, 80], {s: [2]}), S(["walnut", "almonds", "chia"], [0, 0, 10], {s: [2]})],
   smoothie: [S(FRUITS, [100, 80, 100], {n: 2, fruit: 1}), S(["milk", "oatmilk", "almondmilk", "soymilk"], [250, 0, 200], {s: [0, 2]}), S(["milkskim", "soymilk", "almondmilk"], [0, 200, 0], {s: [1]}), S(["honey", "pb"], [15, 0, 0], {s: [0]}),
     S(["protein"], [0, 30, 0], {s: [1]}), S(["greek0", "skyr"], [0, 150, 0], {s: [1]}), S(["greek2", "skyr"], [0, 0, 120], {s: [2]}), S(["oats"], [0, 0, 20], {s: [2]}), S(["chia"], [0, 0, 6], {s: [2]})],
+  sandwich: [S(["bread"], [80, 60, 70], {grain: 1}), S(["chicken", "turkey", "turkeyham", "tuna", "salmon", "egg", "bacon", "beef", "tofu"], [90, 120, 100], {prot: 1}), S(["lettuce", "arugula", "spinach"], [20, 25, 25]),
+    S(["tomato", "cucumber", "pepper", "onion", "pickles"], [50, 50, 60], {n: 2, veg: 1}), S(["hard", "mozz", "suluguni", "feta"], [25, 0, 0], {s: [0]}), S(["lightcheese", "creamcheese"], [0, 30, 0], {s: [1]}),
+    S(["avocado"], [0, 0, 40], {s: [2]}), S(["mayo"], [15, 0, 0], {s: [0]}), S(["greek0"], [0, 30, 25], {s: [1, 2]})],
   plate: [S(PROTS, [150, 220, 170], {prot: 1}), S(["potato", "rice", "pasta", "buckwheat"], [80, 0, 0], {s: [0], grain: 1}), S(["buckwheat", "rice", "quinoa"], [0, 50, 0], {s: [1], grain: 1}), S(["buckwheat", "quinoa", "bulgur", "sweetpotato"], [0, 0, 70], {s: [2], grain: 1}),
     S(VEGS, [120, 150, 150], {n: 2, veg: 1}), S(["oil"], [15, 5, 8]), S(["sour"], [30, 0, 0], {s: [0]}), S(["greek0"], [0, 40, 0], {s: [1]})]
 };
-const ROLE_OF = k => PROTS.includes(k) ? "prot" : VEGS.includes(k) || ["lettuce", "arugula"].includes(k) ? "veg" : FRUITS.includes(k) ? "fruit" : ["rice", "buckwheat", "pasta", "bulgur", "quinoa", "couscous", "potato", "sweetpotato", "oats", "bread", "lavash", "tortilla"].includes(k) ? "grain" : "other";
+const ROLE_OF = k => PROTS.includes(k) || ["turkeyham", "chickenthigh"].includes(k) ? "prot" : VEGS.includes(k) || ["lettuce", "arugula", "pickles", "cabbage", "beet", "pumpkin", "greenpeas"].includes(k) ? "veg" : FRUITS.includes(k) ? "fruit" : ["rice", "buckwheat", "pasta", "bulgur", "quinoa", "couscous", "potato", "sweetpotato", "oats", "bread", "lavash", "tortilla", "ricenoodles"].includes(k) ? "grain" : "other";
 const DEFG = {prot: 120, veg: 80, fruit: 80, grain: 60, other: 30};
-const gw = s => s.toLowerCase().normalize("NFC");
+const gw = s => s.toLowerCase().normalize("NFC").replace(/ё/g, "е");
 function tokens(text) { return gw(text).replace(/[.,!?;:()"«»„“”]/g, " ").split(/\s+/).filter(Boolean); }
-const stemQ = w => w.slice(0, Math.max(3, Math.min(5, w.length - 3)));
 const ALIAS = {
   mushroom: ["гриб", "mushroom", "pilz", "seta", "hongo", "სოკო", "саңырауқұлақ"], chicken: ["куриц", "курин", "курк", "курятин", "chicken", "pollo", "huhn", "hähnchen", "poulet", "ქათამ", "ქათმ", "тауық"],
   beef: ["говядин", "говяж", "яловичин", "beef", "steak", "стейк", "rind", "bœuf", "boeuf", "сиыр", "საქონლ"], potato: ["картош", "картофел", "картопл", "potato", "patata", "kartoffel", "pomme de terre", "картоп", "კარტოფ"],
   egg: ["яйц", "яєць", "яйце", "eggs", "egg", "huevo", "eier", "œuf", "oeuf", "жұмыртқ", "კვერცხ"], pasta: ["макарон", "спагет", "noodle", "nudel", "spaghet", "макарон"], hard: ["сыр", "сир", "cheese", "queso", "käse", "fromage", "ყველ", "ірімшік"],
   milk: ["молок", "молоч", "milk", "leche", "milch", "lait", "რძ", "сүт"], whitefish: ["рыб", "риб", "fish", "pescado", "fisch", "poisson", "თევზ", "балық"], rice: ["рис", "rice", "arroz", "reis", "riz", "ბრინჯ", "күріш"],
   tomato: ["томат", "tomat", "pomodor", "პომიდ", "қызанақ"], cucumber: ["огур", "огір", "cucumber", "pepino", "gurke", "concombre", "კიტრ", "қияр"], shrimp: ["кревет", "shrimp", "prawn", "gamba", "garnele", "crevette", "კრევეტ", "асшаян"],
+  eggplant: ["eggplant", "баклажан"], chicken_mince: ["hähnchenhack", "фарш", "chicken mince"], salmon: ["семг", "лосос", "форел", "сёмг", "ორაგ", "лосос"], tuna: ["тунц", "тунец", "тунц", "atún", "atun", "thunfisch", "thon", "თინუს"], pepper: ["перец", "перц", "перч", "паприк", "პილპილ"],
+  turkeyham: ["ветчин", "шинк", "jamón", "jamon", "schinken", "jambon", "ლორ"], herbs: ["зелен", "укроп", "петрушк", "кинз", "базилик", "зелень", "кріп", "herbs", "მწვანი"], garlic: ["чеснок", "чесноч", "часник", "garlic", "ajo", "knoblauch", "ail", "ნიორ"],
+  pickles: ["солен", "маринов", "pickle", "gurkerl", "cornichon", "pepinillo", "მწნილ"], cabbage: ["капуст", "капуст", "cabbage", "repollo", "kohl", "chou", "კომბოსტ"], cauliflower: ["цветн", "cauliflower", "coliflor", "blumenkohl", "chou-fleur"],
   tvorog5: ["творог", "cottage", "requesón", "requeson", "quark", "fromage blanc", "ხაჭო", "сүзбе"], greek2: ["йогурт", "yogurt", "yoghurt", "joghurt", "yaourt", "იოგურტ"], oats: ["овся", "овес", "вівся", "oat", "avena", "hafer", "avoine", "შვრი", "сұлы"]
 };
-function matchWord(w) {
-  if (w.length < 3) return [];
-  const st = stemQ(w), hits = new Set();
-  for (const [k, al] of Object.entries(ALIAS)) if (al.some(a => w.startsWith(a))) hits.add(k);
-  if (hits.size) return [...hits];
-  for (const c of ORDER) { const F = LANGS[c].food; for (const k of MATCH) { const nm = gw(F[k] || ""); if (nm.split(/[\s/()%,.-]+/).some(p => p.startsWith(st) || (st.length >= 5 && w.includes(p) && p.length >= 4))) hits.add(k); } }
-  return [...hits];
+const NEGX = ["mayo", "mayofull", "oil", "ketchup", "soy", "sugar", "butter", "sour", "sour20", "cream10", "cream20"];
+const ENDS = new Set(["", "м", "х", "ми", "а", "у", "ы", "и", "е", "ю", "я", "й", "ь", "о", "ой", "ом", "ем", "ей", "ам", "ям", "ами", "ями", "ах", "ях", "ью", "ов", "ев", "ою", "ою", "ки", "ку", "ке", "кой", "ка", "кам", "ками", "ці", "ою", "ом", "s", "es", "e", "en", "n", "er", "os", "as", "ы", "ын", "ді", "ты", "ны", "сы", "ер", "лар"]);
+const GENERICW = ["легк", "light", "leicht", "léger", "leger", "ligero", "легк", "белков", "полезн", "сытн", "быстр"];
+function matchWord(w, neg) {
+  if (w.length < 3 || GENERICW.some(a => w.startsWith(a))) return [];
+  const al = {};
+  for (const [k, arr] of Object.entries(ALIAS)) for (const a of arr) if (w.startsWith(a)) al[k] = Math.max(al[k] || 0, a.length);
+  if (Object.keys(al).length) return Object.keys(al).sort((a, b) => al[b] - al[a]); // longest alias wins: eggplant before egg
+  // a food name word matches when the shared start is most of it and the rest of the typed word looks like an ending
+  const best = {}, lcp = (a, b) => { let n = 0; while (n < a.length && n < b.length && a[n] === b[n]) n++; return n; };
+  for (const c of ORDER) { const F = LANGS[c].food; for (const k of neg ? [...MATCH, ...NEGX] : MATCH) {
+    gw(F[k] || "").split(/[\s/()%,.-]+/).filter(p => p.length >= 3).forEach((p, pi) => {
+      const n = lcp(w, p), tail = w.length - n;
+      const ok = p.length <= 4 ? n >= Math.max(3, p.length - 1) && tail <= 3 : (n >= Math.max(4, p.length - (p.length >= 7 ? 2 : 1)) && tail <= 4 && (p.length >= 7 || ENDS.has(w.slice(n)))) || (p.length >= 5 && w.length >= 8 && w.includes(p));
+      if (ok) { const sc = n * 2 - pi + (n === w.length && n === p.length ? 20 : 0); if (!(best[k] >= sc)) best[k] = sc; }
+    }); } }
+  return Object.keys(best).sort((a, b) => best[b] - best[a]);
 }
 function parseReq(text) {
   const toks = tokens(text);
   const G = ORDER.map(c => LANGS[c].gen);
   let type = null;
-  const typeIdx = i => toks.some(w => G.some(g => g.kw[i].some(k => w.includes(k))));
-  for (let i = 0; i < 8; i++) if (typeIdx(i)) { type = TYPES_K[i]; break; }
+  const typeOf = w => TYPES_K.findIndex((_, i) => i !== 7 && G.some(g => (g.kw[i] || []).some(k => w.includes(k))));
+  for (const w of toks) { const i = typeOf(w); if (i >= 0) { type = TYPES_K[i]; break; } }
+  if (!type && toks.some(w => G.some(g => g.kw[7].some(k => w.includes(k))))) type = "plate";
   const neg = new Set(G.flatMap(g => g.neg)), negAfter = new Set(G.flatMap(g => g.negAfter)), pos = new Set(["с", "со", "з", "with", "con", "mit", "avec", "და", "қосылған"]);
   const sufs = G.flatMap(g => g.negSuffix);
   const kwAll = G.flatMap(g => g.kw.flat());
@@ -972,9 +989,9 @@ function parseReq(text) {
     const kwh = kwAll.find(k => k.length >= 3 && w.includes(k));
     if (kwh) { const rest = w.replace(kwh, ""); if (rest.length >= 4) w = rest; else if (!isNeg) return; }
     if (isNeg) for (const g of G) for (const [cat, arr] of Object.entries(g.cat)) if (arr.some(s => w.startsWith(s))) CATK[cat].forEach(k => excl.add(k));
-    const hits = matchWord(w);
-    if (!hits.length || hits.length > 3) return;
-    if (isNeg) { hits.forEach(k => { excl.add(k); (SUBS[k] || []).filter(x => x === "passata" && k === "tomato").forEach(x => excl.add(x)); }); }
+    const hits = matchWord(w, isNeg);
+    if (!hits.length) return;
+    if (isNeg) { hits.slice(0, 3).forEach(k => { excl.add(k); (SUBS[k] || []).filter(x => x === "passata" && k === "tomato").forEach(x => excl.add(x)); }); }
     else hits.slice(0, 1).forEach(k => { if (!wants.includes(k)) wants.push(k); });
   });
   if (excl.has("tomato")) excl.add("passata");
@@ -982,7 +999,7 @@ function parseReq(text) {
   if (!["smoothie", "oatmeal"].includes(type)) { const i = wants.indexOf("protein"); if (i >= 0) wants.splice(i, 1); }
   return {type, wants: wants.filter(k => !excl.has(k)), excl: [...excl], unknown};
 }
-const TYPES_K = ["salad", "bowl", "pasta", "wrap", "omelet", "oatmeal", "smoothie", "plate"];
+const TYPES_K = ["salad", "bowl", "pasta", "wrap", "omelet", "oatmeal", "smoothie", "plate", "sandwich"];
 function buildDish(req, strat, seed) {
   const R = rngOf(seed + "|" + strat + "|" + req.type), excl = new Set(req.excl), used = new Set(), items = [];
   const pickR = arr => arr[Math.floor(R() * arr.length)];
@@ -1008,7 +1025,7 @@ function buildDish(req, strat, seed) {
 const lc = s => lang === "de" ? s : s.toLowerCase();
 function genTitle(type, items) {
   const skip = new Set(["oil", "mayo", "soy", "honey", "maple", "greek0", "chia", "milk", "milkskim", "oatmilk", "almondmilk", "soymilk", "passata", "eggwhite", "sour", "cream10", "protein"]);
-  const own = {pasta: "pasta", wrap: ["lavash", "tortilla"], oatmeal: "oats", omelet: "egg"}[type] || [];
+  const own = {pasta: "pasta", wrap: ["lavash", "tortilla"], oatmeal: "oats", omelet: "egg", sandwich: "bread"}[type] || [];
   const names = items.filter(i => !skip.has(i.key) && ![].concat(own).includes(i.key)).slice(0, 3).map(i => lc(fname(i.key).replace(/\s*\(.*\)$/, "")));
   return `${L().gen.types[TYPES_K.indexOf(type)]}: ${names.join(", ")}`;
 }
@@ -1040,7 +1057,7 @@ function renderGenOut() {
   let h = `<div class="gmeta">`;
   if (req.unknown) h += `<p class="hint">${esc(T.genUnknown)}</p>`;
   if (req.wants.length) h += `<p class="hint">✓ ${esc(T.genUse)}: ${req.wants.map(k => esc(fname(k))).join(", ")}</p>`;
-  const ex = req.excl.filter(k => MATCH.has(k)); if (ex.length) h += `<p class="hint">✕ ${esc(T.genNo)}: ${ex.slice(0, 8).map(k => esc(fname(k))).join(", ")}${ex.length > 8 ? "…" : ""}</p>`;
+  const ex = req.excl.filter(k => MATCH.has(k) || (NEGX.includes(k) && !["mayofull", "sour20", "cream20"].includes(k))); if (ex.length) h += `<p class="hint">✕ ${esc(T.genNo)}: ${ex.slice(0, 8).map(k => esc(fname(k))).join(", ")}${ex.length > 8 ? "…" : ""}</p>`;
   h += `</div>` + [0, 1, 2].map(genCard).join("");
   el.innerHTML = h;
 }
