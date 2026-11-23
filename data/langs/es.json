@@ -262,7 +262,9 @@
     "mealT": "Comida",
     "navFood": "Diario",
     "mac": ["Proteína", "Grasa", "Carbohidratos"],
-    "eaten": "Consumido"
+    "eaten": "Consumido",
+    "timeL": "Tiempo",
+    "related": "Recetas similares"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],

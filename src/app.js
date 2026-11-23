@@ -225,7 +225,7 @@ function renderList() {
     <p class="flbl">${esc(T.base)}</p><div class="chips" role="group" aria-label="${esc(T.base)}">` + BASES.map(b => `<button class="chip" data-b="${b}" aria-pressed="${state.base === b}">${esc(L().bases[b])}</button>`).join("") + `</div>
     </details>`;
   const lanes = !nf && !state.q && state.cat < 0 && !state.fav && !state.quick;
-  const ttl = state.q ? state.q.charAt(0).toUpperCase() + state.q.slice(1) : state.fav ? T.fav : state.quick ? T.quickT : state.cat >= 0 ? catName(state.cat) : T.navR;
+  const ttl = state.q ? state.q.charAt(0).toUpperCase() + state.q.slice(1) : state.fav ? T.fav : state.quick ? T.quickT : state.cat >= 0 ? catName(state.cat) : state.cuis ? T.cu[state.cuis] : state.base ? L().bases[state.base] : state.veg !== "any" ? (state.veg === "vegan" ? T.vegan : T.vegetarian) : T.navR;
   h = `<h2 class="ptitle">${esc(ttl)}</h2><div class="relw"><div class="rel" id="rel">` + L().quick.map(w => `<button class="relc" data-w="${esc(w)}" aria-pressed="${state.q === w}">${esc(w.charAt(0).toUpperCase() + w.slice(1))}</button>`).join("") +
     `</div><button class="relnext" id="relNext" type="button" aria-label="›"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>` + h;
   if (!lanes) h += (state.cat >= 0 && !state.fav && !state.quick) ? `<p class="sub">${esc(catSub(state.cat))}</p>` : `<p class="sub">${esc(T.found)}${A.length}</p>`;
@@ -269,16 +269,23 @@ function renderRecipe(id) {
   const T = t(), x = RX(r), mode = modeOf(r), k = servOf(r) / r.n, eff = effItems(r), byIdx = {};
   eff.forEach(e => byIdx[e.idx] = e);
   done[id] = done[id] || new Set();
-  let h = `<button class="back" id="back">${esc(T.back)}</button>
-  <div class="hero"><div class="dimg big">${recImg(r)}</div><div class="hbody"><h2>${esc(x.title)}</h2><div class="c">${esc(catName(r.cat))}${r.time < 600 ? " · " + r.time + " " + esc(T.min) : ""}</div>
-  <div class="meta" style="margin-top:6px">${vegLbl(r)}${r.cuis.map(c => `<span class="pill o">${esc(T.cu[c])}</span>`).join("")}</div>
-  <div class="actions"><button class="btn" data-f="${r.id}" aria-pressed="${favs.has(r.id)}">${esc(favs.has(r.id) ? T.favOn : T.favAdd)}</button></div></div></div>`;
+  const mm = recipeMacros(r), ico = p => `<svg viewBox="0 0 24 24" aria-hidden="true">${p}</svg>`;
+  const tags = [[`cat:${r.cat}`, catName(r.cat)], ...r.cuis.map(c => [`cu:${c}`, T.cu[c]]), ...(r.veg ? [[`veg:${r.veg === 2 ? "vegan" : "veg"}`, r.veg === 2 ? T.vegan : T.vegetarian]] : []), ...r.filters.filter(f => L().bases[f]).map(f => [`b:${f}`, L().bases[f]])];
+  let h = `<div class="rbar"><button class="rbtn" id="back" aria-label="${esc(T.back)}">${ico('<path d="M15 5l-7 7 7 7"/>')}</button>
+    <div class="rbar-r"><button class="rbtn rfav" data-f="${r.id}" aria-pressed="${favs.has(r.id)}" aria-label="${esc(favs.has(r.id) ? T.favOn : T.favAdd)}" title="${esc(favs.has(r.id) ? T.favOn : T.favAdd)}">${ico('<path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/>')}</button>
+    <button class="rbtn" id="toPlan" aria-label="${esc(T.addPlan)}" title="${esc(T.addPlan)}">${ico('<rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4M12 12.5v5M9.5 15h5"/>')}</button>
+    <button class="rbtn" id="toShop" aria-label="${esc(T.addShop)}" title="${esc(T.addShop)}">${ico('<path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>')}</button>
+    <button class="rmain" id="toDay">${esc(T.addDay)}</button></div></div>
+  <div class="hero"><div class="dimg big">${recImg(r)}</div></div>
+  <div class="rstats"><div><span>${esc(T.goalK)}</span><b>${r0(mm[0])}</b></div><div><span>${esc(macName(0))}</span><b>${r.base.p == null ? "–" : r0(mm[1]) + " " + esc(T.grams)}</b></div>${r.time < 600 ? `<div><span>${esc(T.timeL)}</span><b>${r.time} ${esc(T.min)}</b></div>` : ""}<div><span>${esc(T.servings)}</span><b>${servOf(r)}</b></div></div>
+  <h1 class="rtitle">${esc(x.title)}</h1>
+  <div class="rtags">${tags.map(([k, l]) => `<button class="rtag" data-tg="${esc(k)}">${esc(l)}</button>`).join("")}</div>`;
   h += `<div class="seg" role="group" aria-label="${esc(T.ver)}"><button data-md="fit" aria-pressed="${mode === "fit"}">${esc(T.modeFit)}</button><button data-md="classic" aria-pressed="${mode === "classic"}">${esc(T.modeClassic)}</button></div>`;
   if (r.var && mode === "fit") h += ` <div class="seg" role="group" aria-label="${esc(T.ver)}"><button data-pv="0" aria-pressed="${!state.protOn[r.id]}">${esc(T.noP)}</button><button data-pv="1" aria-pressed="${!!state.protOn[r.id]}">${esc(T.withP)}</button></div>`;
   h += `<p class="hint" style="margin-top:8px">${esc(mode === "fit" ? T.modeFitD : T.modeClassicD)}</p>`;
   h += `<div id="mac">${macroBlock(r)}</div>`;
   h += `<div class="servrow"><span>${esc(T.servings)}</span><div class="qty"><button data-sv="-1" aria-label="−">−</button><input id="svn" type="number" inputmode="numeric" min="1" value="${servOf(r)}" aria-label="${esc(T.servings)}"><button data-sv="1" aria-label="+">+</button></div></div>`;
-  h += `<div class="row2"><button class="btn main" id="toDay">${esc(T.addDay)}</button><button class="btn" id="toPlan">${esc(T.addPlan)}</button><button class="btn" id="toShop">${esc(T.addShop)}</button>${r.items.length ? `<button class="btn" id="myVer">${esc(T.myVersion)}</button>` : ""}</div>`;
+  if (r.items.length) h += `<div class="row2"><button class="btn" id="myVer">${esc(T.myVersion)}</button></div>`;
   if (r.video) h += `<div class="box video"><a class="btn main" href="${esc(r.video)}" target="_blank" rel="noopener">${esc(T.vid)}</a></div>`;
   h += `<h3>${esc(T.ingh)}</h3>`;
   if (r.items.length) h += `<p class="hint">${esc(T.swapHint)}</p>`;
@@ -300,6 +307,8 @@ function renderRecipe(id) {
     return `<li><span>${m ? `<em class="stt">${esc(m[1])}</em>` : ""}${esc(m ? s.slice(m[0].length) : s)}</span></li>`; }).join("") + `</ol>`;
   if (x.storage) h += `<div class="box"><b>${esc(T.stor)}</b> ${esc(x.storage)}</div>`;
   if (x.note) h += `<div class="box">${esc(x.note)}</div>`;
+  const rel = R.filter(o => o.cat === r.cat && o.id !== r.id && !(BANNED.size && !state.showAll && o.items.some(([i, kk]) => banned(kk)))).slice(0, 12);
+  if (rel.length) h += `<section class="lsec rrel"><div class="lhd"><h3>${esc(T.related)}</h3></div><div class="lane">${rel.map(recCard).join("")}</div></section>`;
   h += coachMini();
   $("#app").innerHTML = h;
 }
@@ -870,7 +879,7 @@ function route() {
   const morph = (isHome(prev) && isRec(h)) || (isRec(prev) && isHome(h));
   if (isRec(prev) && !isHome(h)) vt.id = null;
   const done = () => { document.querySelectorAll("[style*='view-transition-name']").forEach(e => e.style.viewTransitionName = ""); };
-  if (morph && document.startViewTransition && !reduceMotion()) { const tr = document.startViewTransition(() => routeNow(h, prev)); tr.finished.then(done, done); }
+  if (morph && document.startViewTransition && !reduceMotion()) { const tr = document.startViewTransition(() => routeNow(h, prev)); tr.ready.catch(() => {}); tr.finished.then(done, done); }
   else { routeNow(h, prev); done(); if (!reduceMotion()) { const a = $("#app"); a.classList.remove("enter"); void a.offsetWidth; a.classList.add("enter"); } }
 }
 function routeNow(h, prev) {
@@ -897,7 +906,7 @@ function routeNow(h, prev) {
   if (/^#recipe-\d+$/.test(h) && vt.id === +h.slice(8)) { const hi = document.querySelector(".hero .dimg > :first-child"); if (hi) hi.style.viewTransitionName = "dish"; }
 }
 function openRecipe(card) {
-  saveListPos(); vt.id = +card.dataset.id;
+  if (!location.hash || location.hash === "#") saveListPos(); vt.id = +card.dataset.id;
   document.querySelectorAll("[style*='view-transition-name']").forEach(e => e.style.viewTransitionName = "");
   const im = card.querySelector(".dimg > :first-child"); if (im) im.style.viewTransitionName = "dish";
   location.hash = "recipe-" + card.dataset.id;
@@ -1000,7 +1009,7 @@ document.addEventListener("click", e => {
   /* list */
   const f = el.closest("[data-f]");
   if (f) { e.stopPropagation(); const id = +f.dataset.f; favs.has(id) ? favs.delete(id) : favs.add(id); saveFav();
-    if (/^#recipe/.test(location.hash)) { f.setAttribute("aria-pressed", favs.has(id)); f.textContent = favs.has(id) ? T.favOn : T.favAdd; } else { renderTabs(); renderList(); } return; }
+    if (/^#recipe/.test(location.hash)) { f.setAttribute("aria-pressed", favs.has(id)); if (f.classList.contains("rfav")) { f.setAttribute("aria-label", favs.has(id) ? T.favOn : T.favAdd); f.title = favs.has(id) ? T.favOn : T.favAdd; } else f.textContent = favs.has(id) ? T.favOn : T.favAdd; } else { renderTabs(); renderList(); } return; }
   const tab = el.closest(".tab");
   if (tab && tab.tagName === "BUTTON") { state.fav = !!tab.dataset.fav && !state.fav; state.quick = !!tab.dataset.quick && !state.quick; state.cat = tab.dataset.c != null ? +tab.dataset.c : -1; renderTabs(); renderList(); return; }
   const cu = el.closest("[data-cu]"); if (cu) { state.cuis = cu.dataset.cu || null; state.fopen = true; renderList(); return; }
@@ -1009,6 +1018,10 @@ document.addEventListener("click", e => {
   const w = el.closest("[data-w]"); if (w) { state.q = state.q === w.dataset.w ? "" : w.dataset.w; $("#q").value = state.q; $("#qx").hidden = !state.q; renderList(); return; }
   if (el.closest("#fltBtn")) { state.fopen = !state.fopen; if (location.hash && location.hash !== "#") location.hash = ""; else { renderList(); if (state.fopen) { const f = $("#fl"); f && f.scrollIntoView({block: "nearest", behavior: "smooth"}); } } return; }
   if (el.closest("#relNext")) { const r = $("#rel"); r && r.scrollBy({left: r.clientWidth * 0.7, behavior: "smooth"}); return; }
+  const tg = el.closest("[data-tg]"); if (tg) { const [kind, v] = tg.dataset.tg.split(":");
+    Object.assign(state, {cat: -1, quick: false, cuis: null, veg: "any", base: null, kcal: "any", prot: "any", sort: "def", q: "", fav: false}); $("#q").value = ""; $("#qx").hidden = true;
+    if (kind === "cat") state.cat = +v; else if (kind === "cu") state.cuis = v; else if (kind === "veg") state.veg = v; else if (kind === "b") state.base = v;
+    listY = 0; vt.id = null; location.hash = ""; return; }
   const lm = el.closest("[data-lane]"); if (lm) { state.cat = +lm.dataset.lane; state.fav = false; state.quick = false; renderTabs(); renderList(); scrollTo(0, 0); return; }
   const card = el.closest(".card[data-id]"); if (card) { openRecipe(card); return; }
   if (el.closest("#back")) { location.hash = ""; return; }

@@ -539,3 +539,30 @@ details.fl > summary{display:none}
 details.fl[open]{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:4px 14px 14px}
 .lsec:first-of-type{margin-top:22px}
 .brand a.logo{border:0;text-decoration:none}
+
+/* ===== Recipe page in the same clean style ===== */
+.rbar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 0 12px}
+.rbar-r{display:flex;align-items:center;gap:8px;min-width:0}
+.rbtn{flex:none;display:grid;place-items:center;width:42px;height:42px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--muted);cursor:pointer}
+.rbtn:hover{color:var(--ink);border-color:var(--muted)}
+.rbtn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#back.rbtn{border-color:transparent;background:transparent;margin-left:-8px}
+.rfav[aria-pressed="true"]{color:#E5484D;border-color:#E5484D}
+.rfav[aria-pressed="true"] svg{fill:currentColor}
+.rmain{flex:none;height:42px;padding:0 16px;border:0;border-radius:10px;background:var(--ink);color:var(--bg);font:inherit;font-size:14.5px;font-weight:800;cursor:pointer;white-space:nowrap}
+.rmain:hover{opacity:.9}
+@media (max-width:380px){.rmain{padding:0 12px;font-size:13.5px}.rbtn{width:38px;height:38px}.rbar-r{gap:6px}}
+.hero .dimg.big{margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));width:auto;max-width:none;aspect-ratio:4/3;max-height:none;border-radius:0;box-shadow:none}
+@media (min-width:640px){.hero .dimg.big{margin-inline:0;border-radius:14px;max-height:520px}}
+.rstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:12px;padding:18px 0 4px}
+.rstats div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.rstats span{font-size:13.5px;color:var(--muted);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rstats b{font-size:18px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rtitle{font-size:clamp(26px,7vw,36px);font-weight:800;letter-spacing:-.025em;line-height:1.12;margin:16px 0 14px;text-wrap:balance;overflow-wrap:anywhere}
+.rtags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.rtag{border:0;border-radius:6px;background:var(--line);color:var(--ink);font:inherit;font-size:14px;font-weight:600;padding:7px 12px;cursor:pointer}
+.rtag:hover{background:var(--soft);color:var(--accent)}
+.seg{margin-top:0}
+h3{font-size:20px;margin:30px 0 12px}
+.rrel{margin-top:34px}
+.rrel .lhd h3{margin:0}

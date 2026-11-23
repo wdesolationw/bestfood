@@ -257,7 +257,9 @@
     "mealT": "Mahlzeit",
     "navFood": "Tagebuch",
     "mac": ["Eiweiß", "Fett", "Kohlenhydrate"],
-    "eaten": "Gegessen"
+    "eaten": "Gegessen",
+    "timeL": "Zeit",
+    "related": "Ähnliche Rezepte"
   },
   "quick": ["Pasta", "Reis", "Hähnchen", "Quark", "Banane", "Schokolade"],
   "stop": ["mit", "und", "der", "die", "das", "ein", "eine", "im", "in"],

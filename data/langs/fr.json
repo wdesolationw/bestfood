@@ -262,7 +262,9 @@
     "mealT": "Repas",
     "navFood": "Journal",
     "mac": ["Protéines", "Lipides", "Glucides"],
-    "eaten": "Consommé"
+    "eaten": "Consommé",
+    "timeL": "Temps",
+    "related": "Recettes similaires"
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],
