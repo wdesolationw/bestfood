@@ -176,7 +176,11 @@ function findFood(q) {
   return hit.slice(0, brandHit.size ? 16 : 8);
 }
 let toastT = null;
-function toast(msg) { const el = $("#toast"); el.textContent = msg; el.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => el.hidden = true, 2200); }
+function toast(msg) { const el = $("#toast"); el.textContent = msg; el.classList.remove("out"); if (!el.hidden) { el.hidden = true; void el.offsetWidth; } el.hidden = false; clearTimeout(toastT);
+  toastT = setTimeout(() => { if (reduceMotion()) { el.hidden = true; return; } el.classList.add("out"); toastT = setTimeout(() => { el.hidden = true; el.classList.remove("out"); }, 200); }, 2200); }
+/* replay an entrance animation on freshly rendered content */
+function animIn(el, cls = "swap") { if (!el || reduceMotion()) return; el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls);
+  clearTimeout(el["_t" + cls]); el["_t" + cls] = setTimeout(() => el.classList.remove(cls), 900); } // later re-renders must not replay it
 let rphoto = load("brfy-rphoto", {});
 const recImg = r => rphoto[r.id] ? `<img src="${rphoto[r.id]}" alt="" loading="lazy" decoding="async" class="own">` : IMGS[r.id] ? `<img src="${IMGS[r.id]}" alt="" loading="lazy" decoding="async">` : r.kind && r.kind.startsWith("svg:") ? dishSVG(r.items.map(([i, k, g]) => ({key: k, g})), r.kind.slice(4), "r" + r.id) : "";
 const timeLbl = r => r.time >= 600 ? "" : `<span class="pill o">${r.time} ${esc(t().min)}</span>`;
@@ -725,8 +729,10 @@ function updateTotals() {
 
 /* ---------- sheets ---------- */
 let sheetKind = null, sheetCtx = null, lastFocus = null;
-function openSheet(kind, ctx) { sheetKind = kind; sheetCtx = ctx || {}; lastFocus = document.activeElement; $("#sheet").hidden = false; renderSheet(); const f = $("#panel input") || $("#panel button"); f && f.focus(); }
-function closeSheet() { $("#sheet").hidden = true; sheetKind = null; lastFocus && lastFocus.focus && lastFocus.focus(); }
+let sheetT = null;
+function openSheet(kind, ctx) { clearTimeout(sheetT); $("#sheet").classList.remove("closing"); sheetKind = kind; sheetCtx = ctx || {}; lastFocus = document.activeElement; $("#sheet").hidden = false; renderSheet(); const f = $("#panel input") || $("#panel button"); f && f.focus(); }
+function closeSheet() { const sh = $("#sheet"); sheetKind = null;
+  if (reduceMotion() || sh.hidden) sh.hidden = true; else { sh.classList.add("closing"); clearTimeout(sheetT); sheetT = setTimeout(() => { sh.hidden = true; sh.classList.remove("closing"); }, 240); } lastFocus && lastFocus.focus && lastFocus.focus(); }
 function renderSheet() {
   const T = t();
   const title = {lang: T.langT, look: T.look, swap: T.swapT, prod: T.addProd.replace(/^\+\s*/, ""), pick: T.addBtn, toplan: T.addPlan.replace(/^\+\s*/, "")}[sheetKind];
@@ -1468,7 +1474,7 @@ function route() {
   if (isRec(prev) && !isHome(h)) vt.id = null;
   const done = () => { document.querySelectorAll("[style*='view-transition-name']").forEach(e => e.style.viewTransitionName = ""); };
   if (morph && document.startViewTransition && !reduceMotion()) { const tr = document.startViewTransition(() => routeNow(h, prev)); tr.ready.catch(() => {}); tr.updateCallbackDone.catch(() => {}); tr.finished.then(done, done); }
-  else { routeNow(h, prev); done(); if (!reduceMotion()) { const a = $("#app"); a.classList.remove("enter"); void a.offsetWidth; a.classList.add("enter"); } }
+  else { routeNow(h, prev); done(); animIn($("#app"), "enter"); }
 }
 function routeNow(h, prev) {
   const home = (h === "" || h === "#");
@@ -1623,9 +1629,10 @@ document.addEventListener("click", e => {
   /* list */
   const f = el.closest("[data-f]");
   if (f) { e.stopPropagation(); const id = +f.dataset.f; favs.has(id) ? favs.delete(id) : favs.add(id); saveFav();
-    if (/^#recipe/.test(location.hash)) { f.setAttribute("aria-pressed", favs.has(id)); if (f.classList.contains("rfav")) { f.setAttribute("aria-label", favs.has(id) ? T.favOn : T.favAdd); f.title = favs.has(id) ? T.favOn : T.favAdd; } else f.textContent = favs.has(id) ? T.favOn : T.favAdd; } else { renderTabs(); renderList(); } return; }
+    if (/^#recipe/.test(location.hash)) { f.setAttribute("aria-pressed", favs.has(id)); if (f.classList.contains("rfav")) { f.setAttribute("aria-label", favs.has(id) ? T.favOn : T.favAdd); f.title = favs.has(id) ? T.favOn : T.favAdd; } else f.textContent = favs.has(id) ? T.favOn : T.favAdd; } else { renderTabs(); renderList(); }
+    if (favs.has(id)) document.querySelectorAll(`[data-f="${id}"]`).forEach(b => animIn(b, "popnow")); return; }
   const tab = el.closest(".tab");
-  if (tab && tab.tagName === "BUTTON") { state.fav = !!tab.dataset.fav && !state.fav; state.quick = !!tab.dataset.quick && !state.quick; state.cat = tab.dataset.c != null ? +tab.dataset.c : -1; renderTabs(); renderList(); return; }
+  if (tab && tab.tagName === "BUTTON") { state.fav = !!tab.dataset.fav && !state.fav; state.quick = !!tab.dataset.quick && !state.quick; state.cat = tab.dataset.c != null ? +tab.dataset.c : -1; renderTabs(); renderList(); animIn($(".list") || $("#app")); return; }
   const cu = el.closest("[data-cu]"); if (cu) { state.cuis = cu.dataset.cu || null; state.fopen = true; renderList(); return; }
   if (el.closest("#showAll")) { state.showAll = true; renderList(); return; }
   const b = el.closest("[data-b]"); if (b) { state.base = state.base === b.dataset.b ? null : b.dataset.b; state.fopen = true; renderList(); return; }

@@ -660,3 +660,75 @@ ul.shop li.done::before{background:var(--ink);border-color:var(--ink)}
 .brandpick{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 8px}
 .results em.est{display:block;font-style:normal;font-size:11.5px;color:var(--muted);font-weight:600}
 @media (max-width:420px){.ghead{grid-template-columns:104px 1fr}.ghead .dimg{width:104px;height:104px}}
+
+/* ---------- motion: one set of curves and durations for the whole app ---------- */
+:root{--ease-out:cubic-bezier(.22,1,.36,1);--ease-io:cubic-bezier(.65,0,.35,1);--ease-pop:cubic-bezier(.34,1.5,.64,1);--d1:.14s;--d2:.24s;--d3:.42s}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
+@keyframes sheetDown{from{transform:none}to{transform:translateY(100%)}}
+@keyframes zoomIn{from{opacity:0;transform:scale(.94) translateY(8px)}to{opacity:1;transform:none}}
+@keyframes zoomOut{from{opacity:1;transform:none}to{opacity:0;transform:scale(.96) translateY(6px)}}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,14px) scale(.96)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes toastOut{to{opacity:0;transform:translate(-50%,8px) scale(.98)}}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.28)}100%{transform:scale(1)}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:none}}
+@keyframes ringIn{from{opacity:0;transform:rotate(-60deg) scale(.86)}to{opacity:1;transform:none}}
+@keyframes vtOut{to{opacity:0;transform:translateY(-6px)}}
+@keyframes vtIn{from{opacity:0;transform:translateY(10px)}}
+@media (prefers-reduced-motion:no-preference){
+  /* screens */
+  #app.enter{animation:rise var(--d3) var(--ease-out) both}
+  #app.enter .list>*,#app.enter .entries>*,#app.enter .gcard{animation:rise .5s var(--ease-out) both}
+  #app.enter .lsec,#app.enter .dotd,#app.enter>.sumcard{animation:rise .5s var(--ease-out) both}
+  #app.enter .lsec:nth-of-type(2){animation-delay:.06s}#app.enter .lsec:nth-of-type(3){animation-delay:.12s}#app.enter .lsec:nth-of-type(n+4){animation-delay:.18s}
+  #app.enter .lane>*{animation:rise .5s var(--ease-out) both}
+  #app.enter .lane>:nth-child(2){animation-delay:.05s}#app.enter .lane>:nth-child(3){animation-delay:.1s}#app.enter .lane>:nth-child(n+4){animation-delay:.15s}
+  #app.enter .list>:nth-child(2),#app.enter .entries>:nth-child(2){animation-delay:.035s}
+  #app.enter .list>:nth-child(3),#app.enter .entries>:nth-child(3){animation-delay:.07s}
+  #app.enter .list>:nth-child(4),#app.enter .entries>:nth-child(4){animation-delay:.105s}
+  #app.enter .list>:nth-child(5),#app.enter .entries>:nth-child(5){animation-delay:.14s}
+  #app.enter .list>:nth-child(6),#app.enter .entries>:nth-child(6){animation-delay:.175s}
+  #app.enter .list>:nth-child(n+7),#app.enter .entries>:nth-child(n+7){animation-delay:.21s}
+  #app.enter .bar i{transform-origin:left;animation:grow .7s var(--ease-out) .1s both}
+  #app.enter .ring svg{animation:ringIn .7s var(--ease-out) both}
+  .bar i{transition:width .5s var(--ease-out),background-color var(--d2)}
+  ::view-transition-old(root){animation:vtOut .16s ease-in both}
+  ::view-transition-new(root){animation:vtIn .34s var(--ease-out) .04s both}
+  ::view-transition-group(dish){animation-duration:.5s;animation-timing-function:var(--ease-out)}
+  ::view-transition-old(dish),::view-transition-new(dish){animation-duration:.5s;animation-timing-function:var(--ease-out)}
+  /* generator results appear one after another */
+  #genOut .gmeta{animation:fadeIn var(--d2) ease-out both}
+  #genOut .gcard{animation:rise .5s var(--ease-out) both}
+  #genOut .gcard:nth-child(3){animation-delay:.07s}
+  #genOut .gcard:nth-child(4){animation-delay:.14s}
+  /* sheet and toast */
+  .sheet:not([hidden]){animation:fadeIn var(--d2) ease-out both}
+  .sheet:not([hidden]) .panel{animation:sheetUp .38s var(--ease-out) both}
+  .sheet.closing{animation:fadeIn .22s ease-in reverse both}
+  .sheet.closing .panel{animation:sheetDown .24s var(--ease-io) both}
+  .toast:not([hidden]){animation:toastIn .32s var(--ease-out) both}
+  .toast.out{animation:toastOut .2s ease-in both}
+  /* everything you press reacts */
+  .card,.tab,.chip,.btn,.seg button,.modes button,.langs button,.sw button,.alts button,.results button,.wdays button,.qty button,.fav,.iconbtn,.lang,.back,.bnav a,.ing li,.entry,.slot,.custom,ul.shop li,.macros div,.vbadge{transition:transform var(--d2) var(--ease-out),background-color var(--d2) ease,color var(--d2) ease,border-color var(--d2) ease,box-shadow var(--d2) ease,opacity var(--d2) ease}
+  .tab:active,.chip:active,.btn:active,.seg button:active,.modes button:active,.langs button:active,.sw button:active,.alts button:active,.results button:active,.wdays button:active,.qty button:active,.iconbtn:active,.lang:active,.bnav a:active{transform:scale(.96);transition-duration:var(--d1)}
+  .card:active{transform:scale(.985);transition-duration:var(--d1)}
+  .ing li:active{transform:scale(.99)}
+  .ing li::before{transition:background-color var(--d2),border-color var(--d2),transform var(--d2) var(--ease-pop)}
+  .ing li.done::before{animation:pop .32s var(--ease-pop)}
+  .popnow{animation:pop .4s var(--ease-pop)}
+  .list.swap>*,#app.swap .lsec,#app.swap>.list>*{animation:rise .4s var(--ease-out) both}
+  .list.swap>:nth-child(2){animation-delay:.03s}.list.swap>:nth-child(3){animation-delay:.06s}.list.swap>:nth-child(4){animation-delay:.09s}.list.swap>:nth-child(n+5){animation-delay:.12s}
+  .bnav svg{transition:background-color var(--d2) ease,width var(--d3) var(--ease-out),padding var(--d3) var(--ease-out)}
+  body{transition:background-color .3s ease,color .3s ease}
+  details.fl[open]>:not(summary){animation:rise var(--d3) var(--ease-out) both}
+}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .card:hover,.card.rcard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.12),var(--shadow)}
+  .alts button:hover,.langs button:hover,.results button:hover{transform:translateY(-1px)}
+}
+@media (min-width:640px) and (prefers-reduced-motion:no-preference){
+  .sheet:not([hidden]) .panel{animation:zoomIn .34s var(--ease-out) both}
+  .sheet.closing .panel{animation:zoomOut .2s ease-in both}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}}
