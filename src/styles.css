@@ -626,3 +626,22 @@ h3{font-size:20px;margin:30px 0 12px}
 .madd{width:36px;height:36px}
 .slotpick{display:flex;flex-wrap:wrap;gap:6px;margin:-4px 0 12px}
 .results .lbl{margin:12px 0 4px}
+/* progress */
+.streaks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 16px}
+.streaks div{border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:2px;background:var(--surface)}
+.streaks b{font-size:30px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.streaks span{font-size:13px;color:var(--muted);font-weight:600}
+.schartbox{padding:10px 8px 4px;margin-top:10px}
+.schart{width:100%;height:auto;display:block}
+.schart .ct{font-size:10px;fill:var(--muted);font-family:var(--font-body);font-weight:700}
+.chk p{margin:6px 0 12px}
+.chk.warn{border-color:var(--hot);background:var(--hot-soft)}
+.chall{display:grid;gap:10px}
+.chc{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--surface)}
+.chc.ok{border-color:var(--accent)}
+.chh{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.chh span{font-weight:800;font-variant-numeric:tabular-nums;color:var(--muted)}
+.chc.ok .chh span{color:var(--accent)}
+.chc p{margin:2px 0 8px;font-size:13px;color:var(--muted)}
+.seg3{gap:22px}
+.rstats.sx span{white-space:normal;line-height:1.25}

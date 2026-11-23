@@ -397,7 +397,7 @@ function renderDay() {
   $("#app").innerHTML = h;
 }
 
-const foodSeg = cur => `<div class="seg3">` + [["day", t().today], ["plan", t().navPlan], ["shop", t().shopT]].map(([k, l]) => `<a href="#${k}"${k === cur ? ' aria-current="page"' : ""}>${esc(l)}</a>`).join("") + `</div>`;
+const foodSeg = cur => `<div class="seg3">` + [["day", t().today], ["stats", t().statsT], ["plan", t().navPlan], ["shop", t().shopT]].map(([k, l]) => `<a href="#${k}"${k === cur ? ' aria-current="page"' : ""}>${esc(l)}</a>`).join("") + `</div>`;
 
 /* ---------- week plan ---------- */
 const SLOTS = ["b", "l", "d", "s"];
@@ -463,6 +463,58 @@ function calcNorm() {
   const minK = prof.sex === "m" ? 1500 : 1200; if (k < Math.max(minK, bmr)) { k = Math.max(minK, bmr); floor = true; }
   const p = w * (prof.aim === "maintain" ? 1.6 : 1.8), f = w * .9, c = Math.max(0, (k - p * 4 - f * 9) / 4);
   return {k: Math.round(k / 10) * 10, p: r0(p), f: r0(f), c: r0(c), floor, tdee: r0(tdee)};
+}
+/* ---------- progress ---------- */
+const isoAgo = n => { const d = new Date(); d.setDate(d.getDate() - n); return iso(d); };
+const dayTot = d => (diary[d] || []).reduce((a, e) => add4(a, entryMacros(e)), [0, 0, 0, 0]);
+const logged = d => (diary[d] || []).length > 0;
+const onTarget = d => { const g = +goal.k, tt = dayTot(d); return logged(d) && g > 0 && Math.abs(tt[0] - g) <= g * .1 && (!(+goal.p > 0) || tt[1] >= +goal.p * .9); };
+function streak(fn) { let n = 0, i = logged(todayIso()) ? 0 : 1; while (fn(isoAgo(i))) { n++; i++; } return n; }
+function weightAvg(from, to) { const v = Object.keys(weights).filter(d => d >= isoAgo(to) && d <= isoAgo(from)).map(d => +weights[d]).filter(x => x > 0); return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null; }
+function checkIn() {
+  const T = t(), gk = +goal.k; if (!(gk > 0)) return {msg: T.noGoal};
+  const days = [...Array(7)].map((_, i) => isoAgo(i + 1)).filter(logged), avg = days.length ? days.reduce((a, d) => a + dayTot(d)[0], 0) / days.length : 0;
+  if (days.length >= 3 && avg < gk * .7) return {msg: T.chkLow.replace("{a}", r0(avg)).replace("{g}", r0(gk)), warn: true};
+  const last = load("brfy-checkin", null); if (last) { const left = 14 - Math.round((new Date(todayIso()) - new Date(last)) / 864e5); if (left > 0) return {msg: T.chkWait.replace("{n}", left)}; }
+  const now = weightAvg(0, 6), before = weightAvg(14, 20); if (now == null || before == null) return {msg: T.chkNeed};
+  const d = now - before, ds = (d > 0 ? "+" : "") + fnum(Math.round(d * 10) / 10), w = now, aim = prof.aim;
+  let x = 0, key = "chkOk";
+  if (aim === "lose") { if (d > -0.2) { x = -150; key = "chkLower"; } else if (-d > w * .02) { x = 150; key = "chkRaise"; } }
+  else if (aim === "gain") { if (d < 0.2) { x = 150; key = "chkGainUp"; } else if (d > 1) { x = -150; key = "chkGainDown"; } }
+  else if (Math.abs(d) > 0.6) { x = d > 0 ? -100 : 100; key = "chkMaint"; }
+  return {msg: T[key].replace("{d}", ds).replace("{x}", Math.abs(x)), x, k: Math.round((gk + x) / 10) * 10};
+}
+const CHALL = [
+  ["ch1", 7, d => { const ms = SLOTS.map(s => (diary[d] || []).filter(e => entrySlot(e) === s)).filter(a => a.length); return ms.length > 0 && ms.every(a => a.reduce((s, e) => s + entryMacros(e)[1], 0) >= 20); }],
+  ["ch2", 7, d => (water[d] || 0) >= waterGoal()],
+  ["ch3", 5, d => { const g = +goal.k; return g > 0 && logged(d) && Math.abs(dayTot(d)[0] - g) <= g * .1; }],
+  ["ch4", 7, logged],
+];
+function barChart(n) {
+  const T = t(), ds = [...Array(n)].map((_, i) => isoAgo(n - 1 - i)), vals = ds.map(d => dayTot(d)), gk = +goal.k || 0;
+  const W = 340, H = 150, pad = 18, mx = Math.max(gk * 1.25, ...vals.map(v => v[0]), 1), bw = (W - pad * 2) / n, y = v => H - 22 - (v / mx) * (H - 34);
+  let s = `<svg viewBox="0 0 ${W} ${H}" class="schart" role="img" aria-label="${esc(T.goalK)}">`;
+  if (gk) s += `<line x1="${pad}" x2="${W - pad}" y1="${y(gk).toFixed(1)}" y2="${y(gk).toFixed(1)}" stroke="var(--muted)" stroke-dasharray="4 4"/><text x="${W - pad}" y="${(y(gk) - 4).toFixed(1)}" text-anchor="end" class="ct">${r0(gk)}</text>`;
+  vals.forEach((v, i) => { const x = pad + i * bw + bw * .18, w = bw * .64, top = y(v[0]), over = gk && v[0] > gk * 1.1, low = gk && v[0] > 0 && v[0] < gk * .7;
+    s += `<rect x="${x.toFixed(1)}" y="${top.toFixed(1)}" width="${w.toFixed(1)}" height="${(H - 22 - top).toFixed(1)}" rx="${Math.min(4, w / 2).toFixed(1)}" fill="${over ? "var(--hot)" : "var(--accent)"}"${low ? ' opacity=".4"' : ""}/>`;
+    if (n <= 7) s += `<text x="${(x + w / 2).toFixed(1)}" y="${H - 6}" text-anchor="middle" class="ct">${esc(wdName((new Date(+ds[i].slice(0, 4), +ds[i].slice(5, 7) - 1, +ds[i].slice(8)).getDay() + 6) % 7))}</text>`; });
+  if (n > 7) s += `<text x="${pad}" y="${H - 6}" class="ct">${ds[0].slice(5).split("-").reverse().join(".")}</text><text x="${W - pad}" y="${H - 6}" text-anchor="end" class="ct">${ds[n - 1].slice(5).split("-").reverse().join(".")}</text>`;
+  return s + `</svg>`;
+}
+function renderStats() {
+  const T = t(), n = state.statN || 7, ds = [...Array(n)].map((_, i) => isoAgo(i)).filter(logged);
+  const avg = i => ds.length ? r0(ds.reduce((a, d) => a + dayTot(d)[i], 0) / ds.length) : "–";
+  let h = foodSeg("stats");
+  h += `<div class="streaks"><div><b>${streak(logged)}</b><span>${esc(T.streakLog)}</span></div><div><b>${streak(onTarget)}</b><span>${esc(T.streakNorm)}</span></div></div>`;
+  h += `<div class="seg" role="group"><button data-sn="7" aria-pressed="${n === 7}">${esc(T.days7)}</button><button data-sn="30" aria-pressed="${n === 30}">${esc(T.days30)}</button></div>`;
+  h += `<div class="mebox schartbox">${barChart(n)}</div>`;
+  h += `<div class="rstats sx"><div><span>${esc(T.avgK)}</span><b>${avg(0)}</b></div><div><span>${esc(T.avgP)}</span><b>${avg(1)} ${esc(T.grams)}</b></div><div><span>${esc(T.daysLogged)}</span><b>${ds.length}/${n}</b></div></div>`;
+  const c = checkIn();
+  h += `<section class="mebox chk${c.warn ? " warn" : ""}"><h2>${esc(T.checkT)}</h2><p>${esc(c.msg)}</p>${c.x ? `<button class="btn main" id="chkApply" data-k="${c.k}">${esc(T.chkApply.replace("{k}", c.k))}</button>` : ""}</section>`;
+  const ks = Object.keys(weights).sort(); if (ks.length >= 2) h += `<section class="mebox"><h2>${esc(T.weightT)}</h2>${weightChart()}</section>`;
+  h += `<h3>${esc(T.challT)}</h3><div class="chall">` + CHALL.map(([k, need, fn]) => { const got = [...Array(7)].map((_, i) => isoAgo(i)).filter(fn).length, ok = got >= need;
+    return `<div class="chc${ok ? " ok" : ""}"><div class="chh"><b>${esc(T[k])}</b><span>${ok ? esc(T.chDone) : got + "/" + need}</span></div><p>${esc(T[k + "d"])}</p><div class="bar"><i style="width:${Math.min(100, got / need * 100)}%"></i></div></div>`; }).join("") + `</div>`;
+  $("#app").innerHTML = h;
 }
 function weightChart() {
   const ks = Object.keys(weights).sort().slice(-30); if (ks.length < 2) return "";
@@ -898,12 +950,13 @@ function route() {
 }
 function routeNow(h, prev) {
   const home = (h === "" || h === "#");
-  const nav = /^#(day|plan|shop|prep)$/.test(h) ? "day" : /^#(mine|dish-)/.test(h) ? "mine" : /^#me/.test(h) ? "me" : "r";
+  const nav = /^#(day|stats|plan|shop|prep)$/.test(h) ? "day" : /^#(mine|dish-)/.test(h) ? "mine" : /^#me/.test(h) ? "me" : "r";
   chrome(nav);
   $("#tabs").hidden = !home; $("#searchBox").hidden = !home;
   if (/^#recipe-\d+$/.test(h)) renderRecipe(+h.slice(8));
   else if (h === "#zameny") renderSubs();
   else if (h === "#day") renderDay();
+  else if (h === "#stats") renderStats();
   else if (h === "#plan") renderPlan(false);
   else if (h === "#prep") renderPlan(true);
   else if (h === "#shop") renderShop();
@@ -940,6 +993,8 @@ document.addEventListener("click", e => {
   const al = el.closest("[data-alt]"); if (al) { const {rid, idx} = sheetCtx; (swaps[rid] = swaps[rid] || {})[idx] = al.dataset.alt; saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   if (el.closest("#altReset")) { const {rid, idx} = sheetCtx; if (swaps[rid]) { delete swaps[rid][idx]; if (!Object.keys(swaps[rid]).length) delete swaps[rid]; } saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   const pk = el.closest("[data-pk]"); if (pk) { sheetCtx.key = pk.dataset.pk; sheetCtx.g = +pk.dataset.pg || PORTION[pk.dataset.pk] || 100; renderSheet(); const g = $("#pg"); g && g.focus(); return; }
+  const snb = el.closest("[data-sn]"); if (snb) { state.statN = +snb.dataset.sn; renderStats(); return; }
+  const cha = el.closest("#chkApply"); if (cha) { const k = +cha.dataset.k, dk = k - +goal.k; goal = Object.assign({}, goal, {k, c: Math.max(0, r0(+goal.c + dk / 4))}); store.set("brfy-goal", JSON.stringify(goal)); store.set("brfy-checkin", JSON.stringify(todayIso())); toast(t().chkApplied); renderStats(); return; }
   const psl = el.closest("[data-psl]"); if (psl) { sheetCtx.slot = psl.dataset.psl; renderSheet(); return; }
   const amb = el.closest("[data-addm]"); if (amb) { openSheet("prod", {q: "", slot: amb.dataset.addm}); return; }
   if (el.closest("#copyY")) { const [y, mo, d] = state.date.split("-").map(Number), yd = iso(new Date(y, mo - 1, d - 1)), src = diary[yd] || [];
