@@ -177,10 +177,10 @@ function findFood(q) {
 }
 let toastT = null;
 function toast(msg) { const el = $("#toast"); el.textContent = msg; el.classList.remove("out"); if (!el.hidden) { el.hidden = true; void el.offsetWidth; } el.hidden = false; clearTimeout(toastT);
-  toastT = setTimeout(() => { if (reduceMotion()) { el.hidden = true; return; } el.classList.add("out"); toastT = setTimeout(() => { el.hidden = true; el.classList.remove("out"); }, 200); }, 2200); }
+  toastT = setTimeout(() => { if (reduceMotion()) { el.hidden = true; return; } el.classList.add("out"); toastT = setTimeout(() => { el.hidden = true; el.classList.remove("out"); }, 230); }, 2200); }
 /* replay an entrance animation on freshly rendered content */
 function animIn(el, cls = "swap") { if (!el || reduceMotion()) return; el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls);
-  clearTimeout(el["_t" + cls]); el["_t" + cls] = setTimeout(() => el.classList.remove(cls), 900); } // later re-renders must not replay it
+  clearTimeout(el["_t" + cls]); el["_t" + cls] = setTimeout(() => el.classList.remove(cls), 1400); } // later re-renders must not replay it
 let rphoto = load("brfy-rphoto", {});
 const recImg = r => rphoto[r.id] ? `<img src="${rphoto[r.id]}" alt="" loading="lazy" decoding="async" class="own">` : IMGS[r.id] ? `<img src="${IMGS[r.id]}" alt="" loading="lazy" decoding="async">` : r.kind && r.kind.startsWith("svg:") ? dishSVG(r.items.map(([i, k, g]) => ({key: k, g})), r.kind.slice(4), "r" + r.id) : "";
 const timeLbl = r => r.time >= 600 ? "" : `<span class="pill o">${r.time} ${esc(t().min)}</span>`;
@@ -732,7 +732,7 @@ let sheetKind = null, sheetCtx = null, lastFocus = null;
 let sheetT = null;
 function openSheet(kind, ctx) { clearTimeout(sheetT); $("#sheet").classList.remove("closing"); sheetKind = kind; sheetCtx = ctx || {}; lastFocus = document.activeElement; $("#sheet").hidden = false; renderSheet(); const f = $("#panel input") || $("#panel button"); f && f.focus(); }
 function closeSheet() { const sh = $("#sheet"); sheetKind = null;
-  if (reduceMotion() || sh.hidden) sh.hidden = true; else { sh.classList.add("closing"); clearTimeout(sheetT); sheetT = setTimeout(() => { sh.hidden = true; sh.classList.remove("closing"); }, 240); } lastFocus && lastFocus.focus && lastFocus.focus(); }
+  if (reduceMotion() || sh.hidden) sh.hidden = true; else { sh.classList.add("closing"); clearTimeout(sheetT); sheetT = setTimeout(() => { sh.hidden = true; sh.classList.remove("closing"); }, 270); } lastFocus && lastFocus.focus && lastFocus.focus(); }
 function renderSheet() {
   const T = t();
   const title = {lang: T.langT, look: T.look, swap: T.swapT, prod: T.addProd.replace(/^\+\s*/, ""), pick: T.addBtn, toplan: T.addPlan.replace(/^\+\s*/, "")}[sheetKind];
