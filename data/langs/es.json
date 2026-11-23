@@ -350,7 +350,8 @@
     "cafesPizza": "Pizza",
     "westT": "peso aprox., macros del menú",
     "genSkip": "No está en la lista de alimentos",
-    "genGuess": "Sin tipo de plato — elegido según los productos"
+    "genGuess": "Sin tipo de plato — elegido según los productos",
+    "genHaveRec": "Hay una receta lista en la app"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],
@@ -2434,6 +2435,392 @@
         "Prepara el {P}: a la plancha, al horno o en lonchas si ya está hecho.",
         "Tuesta el pan en tostadora o sartén seca; corta {V}.",
         "Unta la salsa, coloca el relleno en capas, cubre con la otra rebanada y corta por la mitad."
+      ]
+    }
+  },
+  "dish": {
+    "borscht": {
+      "n": "Borsch",
+      "s": [
+        "Cuece la ternera en 1,5 l de agua 1–1,5 horas, espuma y corta la carne.",
+        "Sofríe cebolla, zanahoria y remolacha 10 minutos, añade tomate; echa patata y col al caldo 15 minutos.",
+        "Vuelve a poner el sofrito y la carne, añade ajo y hierbas, reposa 10 minutos. Sirve con nata agria."
+      ]
+    },
+    "shchi": {
+      "n": "Shchi (sopa de col)",
+      "s": [
+        "Haz un caldo de ternera (1 hora), saca y corta la carne.",
+        "Añade col y patata al caldo 15 minutos; sofríe cebolla y zanahoria con tomate y agrégalas.",
+        "Vuelve a poner la carne, sazona y deja reposar. Sirve con nata agria y hierbas."
+      ]
+    },
+    "solyanka": {
+      "n": "Soliankа",
+      "s": [
+        "Cuece la ternera hasta que esté tierna (1 hora) y córtala en tiras con el jamón.",
+        "Sofríe cebolla con tomate, añade pepinillos, guisa 5 minutos y pásalo al caldo con la carne.",
+        "Añade aceitunas, cuece 5 minutos. Sirve con limón y nata agria."
+      ]
+    },
+    "ukha": {
+      "n": "Ujá (sopa de pescado)",
+      "s": [
+        "Echa patata, zanahoria y una cebolla entera en agua hirviendo, cuece 10 minutos.",
+        "Añade el pescado en trozos y cuece 8–10 minutos a fuego suave, sin hervir fuerte.",
+        "Retira la cebolla, sazona, añade hierbas y unas gotas de limón."
+      ]
+    },
+    "kharcho": {
+      "n": "Jarcho",
+      "s": [
+        "Cuece la ternera en trozos en 1,2 l de agua 1 hora.",
+        "Añade arroz y cebolla, cuece 15 minutos; incorpora tomate, tkemali, nueces molidas y khmeli-suneli.",
+        "Termina con ajo y cilantro, reposa 10 minutos."
+      ]
+    },
+    "lagman": {
+      "n": "Lagman",
+      "s": [
+        "Fríe la ternera en tiras 5 minutos, añade cebolla, zanahoria y pimiento, 5 minutos más.",
+        "Añade tomate y ajo, cubre con caldo y guisa 25 minutos.",
+        "Cuece los fideos, repártelos y vierte encima la salsa de carne."
+      ]
+    },
+    "kuksi": {
+      "n": "Kuksi (sopa fría de fideos)",
+      "s": [
+        "Para el caldo mezcla agua hervida fría con salsa de soja, ajo y una pizca de azúcar, enfría.",
+        "Fríe la ternera en tiras 6–7 minutos; corta pepino, col y tomate en juliana, haz una tortilla fina con el huevo y córtala.",
+        "Cuece los fideos, enjuágalos en agua fría, ponlos en un cuenco con verduras y carne y vierte el caldo frío."
+      ]
+    },
+    "pho": {
+      "n": "Pho bo",
+      "s": [
+        "Calienta el caldo con jengibre y media cebolla tostada 20 minutos, cuela.",
+        "Remoja los fideos de arroz en agua hirviendo 5 minutos; corta la ternera muy fina.",
+        "Pon fideos y ternera cruda en un bol, vierte el caldo hirviendo, añade hierbas y lima."
+      ]
+    },
+    "tomyum": {
+      "n": "Tom yum",
+      "s": [
+        "Lleva el caldo a ebullición con jengibre (y hierba limón si tienes), cuece 5 minutos.",
+        "Añade champiñones y tomate 3 minutos, luego las gambas 2–3 minutos.",
+        "Vierte la leche de coco, calienta sin hervir, aliña con lima y salsa."
+      ]
+    },
+    "ramen": {
+      "n": "Ramen",
+      "s": [
+        "Cuece el huevo 6,5 minutos, enfría y pela; dora la carne de cerdo en lonchas 3–4 minutos por lado.",
+        "Calienta el caldo con soja y setas 5 minutos; cuece los fideos aparte.",
+        "Monta en un bol fideos, caldo, cerdo, espinacas, medio huevo y cebolleta."
+      ]
+    },
+    "minestrone": {
+      "n": "Minestrone",
+      "s": [
+        "Sofríe cebolla y zanahoria en aceite 5 minutos, añade patata y calabacín.",
+        "Añade tomate y caldo, cuece 15 minutos, luego alubias y pasta 10 minutos más.",
+        "Sirve con queso rallado y un hilo de aceite de oliva."
+      ]
+    },
+    "pumpkinsoup": {
+      "n": "Crema de calabaza",
+      "s": [
+        "Sofríe la cebolla 3 minutos, añade calabaza y patata en dados.",
+        "Cubre con caldo y cuece 20 minutos hasta que estén tiernas.",
+        "Tritura, añade la nata, calienta y espolvorea sésamo."
+      ]
+    },
+    "okroshka": {
+      "n": "Okroshka (sopa fría)",
+      "s": [
+        "Cuece patata (20 minutos), huevo (9 minutos) y pollo (20 minutos), enfría.",
+        "Corta todo en dados con pepino fresco, añade hierbas y cebolleta.",
+        "Cubre con kéfir frío rebajado con agua, sazona y enfría 15 minutos."
+      ]
+    },
+    "shurpa": {
+      "n": "Shurpa",
+      "s": [
+        "Cuece la carne en trozos grandes 1 hora, espumando.",
+        "Añade patata, zanahoria, cebolla, pimiento y tomate en trozos grandes, cuece 25 minutos.",
+        "Sazona, añade hierbas y deja reposar 10 minutos."
+      ]
+    },
+    "chakhokhbili": {
+      "n": "Chajojbili",
+      "s": [
+        "Dora el pollo sin aceite, 8 minutos.",
+        "Añade cebolla y pimiento, 5 minutos; incorpora tomate rallado y guisa tapado 25 minutos.",
+        "Añade ajo, khmeli-suneli y mucho cilantro, calienta 2 minutos."
+      ]
+    },
+    "goulash": {
+      "n": "Gulash",
+      "s": [
+        "Dora la ternera en dados por tandas, 6–7 minutos.",
+        "Añade cebolla y pimiento, 5 minutos, pimentón, tomate y un vaso de agua.",
+        "Guisa tapado 1 hora, añadiendo la patata 20 minutos antes del final."
+      ]
+    },
+    "khinkali": {
+      "n": "Jinkali",
+      "s": [
+        "Amasa una masa firme con harina, agua y sal, deja reposar 30 minutos.",
+        "Mezcla la carne picada con cebolla, hierbas, pimienta y 3–4 cucharadas de agua fría para que quede jugosa.",
+        "Estira círculos, pliega los jinkali en un nudo y cuécelos 12–14 minutos en agua con sal."
+      ]
+    },
+    "pelmeni": {
+      "n": "Pelmeni",
+      "s": [
+        "Amasa harina, agua, huevo y sal, deja reposar 30 minutos.",
+        "Mezcla carne picada de ternera y cerdo con cebolla picada fina, sal y pimienta.",
+        "Forma los pelmeni y cuécelos 6–7 minutos tras flotar. Sirve con nata agria."
+      ]
+    },
+    "vareniki": {
+      "n": "Vareniki de patata",
+      "s": [
+        "Cuece las patatas (20 minutos) y hazlas puré con cebolla dorada.",
+        "Amasa harina, agua y una pizca de sal, estira y corta círculos.",
+        "Forma los vareniki y cuécelos 5 minutos tras flotar. Sirve con nata agria y cebolla frita."
+      ]
+    },
+    "manti": {
+      "n": "Manti",
+      "s": [
+        "Amasa harina, agua y sal, deja reposar 30 minutos.",
+        "Mezcla la carne picada con mucha cebolla picada, sal, pimienta y comino.",
+        "Forma los manti, unta la rejilla con aceite y cuécelos al vapor 40–45 minutos. Sirve con nata agria."
+      ]
+    },
+    "gyoza": {
+      "n": "Gyozas",
+      "s": [
+        "Mezcla carne picada de cerdo con col picada fina, cebolleta, jengibre y una cucharada de soja.",
+        "Pon el relleno en círculos de masa y ciérralos en media luna con pliegues.",
+        "Dora las gyozas 2 minutos, añade 50 ml de agua y cuécelas tapadas 6 minutos. Sirve con soja."
+      ]
+    },
+    "khach_adj": {
+      "n": "Jachapuri adjaruli",
+      "s": [
+        "Amasa una masa de levadura con leche o matsoni y deja levar 1 hora.",
+        "Forma una 'barca', rellena con suluguni e imeruli rallados y hornea a 220 °C 12 minutos.",
+        "Haz un hueco, casca el huevo y hornea 2–3 minutos más. Añade mantequilla y mezcla antes de comer."
+      ]
+    },
+    "khach_imer": {
+      "n": "Jachapuri imeruli",
+      "s": [
+        "Amasa una masa blanda con matsoni y una pizca de bicarbonato, reposa 20 minutos.",
+        "Estira una torta, pon el queso rallado en el centro, cierra los bordes y estírala de nuevo en círculo.",
+        "Cuécela en sartén seca tapada 4–5 minutos por lado, pinta con mantequilla."
+      ]
+    },
+    "lobiani": {
+      "n": "Lobiani",
+      "s": [
+        "Machaca las alubias con cebolla frita, khmeli-suneli y sal.",
+        "Envuelve el relleno en masa de levadura o de matsoni y estira una torta redonda.",
+        "Hornea a 220 °C 15 minutos o cuece en sartén seca, pinta con mantequilla."
+      ]
+    },
+    "pizza": {
+      "n": "Pizza Margarita",
+      "s": [
+        "Amasa una masa de levadura con aceite de oliva y deja levar 1 hora.",
+        "Estírala fina, unta salsa de tomate, reparte mozzarella y tomate.",
+        "Hornea a la máxima temperatura (250 °C) 8–10 minutos, añade albahaca."
+      ]
+    },
+    "quesadilla": {
+      "n": "Quesadilla de pollo",
+      "s": [
+        "Saltea el pollo en tiras con pimiento 7–8 minutos, añade maíz.",
+        "Pon queso y relleno en media tortilla y dóblala.",
+        "Dórala en sartén seca 2 minutos por lado, corta en triángulos y sirve con nata agria."
+      ]
+    },
+    "bliny": {
+      "n": "Blinis (crepes)",
+      "s": [
+        "Bate el huevo con azúcar y sal, añade leche e incorpora la harina poco a poco hasta una masa fina sin grumos.",
+        "Deja reposar 15 minutos y añade una cucharada de mantequilla derretida.",
+        "Haz crepes finas en sartén caliente, 1 minuto por lado. Sirve con nata agria."
+      ]
+    },
+    "syrniki": {
+      "n": "Syrniki (tortitas de requesón)",
+      "s": [
+        "Aplasta el requesón con huevo, azúcar y una pizca de sal, añade la harina.",
+        "Forma discos de 1,5 cm y pásalos por harina.",
+        "Fríelos a fuego medio 3–4 minutos por lado hasta dorar. Sirve con nata agria."
+      ]
+    },
+    "draniki": {
+      "n": "Draniki (tortitas de patata)",
+      "s": [
+        "Ralla fina la patata y la cebolla, escurre el exceso de jugo.",
+        "Añade huevo, harina y sal, mezcla.",
+        "Pon cucharadas en sartén caliente con aceite y fríe 3–4 minutos por lado. Sirve con nata agria."
+      ]
+    },
+    "plov": {
+      "n": "Plov (pilaf)",
+      "s": [
+        "Dora la carne en una olla gruesa, añade cebolla y luego zanahoria en tiras, 10 minutos.",
+        "Añade comino y sal, cubre con agua un dedo y guisa 30 minutos.",
+        "Extiende el arroz lavado en capa uniforme, hunde una cabeza de ajo, añade agua 1,5 cm por encima y cuece tapado a fuego bajo 25 minutos."
+      ]
+    },
+    "ojakhuri": {
+      "n": "Ojajuri",
+      "s": [
+        "Dora la carne de cerdo en trozos en la sartén, 10 minutos.",
+        "Aparte, fríe la patata en gajos hasta dorar, 15 minutos.",
+        "Junta, añade cebolla en juliana, ajo y khmeli-suneli, 5 minutos, espolvorea hierbas."
+      ]
+    },
+    "chkmeruli": {
+      "n": "Shkmeruli (pollo al ajo)",
+      "s": [
+        "Dora el pollo con la piel hacia abajo hasta que cruja, 10 minutos, dale la vuelta.",
+        "Mezcla leche y nata con mucho ajo machacado y sal.",
+        "Vierte la salsa sobre el pollo y hornea a 200 °C 15–20 minutos, espolvorea hierbas."
+      ]
+    },
+    "shashlik": {
+      "n": "Shashlik (brochetas)",
+      "s": [
+        "Corta la carne en trozos de 4–5 cm, mézclala con cebolla, sal y pimienta y marina al menos 2 horas.",
+        "Ensártala en brochetas y ásala a la brasa 15–20 minutos, girando.",
+        "Sirve con cebolla encurtida, tomate, hierbas y lavash."
+      ]
+    },
+    "golubtsy": {
+      "n": "Golubtsy (rollitos de col)",
+      "s": [
+        "Escalda las hojas de col 3–4 minutos; cuece el arroz a medias.",
+        "Mezcla la carne con el arroz y la mitad del sofrito de cebolla y zanahoria, envuelve en las hojas.",
+        "Colócalos en una fuente, cubre con tomate, el resto del sofrito y agua, guisa tapado 40 minutos. Sirve con nata agria."
+      ]
+    },
+    "kotlety": {
+      "n": "Filetes rusos con puré",
+      "s": [
+        "Mezcla la carne con huevo, pan remojado en agua, cebolla rallada, sal y pimienta.",
+        "Forma los filetes y fríelos 4 minutos por lado, luego 8 minutos tapados.",
+        "Cuece las patatas (20 minutos) y hazlas puré con leche caliente y mantequilla."
+      ]
+    },
+    "grechka_kup": {
+      "n": "Trigo sarraceno a la mercader",
+      "s": [
+        "Fríe la carne en trozos 7 minutos, añade cebolla y zanahoria, 5 minutos más.",
+        "Añade tomate y el trigo sarraceno lavado, cubre con agua 1:2.",
+        "Cuece tapado a fuego bajo 20 minutos y deja reposar 10."
+      ]
+    },
+    "stroganoff": {
+      "n": "Ternera Stroganoff",
+      "s": [
+        "Corta la ternera en tiras finas y dórala por tandas 2 minutos.",
+        "Sofríe cebolla y champiñones 6 minutos, espolvorea harina, añade un poco de agua y nata agria.",
+        "Vuelve a poner la carne y calienta 3 minutos sin hervir. Sirve con pasta o puré."
+      ]
+    },
+    "beshbarmak": {
+      "n": "Beshbarmak",
+      "s": [
+        "Cuece la carne en trozos grandes 1,5–2 horas, espumando.",
+        "Estira una masa fina sin levadura, córtala en rombos y cuécela en el caldo 3–4 minutos.",
+        "Coloca la masa, encima la carne en lonchas y la cebolla pochada en caldo 2 minutos. Sirve el caldo aparte."
+      ]
+    },
+    "ratatouille": {
+      "n": "Ratatouille (pisto)",
+      "s": [
+        "Corta en dados berenjena, calabacín, pimiento y cebolla.",
+        "Sofríe cebolla y pimiento 5 minutos, añade berenjena y calabacín, 5 minutos más.",
+        "Añade tomate, ajo y hierbas, guisa tapado 25 minutos."
+      ]
+    },
+    "carbonara": {
+      "n": "Pasta carbonara",
+      "s": [
+        "Cuece la pasta al dente y guarda medio vaso de agua.",
+        "Dora el bacon hasta que cruja, 5 minutos; bate el huevo con queso rallado y pimienta.",
+        "Fuera del fuego mezcla pasta, bacon y huevo, añadiendo agua de cocción hasta que quede cremosa."
+      ]
+    },
+    "bolognese": {
+      "n": "Pasta boloñesa",
+      "s": [
+        "Sofríe cebolla y zanahoria picadas 5 minutos, añade la carne y dórala desmenuzándola 7 minutos.",
+        "Añade tomate y ajo y cuece a fuego bajo 25–30 minutos.",
+        "Cuece la pasta, mézclala con la salsa y espolvorea queso rallado."
+      ]
+    },
+    "lasagna": {
+      "n": "Lasaña",
+      "s": [
+        "Haz la salsa de carne: dora la carne 7 minutos, añade tomate y cuece 15 minutos.",
+        "Para la bechamel funde mantequilla, tuesta la harina 1 minuto, añade leche y cuece hasta espesar, 5 minutos.",
+        "Monta capas de láminas, carne, bechamel y queso y hornea a 190 °C 35 minutos."
+      ]
+    },
+    "risotto": {
+      "n": "Risotto de setas",
+      "s": [
+        "Sofríe cebolla y setas en mantequilla 6 minutos, añade el arroz y nacáralo 2 minutos.",
+        "Añade caldo caliente cucharón a cucharón, removiendo, hasta que quede cremoso, 18–20 minutos.",
+        "Fuera del fuego, incorpora queso rallado y mantequilla, reposa 2 minutos."
+      ]
+    },
+    "paella": {
+      "n": "Paella",
+      "s": [
+        "Dora el pollo en trozos 8 minutos, añade pimiento y tomate rallado, 5 minutos.",
+        "Echa el arroz, vierte caldo caliente (con azafrán o cúrcuma) y cuece sin remover 15 minutos.",
+        "Reparte gambas y guisantes, 5 minutos más, reposa 5 minutos y sirve con limón."
+      ]
+    },
+    "padthai": {
+      "n": "Pad thai",
+      "s": [
+        "Remoja los fideos de arroz en agua tibia 10 minutos; mezcla soja, lima y azúcar.",
+        "Saltea las gambas 2 minutos, apártalas, casca el huevo y revuélvelo.",
+        "Añade fideos y salsa, saltea 2–3 minutos y cubre con cacahuetes y cebolleta."
+      ]
+    },
+    "falafel": {
+      "n": "Falafel en pan de pita",
+      "s": [
+        "Tritura los garbanzos con cebolla, ajo, hierbas, harina y especias hasta una masa espesa.",
+        "Forma bolas y fríelas hasta dorar, 2 minutos por lado (o hornea a 200 °C 20 minutos).",
+        "Envuelve en pan de pita con tomate, pepino y salsa de tahini."
+      ]
+    },
+    "tacos": {
+      "n": "Tacos de ternera",
+      "s": [
+        "Fríe la carne picada con cebolla y especias (pimentón, comino) 8–10 minutos.",
+        "Calienta las tortillas en sartén seca 30 segundos cada una.",
+        "Rellena con carne, lechuga, tomate y queso, añade nata agria y dobla."
+      ]
+    },
+    "vinegret": {
+      "n": "Vinegret (ensalada de remolacha)",
+      "s": [
+        "Cuece la remolacha (50 minutos), la patata y la zanahoria (20 minutos), enfría.",
+        "Corta todo en dados con pepinillos y cebolla, añade las alubias.",
+        "Aliña con aceite, sazona y deja reposar 15 minutos."
       ]
     }
   }

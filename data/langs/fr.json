@@ -350,7 +350,8 @@
     "cafesPizza": "Pizza",
     "westT": "poids approx., valeurs du menu",
     "genSkip": "Absent de la liste d'aliments",
-    "genGuess": "Type de plat non précisé — choisi d'après les produits"
+    "genGuess": "Type de plat non précisé — choisi d'après les produits",
+    "genHaveRec": "Une recette toute prête existe dans l'appli"
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],
@@ -2443,6 +2444,392 @@
         "Prépare le {P} : poêlé, au four ou tranché s'il est déjà cuit.",
         "Toaste le pain au grille-pain ou à la poêle sèche ; coupe {V}.",
         "Tartine la sauce, superpose la garniture, couvre de la seconde tranche et coupe en deux."
+      ]
+    }
+  },
+  "dish": {
+    "borscht": {
+      "n": "Bortsch",
+      "s": [
+        "Mijote le bœuf 1–1,5 h dans 1,5 l d'eau, écume puis coupe la viande.",
+        "Fais revenir oignon, carotte et betterave 10 minutes, ajoute la tomate ; mets pommes de terre et chou dans le bouillon 15 minutes.",
+        "Remets les légumes revenus et la viande, ajoute ail et herbes, laisse reposer 10 minutes. Sers avec de la crème aigre."
+      ]
+    },
+    "shchi": {
+      "n": "Chtchi (soupe au chou)",
+      "s": [
+        "Prépare un bouillon de bœuf (1 h), sors et coupe la viande.",
+        "Mets chou et pommes de terre dans le bouillon 15 minutes ; fais revenir oignon et carotte avec la tomate et ajoute-les.",
+        "Remets la viande, assaisonne, laisse reposer. Sers avec crème aigre et herbes."
+      ]
+    },
+    "solyanka": {
+      "n": "Soliankа",
+      "s": [
+        "Fais cuire le bœuf jusqu'à ce qu'il soit tendre (1 h) et coupe-le en lanières avec le jambon.",
+        "Fais revenir l'oignon avec la tomate, ajoute les cornichons, mijote 5 minutes et verse dans le bouillon avec la viande.",
+        "Ajoute les olives, cuis 5 minutes. Sers avec citron et crème aigre."
+      ]
+    },
+    "ukha": {
+      "n": "Oukha (soupe de poisson)",
+      "s": [
+        "Mets pommes de terre, carotte et un oignon entier dans l'eau bouillante, cuis 10 minutes.",
+        "Ajoute le poisson en morceaux et laisse frémir 8–10 minutes à feu doux.",
+        "Retire l'oignon, assaisonne, ajoute herbes et un filet de citron."
+      ]
+    },
+    "kharcho": {
+      "n": "Khartcho",
+      "s": [
+        "Fais mijoter le bœuf en morceaux dans 1,2 l d'eau pendant 1 h.",
+        "Ajoute riz et oignon, cuis 15 minutes ; incorpore tomate, tkemali, noix pilées et khmeli-souneli.",
+        "Termine avec ail et coriandre, laisse reposer 10 minutes."
+      ]
+    },
+    "lagman": {
+      "n": "Lagman",
+      "s": [
+        "Saisis le bœuf en lanières 5 minutes, ajoute oignon, carotte et poivron, 5 minutes de plus.",
+        "Ajoute tomates et ail, mouille au bouillon et mijote 25 minutes.",
+        "Cuis les nouilles, répartis-les et nappe de sauce à la viande."
+      ]
+    },
+    "kuksi": {
+      "n": "Kuksi (soupe froide de nouilles)",
+      "s": [
+        "Pour le bouillon, mélange de l'eau bouillie froide avec sauce soja, ail et une pincée de sucre, mets au frais.",
+        "Saisis le bœuf en lanières 6–7 minutes ; taille concombre, chou et tomate en julienne, fais une omelette fine et coupe-la.",
+        "Cuis les nouilles, rince-les à l'eau froide, mets-les dans un bol avec légumes et viande et verse le bouillon froid."
+      ]
+    },
+    "pho": {
+      "n": "Phở bò",
+      "s": [
+        "Chauffe le bouillon 20 minutes avec gingembre et un demi-oignon grillé, filtre.",
+        "Trempe les nouilles de riz 5 minutes dans l'eau bouillante ; tranche le bœuf très finement.",
+        "Mets nouilles et bœuf cru dans un bol, verse le bouillon bouillant, ajoute herbes et citron vert."
+      ]
+    },
+    "tomyum": {
+      "n": "Tom yum",
+      "s": [
+        "Porte le bouillon à ébullition avec le gingembre (et la citronnelle si tu en as), cuis 5 minutes.",
+        "Ajoute champignons et tomates 3 minutes, puis les crevettes 2–3 minutes.",
+        "Verse le lait de coco, chauffe sans bouillir, assaisonne de citron vert et de sauce."
+      ]
+    },
+    "ramen": {
+      "n": "Ramen",
+      "s": [
+        "Cuis l'œuf 6,5 minutes, refroidis et écale ; saisis le porc en tranches 3–4 minutes par face.",
+        "Chauffe le bouillon avec sauce soja et champignons 5 minutes ; cuis les nouilles à part.",
+        "Dresse dans un bol nouilles, bouillon, porc, épinards, demi-œufs et oignon vert."
+      ]
+    },
+    "minestrone": {
+      "n": "Minestrone",
+      "s": [
+        "Fais revenir oignon et carotte 5 minutes à l'huile, ajoute pomme de terre et courgette.",
+        "Ajoute tomates et bouillon, cuis 15 minutes, puis haricots et pâtes 10 minutes.",
+        "Sers avec du fromage râpé et un filet d'huile d'olive."
+      ]
+    },
+    "pumpkinsoup": {
+      "n": "Velouté de potiron",
+      "s": [
+        "Fais revenir l'oignon 3 minutes, ajoute potiron et pomme de terre en dés.",
+        "Couvre de bouillon et cuis 20 minutes jusqu'à tendreté.",
+        "Mixe, ajoute la crème, réchauffe et parsème de sésame."
+      ]
+    },
+    "okroshka": {
+      "n": "Okrochka (soupe froide)",
+      "s": [
+        "Cuis pomme de terre (20 minutes), œuf (9 minutes) et poulet (20 minutes), laisse refroidir.",
+        "Coupe tout en dés avec le concombre frais, ajoute herbes et oignon vert.",
+        "Verse du kéfir froid allongé d'eau, assaisonne et mets au frais 15 minutes."
+      ]
+    },
+    "shurpa": {
+      "n": "Chorba (shurpa)",
+      "s": [
+        "Mijote la viande en gros morceaux 1 h en écumant.",
+        "Ajoute pomme de terre, carotte, oignon, poivron et tomates en gros morceaux, cuis 25 minutes.",
+        "Assaisonne, ajoute les herbes et laisse reposer 10 minutes."
+      ]
+    },
+    "chakhokhbili": {
+      "n": "Tchakhokhbili",
+      "s": [
+        "Dore le poulet sans huile, 8 minutes.",
+        "Ajoute oignon et poivron, 5 minutes ; mets les tomates râpées et mijote à couvert 25 minutes.",
+        "Ajoute ail, khmeli-souneli et beaucoup de coriandre, chauffe 2 minutes."
+      ]
+    },
+    "goulash": {
+      "n": "Goulache",
+      "s": [
+        "Saisis le bœuf en dés par fournées, 6–7 minutes.",
+        "Ajoute oignon et poivron, 5 minutes, paprika, tomate et un verre d'eau.",
+        "Mijote à couvert 1 h, ajoute les pommes de terre 20 minutes avant la fin."
+      ]
+    },
+    "khinkali": {
+      "n": "Khinkali",
+      "s": [
+        "Pétris une pâte ferme avec farine, eau et sel, laisse reposer 30 minutes.",
+        "Mélange la viande hachée avec oignon, herbes, poivre et 3–4 cuillères d'eau froide pour qu'elle soit juteuse.",
+        "Abaisse des disques, plisse les khinkali en nœud et cuis-les 12–14 minutes à l'eau salée."
+      ]
+    },
+    "pelmeni": {
+      "n": "Pelmeni",
+      "s": [
+        "Pétris farine, eau, œuf et sel, laisse reposer 30 minutes.",
+        "Mélange les viandes hachées de bœuf et de porc avec oignon finement haché, sel et poivre.",
+        "Façonne les pelmeni et cuis-les 6–7 minutes après qu'ils remontent. Sers avec de la crème aigre."
+      ]
+    },
+    "vareniki": {
+      "n": "Vareniki à la pomme de terre",
+      "s": [
+        "Cuis les pommes de terre (20 minutes) et écrase-les avec l'oignon doré.",
+        "Pétris farine, eau et une pincée de sel, abaisse et découpe des disques.",
+        "Façonne les vareniki et cuis-les 5 minutes après qu'ils remontent. Sers avec crème aigre et oignon frit."
+      ]
+    },
+    "manti": {
+      "n": "Manti",
+      "s": [
+        "Pétris farine, eau et sel, laisse reposer 30 minutes.",
+        "Mélange la viande hachée avec beaucoup d'oignon haché, sel, poivre et cumin.",
+        "Façonne les manti, huile le panier et cuis à la vapeur 40–45 minutes. Sers avec de la crème aigre."
+      ]
+    },
+    "gyoza": {
+      "n": "Gyoza",
+      "s": [
+        "Mélange le porc haché avec chou finement émincé, oignon vert, gingembre et une cuillère de sauce soja.",
+        "Dépose la farce sur les disques de pâte et ferme en demi-lunes plissées.",
+        "Dore les gyoza 2 minutes, ajoute 50 ml d'eau et cuis à couvert 6 minutes. Sers avec de la sauce soja."
+      ]
+    },
+    "khach_adj": {
+      "n": "Khatchapouri adjarien",
+      "s": [
+        "Pétris une pâte levée au lait ou au matsoni et laisse lever 1 h.",
+        "Forme une « barque », garnis de suluguni et d'imeruli râpés et enfourne 12 minutes à 220 °C.",
+        "Creuse un puits, casse l'œuf et cuis encore 2–3 minutes. Ajoute du beurre et mélange avant de manger."
+      ]
+    },
+    "khach_imer": {
+      "n": "Khatchapouri imérétien",
+      "s": [
+        "Pétris une pâte souple au matsoni avec une pincée de bicarbonate, repos 20 minutes.",
+        "Abaisse une galette, mets le fromage râpé au centre, referme les bords et abaisse de nouveau en rond.",
+        "Cuis à la poêle sèche couverte 4–5 minutes par face, badigeonne de beurre."
+      ]
+    },
+    "lobiani": {
+      "n": "Lobiani",
+      "s": [
+        "Écrase les haricots avec oignon frit, khmeli-souneli et sel.",
+        "Enveloppe la farce dans une pâte levée ou au matsoni et abaisse une galette ronde.",
+        "Enfourne 15 minutes à 220 °C ou cuis à la poêle sèche, badigeonne de beurre."
+      ]
+    },
+    "pizza": {
+      "n": "Pizza Margherita",
+      "s": [
+        "Pétris une pâte levée à l'huile d'olive et laisse lever 1 h.",
+        "Abaisse finement, étale la sauce tomate, répartis mozzarella et tomates.",
+        "Enfourne à température maximale (250 °C) 8–10 minutes, parsème de basilic."
+      ]
+    },
+    "quesadilla": {
+      "n": "Quesadilla au poulet",
+      "s": [
+        "Saisis le poulet en lanières avec le poivron 7–8 minutes, ajoute le maïs.",
+        "Mets fromage et garniture sur une moitié de tortilla et replie.",
+        "Dore à la poêle sèche 2 minutes par face, coupe en parts, sers avec crème aigre."
+      ]
+    },
+    "bliny": {
+      "n": "Blinis (crêpes)",
+      "s": [
+        "Bats l'œuf avec sucre et sel, ajoute le lait puis la farine petit à petit jusqu'à une pâte fluide et lisse.",
+        "Laisse reposer 15 minutes, ajoute une cuillère de beurre fondu.",
+        "Fais des crêpes fines à la poêle chaude, 1 minute par face. Sers avec de la crème aigre."
+      ]
+    },
+    "syrniki": {
+      "n": "Syrniki (galettes au fromage blanc)",
+      "s": [
+        "Écrase le fromage blanc avec œuf, sucre et une pincée de sel, ajoute la farine.",
+        "Forme des palets de 1,5 cm et farine-les.",
+        "Fais dorer à feu moyen 3–4 minutes par face. Sers avec de la crème aigre."
+      ]
+    },
+    "draniki": {
+      "n": "Draniki (galettes de pommes de terre)",
+      "s": [
+        "Râpe finement pommes de terre et oignon, presse pour retirer le jus.",
+        "Ajoute œuf, farine et sel, mélange.",
+        "Dépose des cuillerées dans une poêle chaude huilée et fais dorer 3–4 minutes par face. Sers avec crème aigre."
+      ]
+    },
+    "plov": {
+      "n": "Plov (pilaf)",
+      "s": [
+        "Saisis la viande dans une cocotte, ajoute l'oignon puis la carotte en bâtonnets, 10 minutes.",
+        "Ajoute cumin et sel, couvre d'eau d'un doigt et mijote 30 minutes.",
+        "Étale le riz rincé en couche régulière, enfonce une tête d'ail, ajoute de l'eau 1,5 cm au-dessus et cuis à couvert à feu doux 25 minutes."
+      ]
+    },
+    "ojakhuri": {
+      "n": "Odjakhouri",
+      "s": [
+        "Dore le porc en morceaux à la poêle, 10 minutes.",
+        "À part, fais dorer les pommes de terre en quartiers, 15 minutes.",
+        "Réunis, ajoute oignon émincé, ail et khmeli-souneli, 5 minutes, parsème d'herbes."
+      ]
+    },
+    "chkmeruli": {
+      "n": "Chkmerouli (poulet à l'ail)",
+      "s": [
+        "Fais dorer le poulet côté peau 10 minutes jusqu'à ce qu'il croustille, retourne-le.",
+        "Mélange lait et crème avec beaucoup d'ail écrasé et du sel.",
+        "Verse la sauce sur le poulet et enfourne 15–20 minutes à 200 °C, parsème d'herbes."
+      ]
+    },
+    "shashlik": {
+      "n": "Chachlik (brochettes)",
+      "s": [
+        "Coupe la viande en morceaux de 4–5 cm, mélange avec oignon, sel et poivre, marine au moins 2 h.",
+        "Enfile sur des brochettes et grille sur la braise 15–20 minutes en retournant.",
+        "Sers avec oignon mariné, tomates, herbes et lavash."
+      ]
+    },
+    "golubtsy": {
+      "n": "Chou farci (golubtsy)",
+      "s": [
+        "Blanchis les feuilles de chou 3–4 minutes ; précuis le riz.",
+        "Mélange la viande avec le riz et la moitié de l'oignon et de la carotte revenus, roule dans les feuilles.",
+        "Dispose dans un plat, couvre de tomate, du reste des légumes et d'eau, mijote à couvert 40 minutes. Sers avec crème aigre."
+      ]
+    },
+    "kotlety": {
+      "n": "Boulettes et purée",
+      "s": [
+        "Mélange la viande avec œuf, pain trempé, oignon râpé, sel et poivre.",
+        "Forme les boulettes, dore 4 minutes par face puis termine 8 minutes à couvert.",
+        "Cuis les pommes de terre (20 minutes) et écrase-les avec lait chaud et beurre."
+      ]
+    },
+    "grechka_kup": {
+      "n": "Sarrasin à la marchande",
+      "s": [
+        "Fais revenir la viande en morceaux 7 minutes, ajoute oignon et carotte, 5 minutes.",
+        "Ajoute la tomate et le sarrasin rincé, couvre d'eau 1:2.",
+        "Mijote à couvert à feu doux 20 minutes, laisse reposer 10 minutes."
+      ]
+    },
+    "stroganoff": {
+      "n": "Bœuf Stroganoff",
+      "s": [
+        "Coupe le bœuf en fines lanières et saisis-le par fournées 2 minutes.",
+        "Fais revenir oignon et champignons 6 minutes, saupoudre de farine, ajoute un peu d'eau et la crème aigre.",
+        "Remets la viande dans la sauce et chauffe 3 minutes sans bouillir. Sers avec pâtes ou purée."
+      ]
+    },
+    "beshbarmak": {
+      "n": "Beshbarmak",
+      "s": [
+        "Mijote la viande en gros morceaux 1,5–2 h en écumant.",
+        "Abaisse une pâte fine sans levain, coupe-la en losanges et cuis-la 3–4 minutes dans le bouillon.",
+        "Dispose la pâte, puis la viande tranchée et l'oignon fondu 2 minutes dans le bouillon. Sers le bouillon à part."
+      ]
+    },
+    "ratatouille": {
+      "n": "Ratatouille",
+      "s": [
+        "Coupe en dés aubergine, courgette, poivron et oignon.",
+        "Fais revenir oignon et poivron 5 minutes, ajoute aubergine et courgette, 5 minutes.",
+        "Ajoute tomates, ail et herbes, mijote à couvert 25 minutes."
+      ]
+    },
+    "carbonara": {
+      "n": "Pâtes carbonara",
+      "s": [
+        "Cuis les pâtes al dente, garde un demi-verre d'eau.",
+        "Fais croustiller le lard 5 minutes ; bats l'œuf avec fromage râpé et poivre.",
+        "Hors du feu, mélange pâtes, lard et œuf en ajoutant l'eau de cuisson jusqu'à obtenir une sauce crémeuse."
+      ]
+    },
+    "bolognese": {
+      "n": "Pâtes bolognaise",
+      "s": [
+        "Fais revenir oignon et carotte hachés 5 minutes, ajoute la viande et émiette-la 7 minutes.",
+        "Ajoute tomate et ail, mijote à feu doux 25–30 minutes.",
+        "Cuis les pâtes, mélange avec la sauce et parsème de fromage râpé."
+      ]
+    },
+    "lasagna": {
+      "n": "Lasagnes",
+      "s": [
+        "Sauce à la viande : dore la viande 7 minutes, ajoute la tomate et mijote 15 minutes.",
+        "Béchamel : fais fondre le beurre, cuis la farine 1 minute, ajoute le lait et épaissis 5 minutes.",
+        "Monte les couches feuilles, viande, béchamel, fromage et enfourne 35 minutes à 190 °C."
+      ]
+    },
+    "risotto": {
+      "n": "Risotto aux champignons",
+      "s": [
+        "Fais revenir oignon et champignons au beurre 6 minutes, ajoute le riz et nacre-le 2 minutes.",
+        "Ajoute le bouillon chaud louche par louche en remuant jusqu'à ce que le riz soit crémeux, 18–20 minutes.",
+        "Hors du feu, incorpore fromage râpé et une noix de beurre, repos 2 minutes."
+      ]
+    },
+    "paella": {
+      "n": "Paella",
+      "s": [
+        "Dore le poulet en morceaux 8 minutes, ajoute poivron et tomate râpée, 5 minutes.",
+        "Verse le riz, mouille au bouillon chaud (safran ou curcuma) et cuis sans remuer 15 minutes.",
+        "Dispose crevettes et petits pois, 5 minutes de plus, repos 5 minutes, sers avec du citron."
+      ]
+    },
+    "padthai": {
+      "n": "Pad thaï",
+      "s": [
+        "Trempe les nouilles de riz 10 minutes dans l'eau tiède ; mélange sauce soja, citron vert et sucre.",
+        "Saisis les crevettes 2 minutes, pousse-les, casse l'œuf et brouille-le.",
+        "Ajoute nouilles et sauce, saute 2–3 minutes, parsème de cacahuètes et d'oignon vert."
+      ]
+    },
+    "falafel": {
+      "n": "Wrap de falafels",
+      "s": [
+        "Mixe pois chiches, oignon, ail, herbes, farine et épices en une pâte épaisse.",
+        "Forme des boulettes et fais-les dorer 2 minutes par face (ou enfourne 20 minutes à 200 °C).",
+        "Roule dans un lavash avec tomate, concombre et sauce tahini."
+      ]
+    },
+    "tacos": {
+      "n": "Tacos au bœuf",
+      "s": [
+        "Fais revenir la viande avec oignon et épices (paprika, cumin) 8–10 minutes.",
+        "Réchauffe les tortillas 30 secondes à la poêle sèche.",
+        "Garnis de viande, salade, tomate et fromage, ajoute la crème aigre et plie."
+      ]
+    },
+    "vinegret": {
+      "n": "Vinegret (salade de betterave)",
+      "s": [
+        "Cuis la betterave (50 minutes), pomme de terre et carotte (20 minutes), laisse refroidir.",
+        "Coupe tout en dés avec cornichons et oignon, ajoute les haricots.",
+        "Assaisonne d'huile, sale et laisse reposer 15 minutes."
       ]
     }
   }

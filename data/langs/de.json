@@ -345,7 +345,8 @@
     "cafesPizza": "Pizza",
     "westT": "Gewicht ca., Nährwerte laut Menü",
     "genSkip": "Nicht in der Lebensmittelliste",
-    "genGuess": "Kein Gerichtstyp angegeben — nach den Zutaten gewählt"
+    "genGuess": "Kein Gerichtstyp angegeben — nach den Zutaten gewählt",
+    "genHaveRec": "In der App gibt es ein fertiges Rezept"
   },
   "quick": ["Pasta", "Reis", "Hähnchen", "Quark", "Banane", "Schokolade"],
   "stop": ["mit", "und", "der", "die", "das", "ein", "eine", "im", "in"],
@@ -2428,6 +2429,392 @@
         "{P} zubereiten: braten, backen oder fertig aufschneiden.",
         "Brot im Toaster oder in einer trockenen Pfanne rösten; {V} schneiden.",
         "Brot mit Soße bestreichen, Füllung schichten, mit der zweiten Scheibe abdecken und halbieren."
+      ]
+    }
+  },
+  "dish": {
+    "borscht": {
+      "n": "Borschtsch",
+      "s": [
+        "Rindfleisch in 1,5 l Wasser 1–1,5 Stunden köcheln, abschäumen, Fleisch schneiden.",
+        "Zwiebel, Möhre und Rote Bete 10 Minuten braten, Tomate dazu; Kartoffeln und Kohl 15 Minuten in der Brühe garen.",
+        "Gemüse und Fleisch zurück in den Topf, Knoblauch und Kräuter dazu, 10 Minuten ziehen lassen. Mit Schmand servieren."
+      ]
+    },
+    "shchi": {
+      "n": "Schtschi (Kohlsuppe)",
+      "s": [
+        "Rinderbrühe kochen (1 Stunde), Fleisch herausnehmen und schneiden.",
+        "Kohl und Kartoffeln 15 Minuten in der Brühe garen; Zwiebel und Möhre mit Tomate braten und dazugeben.",
+        "Fleisch zurückgeben, abschmecken, ziehen lassen. Mit Schmand und Kräutern servieren."
+      ]
+    },
+    "solyanka": {
+      "n": "Soljanka",
+      "s": [
+        "Rindfleisch weich kochen (1 Stunde) und mit dem Schinken in Streifen schneiden.",
+        "Zwiebel mit Tomate braten, Gewürzgurken dazu, 5 Minuten schmoren und in die Brühe mit dem Fleisch geben.",
+        "Oliven zugeben, 5 Minuten kochen. Mit Zitrone und Schmand servieren."
+      ]
+    },
+    "ukha": {
+      "n": "Ucha (Fischsuppe)",
+      "s": [
+        "Kartoffeln, Möhre und eine ganze Zwiebel in kochendes Wasser geben, 10 Minuten kochen.",
+        "Fisch in Stücken zugeben und 8–10 Minuten bei schwacher Hitze ziehen lassen.",
+        "Zwiebel herausnehmen, abschmecken, Kräuter und etwas Zitrone dazu."
+      ]
+    },
+    "kharcho": {
+      "n": "Chartscho",
+      "s": [
+        "Rindfleisch in Stücken in 1,2 l Wasser 1 Stunde köcheln.",
+        "Reis und Zwiebel dazu, 15 Minuten kochen; Tomate, Tkemali, gemahlene Walnüsse und Chmeli-Suneli einrühren.",
+        "Zum Schluss Knoblauch und Koriander, 10 Minuten ziehen lassen."
+      ]
+    },
+    "lagman": {
+      "n": "Lagman",
+      "s": [
+        "Rindfleischstreifen 5 Minuten braten, Zwiebel, Möhre und Paprika 5 Minuten mitbraten.",
+        "Tomaten und Knoblauch dazu, mit Brühe aufgießen und 25 Minuten schmoren.",
+        "Nudeln kochen, auf Schalen verteilen und die Fleischsoße darübergeben."
+      ]
+    },
+    "kuksi": {
+      "n": "Kuksi (kalte Nudelsuppe)",
+      "s": [
+        "Für die Brühe kaltes abgekochtes Wasser mit Sojasoße, Knoblauch und etwas Zucker mischen, kühlen.",
+        "Rindfleischstreifen 6–7 Minuten braten; Gurke, Kohl und Tomate in Streifen schneiden, aus dem Ei ein dünnes Omelett backen und schneiden.",
+        "Nudeln kochen, kalt abspülen, mit Gemüse und Fleisch in eine Schale geben und mit kalter Brühe übergießen."
+      ]
+    },
+    "pho": {
+      "n": "Pho Bo",
+      "s": [
+        "Brühe mit Ingwer und einer halben angerösteten Zwiebel 20 Minuten ziehen lassen, abseihen.",
+        "Reisnudeln 5 Minuten in kochendem Wasser einweichen; Rindfleisch hauchdünn schneiden.",
+        "Nudeln und rohes Fleisch in eine Schale geben, mit kochender Brühe übergießen, Kräuter und Limette dazu."
+      ]
+    },
+    "tomyum": {
+      "n": "Tom Yum",
+      "s": [
+        "Brühe mit Ingwer (und Zitronengras, falls vorhanden) aufkochen, 5 Minuten kochen.",
+        "Pilze und Tomaten 3 Minuten, dann Garnelen 2–3 Minuten garen.",
+        "Kokosmilch zugießen, erhitzen ohne zu kochen, mit Limette und Soße abschmecken."
+      ]
+    },
+    "ramen": {
+      "n": "Ramen",
+      "s": [
+        "Ei 6,5 Minuten kochen, abschrecken, schälen; Schweinefleischscheiben 3–4 Minuten pro Seite braten.",
+        "Brühe mit Sojasoße und Pilzen 5 Minuten erhitzen; Nudeln separat kochen.",
+        "Nudeln, Brühe, Fleisch, Spinat, Eihälften und Frühlingszwiebel in einer Schale anrichten."
+      ]
+    },
+    "minestrone": {
+      "n": "Minestrone",
+      "s": [
+        "Zwiebel und Möhre in Öl 5 Minuten anbraten, Kartoffel und Zucchini dazu.",
+        "Tomaten und Brühe zugeben, 15 Minuten kochen, dann Bohnen und Nudeln weitere 10 Minuten.",
+        "Mit geriebenem Käse und etwas Olivenöl servieren."
+      ]
+    },
+    "pumpkinsoup": {
+      "n": "Kürbiscremesuppe",
+      "s": [
+        "Zwiebel 3 Minuten anbraten, Kürbis- und Kartoffelwürfel dazu.",
+        "Mit Brühe bedecken und 20 Minuten weich kochen.",
+        "Pürieren, Sahne einrühren, erwärmen und mit Sesam bestreuen."
+      ]
+    },
+    "okroshka": {
+      "n": "Okroschka (kalte Suppe)",
+      "s": [
+        "Kartoffel (20 Minuten), Ei (9 Minuten) und Hähnchen (20 Minuten) kochen, abkühlen.",
+        "Alles mit frischer Gurke würfeln, Kräuter und Frühlingszwiebel dazu.",
+        "Mit kaltem, verdünntem Kefir aufgießen, abschmecken und 15 Minuten kühlen."
+      ]
+    },
+    "shurpa": {
+      "n": "Schurpa",
+      "s": [
+        "Fleisch in großen Stücken 1 Stunde köcheln, abschäumen.",
+        "Grob geschnittene Kartoffeln, Möhre, Zwiebel, Paprika und Tomaten 25 Minuten mitkochen.",
+        "Abschmecken, Kräuter dazu und 10 Minuten ziehen lassen."
+      ]
+    },
+    "chakhokhbili": {
+      "n": "Tschachochbili",
+      "s": [
+        "Hähnchen ohne Öl 8 Minuten anbräunen.",
+        "Zwiebel und Paprika 5 Minuten mitbraten; geriebene Tomaten dazu und zugedeckt 25 Minuten schmoren.",
+        "Knoblauch, Chmeli-Suneli und viel Koriander dazu, 2 Minuten erhitzen."
+      ]
+    },
+    "goulash": {
+      "n": "Gulasch",
+      "s": [
+        "Rindfleischwürfel portionsweise 6–7 Minuten anbraten.",
+        "Zwiebel und Paprika 5 Minuten mitbraten, Paprikapulver, Tomate und eine Tasse Wasser dazu.",
+        "Zugedeckt 1 Stunde schmoren, 20 Minuten vor Ende Kartoffeln zugeben."
+      ]
+    },
+    "khinkali": {
+      "n": "Chinkali",
+      "s": [
+        "Festen Teig aus Mehl, Wasser und Salz kneten, 30 Minuten ruhen lassen.",
+        "Hackfleisch mit Zwiebel, Kräutern, Pfeffer und 3–4 Löffeln kaltem Wasser saftig mischen.",
+        "Kreise ausrollen, Chinkali in Falten zu einem Zipfel drehen und 12–14 Minuten in Salzwasser kochen."
+      ]
+    },
+    "pelmeni": {
+      "n": "Pelmeni",
+      "s": [
+        "Teig aus Mehl, Wasser, Ei und Salz kneten, 30 Minuten ruhen lassen.",
+        "Rinder- und Schweinehack mit fein gehackter Zwiebel, Salz und Pfeffer mischen.",
+        "Pelmeni formen und nach dem Aufsteigen 6–7 Minuten kochen. Mit Schmand servieren."
+      ]
+    },
+    "vareniki": {
+      "n": "Wareniki mit Kartoffeln",
+      "s": [
+        "Kartoffeln 20 Minuten kochen und mit goldbraun gebratener Zwiebel zerstampfen.",
+        "Teig aus Mehl, Wasser und einer Prise Salz kneten, ausrollen und Kreise ausstechen.",
+        "Wareniki formen und nach dem Aufsteigen 5 Minuten kochen. Mit Schmand und Röstzwiebeln servieren."
+      ]
+    },
+    "manti": {
+      "n": "Manti",
+      "s": [
+        "Teig aus Mehl, Wasser und Salz kneten, 30 Minuten ruhen lassen.",
+        "Hack mit reichlich fein gehackter Zwiebel, Salz, Pfeffer und Kreuzkümmel mischen.",
+        "Manti formen, Dämpfeinsatz einölen und 40–45 Minuten dämpfen. Mit Schmand servieren."
+      ]
+    },
+    "gyoza": {
+      "n": "Gyoza",
+      "s": [
+        "Schweinehack mit fein geschnittenem Kohl, Frühlingszwiebel, Ingwer und einem Löffel Sojasoße mischen.",
+        "Füllung auf Teigkreise geben und zu gefalteten Halbmonden schließen.",
+        "Gyoza 2 Minuten goldbraun braten, 50 ml Wasser zugießen und zugedeckt 6 Minuten garen. Mit Sojasoße servieren."
+      ]
+    },
+    "khach_adj": {
+      "n": "Adscharische Chatschapuri",
+      "s": [
+        "Hefeteig mit Milch oder Mazoni kneten und 1 Stunde gehen lassen.",
+        "Zu einem 'Boot' formen, mit geriebenem Sulguni und Imeruli füllen und bei 220 °C 12 Minuten backen.",
+        "Mulde machen, Ei hineinschlagen und 2–3 Minuten weiterbacken. Butter dazu und vor dem Essen verrühren."
+      ]
+    },
+    "khach_imer": {
+      "n": "Imeretische Chatschapuri",
+      "s": [
+        "Weichen Teig mit Mazoni und einer Prise Natron kneten, 20 Minuten ruhen lassen.",
+        "Fladen ausrollen, geriebenen Käse in die Mitte, Ränder zusammenfassen und wieder rund ausrollen.",
+        "In trockener Pfanne zugedeckt 4–5 Minuten pro Seite backen, mit Butter bestreichen."
+      ]
+    },
+    "lobiani": {
+      "n": "Lobiani",
+      "s": [
+        "Bohnen mit gebratener Zwiebel, Chmeli-Suneli und Salz zerdrücken.",
+        "Füllung in Hefe- oder Mazoniteig einschlagen und zu einem runden Fladen ausrollen.",
+        "Bei 220 °C 15 Minuten backen oder in trockener Pfanne braten, mit Butter bestreichen."
+      ]
+    },
+    "pizza": {
+      "n": "Pizza Margherita",
+      "s": [
+        "Hefeteig mit Olivenöl kneten und 1 Stunde gehen lassen.",
+        "Dünn ausrollen, mit Tomatensoße bestreichen, Mozzarella und Tomaten darauf.",
+        "Bei höchster Temperatur (250 °C) 8–10 Minuten backen, mit Basilikum bestreuen."
+      ]
+    },
+    "quesadilla": {
+      "n": "Hähnchen-Quesadilla",
+      "s": [
+        "Hähnchenstreifen mit Paprika 7–8 Minuten braten, Mais dazu.",
+        "Käse und Füllung auf eine Tortillahälfte geben und zuklappen.",
+        "In trockener Pfanne 2 Minuten pro Seite braten, in Ecken schneiden, mit Schmand servieren."
+      ]
+    },
+    "bliny": {
+      "n": "Bliny (Pfannkuchen)",
+      "s": [
+        "Ei mit Zucker und Salz verquirlen, Milch zugießen, nach und nach Mehl zu einem glatten, dünnen Teig einrühren.",
+        "Teig 15 Minuten ruhen lassen, einen Löffel geschmolzene Butter zugeben.",
+        "Dünne Pfannkuchen in heißer Pfanne 1 Minute pro Seite backen. Mit Schmand servieren."
+      ]
+    },
+    "syrniki": {
+      "n": "Syrniki (Quarkpfannkuchen)",
+      "s": [
+        "Quark mit Ei, Zucker und einer Prise Salz zerdrücken, Mehl zugeben.",
+        "1,5 cm dicke Taler formen und in Mehl wenden.",
+        "Bei mittlerer Hitze 3–4 Minuten pro Seite goldbraun braten. Mit Schmand servieren."
+      ]
+    },
+    "draniki": {
+      "n": "Kartoffelpuffer",
+      "s": [
+        "Kartoffeln und Zwiebel fein reiben, überschüssigen Saft ausdrücken.",
+        "Ei, Mehl und Salz zugeben, mischen.",
+        "Löffelweise in heißes Öl geben und 3–4 Minuten pro Seite braten. Mit Schmand servieren."
+      ]
+    },
+    "plov": {
+      "n": "Plov (Pilaw)",
+      "s": [
+        "Fleisch im schweren Topf anbraten, Zwiebel und dann Möhrenstreifen 10 Minuten mitbraten.",
+        "Kreuzkümmel und Salz dazu, fingerbreit Wasser angießen und 30 Minuten schmoren.",
+        "Gewaschenen Reis gleichmäßig darauf verteilen, eine Knoblauchknolle hineindrücken, Wasser 1,5 cm über den Reis gießen und zugedeckt bei schwacher Hitze 25 Minuten garen."
+      ]
+    },
+    "ojakhuri": {
+      "n": "Odschachuri",
+      "s": [
+        "Schweinefleischstücke in der Pfanne 10 Minuten anbraten.",
+        "Kartoffelspalten separat 15 Minuten goldbraun braten.",
+        "Zusammengeben, Zwiebelringe, Knoblauch und Chmeli-Suneli dazu, 5 Minuten braten, mit Kräutern bestreuen."
+      ]
+    },
+    "chkmeruli": {
+      "n": "Schkmeruli (Hähnchen in Knoblauchsoße)",
+      "s": [
+        "Hähnchen mit der Hautseite nach unten 10 Minuten knusprig braten, wenden.",
+        "Milch und Sahne mit reichlich gepresstem Knoblauch und Salz mischen.",
+        "Soße über das Hähnchen gießen und bei 200 °C 15–20 Minuten backen, mit Kräutern bestreuen."
+      ]
+    },
+    "shashlik": {
+      "n": "Schaschlik",
+      "s": [
+        "Fleisch in 4–5 cm große Stücke schneiden, mit Zwiebel, Salz und Pfeffer mindestens 2 Stunden marinieren.",
+        "Auf Spieße stecken und über Glut 15–20 Minuten grillen, dabei wenden.",
+        "Mit eingelegter Zwiebel, Tomaten, Kräutern und Lavasch servieren."
+      ]
+    },
+    "golubtsy": {
+      "n": "Kohlrouladen",
+      "s": [
+        "Kohlblätter 3–4 Minuten blanchieren; Reis halbgar kochen.",
+        "Hack mit Reis und der Hälfte der gebratenen Zwiebel und Möhre mischen, in die Blätter wickeln.",
+        "In eine Form legen, mit Tomate, restlichem Gemüse und Wasser bedecken und zugedeckt 40 Minuten schmoren. Mit Schmand servieren."
+      ]
+    },
+    "kotlety": {
+      "n": "Frikadellen mit Kartoffelpüree",
+      "s": [
+        "Hack mit Ei, eingeweichtem Brot, geriebener Zwiebel, Salz und Pfeffer mischen.",
+        "Frikadellen formen, 4 Minuten pro Seite braten, dann zugedeckt 8 Minuten garen.",
+        "Kartoffeln 20 Minuten kochen und mit heißer Milch und Butter stampfen."
+      ]
+    },
+    "grechka_kup": {
+      "n": "Buchweizen nach Kaufmannsart",
+      "s": [
+        "Fleischstücke 7 Minuten braten, Zwiebel und Möhre 5 Minuten mitbraten.",
+        "Tomate und gewaschenen Buchweizen dazu, Wasser 1:2 angießen.",
+        "Zugedeckt bei schwacher Hitze 20 Minuten garen, 10 Minuten ruhen lassen."
+      ]
+    },
+    "stroganoff": {
+      "n": "Boeuf Stroganoff",
+      "s": [
+        "Rindfleisch in feine Streifen schneiden und portionsweise 2 Minuten scharf anbraten.",
+        "Zwiebel und Pilze 6 Minuten braten, mit Mehl bestäuben, etwas Wasser und Schmand zugeben.",
+        "Fleisch zurück in die Soße und 3 Minuten erwärmen, nicht kochen. Mit Nudeln oder Püree servieren."
+      ]
+    },
+    "beshbarmak": {
+      "n": "Beschbarmak",
+      "s": [
+        "Fleisch in großen Stücken 1,5–2 Stunden köcheln, abschäumen.",
+        "Dünnen ungesäuerten Teig ausrollen, in Rauten schneiden und 3–4 Minuten in der Brühe kochen.",
+        "Teig anrichten, darauf das geschnittene Fleisch und 2 Minuten in Brühe gedünstete Zwiebel. Brühe extra reichen."
+      ]
+    },
+    "ratatouille": {
+      "n": "Ratatouille",
+      "s": [
+        "Aubergine, Zucchini, Paprika und Zwiebel würfeln.",
+        "Zwiebel und Paprika 5 Minuten braten, Aubergine und Zucchini 5 Minuten mitbraten.",
+        "Tomaten, Knoblauch und Kräuter dazu, zugedeckt 25 Minuten schmoren."
+      ]
+    },
+    "carbonara": {
+      "n": "Pasta Carbonara",
+      "s": [
+        "Pasta al dente kochen, eine halbe Tasse Kochwasser aufheben.",
+        "Speck 5 Minuten knusprig braten; Ei mit geriebenem Käse und Pfeffer verquirlen.",
+        "Pfanne vom Herd nehmen, Pasta mit Speck und Eimischung vermengen, mit Kochwasser cremig rühren."
+      ]
+    },
+    "bolognese": {
+      "n": "Pasta Bolognese",
+      "s": [
+        "Fein gehackte Zwiebel und Möhre 5 Minuten braten, Hack zugeben und 7 Minuten krümelig braten.",
+        "Tomate und Knoblauch dazu, bei schwacher Hitze 25–30 Minuten köcheln.",
+        "Pasta kochen, mit der Soße mischen und mit geriebenem Käse bestreuen."
+      ]
+    },
+    "lasagna": {
+      "n": "Lasagne",
+      "s": [
+        "Fleischsoße: Hack 7 Minuten braten, Tomate dazu und 15 Minuten köcheln.",
+        "Für die Béchamel Butter schmelzen, Mehl 1 Minute anschwitzen, Milch einrühren und 5 Minuten eindicken.",
+        "Platten, Fleisch, Béchamel und Käse schichten und bei 190 °C 35 Minuten backen."
+      ]
+    },
+    "risotto": {
+      "n": "Pilzrisotto",
+      "s": [
+        "Zwiebel und Pilze in Butter 6 Minuten braten, Reis zugeben und 2 Minuten anschwitzen.",
+        "Heiße Brühe kellenweise unter Rühren zugeben, bis der Reis cremig ist, 18–20 Minuten.",
+        "Vom Herd nehmen, geriebenen Käse und Butter einrühren, 2 Minuten ruhen lassen."
+      ]
+    },
+    "paella": {
+      "n": "Paella",
+      "s": [
+        "Hähnchenstücke 8 Minuten braten, Paprika und geriebene Tomate 5 Minuten mitbraten.",
+        "Reis zugeben, heiße Brühe (mit Safran oder Kurkuma) angießen und 15 Minuten ohne Rühren garen.",
+        "Garnelen und Erbsen darauflegen, 5 Minuten weitergaren, 5 Minuten ruhen lassen und mit Zitrone servieren."
+      ]
+    },
+    "padthai": {
+      "n": "Pad Thai",
+      "s": [
+        "Reisnudeln 10 Minuten in warmem Wasser einweichen; Sojasoße, Limette und Zucker mischen.",
+        "Garnelen 2 Minuten braten, zur Seite schieben, Ei hineinschlagen und stocken lassen.",
+        "Nudeln und Soße zugeben, 2–3 Minuten schwenken, mit Erdnüssen und Frühlingszwiebel bestreuen."
+      ]
+    },
+    "falafel": {
+      "n": "Falafel-Wrap",
+      "s": [
+        "Kichererbsen mit Zwiebel, Knoblauch, Kräutern, Mehl und Gewürzen zu einer dicken Masse mixen.",
+        "Bällchen formen und 2 Minuten pro Seite goldbraun braten (oder bei 200 °C 20 Minuten backen).",
+        "Mit Tomate, Gurke und Tahinisoße in Lavasch wickeln."
+      ]
+    },
+    "tacos": {
+      "n": "Rindfleisch-Tacos",
+      "s": [
+        "Hack mit Zwiebel und Gewürzen (Paprika, Kreuzkümmel) 8–10 Minuten braten.",
+        "Tortillas je 30 Sekunden in trockener Pfanne erwärmen.",
+        "Mit Fleisch, Salat, Tomate und Käse füllen, Schmand dazu und zuklappen."
+      ]
+    },
+    "vinegret": {
+      "n": "Winegret (Rote-Bete-Salat)",
+      "s": [
+        "Rote Bete (50 Minuten), Kartoffel und Möhre (20 Minuten) kochen, abkühlen.",
+        "Alles mit Gewürzgurken und Zwiebel würfeln, Bohnen dazu.",
+        "Mit Öl anmachen, abschmecken und 15 Minuten ziehen lassen."
       ]
     }
   }

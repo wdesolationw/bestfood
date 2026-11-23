@@ -345,7 +345,8 @@
     "cafesPizza": "Pizza",
     "westT": "approx. weight, KBJU from the menu",
     "genSkip": "Not found in the food list",
-    "genGuess": "No dish type given — picked from the products"
+    "genGuess": "No dish type given — picked from the products",
+    "genHaveRec": "There is a ready recipe in the app"
   },
   "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
   "stop": ["with", "and", "the", "a", "of", "in"],
@@ -2410,6 +2411,392 @@
         "Prepare the {P}: pan-fry, bake or slice it if ready-made.",
         "Toast the bread in a toaster or dry pan; slice the {V}.",
         "Spread the sauce, layer the filling, top with the second slice and cut in half."
+      ]
+    }
+  },
+  "dish": {
+    "borscht": {
+      "n": "Borscht",
+      "s": [
+        "Simmer the beef in 1.5 l of water for 1–1.5 hours, skim, then cut the meat.",
+        "Fry onion, carrot and beet for 10 minutes, add tomato; put potato and cabbage into the broth for 15 minutes.",
+        "Return the fry and meat, add garlic and herbs, rest 10 minutes. Serve with sour cream."
+      ]
+    },
+    "shchi": {
+      "n": "Shchi (cabbage soup)",
+      "s": [
+        "Make a beef broth (1 hour), take out and cut the meat.",
+        "Add cabbage and potato to the broth for 15 minutes; fry onion and carrot with tomato and add.",
+        "Return the meat, season, let it rest. Serve with sour cream and herbs."
+      ]
+    },
+    "solyanka": {
+      "n": "Solyanka",
+      "s": [
+        "Simmer the beef until tender (1 hour) and cut it into strips together with the ham.",
+        "Fry onion with tomato, add pickles, stew 5 minutes and add to the broth with the meat.",
+        "Add olives, cook 5 minutes. Serve with lemon and sour cream."
+      ]
+    },
+    "ukha": {
+      "n": "Ukha (fish soup)",
+      "s": [
+        "Put potato, carrot and a whole onion into boiling water, cook 10 minutes.",
+        "Add the fish in pieces and simmer 8–10 minutes on low heat without a hard boil.",
+        "Remove the onion, season, add herbs and a drop of lemon."
+      ]
+    },
+    "kharcho": {
+      "n": "Kharcho",
+      "s": [
+        "Simmer the beef in pieces in 1.2 l of water for 1 hour.",
+        "Add rice and onion, cook 15 minutes; stir in tomato and tkemali, ground walnuts and khmeli-suneli.",
+        "Finish with garlic and coriander, rest 10 minutes."
+      ]
+    },
+    "lagman": {
+      "n": "Lagman",
+      "s": [
+        "Fry beef strips for 5 minutes, add onion, carrot and pepper, fry 5 more minutes.",
+        "Add tomatoes and garlic, pour in broth and stew 25 minutes.",
+        "Boil the noodles, divide into bowls and pour the meat sauce over."
+      ]
+    },
+    "kuksi": {
+      "n": "Kuksi (cold noodle soup)",
+      "s": [
+        "For the broth mix cold boiled water with soy sauce, garlic and a pinch of sugar, chill.",
+        "Fry beef strips 6–7 minutes; cut cucumber, cabbage and tomato into thin strips, make a thin omelet from the egg and slice it.",
+        "Boil the noodles, rinse in cold water, put into a bowl with vegetables and meat and pour over the cold broth."
+      ]
+    },
+    "pho": {
+      "n": "Pho bo",
+      "s": [
+        "Warm the broth with ginger and half a charred onion for 20 minutes, strain.",
+        "Soak rice noodles in boiling water for 5 minutes; slice the beef very thin.",
+        "Put noodles and raw beef in a bowl, pour boiling broth over, add herbs and lime."
+      ]
+    },
+    "tomyum": {
+      "n": "Tom yum",
+      "s": [
+        "Bring the broth to a boil with ginger (and lemongrass if you have it), cook 5 minutes.",
+        "Add mushrooms and tomatoes for 3 minutes, then shrimp for 2–3 minutes.",
+        "Pour in coconut milk, heat without boiling, season with lime and sauce."
+      ]
+    },
+    "ramen": {
+      "n": "Ramen",
+      "s": [
+        "Boil the egg 6.5 minutes, cool and peel; fry pork slices 3–4 minutes per side.",
+        "Heat the broth with soy sauce and mushrooms for 5 minutes; boil noodles separately.",
+        "Assemble noodles, broth, pork, spinach, egg halves and spring onion in a bowl."
+      ]
+    },
+    "minestrone": {
+      "n": "Minestrone",
+      "s": [
+        "Fry onion and carrot in oil for 5 minutes, add potato and zucchini.",
+        "Add tomatoes and broth, cook 15 minutes, then beans and pasta for 10 more.",
+        "Serve with grated cheese and a drop of olive oil."
+      ]
+    },
+    "pumpkinsoup": {
+      "n": "Pumpkin cream soup",
+      "s": [
+        "Fry the onion for 3 minutes, add diced pumpkin and potato.",
+        "Cover with broth and cook 20 minutes until soft.",
+        "Blend, stir in cream, warm through and sprinkle with sesame."
+      ]
+    },
+    "okroshka": {
+      "n": "Okroshka (cold kefir soup)",
+      "s": [
+        "Boil potato (20 minutes), egg (9 minutes) and chicken (20 minutes), cool.",
+        "Dice everything with fresh cucumber, add herbs and spring onion.",
+        "Pour over cold kefir diluted with water, season and chill 15 minutes."
+      ]
+    },
+    "shurpa": {
+      "n": "Shurpa",
+      "s": [
+        "Simmer the meat in large pieces for 1 hour, skimming.",
+        "Add roughly cut potato, carrot, onion, pepper and tomatoes, cook 25 minutes.",
+        "Season, add herbs and let it rest 10 minutes."
+      ]
+    },
+    "chakhokhbili": {
+      "n": "Chakhokhbili",
+      "s": [
+        "Brown the chicken without oil, 8 minutes.",
+        "Add onion and pepper, fry 5 minutes; add grated tomatoes and stew covered for 25 minutes.",
+        "Add garlic, khmeli-suneli and plenty of coriander, heat 2 minutes."
+      ]
+    },
+    "goulash": {
+      "n": "Goulash",
+      "s": [
+        "Brown the beef cubes in batches, 6–7 minutes.",
+        "Add onion and pepper, fry 5 minutes, stir in paprika, add tomato and a cup of water.",
+        "Stew covered for 1 hour, adding potato 20 minutes before the end."
+      ]
+    },
+    "khinkali": {
+      "n": "Khinkali",
+      "s": [
+        "Knead a stiff dough from flour, water and salt, rest 30 minutes.",
+        "Mix the mince with onion, herbs, pepper and 3–4 spoons of cold water until juicy.",
+        "Roll circles, pleat the khinkali into a top knot and boil 12–14 minutes in salted water."
+      ]
+    },
+    "pelmeni": {
+      "n": "Pelmeni",
+      "s": [
+        "Knead a dough from flour, water, egg and salt, rest 30 minutes.",
+        "Mix beef and pork mince with finely chopped onion, salt and pepper.",
+        "Shape the pelmeni and boil 6–7 minutes after they float. Serve with sour cream."
+      ]
+    },
+    "vareniki": {
+      "n": "Vareniki with potato",
+      "s": [
+        "Boil potatoes (20 minutes) and mash them with golden fried onion.",
+        "Knead a dough from flour, water and a pinch of salt, roll it out and cut circles.",
+        "Shape the vareniki and boil 5 minutes after they float. Serve with sour cream and fried onion."
+      ]
+    },
+    "manti": {
+      "n": "Manti",
+      "s": [
+        "Knead a dough from flour, water and salt, rest 30 minutes.",
+        "Mix the mince with plenty of finely chopped onion, salt, pepper and cumin.",
+        "Shape the manti, oil the steamer rack and steam 40–45 minutes. Serve with sour cream."
+      ]
+    },
+    "gyoza": {
+      "n": "Gyoza",
+      "s": [
+        "Mix pork mince with finely chopped cabbage, spring onion, ginger and a spoon of soy sauce.",
+        "Put the filling on dough circles and pleat into half-moons.",
+        "Fry the gyoza 2 minutes until golden, add 50 ml of water and steam covered for 6 minutes. Serve with soy sauce."
+      ]
+    },
+    "khach_adj": {
+      "n": "Adjarian khachapuri",
+      "s": [
+        "Knead a yeast dough with milk or matsoni and let it rise for 1 hour.",
+        "Shape a 'boat', fill with grated sulguni and imeruli and bake at 220 °C for 12 minutes.",
+        "Make a well, crack in the egg and bake 2–3 more minutes. Add a piece of butter and stir before eating."
+      ]
+    },
+    "khach_imer": {
+      "n": "Imeretian khachapuri",
+      "s": [
+        "Knead a soft dough with matsoni and a pinch of baking soda, rest 20 minutes.",
+        "Roll a flatbread, put grated cheese in the centre, gather the edges and roll into a circle again.",
+        "Cook in a dry pan under a lid 4–5 minutes per side, brush with butter."
+      ]
+    },
+    "lobiani": {
+      "n": "Lobiani (bean bread)",
+      "s": [
+        "Mash the beans with fried onion, khmeli-suneli and salt.",
+        "Wrap the filling in a yeast or matsoni dough and roll into a round flatbread.",
+        "Bake at 220 °C for 15 minutes or cook in a dry pan, brush with butter."
+      ]
+    },
+    "pizza": {
+      "n": "Pizza Margherita",
+      "s": [
+        "Knead a yeast dough with olive oil and let it rise for 1 hour.",
+        "Roll thin, spread tomato sauce, top with mozzarella and tomatoes.",
+        "Bake at the highest temperature (250 °C) for 8–10 minutes, sprinkle with basil."
+      ]
+    },
+    "quesadilla": {
+      "n": "Chicken quesadilla",
+      "s": [
+        "Fry chicken strips with pepper for 7–8 minutes, add corn.",
+        "Put cheese and filling on half of the tortilla and fold over.",
+        "Cook in a dry pan 2 minutes per side, cut into wedges, serve with sour cream."
+      ]
+    },
+    "bliny": {
+      "n": "Bliny (thin pancakes)",
+      "s": [
+        "Whisk the egg with sugar and salt, add milk and gradually stir in flour to a smooth thin batter.",
+        "Let the batter rest 15 minutes, add a spoon of melted butter.",
+        "Fry thin pancakes in a hot pan for 1 minute per side. Serve with sour cream."
+      ]
+    },
+    "syrniki": {
+      "n": "Syrniki (cottage cheese pancakes)",
+      "s": [
+        "Mash the cottage cheese with egg, sugar and a pinch of salt, add flour.",
+        "Shape 1.5 cm thick patties and dust with flour.",
+        "Fry on medium heat 3–4 minutes per side until golden. Serve with sour cream."
+      ]
+    },
+    "draniki": {
+      "n": "Draniki (potato pancakes)",
+      "s": [
+        "Grate potato and onion finely, squeeze out excess juice.",
+        "Add egg, flour and salt, mix.",
+        "Spoon onto a hot oiled pan and fry 3–4 minutes per side. Serve with sour cream."
+      ]
+    },
+    "plov": {
+      "n": "Plov (pilaf)",
+      "s": [
+        "Brown the meat in a heavy pot, add onion, then carrot strips, fry 10 minutes.",
+        "Add cumin and salt, cover with water by a finger and simmer 30 minutes.",
+        "Spread rinsed rice in an even layer, push in a head of garlic, add water 1.5 cm above the rice and cook covered on low heat for 25 minutes."
+      ]
+    },
+    "ojakhuri": {
+      "n": "Ojakhuri",
+      "s": [
+        "Brown the pork pieces in a pan, 10 minutes.",
+        "Separately fry potato wedges until golden, 15 minutes.",
+        "Combine, add sliced onion, garlic and khmeli-suneli, fry 5 minutes, sprinkle with herbs."
+      ]
+    },
+    "chkmeruli": {
+      "n": "Shkmeruli (chicken in garlic sauce)",
+      "s": [
+        "Fry the chicken skin side down until crispy, 10 minutes, turn over.",
+        "Mix milk and cream with plenty of crushed garlic and salt.",
+        "Pour the sauce over the chicken and bake at 200 °C for 15–20 minutes, sprinkle with herbs."
+      ]
+    },
+    "shashlik": {
+      "n": "Shashlik (grilled skewers)",
+      "s": [
+        "Cut the meat into 4–5 cm pieces, mix with onion, salt and pepper, marinate at least 2 hours.",
+        "Thread onto skewers and grill over coals 15–20 minutes, turning.",
+        "Serve with pickled onion, tomatoes, herbs and lavash."
+      ]
+    },
+    "golubtsy": {
+      "n": "Golubtsy (cabbage rolls)",
+      "s": [
+        "Blanch cabbage leaves 3–4 minutes until soft; parboil the rice.",
+        "Mix mince with rice and half of the fried onion and carrot, wrap in the leaves.",
+        "Place in a dish, cover with tomato, the rest of the fry and water, stew covered for 40 minutes. Serve with sour cream."
+      ]
+    },
+    "kotlety": {
+      "n": "Cutlets with mashed potatoes",
+      "s": [
+        "Mix the mince with egg, bread soaked in water, grated onion, salt and pepper.",
+        "Shape the cutlets and fry 4 minutes per side, then finish covered for 8 minutes.",
+        "Boil potatoes (20 minutes) and mash with hot milk and butter."
+      ]
+    },
+    "grechka_kup": {
+      "n": "Merchant-style buckwheat",
+      "s": [
+        "Fry the meat pieces 7 minutes, add onion and carrot, 5 more minutes.",
+        "Add tomato and rinsed buckwheat, cover with water 1:2.",
+        "Simmer covered on low heat 20 minutes, let it stand 10 minutes."
+      ]
+    },
+    "stroganoff": {
+      "n": "Beef stroganoff",
+      "s": [
+        "Cut the beef into thin strips and sear in batches for 2 minutes.",
+        "Fry onion and mushrooms 6 minutes, dust with flour, add a little water and sour cream.",
+        "Return the meat to the sauce and warm 3 minutes without boiling. Serve with pasta or mash."
+      ]
+    },
+    "beshbarmak": {
+      "n": "Beshbarmak",
+      "s": [
+        "Simmer the meat in large pieces for 1.5–2 hours, skimming.",
+        "Roll a thin unleavened dough, cut into diamonds and boil in the broth 3–4 minutes.",
+        "Lay out the dough, top with sliced meat and onion softened in broth for 2 minutes. Serve the broth separately."
+      ]
+    },
+    "ratatouille": {
+      "n": "Ratatouille",
+      "s": [
+        "Dice the eggplant, zucchini, pepper and onion.",
+        "Fry onion and pepper 5 minutes, add eggplant and zucchini, 5 more minutes.",
+        "Add tomatoes, garlic and herbs, stew covered for 25 minutes."
+      ]
+    },
+    "carbonara": {
+      "n": "Pasta carbonara",
+      "s": [
+        "Cook the pasta al dente, keep half a cup of water.",
+        "Fry bacon until crisp, 5 minutes; whisk egg with grated cheese and pepper.",
+        "Off the heat, toss pasta with bacon and the egg mix, adding pasta water until creamy."
+      ]
+    },
+    "bolognese": {
+      "n": "Pasta bolognese",
+      "s": [
+        "Fry finely chopped onion and carrot 5 minutes, add the mince and brown, breaking it up, 7 minutes.",
+        "Add tomato and garlic and simmer on low heat 25–30 minutes.",
+        "Boil the pasta, toss with the sauce and top with grated cheese."
+      ]
+    },
+    "lasagna": {
+      "n": "Lasagna",
+      "s": [
+        "Make the meat sauce: brown the mince 7 minutes, add tomato and simmer 15 minutes.",
+        "For béchamel melt butter, cook flour 1 minute, whisk in milk and cook until thick, 5 minutes.",
+        "Layer sheets, meat, béchamel and cheese and bake at 190 °C for 35 minutes."
+      ]
+    },
+    "risotto": {
+      "n": "Mushroom risotto",
+      "s": [
+        "Fry onion and mushrooms in butter for 6 minutes, add rice and toast 2 minutes.",
+        "Add hot broth a ladle at a time, stirring, until the rice is creamy, 18–20 minutes.",
+        "Off the heat stir in grated cheese and a knob of butter, rest 2 minutes."
+      ]
+    },
+    "paella": {
+      "n": "Paella",
+      "s": [
+        "Fry the chicken pieces 8 minutes, add pepper and grated tomato, 5 minutes.",
+        "Add rice, pour in hot broth (with a pinch of saffron or turmeric) and cook without stirring for 15 minutes.",
+        "Lay shrimp and peas on top, cook 5 more minutes, rest 5 minutes and serve with lemon."
+      ]
+    },
+    "padthai": {
+      "n": "Pad thai",
+      "s": [
+        "Soak rice noodles in warm water for 10 minutes; mix soy sauce, lime and sugar.",
+        "Fry shrimp 2 minutes, push aside, crack in the egg and scramble.",
+        "Add noodles and sauce, toss 2–3 minutes, top with peanuts and spring onion."
+      ]
+    },
+    "falafel": {
+      "n": "Falafel wrap",
+      "s": [
+        "Blitz chickpeas with onion, garlic, herbs, flour and spices into a thick mix.",
+        "Shape balls and fry until golden, 2 minutes per side (or bake at 200 °C for 20 minutes).",
+        "Wrap in lavash with tomato, cucumber and tahini sauce."
+      ]
+    },
+    "tacos": {
+      "n": "Beef tacos",
+      "s": [
+        "Fry the mince with onion and spices (paprika, cumin) for 8–10 minutes.",
+        "Warm the tortillas in a dry pan for 30 seconds each.",
+        "Fill with meat, lettuce, tomato and cheese, add sour cream and fold."
+      ]
+    },
+    "vinegret": {
+      "n": "Vinegret (beet salad)",
+      "s": [
+        "Boil beet (50 minutes), potato and carrot (20 minutes), cool.",
+        "Dice everything with pickles and onion, add beans.",
+        "Dress with oil, season and let it rest 15 minutes."
       ]
     }
   }

@@ -1,0 +1,631 @@
+{
+  "borscht": {
+    "type": "soup",
+    "cuis": ["home"],
+    "kw": ["борщ", "борш", "borscht", "borsch", "ბორშ"],
+    "items": [
+      ["beef", 100],
+      ["beet", 90],
+      ["cabbage", 80],
+      ["potato", 80],
+      ["carrot", 30],
+      ["onion", 30],
+      ["passata", 30],
+      ["oil", 5],
+      ["garlic", 3],
+      ["herbs", 3],
+      ["sour", 20],
+      ["broth", 300]
+    ]
+  },
+  "shchi": {
+    "type": "soup",
+    "cuis": ["home"],
+    "kw": ["щи", "щей", "shchi", "schtschi", "chtchi", "щі", "შჩი"],
+    "items": [
+      ["beef", 90],
+      ["cabbage", 160],
+      ["potato", 80],
+      ["carrot", 30],
+      ["onion", 30],
+      ["passata", 20],
+      ["oil", 5],
+      ["herbs", 3],
+      ["sour", 20],
+      ["broth", 300]
+    ]
+  },
+  "solyanka": {
+    "type": "soup",
+    "cuis": ["home"],
+    "kw": ["солянк", "solyank", "soljank", "soliank", "სოლიანკ"],
+    "items": [
+      ["beef", 70],
+      ["turkeyham", 50],
+      ["pickles", 60],
+      ["olives", 15],
+      ["onion", 30],
+      ["passata", 30],
+      ["oil", 5],
+      ["lemon", 10],
+      ["sour", 15],
+      ["broth", 300]
+    ]
+  },
+  "ukha": {
+    "type": "soup",
+    "cuis": ["home"],
+    "kw": ["уха", "уху", "ухи", "ukha", "ucha", "oukha", "უხა", "ujá", "uja"],
+    "items": [
+      ["whitefish", 150],
+      ["potato", 100],
+      ["carrot", 30],
+      ["onion", 30],
+      ["herbs", 5],
+      ["lemon", 5],
+      ["broth", 350]
+    ]
+  },
+  "kharcho": {
+    "type": "soup",
+    "cuis": ["georgian"],
+    "kw": ["харчо", "kharcho", "chartscho", "khartcho", "ხარჩო"],
+    "items": [
+      ["beef", 110],
+      ["rice", 30],
+      ["passata", 40],
+      ["onion", 40],
+      ["walnut", 10],
+      ["garlic", 5],
+      ["khmeli", 2],
+      ["herbs", 5],
+      ["tkemali", 15],
+      ["broth", 300]
+    ]
+  },
+  "lagman": {
+    "type": "soup",
+    "cuis": ["asian"],
+    "kw": ["лагман", "lagman", "laghman", "ლაგმან"],
+    "items": [
+      ["beef", 100],
+      ["pasta", 70],
+      ["pepper", 60],
+      ["carrot", 40],
+      ["onion", 30],
+      ["tomato", 60],
+      ["garlic", 5],
+      ["oil", 8],
+      ["broth", 250]
+    ]
+  },
+  "kuksi": {
+    "type": "soup",
+    "cuis": ["asian"],
+    "kw": ["кукс", "kuksi", "guksu", "kuksu", "კუქს"],
+    "items": [
+      ["beef", 80],
+      ["pasta", 80],
+      ["cucumber", 80],
+      ["cabbage", 60],
+      ["tomato", 50],
+      ["egg", 50],
+      ["soy", 10],
+      ["garlic", 5],
+      ["oil", 8],
+      ["water", 300]
+    ]
+  },
+  "pho": {
+    "type": "soup",
+    "cuis": ["asian"],
+    "kw": ["фо бо", "фо-бо", "фобо", "pho", "phở", "ფო"],
+    "items": [
+      ["beef", 100],
+      ["ricenoodles", 70],
+      ["onion", 30],
+      ["herbs", 10],
+      ["ginger", 5],
+      ["lemon", 10],
+      ["soy", 5],
+      ["broth", 400]
+    ]
+  },
+  "tomyum": {
+    "type": "soup",
+    "cuis": ["asian"],
+    "kw": ["том ям", "том-ям", "томям", "tom yum", "tom-yum", "tomyum", "ტომ"],
+    "items": [
+      ["shrimp", 120],
+      ["mushroom", 80],
+      ["tomato", 60],
+      ["coconut", 100],
+      ["lemon", 10],
+      ["ginger", 5],
+      ["soy", 5],
+      ["broth", 250]
+    ]
+  },
+  "ramen": {
+    "type": "soup",
+    "cuis": ["asian"],
+    "kw": ["рамен", "ramen", "რამენ"],
+    "items": [
+      ["pork", 90],
+      ["pasta", 80],
+      ["egg", 50],
+      ["spinach", 30],
+      ["mushroom", 40],
+      ["greenonion", 10],
+      ["soy", 15],
+      ["broth", 350]
+    ]
+  },
+  "minestrone": {
+    "type": "soup",
+    "cuis": ["italian"],
+    "kw": ["минестрон", "minestron", "მინესტრონ"],
+    "items": [
+      ["beans", 80],
+      ["pasta", 30],
+      ["zucchini", 60],
+      ["carrot", 40],
+      ["tomato", 80],
+      ["onion", 30],
+      ["potato", 50],
+      ["oil", 8],
+      ["hard", 10],
+      ["broth", 300]
+    ]
+  },
+  "pumpkinsoup": {
+    "type": "soup",
+    "cuis": ["mediterranean"],
+    "kw": [
+      "тыквенный суп",
+      "тыквенный крем",
+      "суп из тыкв",
+      "крем-суп из тыкв",
+      "суп-пюре из тыкв",
+      "pumpkin soup",
+      "pumpkin cream",
+      "гарбузовий суп",
+      "гарбузовий крем",
+      "суп з гарбуз",
+      "асқабақ сорпа",
+      "გოგრის სუპ",
+      "გოგრის კრემ",
+      "crema de calabaza",
+      "sopa de calabaza",
+      "kürbissuppe",
+      "kürbiscreme",
+      "velouté de potiron",
+      "soupe de potiron",
+      "soupe de citrouille"
+    ],
+    "items": [
+      ["pumpkin", 250],
+      ["onion", 30],
+      ["potato", 50],
+      ["cream10", 50],
+      ["oil", 5],
+      ["sesame", 3],
+      ["broth", 150]
+    ]
+  },
+  "okroshka": {
+    "type": "soup",
+    "cuis": ["home"],
+    "kw": ["окрошк", "okroshk", "okroschk", "окрошк"],
+    "items": [
+      ["kefir", 300],
+      ["potato", 80],
+      ["egg", 50],
+      ["cucumber", 80],
+      ["chicken", 60],
+      ["herbs", 5],
+      ["greenonion", 5]
+    ]
+  },
+  "shurpa": {
+    "type": "soup",
+    "cuis": ["asian"],
+    "kw": ["шурп", "шорп", "shurpa", "shorpa", "schurpa", "chourpa", "შურპ"],
+    "items": [
+      ["beef", 120],
+      ["potato", 100],
+      ["carrot", 40],
+      ["onion", 40],
+      ["pepper", 40],
+      ["tomato", 50],
+      ["herbs", 5],
+      ["broth", 350]
+    ]
+  },
+  "chakhokhbili": {
+    "type": "soup",
+    "cuis": ["georgian"],
+    "kw": ["чахохбил", "chakhokhbil", "tschachochbil", "tchakhokhbil", "ჩახოხბილ"],
+    "items": [
+      ["chickenthigh", 200],
+      ["tomato", 200],
+      ["onion", 80],
+      ["pepper", 40],
+      ["garlic", 5],
+      ["herbs", 5],
+      ["khmeli", 2],
+      ["oil", 5]
+    ]
+  },
+  "goulash": {
+    "type": "soup",
+    "cuis": ["home"],
+    "kw": ["гуляш", "goulash", "gulasch", "gulyás", "gulyas", "гуляш", "გულაშ"],
+    "items": [
+      ["beef", 150],
+      ["onion", 50],
+      ["pepper", 60],
+      ["passata", 60],
+      ["potato", 100],
+      ["oil", 8],
+      ["spices", 2]
+    ]
+  },
+  "khinkali": {
+    "type": "dumpling_round",
+    "cuis": ["georgian"],
+    "kw": ["хинкал", "khinkal", "chinkal", "xinkal", "ხინკალ"],
+    "items": [["flour", 90], ["beef20", 90], ["onion", 20], ["herbs", 3], ["spices", 2]]
+  },
+  "pelmeni": {
+    "type": "dumpling",
+    "cuis": ["home"],
+    "kw": ["пельмен", "pelmen", "пельмен", "пельмен", "პელმენ"],
+    "items": [["flour", 80], ["beef20", 50], ["pork", 40], ["onion", 15], ["sour", 20], ["butter", 5]]
+  },
+  "vareniki": {
+    "type": "dumpling",
+    "cuis": ["home"],
+    "kw": ["варени", "vareniki", "wareniki", "varenyky", "вареник", "ვარენიკ"],
+    "items": [["flour", 80], ["potato", 130], ["onion", 25], ["oil", 8], ["sour", 30]]
+  },
+  "manti": {
+    "type": "dumpling_round",
+    "cuis": ["asian"],
+    "kw": ["мант", "manti", "manty", "მანტ"],
+    "items": [["flour", 90], ["beef20", 100], ["onion", 60], ["sour", 25], ["spices", 2]]
+  },
+  "gyoza": {
+    "type": "dumpling",
+    "cuis": ["asian"],
+    "kw": ["гёдз", "гедз", "гьоз", "gyoza", "gyōza", "jiaozi", "цзяоцз", "гедзы", "გიოძ"],
+    "items": [
+      ["flour", 60],
+      ["pork", 70],
+      ["cabbage", 50],
+      ["greenonion", 5],
+      ["ginger", 3],
+      ["soy", 10],
+      ["oil", 5]
+    ]
+  },
+  "khach_adj": {
+    "type": "boat",
+    "cuis": ["georgian"],
+    "kw": ["хачапури по-аджарски", "аджарск", "аджарули", "adjarul", "adjarian", "acharul", "აჭარულ"],
+    "items": [["flour", 120], ["suluguni", 60], ["imeruli", 50], ["egg", 50], ["butter", 15]]
+  },
+  "khach_imer": {
+    "type": "flat",
+    "cuis": ["georgian"],
+    "kw": ["хачапури", "khachapur", "khatchapour", "jachapuri", "chatschapuri", "ხაჭაპურ"],
+    "items": [["flour", 110], ["imeruli", 70], ["suluguni", 50], ["butter", 10], ["matsoni", 30]]
+  },
+  "lobiani": {
+    "type": "flat",
+    "cuis": ["georgian"],
+    "kw": ["лобиан", "lobian", "ლობიან"],
+    "items": [["flour", 110], ["beans", 120], ["onion", 20], ["butter", 10], ["khmeli", 2]]
+  },
+  "pizza": {
+    "type": "flat",
+    "cuis": ["italian"],
+    "kw": ["пицц", "pizza", "піц", "ピザ", "პიც"],
+    "items": [["flour", 110], ["passata", 60], ["mozzfull", 80], ["tomato", 40], ["oil", 8], ["herbs", 2]]
+  },
+  "quesadilla": {
+    "type": "flat",
+    "cuis": ["mexican"],
+    "kw": ["кесадиль", "quesadill", "кесаділ", "კესადილ", "hähnchen-quesadill"],
+    "items": [["tortilla", 70], ["chicken", 80], ["hard", 40], ["pepper", 40], ["corn", 30], ["sour", 20]]
+  },
+  "bliny": {
+    "type": "pancakes",
+    "cuis": ["home"],
+    "kw": ["блин", "блинч", "bliny", "blini", "млинц", "налисник", "блин", "ბლინ", "crepe", "crêpe"],
+    "items": [["flour", 60], ["milk", 150], ["egg", 50], ["sugar", 5], ["butter", 5], ["sour", 30]]
+  },
+  "syrniki": {
+    "type": "pancakes",
+    "cuis": ["home"],
+    "kw": ["сырник", "сирник", "syrnik", "sirniki", "სირნიკ"],
+    "items": [["tvorog5", 180], ["egg", 50], ["flour", 30], ["sugar", 10], ["oil", 8], ["sour", 30]]
+  },
+  "draniki": {
+    "type": "pancakes",
+    "cuis": ["home"],
+    "kw": [
+      "драник",
+      "деруны",
+      "дерун",
+      "draniki",
+      "deruny",
+      "латкес",
+      "latke",
+      "kartoffelpuffer",
+      "reibekuchen",
+      "დრანიკ"
+    ],
+    "items": [["potato", 250], ["onion", 30], ["egg", 50], ["flour", 15], ["oil", 15], ["sour", 30]]
+  },
+  "plov": {
+    "type": "plate",
+    "cuis": ["asian"],
+    "kw": ["плов", "палов", "plov", "pilaf", "pilau", "palov", "პლოვ", "ფლავ"],
+    "items": [
+      ["rice", 80],
+      ["beef", 120],
+      ["carrot", 100],
+      ["onion", 50],
+      ["oil", 15],
+      ["garlic", 10],
+      ["spices", 2]
+    ]
+  },
+  "ojakhuri": {
+    "type": "plate",
+    "cuis": ["georgian"],
+    "kw": ["оджахур", "ojakhur", "odschachur", "odjakhour", "ოჯახურ"],
+    "items": [
+      ["pork", 150],
+      ["potato", 200],
+      ["onion", 50],
+      ["oil", 15],
+      ["garlic", 5],
+      ["herbs", 5],
+      ["khmeli", 2]
+    ]
+  },
+  "chkmeruli": {
+    "type": "plate",
+    "cuis": ["georgian"],
+    "kw": ["чкмерул", "shkmerul", "chkmerul", "schkmerul", "შქმერულ"],
+    "items": [
+      ["chickenthigh", 220],
+      ["garlic", 10],
+      ["milk", 100],
+      ["cream10", 50],
+      ["butter", 5],
+      ["herbs", 3]
+    ]
+  },
+  "shashlik": {
+    "type": "plate",
+    "cuis": ["georgian"],
+    "kw": [
+      "шашлык",
+      "шашлик",
+      "мцвади",
+      "shashlik",
+      "shashlyk",
+      "schaschlik",
+      "chachlik",
+      "mtsvadi",
+      "მწვად",
+      "шашлық",
+      "kebab",
+      "кебаб"
+    ],
+    "items": [["pork", 200], ["onion", 60], ["tomato", 80], ["herbs", 5], ["lavash", 40], ["spices", 2]]
+  },
+  "golubtsy": {
+    "type": "plate",
+    "cuis": ["home"],
+    "kw": [
+      "голубц",
+      "голубц",
+      "голубц",
+      "golubts",
+      "golubz",
+      "golubtsi",
+      "кохл",
+      "kohlroulad",
+      "chou farci",
+      "ტოლმ",
+      "голубці"
+    ],
+    "items": [
+      ["cabbage", 150],
+      ["beef20", 80],
+      ["rice", 25],
+      ["carrot", 30],
+      ["onion", 30],
+      ["passata", 60],
+      ["sour", 20]
+    ]
+  },
+  "kotlety": {
+    "type": "plate",
+    "cuis": ["home"],
+    "kw": ["котлет", "котлети", "kotlet", "cutlet", "frikadell", "boulette", "котлет", "კოტლეტ"],
+    "items": [
+      ["beef20", 130],
+      ["egg", 15],
+      ["bread", 15],
+      ["onion", 20],
+      ["potato", 200],
+      ["milk", 40],
+      ["butter", 10]
+    ]
+  },
+  "grechka_kup": {
+    "type": "bowl",
+    "cuis": ["home"],
+    "kw": ["по-купечески", "купечес", "buckwheat merchant", "merchant-style"],
+    "items": [["buckwheat", 70], ["pork", 100], ["onion", 40], ["carrot", 40], ["passata", 30], ["oil", 8]]
+  },
+  "stroganoff": {
+    "type": "plate",
+    "cuis": ["home"],
+    "kw": ["строганов", "бефстроганов", "stroganof", "strogonof", "строганоф", "სტროგანოვ"],
+    "items": [
+      ["beef", 150],
+      ["onion", 40],
+      ["mushroom", 60],
+      ["sour", 50],
+      ["flour", 5],
+      ["oil", 8],
+      ["pasta", 70]
+    ]
+  },
+  "beshbarmak": {
+    "type": "plate",
+    "cuis": ["asian"],
+    "kw": ["бешбармак", "бешпармак", "beshbarmak", "beschbarmak", "бесбармақ", "ბეშბარმაკ"],
+    "items": [["beef", 150], ["flour", 80], ["onion", 40], ["broth", 200], ["herbs", 3]]
+  },
+  "ratatouille": {
+    "type": "plate",
+    "cuis": ["mediterranean"],
+    "kw": ["рататуй", "ratatouill", "рататуй", "რატატუ"],
+    "items": [
+      ["eggplant", 120],
+      ["zucchini", 120],
+      ["pepper", 80],
+      ["tomato", 120],
+      ["onion", 40],
+      ["oil", 15],
+      ["garlic", 5],
+      ["herbs", 3]
+    ]
+  },
+  "carbonara": {
+    "type": "pasta",
+    "cuis": ["italian"],
+    "kw": ["карбонар", "carbonar", "კარბონარ"],
+    "items": [["pasta", 100], ["bacon", 50], ["egg", 50], ["hard", 25], ["spices", 1]]
+  },
+  "bolognese": {
+    "type": "pasta",
+    "cuis": ["italian"],
+    "kw": ["болоньез", "болонез", "bolognes", "bolones", "ბოლონიეზ"],
+    "items": [
+      ["pasta", 100],
+      ["beef20", 110],
+      ["passata", 120],
+      ["onion", 30],
+      ["carrot", 20],
+      ["garlic", 3],
+      ["oil", 8],
+      ["hard", 10]
+    ]
+  },
+  "lasagna": {
+    "type": "pasta",
+    "cuis": ["italian"],
+    "kw": ["лазань", "lasagn", "lasañ", "ლაზანი"],
+    "items": [
+      ["pasta", 70],
+      ["beef20", 100],
+      ["passata", 100],
+      ["milk", 80],
+      ["butter", 8],
+      ["flour", 8],
+      ["hard", 30]
+    ]
+  },
+  "risotto": {
+    "type": "bowl",
+    "cuis": ["italian"],
+    "kw": ["ризотто", "risott", "რიზოტ"],
+    "items": [["rice", 80], ["mushroom", 120], ["onion", 30], ["butter", 10], ["hard", 20], ["broth", 250]]
+  },
+  "paella": {
+    "type": "bowl",
+    "cuis": ["mediterranean"],
+    "kw": ["паэль", "paell", "паел", "პაელ"],
+    "items": [
+      ["rice", 80],
+      ["shrimp", 80],
+      ["chickenthigh", 80],
+      ["pepper", 60],
+      ["greenpeas", 30],
+      ["tomato", 50],
+      ["oil", 10],
+      ["lemon", 10],
+      ["broth", 250]
+    ]
+  },
+  "padthai": {
+    "type": "pasta",
+    "cuis": ["asian"],
+    "kw": ["пад тай", "пад-тай", "падтай", "pad thai", "pad-thai", "padthai", "პად"],
+    "items": [
+      ["ricenoodles", 80],
+      ["shrimp", 100],
+      ["egg", 50],
+      ["peanuts", 15],
+      ["greenonion", 10],
+      ["soy", 15],
+      ["lemon", 10],
+      ["oil", 10],
+      ["sugar", 5]
+    ]
+  },
+  "falafel": {
+    "type": "wrap",
+    "cuis": ["mediterranean"],
+    "kw": ["фалафел", "falafel", "ფალაფელ"],
+    "items": [
+      ["chickpeas", 150],
+      ["onion", 30],
+      ["herbs", 10],
+      ["garlic", 5],
+      ["flour", 10],
+      ["oil", 20],
+      ["lavash", 60],
+      ["tahini", 15],
+      ["tomato", 50],
+      ["cucumber", 50]
+    ]
+  },
+  "tacos": {
+    "type": "wrap",
+    "cuis": ["mexican"],
+    "kw": ["тако", "tacos", "taco", "ტაკო"],
+    "items": [
+      ["tortilla", 60],
+      ["beef20", 100],
+      ["tomato", 50],
+      ["lettuce", 20],
+      ["hard", 20],
+      ["sour", 20],
+      ["onion", 15],
+      ["spices", 2]
+    ]
+  },
+  "vinegret": {
+    "type": "salad",
+    "cuis": ["home"],
+    "kw": ["винегрет", "вінегрет", "vinegret", "vinaigrette salad", "винегрет", "ვინეგრეტ"],
+    "items": [
+      ["beet", 100],
+      ["potato", 80],
+      ["carrot", 50],
+      ["pickles", 50],
+      ["beans", 50],
+      ["onion", 20],
+      ["oil", 15]
+    ]
+  }
+}

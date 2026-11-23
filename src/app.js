@@ -994,6 +994,78 @@ function dishSVG(items, type, seed) {
     return `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${defs}${svg}</svg>`;
   }
 
+  const OUT = () => `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${defs}${svg}</svg>`;
+  const side = (x, y) => { const v = mains.filter(p => !["flour", "beef20", "beef", "pork", "potato", "tvorog5", "egg", "milk", "suluguni", "imeruli", "butter", "onion", "matsoni", "beans"].includes(p.k)).slice(0, 2); v.forEach((p, j) => { for (let i = 0; i < 3; i++) svg += piece(p, x + j * 16 + R() * 8, y + i * 7, .85); }); };
+  if (type === "dumpling_round") { // khinkali, manti: round pleated dumplings with a knot
+    svg += plate();
+    const dough = "#F4EBD6", dd = dk(dough, .18);
+    [[72, 78], [122, 74], [100, 112], [60, 124], [140, 122]].forEach(([x, y], n) => {
+      let g = `<ellipse cx="2" cy="14" rx="23" ry="8" fill="#3A2A18" opacity=".18" filter="url(#${id}sh)"/><path d="M-24 6 Q-24 -18 0 -20 Q24 -18 24 6 Q22 18 0 18 Q-22 18 -24 6z" fill="${dough}" stroke="${dd}" stroke-width="1"/>`;
+      for (let i = 0; i < 9; i++) { const a = -Math.PI * .95 + i * Math.PI * .95 / 4.2; g += `<path d="M0 -15 Q${f(Math.cos(a) * 13)} ${f(Math.sin(a) * 8 - 6)} ${f(Math.cos(a) * 22)} ${f(Math.sin(a) * 12 + 6)}" fill="none" stroke="${dd}" stroke-width=".9" opacity=".7"/>`; }
+      g += `<ellipse cx="0" cy="-17" rx="5.5" ry="4" fill="${lt(dough, .3)}" stroke="${dd}" stroke-width="1"/><path d="M-3 -20 q3 -6 6 0" fill="${dough}" stroke="${dd}" stroke-width="1"/>` + hl(-9, -4, 6, 3, .45);
+      svg += G(x, y, (n - 2) * 8, 1, g);
+    });
+    svg += dollops(150, 66) + Array.from({length: 14}, () => `<circle cx="${f(70 + R() * 60)}" cy="${f(60 + R() * 70)}" r=".9" fill="#2B1F14" opacity=".6"/>`).join("");
+    return OUT();
+  }
+  if (type === "dumpling") { // pelmeni, vareniki, gyoza: half-moons
+    svg += plate();
+    const fried = parts.some(p => p.k === "soy"), dough = fried ? "#EFDDB6" : "#F6EEDB", dd = dk(dough, .2);
+    const pos = [[64, 74], [96, 64], [130, 72], [56, 106], [90, 98], [124, 104], [150, 100], [70, 136], [106, 134], [138, 134]];
+    pos.forEach(([x, y]) => {
+      let g = `<path d="M-16 4 Q-14 -14 0 -14 Q14 -14 16 4 Q0 10 -16 4z" fill="${dough}" stroke="${dd}" stroke-width=".9"/>`;
+      for (let i = 0; i < 6; i++) { const u = -12 + i * 5; g += `<path d="M${u} ${f(-12 + Math.abs(u) * .45)} l1.6 3.4" stroke="${dd}" stroke-width=".8" opacity=".7"/>`; }
+      if (fried) g += `<path d="M-15 4 Q0 9 15 4 Q0 13 -15 4z" fill="#B97A2E" opacity=".75"/>`;
+      g += hl(-6, -6, 5, 2.4, .4);
+      svg += G(x, y, Math.round((R() - .5) * 50), 1, g);
+    });
+    if (fried) svg += `<ellipse cx="158" cy="148" rx="13" ry="9" fill="#EDE6DA"/><ellipse cx="158" cy="148" rx="10" ry="6.5" fill="#3B1E10"/>`;
+    svg += dollops(150, 60);
+    herbs.slice(0, 1).forEach(p => { for (let i = 0; i < 4; i++) svg += piece(p, 80 + R() * 50, 80 + R() * 40, .5); });
+    return OUT();
+  }
+  if (type === "flat") { // khachapuri, lobiani, pizza, quesadilla: a round pie cut into wedges
+    svg += plate();
+    const pizza = parts.some(p => p.k === "passata"), tort = parts.some(p => p.k === "tortilla"), bean = parts.some(p => p.k === "beans");
+    const crust = tort ? "#E7C584" : "#DDA552", top = pizza ? "#C9402F" : bean ? "#C8884F" : "#F2D277";
+    let g = `<circle cx="0" cy="0" r="66" fill="${crust}" stroke="${dk(crust, .3)}" stroke-width="1.2"/><circle cx="0" cy="0" r="${pizza ? 56 : 62}" fill="${pizza ? top : lt(crust, .25)}"/>`;
+    g += Array.from({length: 26}, () => { const a = R() * TAU, d = Math.sqrt(R()) * 58; return `<ellipse cx="${f(Math.cos(a) * d)}" cy="${f(Math.sin(a) * d)}" rx="${f(2 + R() * 4)}" ry="${f(1.5 + R() * 2.5)}" fill="${pizza ? "#F7EFD9" : dk(crust, .35)}" opacity="${pizza ? .95 : .35}"/>`; }).join("");
+    if (pizza) { g += Array.from({length: 7}, () => { const a = R() * TAU, d = 14 + R() * 34; return `<path d="M0 -5 q5 3 0 10 q-5 -3 0 -10z" fill="#3E8E3A" transform="translate(${f(Math.cos(a) * d)} ${f(Math.sin(a) * d)}) rotate(${rot()})"/>`; }).join(""); }
+    if (!pizza && !tort) g += `<circle cx="0" cy="0" r="30" fill="${top}" opacity=".35"/>`;
+    for (let i = 0; i < (tort ? 4 : 6); i++) { const a = i * TAU / (tort ? 4 : 6) + .3; g += `<path d="M0 0 L${f(Math.cos(a) * 66)} ${f(Math.sin(a) * 66)}" stroke="${dk(crust, .45)}" stroke-width="1.4" opacity=".55"/>`; }
+    g += `<path d="M-46 -30 A55 55 0 0 1 -10 -54" stroke="#fff" stroke-width="3" fill="none" opacity=".3" stroke-linecap="round"/>`;
+    svg += G(100, 100, rot(), 1, g) + dollops(160, 156);
+    return OUT();
+  }
+  if (type === "boat") { // adjarian khachapuri: a boat with cheese, yolk and butter
+    svg += plate();
+    const crust = "#D9973F";
+    svg += `<path d="M22 100 Q60 46 100 52 Q140 46 178 100 Q140 154 100 148 Q60 154 22 100z" fill="${crust}" stroke="${dk(crust, .3)}" stroke-width="1.4" transform="rotate(-18 100 100)"/>` +
+      `<g transform="rotate(-18 100 100)"><path d="M44 100 Q70 68 100 70 Q130 68 156 100 Q130 132 100 130 Q70 132 44 100z" fill="#F4D77C"/>` +
+      Array.from({length: 18}, () => `<ellipse cx="${f(62 + R() * 76)}" cy="${f(84 + R() * 32)}" rx="${f(2 + R() * 4)}" ry="${f(1.4 + R() * 2)}" fill="#E2B54E" opacity=".6"/>`).join("") +
+      `<ellipse cx="100" cy="100" rx="17" ry="14" fill="#FFF8EA"/><circle cx="100" cy="100" r="9" fill="url(#${id}y)"/><rect x="114" y="86" width="13" height="10" rx="2" fill="#FBE7A1" stroke="#E6C770" stroke-width=".8"/>` + hl(92, 96, 3, 2, .6) +
+      `<path d="M36 92 Q64 60 100 62" stroke="#fff" stroke-width="2.4" fill="none" opacity=".3" stroke-linecap="round"/></g>`;
+    return OUT();
+  }
+  if (type === "pancakes") { // bliny, syrniki, draniki: a stack with sour cream
+    svg += plate();
+    const pot = parts.some(p => p.k === "potato"), tv = parts.some(p => p.k.startsWith("tvorog")), thin = !pot && !tv;
+    const c = pot ? "#C98A3A" : tv ? "#E2A24C" : "#EDC37A";
+    if (thin) {
+      for (let i = 0; i < 6; i++) svg += `<ellipse cx="100" cy="${112 - i * 5}" rx="58" ry="40" fill="${i % 2 ? c : lt(c, .2)}" stroke="${dk(c, .3)}" stroke-width="1"/>`;
+      svg += Array.from({length: 20}, () => `<circle cx="${f(60 + R() * 80)}" cy="${f(70 + R() * 40)}" r="${f(1 + R() * 2.4)}" fill="${dk(c, .35)}" opacity=".35"/>`).join("") + `<path d="M100 84 L158 84 A58 40 0 0 1 128 118Z" fill="${lt(c, .35)}" stroke="${dk(c, .25)}" stroke-width="1" opacity=".9"/>`;
+    } else {
+      [[70, 84], [118, 78], [92, 122], [140, 120]].forEach(([x, y], n) => {
+        let g = `<ellipse cx="2" cy="6" rx="22" ry="15" fill="#3A2A18" opacity=".18" filter="url(#${id}sh)"/><ellipse cx="0" cy="4" rx="22" ry="15" fill="${dk(c, .25)}"/><ellipse cx="0" cy="0" rx="22" ry="15" fill="${c}" stroke="${dk(c, .3)}" stroke-width="1"/>`;
+        g += pot ? Array.from({length: 10}, () => `<path d="M${f(-16 + R() * 32)} ${f(-10 + R() * 20)} l${f(3 + R() * 4)} ${f(R() * 2)}" stroke="${dk(c, .4)}" stroke-width="1.2" stroke-linecap="round" opacity=".6"/>`).join("") : hl(-6, -4, 10, 5, .25);
+        svg += G(x, y, Math.round((R() - .5) * 30), 1, g);
+      });
+    }
+    svg += `<ellipse cx="${thin ? 100 : 46}" cy="${thin ? 82 : 140}" rx="14" ry="9" fill="#FBF8F0" stroke="#E5DED0" stroke-width=".8"/>` + hl(thin ? 96 : 42, thin ? 79 : 137, 5, 2.5, .6);
+    side(140, 150);
+    return OUT();
+  }
+
   if (type === "plate") {
     svg += plate();
     const gr = parts.find(p => p.s === "grain"), prot = mains.find(p => PROTS.includes(p.k) || ["chickenthigh", "turkeyham"].includes(p.k)), side = mains.filter(p => p !== prot);
@@ -1022,9 +1094,13 @@ function dishSVG(items, type, seed) {
   const base = parts.filter(p => p.s === "grain" || p.s === "base").sort((a, b) => b.g - a.g)[0];
   if (type === "soup") {
     const liq = parts.filter(p => p.s === "base").sort((a, b) => b.g - a.g)[0];
-    let col = liq ? liq.c : "#E9C46A"; parts.filter(p => ["cube", "round"].includes(p.s)).slice(0, 2).forEach(p => col = mix(p.c, col, .25));
+    const has = k => parts.some(p => p.k === k), gOf = k => (parts.find(p => p.k === k) || {g: 0}).g;
+    let col = liq ? liq.c : "#E9C46A";
+    if (has("beet")) col = "#B3263E"; else if (has("pumpkin")) col = "#EE9A2E"; else if (has("kefir")) col = "#F2EFE6"; else if (has("coconut")) col = mix("#F3D9A4", "#FBF3E2", .5);
+    else if (gOf("passata") + gOf("tomato") >= 40) col = gOf("passata") + gOf("tomato") >= 100 ? "#D2582E" : "#C8763E"; else parts.filter(p => ["cube", "round"].includes(p.s)).slice(0, 2).forEach(p => col = mix(p.c, col, .25));
     inner += `<circle cx="100" cy="100" r="70" fill="${col}"/><ellipse cx="84" cy="80" rx="26" ry="10" fill="#fff" opacity=".16"/>` + Array.from({length: 10}, () => `<circle cx="${f(60 + R() * 80)}" cy="${f(60 + R() * 80)}" r="${f(1 + R() * 2.4)}" fill="#F6D46A" opacity=".55" stroke="#C99A2E" stroke-width=".3"/>`).join("");
-    mains.forEach(p => { for (let i = 0; i < cnt(p.g, 3, 9); i++) { const [x, y] = spot(100, 100, 0, 56, 0, TAU, 12); inner += piece(p, x, y, .95); } });
+    mains.filter(p => !(p.k === "pumpkin" && col === "#EE9A2E") && p.k !== "flour").forEach(p => { for (let i = 0; i < cnt(p.g, 3, 9); i++) { const [x, y] = spot(100, 100, 0, 56, 0, TAU, 12); inner += piece(p, x, y, .95); } });
+    if (has("sour")) inner += `<path d="M96 92 q10 -8 18 0 q6 8 -4 14 q-12 4 -16 -4 q-2 -6 2 -10z" fill="#FBF8F0" stroke="#E5DED0" stroke-width=".8"/>`;
   } else if (type === "pasta") {
     const sauce = parts.find(p => p.k === "passata") || parts.find(p => ["cream10", "cream20", "sour"].includes(p.k));
     const pc = (parts.find(p => p.s === "noodle") || {c: "#F2D48A"}).c, tint = sauce ? mix(sauce.c, pc, .35) : pc;
@@ -1070,7 +1146,7 @@ const PROTS = ["chicken", "turkey", "veal", "beef", "pork", "chicken_mince", "sa
 const VEGS = ["cucumber", "tomato", "pepper", "carrot", "corn", "mushroom", "broccoli", "zucchini", "spinach", "cauliflower", "eggplant", "greenbeans", "onion"];
 const FRUITS = ["banana", "berries", "strawberry", "mango", "apple", "pear", "cherry", "pineapple", "kiwi", "persimmon"];
 const MATCH = new Set(Object.keys(FOOD).filter(k => !BRANDOF[k] && !PORTION[k] && !["water", "spices", "broth", "sweetener"].includes(k)));
-const CATK = {meat: ["chicken", "chicken_mince", "turkey", "veal", "beef", "pork", "bacon"], fish: ["whitefish", "salmon", "shrimp", "tuna"],
+const CATK = {meat: ["chicken", "chicken_mince", "chickenthigh", "turkey", "turkeyham", "veal", "beef", "beef20", "pork", "bacon"], fish: ["whitefish", "salmon", "shrimp", "tuna"],
   dairy: ["milk", "milkskim", "kefir", "yogurt", "greek0", "greek2", "skyr", "tvorog1", "tvorog2", "tvorog5", "hard", "lightcheese", "mozz", "feta", "suluguni", "procheese", "creamcheese", "cream10", "sour", "protein"],
   gluten: ["pasta", "pastacooked", "bread", "lavash", "tortilla", "bulgur", "couscous", "semolina", "oats"]};
 const PMUL = {egg: .8, tuna: .85, tofu: 1.2, shrimp: 1.1, bacon: .35};
@@ -1177,21 +1253,57 @@ function matchWord(w) {
   return Object.keys(best).sort((a, b) => best[b] - best[a]);
 }
 /* words that carry no product: wishes, meals, adjectives */
-const FILLER = ["красн", "бел", "зелен", "желт", "черн", "красн", "red", "white", "green", "yellow", "black", "rojo", "roja", "blanc", "rouge", "vert", "rot", "weiß", "weiss", "grün", "хоч", "хотел", "нужн", "надо", "мне", "сдела", "приготов", "придума", "блюд", "рецепт", "что", "нибудь", "како", "можно", "пожалуйст", "вкусн", "прост", "домашн", "для", "или", "после", "трениров", "завтрак", "ужин", "обед", "перекус", "утр", "вечер", "больш", "маленьк", "диет", "низкокал", "кето", "веган", "вегетар", "остр", "сладк", "тепл", "горяч", "холодн", "свеж", "порци", "граммов", "грамм", "много", "мало", "немного", "побольше", "поменьше", "калори", "белка", "жира", "углевод", "праздн", "детск", "ребен",
+const FILLER = ["такой", "такое", "такую", "такие", "красн", "бел", "зелен", "желт", "черн", "красн", "red", "white", "green", "yellow", "black", "rojo", "roja", "blanc", "rouge", "vert", "rot", "weiß", "weiss", "grün", "хоч", "хотел", "нужн", "надо", "мне", "сдела", "приготов", "придума", "блюд", "рецепт", "что", "нибудь", "како", "можно", "пожалуйст", "вкусн", "прост", "домашн", "для", "или", "после", "трениров", "завтрак", "ужин", "обед", "перекус", "утр", "вечер", "больш", "маленьк", "диет", "низкокал", "кето", "веган", "вегетар", "остр", "сладк", "тепл", "горяч", "холодн", "свеж", "порци", "граммов", "грамм", "много", "мало", "немного", "побольше", "поменьше", "калори", "белка", "жира", "углевод", "праздн", "детск", "ребен",
   "want", "make", "something", "please", "quick", "easy", "healthy", "high", "low", "carb", "breakfast", "lunch", "dinner", "snack", "for", "some", "recipe", "dish", "tasty", "simple", "spicy", "sweet", "fresh", "hot", "cold",
   "щось", "страв", "смачн", "сніданок", "вечер", "обід", "quier", "algo", "receta", "plato", "rápid", "rapid", "sano", "desayuno", "cena", "almuerzo", "ich", "möchte", "etwas", "rezept", "gericht", "schnell", "gesund", "frühstück", "abendessen", "mittag",
   "veux", "quelque", "chose", "recette", "plat", "pour", "sain", "petit", "déjeuner", "dîner", "маған", "тағам", "керек", "მინდა", "კერძ", "რეცეპტ"];
+/* named dishes of different cuisines (data/dishes.json): "борщ", "хинкали", "pad thai" */
+const DISHES = DATA.dishes || {};
+const DTAIL = new Set(["", "ы", "а", "и", "у", "е", "ой", "ом", "ов", "ей", "ам", "ами", "ах", "s", "es"]);
+const dishWord = (w, k) => w === k || (w.startsWith(k) && (k.length >= 5 ? w.length - k.length <= 5 : DTAIL.has(w.slice(k.length)) && w.slice(k.length) !== "е"));
+/* keywords of a dish: the hand-made stems plus its name in every language (whole name, and its own distinctive words) */
+let DKW = null;
+const DGEN = ["суп", "супу", "сорпа", "сорпасы", "soup", "sopa", "suppe", "soupe", "წვნიანი", "крем", "cream", "crema", "creme", "пюре", "puré", "püree", "purée", "тағам", "блюдо", "with", "mit", "avec"];
+const dstem = w => w.length >= 6 ? w.replace(/[аеиоуыяіюєьაეიოუaeiouy]$/, "") : w;
+function dishKw(key) {
+  if (!DKW) {
+    DKW = {}; const cnt = {}, own = {};
+    const kwAll = ORDER.flatMap(c => LANGS[c].gen.kw.flat()).map(gw);
+    for (const k of Object.keys(DISHES)) { own[k] = new Set(); for (const c of ORDER) { const nm = gw((LANGS[c].dish || {})[k] ? LANGS[c].dish[k].n : "").replace(/[()]/g, " ");
+      nm.split(/\s+/).filter(w => w.length >= 4 && !DGEN.some(g => w.startsWith(g)) && !kwAll.includes(w) && !matchWord(w).length).forEach(w => own[k].add(dstem(w))); } own[k].forEach(w => cnt[w] = (cnt[w] || 0) + 1); }
+    for (const [k, d] of Object.entries(DISHES)) {
+      const s = new Set(d.kw.map(gw));
+      for (const c of ORDER) { const nm = (LANGS[c].dish || {})[k]; if (!nm) continue; const ws = gw(nm.n.replace(/\s*\(.*\)/, "")).split(/\s+/); if (ws.length > 1) s.add(ws.slice(0, -1).concat(dstem(ws[ws.length - 1])).join(" ")); }
+      own[k].forEach(w => { if (cnt[w] === 1) s.add(w); });
+      DKW[k] = [...s];
+    }
+  }
+  return DKW[key];
+}
+function findDish(toks) {
+  let best = null;
+  for (const key of Object.keys(DISHES)) for (const k of dishKw(key)) {
+    const kw = k.split(/\s+/);
+    for (let i = 0; i + kw.length <= toks.length; i++) {
+      const ok = kw.every((x, j) => j === kw.length - 1 ? dishWord(toks[i + j], x) : toks[i + j] === x);
+      if (ok && (!best || k.length > best.kl)) best = {key, at: i, len: kw.length, kl: k.length};
+    }
+  }
+  return best;
+}
 function parseReq(text) {
   const toks = tokens(text);
   const G = ORDER.map(c => LANGS[c].gen);
+  const dsh = findDish(toks);
   const ph = {}; for (let i = 0; i < toks.length; i++) { const m = matchPhrase(toks, i); if (m) { ph[i] = m; i += m.len - 1; } }
   const inPh = new Set(); Object.entries(ph).forEach(([i, m]) => { for (let j = 0; j < m.len; j++) inPh.add(+i + j); });
+  const inDish = new Set(); if (dsh) for (let j = 0; j < dsh.len; j++) { inDish.add(dsh.at + j); if (ph[dsh.at + j]) delete ph[dsh.at + j]; }
   let type = null;
   const kwIn = (w, k) => w.startsWith(k) || (k.length >= 5 && w.includes(k));
   const typeOf = w => TYPES_K.findIndex((_, i) => i !== 7 && G.some(g => (g.kw[i] || []).some(k => kwIn(w, k))));
   let typeAt = -1;
-  for (const [j, w] of toks.entries()) { if (inPh.has(j)) continue; const i = typeOf(w); if (i >= 0) { type = TYPES_K[i]; typeAt = j; break; } }
-  if (!type && toks.some(w => G.some(g => g.kw[7].some(k => kwIn(w, k))))) type = "plate";
+  for (const [j, w] of toks.entries()) { if (dsh) break; if (inPh.has(j)) continue; const i = typeOf(w); if (i >= 0) { type = TYPES_K[i]; typeAt = j; break; } }
+  if (!type && !dsh && toks.some(w => G.some(g => g.kw[7].some(k => kwIn(w, k))))) type = "plate";
   const neg = new Set(G.flatMap(g => g.neg)), negAfter = new Set(G.flatMap(g => g.negAfter)), pos = new Set(["с", "со", "з", "with", "con", "mit", "avec", "და", "қосылған"]);
   const sufs = G.flatMap(g => g.negSuffix);
   const kwAll = G.flatMap(g => g.kw.flat());
@@ -1210,6 +1322,7 @@ function parseReq(text) {
     if (pos.has(w)) { negMode = false; return; }
     if (negAfter.has(w)) return;
     if (negAfter.has(toks[i + 1] || "")) isNeg = true;
+    if (inDish.has(i)) return;
     if (inPh.has(i)) { if (ph[i]) take(withQual(ph[i].k, toks[i + ph[i].len]), isNeg); return; }
     for (const sf of sufs) if (sf && w.endsWith(sf) && w.length > sf.length + 2) { w = w.slice(0, -sf.length); isNeg = true; }
     if (/^\d+(\.\d+)?%?$/.test(w)) return;
@@ -1224,9 +1337,10 @@ function parseReq(text) {
   });
   if (excl.has("tomato")) excl.add("passata");
   let unknown = false, guessed = false;
+  if (dsh) type = DISHES[dsh.key].type;
   if (!type) { const g = guessType(wants.filter(k => !excl.has(k))); if (g) { type = g; guessed = true; } else { type = "plate"; unknown = true; } }
   if (!["smoothie", "oatmeal"].includes(type)) { const i = wants.indexOf("protein"); if (i >= 0) wants.splice(i, 1); }
-  return {type, wants: wants.filter(k => !excl.has(k)), excl: [...excl], unknown, guessed, skipped};
+  return {type, dish: dsh ? dsh.key : null, wants: wants.filter(k => !excl.has(k)), excl: [...excl], unknown, guessed, skipped};
 }
 /* no dish word: choose the dish by the products ("овсяное молоко" -> smoothie, "яйца с сыром" -> omelet) */
 function guessType(ws) {
@@ -1247,7 +1361,29 @@ function guessType(ws) {
   return "plate";
 }
 const TYPES_K = ["salad", "bowl", "pasta", "wrap", "omelet", "oatmeal", "smoothie", "plate", "sandwich"];
+const STARCH = ["flour", "pasta", "rice", "ricenoodles", "potato", "buckwheat", "tortilla", "lavash", "bread"];
+const LEAN = [{}, {beef20: "beef", chickenthigh: "chicken", sour: "greek0", mayo: "greek0", cream10: "milk", mozzfull: "mozz", hard: "lightcheese", tvorog9: "tvorog2", tvorog5: "tvorog2", milk: "milkskim", bacon: "turkeyham"},
+  {beef20: "beef", mayo: "sour", cream10: "milk", mozzfull: "mozz", tvorog9: "tvorog5"}];
+function buildNamed(req, strat) {
+  const d = DISHES[req.dish], excl = new Set(req.excl), items = [];
+  const put = (k, g) => { const o = items.find(i => i.key === k); if (o) o.g += g; else items.push({key: k, g}); };
+  const wantsLeft = req.wants.filter(k => !d.items.some(([f]) => f === k));
+  const wantProt = wantsLeft.find(k => ROLE_OF(k) === "prot");
+  let swapped = false;
+  for (let [k, g] of d.items) {
+    if (wantProt && !swapped && ROLE_OF(k) === "prot" && !req.wants.includes(k)) { k = wantProt; swapped = true; wantsLeft.splice(wantsLeft.indexOf(k), 1); } // "борщ с курицей"
+    if (excl.has(k)) continue;
+    const lean = LEAN[strat][k]; if (lean && !excl.has(lean)) k = lean;
+    const role = ROLE_OF(k);
+    if (strat === 1) g *= role === "prot" ? 1.4 : ["oil", "butter"].includes(k) ? .5 : STARCH.includes(k) ? .8 : 1;
+    if (strat === 2) g *= role === "veg" ? 1.3 : ["oil", "butter"].includes(k) ? .7 : STARCH.includes(k) ? .85 : 1;
+    put(k, g);
+  }
+  wantsLeft.forEach(k => { if (!excl.has(k)) put(k, DEFG[ROLE_OF(k)] * (ROLE_OF(k) === "grain" ? (GMUL[k] || 1) : 1)); });
+  return items.map(i => ({key: i.key, g: rg(i.g)}));
+}
 function buildDish(req, strat, seed) {
+  if (req.dish && DISHES[req.dish]) return buildNamed(req, strat);
   const R = rngOf(seed + "|" + strat + "|" + req.type), excl = new Set(req.excl), used = new Set(), items = [];
   const pickR = arr => arr[Math.floor(R() * arr.length)];
   const wantsLeft = req.wants.slice();
@@ -1270,13 +1406,17 @@ function buildDish(req, strat, seed) {
   return items;
 }
 const lc = s => lang === "de" ? s : s.toLowerCase();
-function genTitle(type, items) {
+function genTitle(req, items) {
+  if (req.dish) return (L().dish || {})[req.dish] ? L().dish[req.dish].n : LANGS.en.dish[req.dish].n;
+  const type = req.type;
   const skip = new Set(["oil", "mayo", "soy", "honey", "maple", "greek0", "chia", "milk", "milkskim", "oatmilk", "almondmilk", "soymilk", "passata", "eggwhite", "sour", "cream10", "protein"]);
   const own = {pasta: "pasta", wrap: ["lavash", "tortilla"], oatmeal: "oats", omelet: "egg", sandwich: "bread"}[type] || [];
   const names = items.filter(i => !skip.has(i.key) && ![].concat(own).includes(i.key)).slice(0, 3).map(i => lc(fname(i.key).replace(/\s*\(.*\)$/, "")));
   return `${L().gen.types[TYPES_K.indexOf(type)]}: ${names.join(", ")}`;
 }
-function genSteps(type, items) {
+function genSteps(req, items) {
+  if (req.dish) return ((L().dish || {})[req.dish] || LANGS.en.dish[req.dish]).s;
+  const type = req.type;
   const by = r => items.filter(i => ROLE_OF(i.key) === r && !["lettuce", "arugula"].includes(i.key)).map(i => lc(fname(i.key).replace(/\s*\(.*\)$/, "")));
   const P = by("prot")[0] || "", G = by("grain")[0] || "", V = by("veg").join(", ");
   return L().gen.steps[type].map(s => { s = s.replace("{P}", P).replace("{G}", G).replace("{V}", V || "…"); return s.charAt(0).toUpperCase() + s.slice(1); });
@@ -1291,10 +1431,10 @@ function genCard(strat) {
   gen["items" + strat] = items;
   let m = [0, 0, 0, 0]; items.forEach(it => m = add4(m, mac(it.key, it.g)));
   const [vn, vd] = L().gen.var[strat];
-  return `<div class="gcard"><div class="ghead"><div class="dimg">${dishSVG(items, req.type, gen.seeds[strat])}</div><div><span class="vbadge v${strat}">${esc(vn)}</span><p class="t">${esc(genTitle(req.type, items))}</p><div class="c">${esc(vd)} · ${esc(T.oneServing)}</div></div></div>
+  return `<div class="gcard"><div class="ghead"><div class="dimg">${dishSVG(items, req.type, gen.seeds[strat])}</div><div><span class="vbadge v${strat}">${esc(vn)}</span><p class="t">${esc(genTitle(req, items))}</p><div class="c">${esc(vd)} · ${esc(T.oneServing)}</div></div></div>
     <div class="macros sm">${m.map((v, i) => `<div class="${i === 1 ? "p" : ""}"><b>${r0(v)}</b><span>${esc(T.g[i])}</span></div>`).join("")}</div>
     <ul class="gl">${items.map(it => `<li><span>${esc(fname(it.key))}</span><b>${it.g} ${esc(T.grams)}</b></li>`).join("")}</ul>
-    <ol class="steps sm">${genSteps(req.type, items).map(s => `<li><span>${esc(s)}</span></li>`).join("")}</ol>
+    <ol class="steps sm">${genSteps(req, items).map(s => `<li><span>${esc(s)}</span></li>`).join("")}</ol>
     <div class="row2"><button class="btn main" data-gsave="${strat}">${esc(T.saveMine)}</button><button class="btn" data-gday="${strat}">${esc(T.addDay)}</button><button class="btn" data-reroll="${strat}">↻ ${esc(T.reroll)}</button></div></div>`;
 }
 function renderGenOut() {
@@ -1303,6 +1443,11 @@ function renderGenOut() {
   const T = t(), req = gen.req;
   let h = `<div class="gmeta">`;
   if (req.unknown) h += `<p class="hint">${esc(T.genUnknown)}</p>`;
+  if (req.dish) {
+    const kws = DISHES[req.dish].kw.map(gw).filter(k => k.length >= 4 && !/\s/.test(k));
+    const rs = R.filter(r => { const tt = gw(RX(r).title); return kws.some(k => tt.split(/[\s-]+/).some(w => dishWord(w, k))); }).slice(0, 3);
+    if (rs.length) h += `<p class="hint">★ ${esc(T.genHaveRec)}: ${rs.map(r => `<a href="#recipe-${r.id}">${esc(RX(r).title)}</a>`).join(", ")}</p>`;
+  }
   if (req.guessed) h += `<p class="hint">${esc(T.genGuess)}: ${esc(L().gen.types[TYPES_K.indexOf(req.type)])}</p>`;
   if ((req.skipped || []).length) h += `<p class="hint">? ${esc(T.genSkip)}: ${req.skipped.map(esc).join(", ")}</p>`;
   if (req.wants.length) h += `<p class="hint">✓ ${esc(T.genUse)}: ${req.wants.map(k => esc(fname(k))).join(", ")}</p>`;
@@ -1454,8 +1599,8 @@ document.addEventListener("click", e => {
   if (el.closest("#genGo")) { const q = $("#gq").value.trim(); if (!q) { $("#gq").focus(); return; } runGen(q); renderGenOut(); $("#genOut").scrollIntoView({behavior: "smooth", block: "start"}); return; }
   const gx = el.closest("[data-gex]"); if (gx) { $("#gq").value = gx.dataset.gex; runGen(gx.dataset.gex); renderGenOut(); return; }
   const rr = el.closest("[data-reroll]"); if (rr) { gen.seeds[+rr.dataset.reroll] = Date.now() + "-" + Math.random(); renderGenOut(); return; }
-  const gsv = el.closest("[data-gsave]"); if (gsv) { const s = +gsv.dataset.gsave, items = gen["items" + s]; dishes.push({id: Date.now().toString(36), name: genTitle(gen.req.type, items), serv: 1, type: gen.req.type, items: items.map(i => ({key: i.key, g: i.g}))}); saveDishes(); toast(T.saved); renderMine(); return; }
-  const gdy = el.closest("[data-gday]"); if (gdy) { const s = +gdy.dataset.gday, items = gen["items" + s]; let m = [0, 0, 0, 0]; items.forEach(it => m = add4(m, mac(it.key, it.g))); addToDay({t: "x", n: 1, per: m, name: genTitle(gen.req.type, items)}); return; }
+  const gsv = el.closest("[data-gsave]"); if (gsv) { const s = +gsv.dataset.gsave, items = gen["items" + s]; dishes.push({id: Date.now().toString(36), name: genTitle(gen.req, items), serv: 1, type: gen.req.type, items: items.map(i => ({key: i.key, g: i.g}))}); saveDishes(); toast(T.saved); renderMine(); return; }
+  const gdy = el.closest("[data-gday]"); if (gdy) { const s = +gdy.dataset.gday, items = gen["items" + s]; let m = [0, 0, 0, 0]; items.forEach(it => m = add4(m, mac(it.key, it.g))); addToDay({t: "x", n: 1, per: m, name: genTitle(gen.req, items)}); return; }
   if (el.closest("#phDel")) { delete draft.photo; renderBuilder(); return; }
   const dk = el.closest("[data-dk]"); if (dk) { draft.items.push({key: dk.dataset.dk, g: 100}); renderBuilder(); const s = $("#ds"); s && s.focus(); return; }
   const drm = el.closest("[data-drm]"); if (drm) { draft.items.splice(+drm.dataset.drm, 1); renderBuilder(); return; }
