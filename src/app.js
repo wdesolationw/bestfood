@@ -1,4 +1,5 @@
 const IMGS = DATA.imgs, R = DATA.recipes, LANGS = DATA.langs, ORDER = DATA.order, FOOD = DATA.food, SUBS = DATA.subs;
+const PORTION = DATA.portion || {}, LOCAL = Object.keys(DATA.portion || {});
 const CLASSIC = DATA.classic, ALLERG = DATA.allerg, SHOPCAT = DATA.shopcat, VEGL = DATA.veglevel, PRESETS = DATA.presets, CUIS = DATA.cuisines, COACH = DATA.coach;
 const RATIO = {}; DATA.ratio.forEach(([a, b, r]) => RATIO[a + ">" + b] = r);
 const $ = s => document.querySelector(s);
@@ -335,7 +336,14 @@ function entryName(e) {
   if (e.t === "x") return e.name;
   return e.key ? fname(e.key) : e.name;
 }
-function addToDay(e, date) { const d = date || state.date; (diary[d] = diary[d] || []).push(e); saveDiary(); toast(t().added); }
+const slotNow = () => { const h = new Date().getHours(); return h < 11 ? "b" : h < 16 ? "l" : h < 21 ? "d" : "s"; };
+const entrySlot = e => e.m || "s";
+function addToDay(e, date, slot) { const d = date || state.date; e.m = e.m || slot || slotNow(); (diary[d] = diary[d] || []).push(e); saveDiary(); toast(t().added + " · " + t().slot[e.m]); }
+function recentFoods() {
+  const seen = new Map();
+  Object.keys(diary).sort().reverse().slice(0, 30).forEach(d => (diary[d] || []).slice().reverse().forEach(e => { if (e.t === "p" && e.key && FOOD[e.key] && !seen.has(e.key)) seen.set(e.key, e.g); }));
+  return [...seen].slice(0, 8);
+}
 function shiftDate(n) { const [y, m, d] = state.date.split("-").map(Number); state.date = iso(new Date(y, m - 1, d + n)); }
 function dateLabel() {
   if (state.date === todayIso()) return t().today;
@@ -374,15 +382,17 @@ function renderDay() {
   const wv = water[state.date] || 0, wg = waterGoal();
   h += `<div class="water"><div><b>${esc(T.waterT)}</b><span class="subtle">${fnum(wv / 1000)} / ${fnum(wg / 1000)} ${esc(T.liters)}</span></div><div class="bar"><i style="width:${Math.min(100, wv / wg * 100)}%;background:#3E8ED0"></i></div>
     <div class="qty"><button data-wt="-250" aria-label="−">−</button><span class="subtle">250 ${esc(T.ml)}</span><button data-wt="250" aria-label="+">+</button></div></div>`;
-  h += `<div class="row2"><button class="btn main" id="addProd">${esc(T.addProd)}</button><a class="btn" href="#mine">${esc(T.navMine)}</a></div>`;
-  if (!list.length) h += `<div class="empty">${esc(T.emptyDay)}</div>`;
-  else h += `<div class="entries">` + list.map((e, i) => {
+  h += `<div class="row2"><button class="btn" id="copyY">${esc(T.copyY)}</button><a class="btn" href="#mine">${esc(T.navMine)}</a></div>`;
+  const row = (e, i) => {
     const m = entryMacros(e);
     const qty = e.t === "p"
       ? `<div class="qty"><input type="number" inputmode="decimal" min="0" data-eg="${i}" value="${r0(e.g)}" aria-label="${esc(T.grams)}"><span class="x">${esc(T.grams)}</span><button data-erm="${i}" aria-label="${esc(T.remove)}">✕</button></div>`
       : `<div class="qty"><button data-en="${i}" data-d="-0.5" aria-label="−">−</button><span style="min-width:34px;text-align:center;font-weight:800">${fnum(e.n)}</span><button data-en="${i}" data-d="0.5" aria-label="+">+</button><button data-erm="${i}" aria-label="${esc(T.remove)}">✕</button></div>`;
     return `<div class="entry"><div><div class="nm">${esc(entryName(e))}</div><div class="sub2">${e.t === "p" ? "" : fnum(e.n) + " " + esc(T.portions) + " · "}${esc(fmtM(m))}</div></div>${qty}</div>`;
-  }).join("") + `</div>`;
+  };
+  h += SLOTS.map(sl => { const it = list.map((e, i) => [e, i]).filter(([e]) => entrySlot(e) === sl), kc = it.reduce((a, [e]) => a + entryMacros(e)[0], 0);
+    return `<section class="meal"><div class="mhd"><b>${esc(T.slot[sl])}</b><span>${it.length ? r0(kc) + " " + esc(T.kcal) : ""}</span><button class="rbtn madd" data-addm="${sl}" aria-label="${esc(T.addProd)} · ${esc(T.slot[sl])}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></div>${it.length ? `<div class="entries">${it.map(([e, i]) => row(e, i)).join("")}</div>` : ""}</section>`; }).join("");
+  if (!list.length) h += `<p class="hint">${esc(T.emptyDay)}</p>`;
   h += `<p class="note2">${esc(T.storageNote)}</p>`;
   $("#app").innerHTML = h;
 }
@@ -583,6 +593,7 @@ function renderSheet() {
     }).join("") + `</div>`;
     if (cur) h += `<button class="linkbtn" id="altReset">${esc(T.swapReset)}</button>`;
   } else if (sheetKind === "prod") {
+    if (sheetCtx.target !== "shop") h += `<div class="slotpick">` + SLOTS.map(s => `<button class="chip" data-psl="${s}" aria-pressed="${(sheetCtx.slot || slotNow()) === s}">${esc(T.slot[s])}</button>`).join("") + `</div>`;
     h += `<div class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="ps" type="search" placeholder="${esc(T.findProd)}" aria-label="${esc(T.findProd)}" autocomplete="off" value="${esc(sheetCtx.q || "")}"></div><div class="results" id="pres"></div>`;
     if (sheetCtx.key) h += `<div class="pick"><b>${esc(fname(sheetCtx.key))}</b><div class="grid2"><label class="field">${esc(T.grams)}<input id="pg" type="number" inputmode="decimal" min="0" value="${sheetCtx.g || 100}"></label><button class="btn main" id="pAdd" style="align-self:end;height:42px">${esc(T.addBtn)}</button></div><div class="sub2 subtle" id="pmac">${esc(fmtM(mac(sheetCtx.key, sheetCtx.g || 100)))}</div></div>`;
   } else if (sheetKind === "pick") {
@@ -597,7 +608,13 @@ function renderSheet() {
   if (sheetKind === "pick") fillPick();
 }
 function resultsHTML(keys, attr) { return keys.map(k => `<button ${attr}="${k}"><span>${esc(fname(k))}</span><small>${r0(FOOD[k][0])} ${esc(t().kcal)} · ${esc(t().p)} ${r0(FOOD[k][1])} / 100 ${esc(t().grams)}</small></button>`).join(""); }
-function fillProd() { const el = $("#pres"); if (el) el.innerHTML = resultsHTML(findFood(sheetCtx.q || ""), "data-pk"); }
+function fillProd() {
+  const el = $("#pres"); if (!el) return; const T = t();
+  if ((sheetCtx.q || "").trim()) { el.innerHTML = resultsHTML(findFood(sheetCtx.q), "data-pk"); return; }
+  const rec = recentFoods();
+  el.innerHTML = (rec.length ? `<p class="lbl">${esc(T.recent)}</p>` + rec.map(([k, g]) => `<button data-pk="${k}" data-pg="${r0(g)}"><span>${esc(fname(k))}</span><small>${r0(g)} ${esc(T.grams)} · ${r0(FOOD[k][0] * g / 100)} ${esc(T.kcal)}</small></button>`).join("") : "") +
+    `<p class="lbl">${esc(T.localT)}</p>` + LOCAL.map(k => `<button data-pk="${k}"><span>${esc(fname(k))}</span><small>1 ${esc(T.pcs)} ≈ ${PORTION[k]} ${esc(T.grams)} · ${r0(FOOD[k][0] * PORTION[k] / 100)} ${esc(T.kcal)}</small></button>`).join("");
+}
 function fillPick() {
   const el = $("#pkres"); if (!el) return; const q = sheetCtx.q || "", T = t();
   const rs = (q ? R.filter(r => matchQ(r, q)) : R.filter(r => favs.has(r.id)).concat(R.filter(r => !favs.has(r.id)))).slice(0, 12);
@@ -922,8 +939,12 @@ document.addEventListener("click", e => {
   if (el.closest("#lookReset")) { look = {mode: "auto", pal: "mint", custom: ""}; saveLook(); renderSheet(); return; }
   const al = el.closest("[data-alt]"); if (al) { const {rid, idx} = sheetCtx; (swaps[rid] = swaps[rid] || {})[idx] = al.dataset.alt; saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   if (el.closest("#altReset")) { const {rid, idx} = sheetCtx; if (swaps[rid]) { delete swaps[rid][idx]; if (!Object.keys(swaps[rid]).length) delete swaps[rid]; } saveSwaps(); closeSheet(); renderRecipe(rid); return; }
-  const pk = el.closest("[data-pk]"); if (pk) { sheetCtx.key = pk.dataset.pk; sheetCtx.g = sheetCtx.g || 100; renderSheet(); const g = $("#pg"); g && g.focus(); return; }
-  if (el.closest("#pAdd")) { const g = +($("#pg").value || 0); if (g > 0) { if (sheetCtx.target === "shop") { addItemsToShop([[sheetCtx.key, g]]); closeSheet(); renderShop(); } else { addToDay({t: "p", key: sheetCtx.key, g}); closeSheet(); renderDay(); } } return; }
+  const pk = el.closest("[data-pk]"); if (pk) { sheetCtx.key = pk.dataset.pk; sheetCtx.g = +pk.dataset.pg || PORTION[pk.dataset.pk] || 100; renderSheet(); const g = $("#pg"); g && g.focus(); return; }
+  const psl = el.closest("[data-psl]"); if (psl) { sheetCtx.slot = psl.dataset.psl; renderSheet(); return; }
+  const amb = el.closest("[data-addm]"); if (amb) { openSheet("prod", {q: "", slot: amb.dataset.addm}); return; }
+  if (el.closest("#copyY")) { const [y, mo, d] = state.date.split("-").map(Number), yd = iso(new Date(y, mo - 1, d - 1)), src = diary[yd] || [];
+    if (!src.length) { toast(t().emptyY); return; } (diary[state.date] = diary[state.date] || []).push(...JSON.parse(JSON.stringify(src))); saveDiary(); toast(t().copiedY); renderDay(); return; }
+  if (el.closest("#pAdd")) { const g = +($("#pg").value || 0); if (g > 0) { if (sheetCtx.target === "shop") { addItemsToShop([[sheetCtx.key, g]]); closeSheet(); renderShop(); } else { addToDay({t: "p", key: sheetCtx.key, g}, null, sheetCtx.slot || slotNow()); closeSheet(); renderDay(); } } return; }
   const pkr = el.closest("[data-pkr]"); if (pkr) { const r = R.find(x => x.id === +pkr.dataset.pkr); plan.d[state.planDay][sheetCtx.slot].push({t: "r", id: r.id, n: 1, mode: prof.defMode}); savePlan(); closeSheet(); renderPlan(); return; }
   const pkd = el.closest("[data-pkd]"); if (pkd) { plan.d[state.planDay][sheetCtx.slot].push({t: "d", id: pkd.dataset.pkd, n: 1}); savePlan(); closeSheet(); renderPlan(); return; }
   const tpd = el.closest("[data-tpd]"); if (tpd) { sheetCtx.day = +tpd.dataset.tpd; renderSheet(); return; }
@@ -954,7 +975,7 @@ document.addEventListener("click", e => {
   const pn = el.closest("[data-pn]"); if (pn) { const [sl, j] = pn.dataset.pn.split(":"), it = plan.d[state.planDay][sl][+j]; it.n = Math.max(0.5, Math.round((it.n + +pn.dataset.d) * 2) / 2); savePlan(); renderPlan(); return; }
   const prm = el.closest("[data-prm]"); if (prm) { const [sl, j] = prm.dataset.prm.split(":"); plan.d[state.planDay][sl].splice(+j, 1); savePlan(); renderPlan(); return; }
   if (el.closest("#planShop")) { shopFromPlan(); toast(T.shopMade); location.hash = "shop"; return; }
-  if (el.closest("#planToDay")) { const day = plan.d[state.planDay]; let n = 0; SLOTS.forEach(sl => day[sl].forEach(e2 => { const m = planEntryMac(e2).map(v => v / e2.n); (diary[todayIso()] = diary[todayIso()] || []).push(e2.t === "r" ? {t: "r", id: e2.id, n: e2.n, per: m, mode: e2.mode, name: planName(e2)} : {t: "d", id: e2.id, n: e2.n, per: m, name: planName(e2)}); n++; })); saveDiary(); toast(T.added + " (" + n + ")"); return; }
+  if (el.closest("#planToDay")) { const day = plan.d[state.planDay]; let n = 0; SLOTS.forEach(sl => day[sl].forEach(e2 => { const m = planEntryMac(e2).map(v => v / e2.n); (diary[todayIso()] = diary[todayIso()] || []).push(e2.t === "r" ? {t: "r", id: e2.id, n: e2.n, per: m, mode: e2.mode, name: planName(e2), m: sl} : {t: "d", id: e2.id, n: e2.n, per: m, name: planName(e2), m: sl}); n++; })); saveDiary(); toast(T.added + " (" + n + ")"); return; }
   if (el.closest("#planClear")) { if (state.presetArm !== "clear") { state.presetArm = "clear"; renderPlan(); return; } plan = {d: [0, 1, 2, 3, 4, 5, 6].map(() => ({b: [], l: [], d: [], s: []}))}; savePlan(); state.presetArm = null; renderPlan(); return; }
   const pre = el.closest("[data-pre]"); if (pre) { const i = +pre.dataset.pre; if (!planEmpty() && state.presetArm !== i) { state.presetArm = i; renderPlan(true); return; }
     const p = PRESETS[i]; plan = {d: p.days.map(d => ({b: d.b.map(x => ({t: "r", id: x[0], n: x[1], mode: "fit"})), l: d.l.map(x => ({t: "r", id: x[0], n: x[1], mode: "fit"})), d: d.d.map(x => ({t: "r", id: x[0], n: x[1], mode: "fit"})), s: d.s.map(x => ({t: "r", id: x[0], n: x[1], mode: "fit"}))}))};

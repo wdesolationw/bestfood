@@ -139,5 +139,22 @@
   "spices": 2,
   "broth": 2,
   "water": 2,
-  "coffee": 2
+  "coffee": 2,
+  "khinkali": 0,
+  "khach_adj": 1,
+  "khach_imer": 1,
+  "lobiani": 1,
+  "mchadi": 2,
+  "badrijani": 2,
+  "churchkhela": 2,
+  "shashlik_pork": 0,
+  "shashlik_chicken": 0,
+  "shawarma": 0,
+  "plov": 0,
+  "manti": 0,
+  "beshbarmak": 0,
+  "lagman": 0,
+  "samsa": 0,
+  "baursak": 1,
+  "kumis": 1
 }

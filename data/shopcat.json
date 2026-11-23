@@ -139,5 +139,22 @@
   "spices": "other",
   "broth": "other",
   "water": "other",
-  "coffee": "other"
+  "coffee": "other",
+  "khinkali": "other",
+  "khach_adj": "other",
+  "khach_imer": "other",
+  "lobiani": "other",
+  "mchadi": "other",
+  "badrijani": "other",
+  "churchkhela": "other",
+  "shashlik_pork": "meat",
+  "shashlik_chicken": "meat",
+  "shawarma": "other",
+  "plov": "other",
+  "manti": "other",
+  "beshbarmak": "other",
+  "lagman": "other",
+  "samsa": "other",
+  "baursak": "other",
+  "kumis": "dairy"
 }

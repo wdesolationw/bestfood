@@ -19,7 +19,7 @@ OUT = os.path.join(ROOT, "dist", "index.html")
 
 # Порядок ключей в объекте DATA и порядок языков (влияет на порядок в переключателе).
 KEYS = ["food", "subs", "ratio", "recipes", "imgs", "order", "langs", "classic", "allerg",
-        "shopcat", "veglevel", "presets", "cuisines", "coach"]
+        "shopcat", "veglevel", "presets", "cuisines", "coach", "portion"]
 LANG_ORDER = ["ru", "en", "uk", "kk", "ka", "es", "de", "fr"]
 
 
