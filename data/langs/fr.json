@@ -339,7 +339,11 @@
     "autoPlan": "Composer ma semaine selon mon objectif",
     "autoPlanD": "Je choisis recettes et portions sur 7 jours selon ton objectif de calories et de protéines. Les aliments exclus sont respectés.",
     "autoDone": "Semaine prête : environ {k} kcal et {p} g de protéines par jour",
-    "autoNeed": "Calcule d'abord ton objectif dans l'onglet « Moi »"
+    "autoNeed": "Calcule d'abord ton objectif dans l'onglet « Moi »",
+    "myPhoto": "Ta photo",
+    "photoReset": "Remettre la photo d'origine",
+    "photoSaved": "Photo enregistrée",
+    "photoFull": "Pas assez d'espace dans le navigateur pour la photo"
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],

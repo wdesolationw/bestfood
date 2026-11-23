@@ -175,7 +175,8 @@ function findFood(q) {
 }
 let toastT = null;
 function toast(msg) { const el = $("#toast"); el.textContent = msg; el.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => el.hidden = true, 2200); }
-const recImg = r => IMGS[r.id] ? `<img src="${IMGS[r.id]}" alt="" loading="lazy" decoding="async">` : r.kind && r.kind.startsWith("svg:") ? dishSVG(r.items.map(([i, k, g]) => ({key: k, g})), r.kind.slice(4), "r" + r.id) : "";
+let rphoto = load("brfy-rphoto", {});
+const recImg = r => rphoto[r.id] ? `<img src="${rphoto[r.id]}" alt="" loading="lazy" decoding="async" class="own">` : IMGS[r.id] ? `<img src="${IMGS[r.id]}" alt="" loading="lazy" decoding="async">` : r.kind && r.kind.startsWith("svg:") ? dishSVG(r.items.map(([i, k, g]) => ({key: k, g})), r.kind.slice(4), "r" + r.id) : "";
 const timeLbl = r => r.time >= 600 ? "" : `<span class="pill o">${r.time} ${esc(t().min)}</span>`;
 const VEGI = {
   1: '<path d="M5.5 18.5C5.5 10 10.5 5.5 19 5c0 8.5-4.5 13.5-13.5 13.5z"/><path d="M5.5 18.5 14 10"/>',
@@ -318,7 +319,7 @@ function renderRecipe(id) {
     <button class="rbtn" id="toPlan" aria-label="${esc(T.addPlan)}" title="${esc(T.addPlan)}">${ico('<rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4M12 12.5v5M9.5 15h5"/>')}</button>
     <button class="rbtn" id="toShop" aria-label="${esc(T.addShop)}" title="${esc(T.addShop)}">${ico('<path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>')}</button>
     <button class="rmain" id="toDay">${esc(T.addDay)}</button></div></div>
-  <div class="hero"><div class="dimg big">${recImg(r)}</div></div>
+  <div class="hero"><div class="dimg big">${recImg(r)}</div><label class="phbtn" for="rphIn" title="${esc(T.myPhoto)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span class="vh">${esc(T.myPhoto)}</span></label><input type="file" id="rphIn" accept="image/*" hidden>${rphoto[r.id] ? `<button class="linkbtn phreset" id="rphReset">${esc(T.photoReset)}</button>` : ""}</div>
   <div class="rstats"><div><span>${esc(T.goalK)}</span><b>${r0(mm[0])}</b></div><div><span>${esc(macName(0))}</span><b>${r.base.p == null ? "–" : r0(mm[1]) + " " + esc(T.grams)}</b></div>${r.time < 600 ? `<div><span>${esc(T.timeL)}</span><b>${r.time} ${esc(T.min)}</b></div>` : ""}<div><span>${esc(T.servings)}</span><b>${servOf(r)}</b></div></div>
   <h1 class="rtitle">${esc(x.title)}</h1>
   <div class="rtags">${tags.map(([k, l]) => `<button class="rtag" data-tg="${esc(k)}">${esc(l)}</button>`).join("")}</div>`;
@@ -1095,6 +1096,7 @@ document.addEventListener("click", e => {
   const al = el.closest("[data-alt]"); if (al) { const {rid, idx} = sheetCtx; (swaps[rid] = swaps[rid] || {})[idx] = al.dataset.alt; saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   if (el.closest("#altReset")) { const {rid, idx} = sheetCtx; if (swaps[rid]) { delete swaps[rid][idx]; if (!Object.keys(swaps[rid]).length) delete swaps[rid]; } saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   const pk = el.closest("[data-pk]"); if (pk) { sheetCtx.key = pk.dataset.pk; sheetCtx.g = +pk.dataset.pg || PORTION[pk.dataset.pk] || 100; renderSheet(); const g = $("#pg"); g && g.focus(); return; }
+  if (el.closest("#rphReset")) { const id = curRecipeId(); delete rphoto[id]; store.set("brfy-rphoto", JSON.stringify(rphoto)); renderRecipe(id); return; }
   if (el.closest("#cookGo")) { openCook(curRecipeId()); return; }
   if (el.closest("#ckClose")) { closeCook(); return; }
   if (el.closest("#ckNext")) { cook.i++; renderCook(); return; }
@@ -1226,7 +1228,18 @@ document.addEventListener("keydown", e => {
   if (e.key === "Enter" && e.target.id === "gq") { e.preventDefault(); $("#genGo").click(); return; }
   if (e.key === "Enter" && e.target.classList && e.target.classList.contains("card") && e.target.dataset.id) openRecipe(e.target);
 });
+function loadRecipePhoto(file, rid) {
+  const url = URL.createObjectURL(file), img = new Image();
+  img.onload = () => { const mx = 640, sc = Math.min(1, mx / Math.max(img.width, img.height)), c = document.createElement("canvas");
+    c.width = Math.round(img.width * sc); c.height = Math.round(img.height * sc); c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+    let d = c.toDataURL("image/webp", .75); if (!d.startsWith("data:image/webp")) d = c.toDataURL("image/jpeg", .75);
+    URL.revokeObjectURL(url); rphoto[rid] = d;
+    if (store.set("brfy-rphoto", JSON.stringify(rphoto))) toast(t().photoSaved); else { delete rphoto[rid]; toast(t().photoFull); }
+    renderRecipe(rid); };
+  img.onerror = () => URL.revokeObjectURL(url); img.src = url;
+}
 document.addEventListener("change", e => {
+  if (e.target.id === "rphIn") { const f = e.target.files && e.target.files[0]; if (f) loadRecipePhoto(f, curRecipeId()); return; }
   if (e.target.id === "bkFile") { const f = e.target.files && e.target.files[0]; if (f) { const r = new FileReader(); r.onload = () => restoreBackup(String(r.result)); r.readAsText(f); } return; }
   const id = e.target.id;
   if (id === "fk") state.kcal = e.target.value; else if (id === "fp") state.prot = e.target.value; else if (id === "fs") state.sort = e.target.value; else if (id === "fv") state.veg = e.target.value;

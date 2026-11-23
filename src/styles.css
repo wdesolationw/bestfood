@@ -705,3 +705,9 @@ ul.shop li.done::before{background:var(--ink);border-color:var(--ink)}
 .autop b{font-size:17px}
 .autop p{margin:2px 0 0;font-size:13.5px;color:var(--muted)}
 .autop .btn{align-self:flex-start}
+/* own recipe photo */
+.hero{position:relative}
+.phbtn{position:absolute;right:10px;bottom:10px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);color:#2A3430;display:grid;place-items:center;cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.2)}
+.phbtn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linejoin:round}
+.phreset{display:block;padding:8px 0 0}
+.dimg > img.own{filter:none}

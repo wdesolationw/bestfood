@@ -334,7 +334,11 @@
     "autoPlan": "Build my week for my target",
     "autoPlanD": "I'll pick recipes and portions for 7 days to match your calorie and protein target. Excluded foods are respected.",
     "autoDone": "Week ready: about {k} kcal and {p} g protein per day",
-    "autoNeed": "First calculate your target in the Me tab"
+    "autoNeed": "First calculate your target in the Me tab",
+    "myPhoto": "Your photo",
+    "photoReset": "Restore original photo",
+    "photoSaved": "Photo saved",
+    "photoFull": "Not enough browser storage for the photo"
   },
   "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
   "stop": ["with", "and", "the", "a", "of", "in"],

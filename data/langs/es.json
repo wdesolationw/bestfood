@@ -339,7 +339,11 @@
     "autoPlan": "Armar mi semana según mi objetivo",
     "autoPlanD": "Elegiré recetas y porciones para 7 días según tu objetivo de calorías y proteína. Se respetan los alimentos excluidos.",
     "autoDone": "Semana lista: unas {k} kcal y {p} g de proteína al día",
-    "autoNeed": "Primero calcula tu objetivo en la pestaña «Yo»"
+    "autoNeed": "Primero calcula tu objetivo en la pestaña «Yo»",
+    "myPhoto": "Tu foto",
+    "photoReset": "Restaurar la foto original",
+    "photoSaved": "Foto guardada",
+    "photoFull": "No hay espacio en el navegador para la foto"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],
