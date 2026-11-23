@@ -202,10 +202,11 @@ function renderTabs() {
   const on = $("#tabs .tab[aria-pressed=\"true\"]"), box = $("#tabs");
   if (on && box) box.scrollLeft = Math.max(0, on.offsetLeft - (box.clientWidth - on.offsetWidth) / 2);
 }
+let DOTD = null;
+function dotdPick(A) { const pool = A.filter(r => IMGS[r.id]); if (!pool.length) return null; let hsh = 0; for (const ch of todayIso()) hsh = (hsh * 31 + ch.charCodeAt(0)) >>> 0; return pool[hsh % pool.length]; }
 function dishOfDay(A) {
-  const T = t(), pool = A.filter(r => IMGS[r.id]); if (!pool.length) return "";
-  const s = todayIso(); let hsh = 0; for (const ch of s) hsh = (hsh * 31 + ch.charCodeAt(0)) >>> 0;
-  const r = pool[hsh % pool.length], x = RX(r), m = recipeMacros(r);
+  const T = t(), r = dotdPick(A); if (!r) return "";
+  const x = RX(r), m = recipeMacros(r);
   return `<section class="dotd"><div class="card rcard wide" role="link" tabindex="0" data-id="${r.id}"><div class="dimg">${recImg(r)}</div>
     <span class="dtag">${esc(T.dotd)}</span>
     <div class="ov"><p class="t">${esc(x.title)}</p><div class="m"><b>${r0(m[0])}</b> ${esc(T.kcal)} · ${esc(T.p)} ${r.base.p == null ? "?" : r0(m[1])}${r.time < 600 ? ` · ${r.time} ${esc(T.min)}` : ""}</div></div></div></section>`;
@@ -247,13 +248,14 @@ document.addEventListener("keydown", e => { if (!cook.on) return; if (e.key === 
 (() => { let x0 = null; document.addEventListener("touchstart", e => { if (cook.on && e.target.closest("#cook .ckbody")) x0 = e.touches[0].clientX; }, {passive: true});
   document.addEventListener("touchend", e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 60) { const b = $(dx < 0 ? "#ckNext" : "#ckPrev"); b && !b.disabled && b.click(); } }, {passive: true}); })();
 function recCard(r) {
+  if (DOTD === null) { DOTD = (dotdPick(R.filter(o => !warnOf(o).length)) || {}).id || 0; }
   const T = t(), x = RX(r), m = recipeMacros(r), w = warnOf(r);
   const badges = (r.var ? `<span class="bdg">${esc(T.plus)}</span>` : "") + (hasSwaps(r) || autoOf(r) ? `<span class="bdg">⇄</span>` : "") + (w.length ? `<span class="bdg w">⚠</span>` : "") + vegLbl(r);
   return `<div class="card rcard" role="link" tabindex="0" data-id="${r.id}">
     <div class="dimg">${recImg(r)}</div>
     <button class="fav" data-f="${r.id}" aria-pressed="${favs.has(r.id)}" aria-label="${esc(T.favaria)}">${favs.has(r.id) ? "★" : "☆"}</button>
     ${badges ? `<div class="bdgs">${badges}</div>` : ""}
-    <div class="ov"><p class="t">${esc(x.title)}</p><div class="m"><b>${r0(m[0])}</b> ${esc(T.kcal)} · ${esc(T.p)} ${r.base.p == null ? "?" : r0(m[1])}${r.time < 600 ? ` · ${r.time} ${esc(T.min)}` : ""}</div></div></div>`;
+    <div class="ov">${DOTD === r.id ? `<span class="dtag in">${esc(T.dotd)}</span>` : ""}<p class="t">${esc(x.title)}</p><div class="m"><b>${r0(m[0])}</b> ${esc(T.kcal)} · ${esc(T.p)} ${r.base.p == null ? "?" : r0(m[1])}${r.time < 600 ? ` · ${r.time} ${esc(T.min)}` : ""}</div></div></div>`;
 }
 const vt = {id: null}, laneX = {}; let listY = 0;
 const saveListPos = () => { listY = scrollY; document.querySelectorAll(".lane").forEach(l => laneX[l.dataset.ln] = l.scrollLeft); };
@@ -271,6 +273,7 @@ function renderList() {
     <p class="flbl">${esc(T.base)}</p><div class="chips" role="group" aria-label="${esc(T.base)}">` + BASES.map(b => `<button class="chip" data-b="${b}" aria-pressed="${state.base === b}">${esc(L().bases[b])}</button>`).join("") + `</div>
     <p class="flbl">${esc(T.quickl)}</p><div class="chips" role="group" aria-label="${esc(T.quickl)}">` + L().quick.map(w => `<button class="chip" data-w="${esc(w)}" aria-pressed="${state.q === w}">${esc(w)}</button>`).join("") + `</div></details>`;
   const lanes = !nf && !state.q && state.cat < 0 && !state.fav && !state.quick;
+  if (lanes) DOTD = (dotdPick(A) || {}).id || null;
   if (!lanes) h += (state.cat >= 0 && !state.fav && !state.quick) ? `<p class="sub">${esc(catSub(state.cat))}</p>` : `<p class="sub">${esc(T.found)}${A.length}</p>`;
   if (hidden) h += `<p class="hint">${esc(T.hiddenN.replace("{n}", hidden))} <button class="linkbtn" id="showAll" style="padding:0">${esc(T.showAll)}</button></p>`;
   if (!A.length) h += `<div class="empty"><b>${esc(T.none)}</b>${esc(T.none2)}<br><br><button class="btn" id="reset">${esc(T.reset)}</button></div>`;
