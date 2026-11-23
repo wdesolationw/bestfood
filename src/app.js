@@ -197,7 +197,20 @@ function renderTabs() {
   $("#tabs").innerHTML = tab('data-c="-1"', allOn, T.all, R.length) + tab('data-quick="1"', state.quick, T.quickT, R.filter(r => r.time <= 25).length) +
     CATORDER.map(i => tab(`data-c="${i}"`, state.cat === i && !state.fav && !state.quick, catShort(i), inCat(i))).join("") +
     `<a class="tab" href="#prep">${esc(T.prepT)}</a>` + tab('data-fav="1"', state.fav, T.fav, favs.size) + `<a class="tab" href="#zameny" id="subsLink">${esc(T.sub)}</a>`;
+  const on = $("#tabs .tab[aria-pressed=\"true\"]"), box = $("#tabs");
+  if (on && box) box.scrollLeft = Math.max(0, on.offsetLeft - (box.clientWidth - on.offsetWidth) / 2);
 }
+function recCard(r) {
+  const T = t(), x = RX(r), m = recipeMacros(r), w = warnOf(r);
+  const badges = (r.var ? `<span class="bdg">${esc(T.plus)}</span>` : "") + (hasSwaps(r) || autoOf(r) ? `<span class="bdg">⇄</span>` : "") + (w.length ? `<span class="bdg w">⚠</span>` : "") + vegLbl(r);
+  return `<div class="card rcard" role="link" tabindex="0" data-id="${r.id}">
+    <div class="dimg">${recImg(r)}</div>
+    <button class="fav" data-f="${r.id}" aria-pressed="${favs.has(r.id)}" aria-label="${esc(T.favaria)}">${favs.has(r.id) ? "★" : "☆"}</button>
+    ${badges ? `<div class="bdgs">${badges}</div>` : ""}
+    <div class="ov"><p class="t">${esc(x.title)}</p><div class="m"><b>${r0(m[0])}</b> ${esc(T.kcal)} · ${esc(T.p)} ${r.base.p == null ? "?" : r0(m[1])}${r.time < 600 ? ` · ${r.time} ${esc(T.min)}` : ""}</div></div></div>`;
+}
+const vt = {id: null}, laneX = {}; let listY = 0;
+const saveListPos = () => { listY = scrollY; document.querySelectorAll(".lane").forEach(l => laneX[l.dataset.ln] = l.scrollLeft); };
 function renderList() {
   const T = t(), A = filtered(), hidden = BANNED.size && !state.showAll ? filtered(true).length - A.length : 0;
   let h = "";
@@ -211,18 +224,17 @@ function renderList() {
     <p class="flbl">${esc(T.cuisT)}</p><div class="chips" role="group" aria-label="${esc(T.cuisT)}">` + [null, ...CUIS].map(c => `<button class="chip" data-cu="${c || ""}" aria-pressed="${state.cuis === c}">${esc(c ? T.cu[c] : T.allCu)}</button>`).join("") + `</div>
     <p class="flbl">${esc(T.base)}</p><div class="chips" role="group" aria-label="${esc(T.base)}">` + BASES.map(b => `<button class="chip" data-b="${b}" aria-pressed="${state.base === b}">${esc(L().bases[b])}</button>`).join("") + `</div>
     <p class="flbl">${esc(T.quickl)}</p><div class="chips" role="group" aria-label="${esc(T.quickl)}">` + L().quick.map(w => `<button class="chip" data-w="${esc(w)}" aria-pressed="${state.q === w}">${esc(w)}</button>`).join("") + `</div></details>`;
-  h += (state.cat >= 0 && !state.fav && !state.quick) ? `<p class="sub">${esc(catSub(state.cat))}</p>` : `<p class="sub">${esc(T.found)}${A.length}</p>`;
+  const lanes = !nf && !state.q && state.cat < 0 && !state.fav && !state.quick;
+  if (!lanes) h += (state.cat >= 0 && !state.fav && !state.quick) ? `<p class="sub">${esc(catSub(state.cat))}</p>` : `<p class="sub">${esc(T.found)}${A.length}</p>`;
   if (hidden) h += `<p class="hint">${esc(T.hiddenN.replace("{n}", hidden))} <button class="linkbtn" id="showAll" style="padding:0">${esc(T.showAll)}</button></p>`;
   if (!A.length) h += `<div class="empty"><b>${esc(T.none)}</b>${esc(T.none2)}<br><br><button class="btn" id="reset">${esc(T.reset)}</button></div>`;
-  else h += `<div class="list">` + A.map(r => {
-    const x = RX(r), m = recipeMacros(r), w = warnOf(r);
-    const vn = r.var ? `<span class="pill o">${esc(T.plus)}</span>` : "", sw = hasSwaps(r) || autoOf(r) ? `<span class="pill o">⇄</span>` : "", wn = w.length ? `<span class="pill p">⚠</span>` : "";
-    return `<div class="card" role="link" tabindex="0" data-id="${r.id}">
-      <div class="dimg">${recImg(r)}<button class="fav" data-f="${r.id}" aria-pressed="${favs.has(r.id)}" aria-label="${esc(T.favaria)}">${favs.has(r.id) ? "★" : "☆"}</button>${r.time < 600 ? `<span class="ctime">${r.time} ${esc(T.min)}</span>` : ""}</div>
-      <div class="cbody"><p class="t">${esc(x.title)}</p><div class="c">${esc(catName(r.cat))}</div>
-      <div class="meta"><span class="kc">${r0(m[0])} <small>${esc(T.kcal)}</small></span><span class="pill p">${esc(T.p)} ${r.base.p == null ? "?" : r0(m[1])}</span>${vegLbl(r)}${vn}${sw}${wn}</div></div></div>`;
-  }).join("") + `</div>`;
+  else if (lanes) h += CATORDER.map(i => { const L2 = A.filter(r => r.cat === i); if (!L2.length) return "";
+    return `<section class="lsec"><div class="lhd"><h3>${esc(catName(i))}</h3><button class="lmore" data-lane="${i}">${esc(T.all)} ${L2.length} ›</button></div>
+      <div class="lane" data-ln="${i}">${L2.map(recCard).join("")}</div></section>`; }).join("");
+  else h += `<div class="list">` + A.map(recCard).join("") + `</div>`;
   $("#app").innerHTML = h;
+  if (lanes) document.querySelectorAll(".lane").forEach(l => { const x = laneX[l.dataset.ln]; if (x) l.scrollLeft = x; });
+  if (vt.id != null) { const im = document.querySelector(`.rcard[data-id="${vt.id}"] .dimg > :first-child`); if (im) im.style.viewTransitionName = "dish"; }
   $("#fl").addEventListener("toggle", e => { state.fopen = e.target.open; });
   $("#fk").value = state.kcal; $("#fp").value = state.prot; $("#fs").value = state.sort; $("#fv").value = state.veg;
 }
@@ -846,8 +858,19 @@ function renderGenOut() {
 
 
 /* ---------- routing ---------- */
+let lastHash = location.hash;
+const reduceMotion = () => window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 function route() {
-  const h = location.hash, home = (h === "" || h === "#");
+  const h = location.hash, prev = lastHash; lastHash = h;
+  const isHome = x => x === "" || x === "#", isRec = x => /^#recipe-\d+$/.test(x);
+  const morph = (isHome(prev) && isRec(h)) || (isRec(prev) && isHome(h));
+  if (isRec(prev) && !isHome(h)) vt.id = null;
+  const done = () => { document.querySelectorAll("[style*='view-transition-name']").forEach(e => e.style.viewTransitionName = ""); };
+  if (morph && document.startViewTransition && !reduceMotion()) { const tr = document.startViewTransition(() => routeNow(h, prev)); tr.finished.then(done, done); }
+  else { routeNow(h, prev); done(); if (!reduceMotion()) { const a = $("#app"); a.classList.remove("enter"); void a.offsetWidth; a.classList.add("enter"); } }
+}
+function routeNow(h, prev) {
+  const home = (h === "" || h === "#");
   const nav = /^#(day|plan|shop|prep)$/.test(h) ? "day" : /^#(mine|dish-)/.test(h) ? "mine" : /^#me/.test(h) ? "me" : "r";
   chrome(nav);
   $("#tabs").hidden = !home; $("#searchBox").hidden = !home;
@@ -864,7 +887,16 @@ function route() {
   else if (/^#dish-\w+$/.test(h)) { const id = h.slice(6); const d = dishes.find(x => x.id === id); if (!d) { location.hash = "mine"; return; } if (!draft || draft.id !== id) draft = JSON.parse(JSON.stringify(d)); renderBuilder(); }
   else { renderTabs(); renderList(); }
   if (!/^#(dish-)/.test(h)) state.delArm = false;
-  if (h === "#prep") { const p = $("#presets"); p && p.scrollIntoView({block: "start"}); } else if (h !== "#me-coach") scrollTo(0, 0);
+  if (h === "#prep") { const p = $("#presets"); p && p.scrollIntoView({block: "start"}); }
+  else if (home && /^#recipe-/.test(prev || "")) scrollTo(0, listY);
+  else if (h !== "#me-coach") scrollTo(0, 0);
+  if (/^#recipe-\d+$/.test(h) && vt.id === +h.slice(8)) { const hi = document.querySelector(".hero .dimg > :first-child"); if (hi) hi.style.viewTransitionName = "dish"; }
+}
+function openRecipe(card) {
+  saveListPos(); vt.id = +card.dataset.id;
+  document.querySelectorAll("[style*='view-transition-name']").forEach(e => e.style.viewTransitionName = "");
+  const im = card.querySelector(".dimg > :first-child"); if (im) im.style.viewTransitionName = "dish";
+  location.hash = "recipe-" + card.dataset.id;
 }
 function curRecipeId() { const m = /^#recipe-(\d+)$/.exec(location.hash); return m ? +m[1] : null; }
 const rerender = () => { const h = location.hash; if (/^#recipe/.test(h)) renderRecipe(curRecipeId()); else if (h === "#me") renderMe(); else if (h === "#plan" || h === "#prep") renderPlan(h === "#prep"); else if (h === "#shop") renderShop(); else if (h === "#day") renderDay(); };
@@ -971,7 +1003,8 @@ document.addEventListener("click", e => {
   if (el.closest("#showAll")) { state.showAll = true; renderList(); return; }
   const b = el.closest("[data-b]"); if (b) { state.base = state.base === b.dataset.b ? null : b.dataset.b; state.fopen = true; renderList(); return; }
   const w = el.closest("[data-w]"); if (w) { state.q = state.q === w.dataset.w ? "" : w.dataset.w; $("#q").value = state.q; $("#qx").hidden = !state.q; state.fopen = true; renderList(); return; }
-  const card = el.closest(".card[data-id]"); if (card) { location.hash = "recipe-" + card.dataset.id; return; }
+  const lm = el.closest("[data-lane]"); if (lm) { state.cat = +lm.dataset.lane; state.fav = false; state.quick = false; renderTabs(); renderList(); scrollTo(0, 0); return; }
+  const card = el.closest(".card[data-id]"); if (card) { openRecipe(card); return; }
   if (el.closest("#back")) { location.hash = ""; return; }
   if (el.closest("#reset")) { Object.assign(state, {cat: -1, quick: false, cuis: null, veg: "any", base: null, kcal: "any", prot: "any", sort: "def", q: "", fav: false}); $("#q").value = ""; $("#qx").hidden = true; renderTabs(); renderList(); return; }
   const li = el.closest(".ing li[data-i]"); if (li && !li.classList.contains("note") && !li.classList.contains("swp")) { const id = curRecipeId(), i = +li.dataset.i; done[id].has(i) ? done[id].delete(i) : done[id].add(i); li.classList.toggle("done"); return; }
@@ -981,7 +1014,7 @@ document.addEventListener("click", e => {
 document.addEventListener("keydown", e => {
   if (e.key === "Escape" && !$("#sheet").hidden) { closeSheet(); return; }
   if (e.key === "Enter" && e.target.id === "gq") { e.preventDefault(); $("#genGo").click(); return; }
-  if (e.key === "Enter" && e.target.classList && e.target.classList.contains("card") && e.target.dataset.id) location.hash = "recipe-" + e.target.dataset.id;
+  if (e.key === "Enter" && e.target.classList && e.target.classList.contains("card") && e.target.dataset.id) openRecipe(e.target);
 });
 document.addEventListener("change", e => {
   const id = e.target.id;
