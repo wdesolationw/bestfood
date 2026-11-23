@@ -464,6 +464,33 @@ function calcNorm() {
   const p = w * (prof.aim === "maintain" ? 1.6 : 1.8), f = w * .9, c = Math.max(0, (k - p * 4 - f * 9) / 4);
   return {k: Math.round(k / 10) * 10, p: r0(p), f: r0(f), c: r0(c), floor, tdee: r0(tdee)};
 }
+/* ---------- coach report & backup ---------- */
+function coachReport() {
+  const T = t(), ds = [...Array(7)].map((_, i) => isoAgo(6 - i)), dm = d => d.slice(8) + "." + d.slice(5, 7);
+  const L = [T.rpHead.replace("{a}", dm(ds[0])).replace("{b}", dm(ds[6]))];
+  if (+goal.k > 0) L.push(T.rpNorm.replace("{k}", r0(+goal.k)).replace("{p}", r0(+goal.p || 0)));
+  L.push("");
+  ds.forEach(d => { const tt = dayTot(d), w = water[d] || 0, wd = (new Date(+d.slice(0, 4), +d.slice(5, 7) - 1, +d.slice(8)).getDay() + 6) % 7;
+    L.push(`${wdName(wd)} ${dm(d)}: ` + (logged(d) ? `${r0(tt[0])} ${T.kcal} · ${T.p} ${r0(tt[1])} · ${T.fL} ${r0(tt[2])} · ${T.cL} ${r0(tt[3])}` : T.rpEmpty) + (w ? ` · ${T.rpWater} ${fnum(w / 1000)} ${T.liters}` : "")); });
+  const lg = ds.filter(logged), av = i => lg.length ? r0(lg.reduce((a, d) => a + dayTot(d)[i], 0) / lg.length) : 0;
+  L.push(""); if (lg.length) L.push(T.rpAvg.replace("{k}", av(0)).replace("{p}", av(1)));
+  L.push(T.rpDays.replace("{n}", lg.length));
+  const low = lg.filter(d => dayTot(d)[0] < 1000).length; if (low) L.push("⚠ " + T.rpLow.replace("{n}", low));
+  const wk = Object.keys(weights).filter(d => d >= ds[0]).sort(); if (wk.length) { const a = +weights[wk[0]], b = +weights[wk[wk.length - 1]], dd = Math.round((b - a) * 10) / 10;
+    L.push(T.rpWeight.replace("{a}", fnum(a)).replace("{b}", fnum(b)).replace("{d}", (dd > 0 ? "+" : "") + fnum(dd))); }
+  return L.join("\n");
+}
+const BK_KEYS = () => Object.keys(localStorage).filter(k => k.startsWith("brfy-"));
+function backupJSON() { const o = {app: "bestfood", v: 1, at: new Date().toISOString(), data: {}}; try { BK_KEYS().forEach(k => o.data[k] = localStorage.getItem(k)); } catch (e) {} return JSON.stringify(o); }
+const toB64 = s => btoa(unescape(encodeURIComponent(s))), fromB64 = s => decodeURIComponent(escape(atob(s.replace(/\s+/g, ""))));
+function restoreBackup(txt) {
+  let o; try { o = JSON.parse(txt.trim().startsWith("{") ? txt : fromB64(txt.trim())); } catch (e) { o = null; }
+  if (!o || o.app !== "bestfood" || typeof o.data !== "object") { toast(t().bkBad); return false; }
+  try { BK_KEYS().forEach(k => localStorage.removeItem(k)); Object.entries(o.data).forEach(([k, v]) => { if (k.startsWith("brfy-")) localStorage.setItem(k, v); }); } catch (e) { toast(t().bkBad); return false; }
+  toast(t().bkDone); setTimeout(() => location.reload(), 600); return true;
+}
+async function copyText(txt, msg) { try { await navigator.clipboard.writeText(txt); toast(msg); } catch (e) { const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); toast(msg); } catch (e2) {} ta.remove(); } }
+
 /* ---------- progress ---------- */
 const isoAgo = n => { const d = new Date(); d.setDate(d.getDate() - n); return iso(d); };
 const dayTot = d => (diary[d] || []).reduce((a, e) => add4(a, entryMacros(e)), [0, 0, 0, 0]);
@@ -555,6 +582,11 @@ function renderMe(focus) {
     <div class="chips">${prof.excl.map(k => `<button class="chip" data-nerm="${k}" aria-pressed="true">${esc(fname(k))} ✕</button>`).join("")}</div></section>`;
   h += `<section class="mebox"><h2>${esc(T.defModeT)}</h2><div class="modes" style="grid-template-columns:1fr 1fr"><button data-dm="fit" aria-pressed="${prof.defMode === "fit"}">${esc(T.modeFit)}</button><button data-dm="classic" aria-pressed="${prof.defMode === "classic"}">${esc(T.modeClassic)}</button></div></section>`;
   const links = [["telegram", COACH.telegram], ["instagram", COACH.instagram], ["whatsapp", COACH.whatsapp]].filter(x => x[1]);
+  h += `<section class="mebox"><h2>${esc(T.reportT)}</h2><p class="hint">${esc(T.reportD)}</p><pre class="report" id="rpTxt">${esc(coachReport())}</pre>
+    <div class="row2"><button class="btn main" id="rpTg">${esc(T.reportTg)}</button><button class="btn" id="rpCopy">${esc(T.copy)}</button></div></section>`;
+  h += `<section class="mebox"><h2>${esc(T.backupT)}</h2><p class="hint">${esc(T.backupD)}</p>
+    <div class="row2"><button class="btn main" id="bkSave">${esc(T.bkSave)}</button><button class="btn" id="bkCode">${esc(T.bkCode)}</button><label class="btn" for="bkFile">${esc(T.bkLoad)}</label><input type="file" id="bkFile" accept=".json,application/json" hidden></div>
+    <div class="bkpaste"><textarea id="bkIn" rows="2" placeholder="${esc(T.bkPaste)}"></textarea><button class="btn" id="bkRestore">${esc(state.bkArm ? T.bkSure : T.bkRestore)}</button></div></section>`;
   h += `<section class="mebox coach" id="coach"><h2>${esc(T.coachT)}</h2><p>${esc(T.coachIntro)}</p><ul class="tips">${T.tips.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
     <div class="row2">${links.length ? links.map(([n, u]) => `<a class="btn main" href="${esc(u)}" target="_blank" rel="noopener">${esc(T.wantProg)} · ${n[0].toUpperCase() + n.slice(1)}</a>`).join("") : `<p class="subtle">${esc(T.coachSoon)}</p>`}</div></section>`;
   h += `<p class="note2">${esc(T.storageNote)}</p>`;
@@ -993,6 +1025,11 @@ document.addEventListener("click", e => {
   const al = el.closest("[data-alt]"); if (al) { const {rid, idx} = sheetCtx; (swaps[rid] = swaps[rid] || {})[idx] = al.dataset.alt; saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   if (el.closest("#altReset")) { const {rid, idx} = sheetCtx; if (swaps[rid]) { delete swaps[rid][idx]; if (!Object.keys(swaps[rid]).length) delete swaps[rid]; } saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   const pk = el.closest("[data-pk]"); if (pk) { sheetCtx.key = pk.dataset.pk; sheetCtx.g = +pk.dataset.pg || PORTION[pk.dataset.pk] || 100; renderSheet(); const g = $("#pg"); g && g.focus(); return; }
+  if (el.closest("#rpCopy")) { copyText(coachReport(), t().reportCopied); return; }
+  if (el.closest("#rpTg")) { window.open("https://t.me/share/url?url=%20&text=" + encodeURIComponent(coachReport()), "_blank", "noopener"); return; }
+  if (el.closest("#bkSave")) { const b = new Blob([backupJSON()], {type: "application/json"}), a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "bestfood-" + todayIso() + ".json"; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500); return; }
+  if (el.closest("#bkCode")) { copyText(toB64(backupJSON()), t().bkCodeCopied); return; }
+  if (el.closest("#bkRestore")) { const v = ($("#bkIn") || {}).value || ""; if (!v.trim()) return; if (!state.bkArm) { state.bkArm = true; el.closest("#bkRestore").textContent = t().bkSure; return; } state.bkArm = false; restoreBackup(v); return; }
   const snb = el.closest("[data-sn]"); if (snb) { state.statN = +snb.dataset.sn; renderStats(); return; }
   const cha = el.closest("#chkApply"); if (cha) { const k = +cha.dataset.k, dk = k - +goal.k; goal = Object.assign({}, goal, {k, c: Math.max(0, r0(+goal.c + dk / 4))}); store.set("brfy-goal", JSON.stringify(goal)); store.set("brfy-checkin", JSON.stringify(todayIso())); toast(t().chkApplied); renderStats(); return; }
   const psl = el.closest("[data-psl]"); if (psl) { sheetCtx.slot = psl.dataset.psl; renderSheet(); return; }
@@ -1108,6 +1145,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "Enter" && e.target.classList && e.target.classList.contains("card") && e.target.dataset.id) openRecipe(e.target);
 });
 document.addEventListener("change", e => {
+  if (e.target.id === "bkFile") { const f = e.target.files && e.target.files[0]; if (f) { const r = new FileReader(); r.onload = () => restoreBackup(String(r.result)); r.readAsText(f); } return; }
   const id = e.target.id;
   if (id === "fk") state.kcal = e.target.value; else if (id === "fp") state.prot = e.target.value; else if (id === "fs") state.sort = e.target.value; else if (id === "fv") state.veg = e.target.value;
   else if (id === "svn") { const r = R.find(x => x.id === curRecipeId()); state.serv[r.id] = Math.max(1, Math.round(+e.target.value || 1)); renderRecipe(r.id); return; }
