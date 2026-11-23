@@ -135,7 +135,7 @@
     ],
     "genUse": "Included",
     "genNo": "Without",
-    "genUnknown": "I didn't recognise the dish type, so I made a plate: protein, side and vegetables.",
+    "genUnknown": "Couldn't tell what to make, so here is a plate: protein, side and veg. Add a product or a dish type.",
     "reroll": "Another option",
     "saveMine": "Save to my dishes",
     "oneServing": "1 serving",
@@ -344,7 +344,8 @@
     "portionT": "portion",
     "cafesPizza": "Pizza",
     "westT": "approx. weight, KBJU from the menu",
-    "genSkip": "Not found in the food list"
+    "genSkip": "Not found in the food list",
+    "genGuess": "No dish type given — picked from the products"
   },
   "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
   "stop": ["with", "and", "the", "a", "of", "in"],

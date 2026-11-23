@@ -135,7 +135,7 @@
     ],
     "genUse": "Berücksichtigt",
     "genNo": "Ohne",
-    "genUnknown": "Ich habe die Art des Gerichts nicht erkannt und einen Teller gemacht: Eiweiß, Beilage und Gemüse.",
+    "genUnknown": "Unklar, was gekocht werden soll – also ein Teller: Eiweiß, Beilage, Gemüse. Nenne eine Zutat oder ein Gericht.",
     "reroll": "Andere Variante",
     "saveMine": "In meinen Gerichten speichern",
     "oneServing": "1 Portion",
@@ -344,7 +344,8 @@
     "portionT": "Portion",
     "cafesPizza": "Pizza",
     "westT": "Gewicht ca., Nährwerte laut Menü",
-    "genSkip": "Nicht in der Lebensmittelliste"
+    "genSkip": "Nicht in der Lebensmittelliste",
+    "genGuess": "Kein Gerichtstyp angegeben — nach den Zutaten gewählt"
   },
   "quick": ["Pasta", "Reis", "Hähnchen", "Quark", "Banane", "Schokolade"],
   "stop": ["mit", "und", "der", "die", "das", "ein", "eine", "im", "in"],

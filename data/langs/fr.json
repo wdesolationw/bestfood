@@ -135,7 +135,7 @@
     ],
     "genUse": "Pris en compte",
     "genNo": "Sans",
-    "genUnknown": "Je n'ai pas reconnu le type de plat, alors j'ai fait une assiette : protéine, accompagnement et légumes.",
+    "genUnknown": "Je n'ai pas compris quoi préparer, voici donc une assiette : protéine, accompagnement et légumes. Indique un produit ou un type de plat.",
     "reroll": "Autre version",
     "saveMine": "Enregistrer dans mes plats",
     "oneServing": "1 portion",
@@ -349,7 +349,8 @@
     "portionT": "portion",
     "cafesPizza": "Pizza",
     "westT": "poids approx., valeurs du menu",
-    "genSkip": "Absent de la liste d'aliments"
+    "genSkip": "Absent de la liste d'aliments",
+    "genGuess": "Type de plat non précisé — choisi d'après les produits"
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],

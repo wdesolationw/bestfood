@@ -135,7 +135,7 @@
     ],
     "genUse": "Incluido",
     "genNo": "Sin",
-    "genUnknown": "No reconocí el tipo de plato, así que hice un plato combinado: proteína, guarnición y verduras.",
+    "genUnknown": "No entendí qué preparar, así que hice un plato: proteína, guarnición y verduras. Escribe un producto o tipo de plato.",
     "reroll": "Otra opción",
     "saveMine": "Guardar en mis platos",
     "oneServing": "1 ración",
@@ -349,7 +349,8 @@
     "portionT": "porción",
     "cafesPizza": "Pizza",
     "westT": "peso aprox., macros del menú",
-    "genSkip": "No está en la lista de alimentos"
+    "genSkip": "No está en la lista de alimentos",
+    "genGuess": "Sin tipo de plato — elegido según los productos"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],

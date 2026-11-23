@@ -1223,9 +1223,28 @@ function parseReq(text) {
     take(withQual(hits[0], toks[i + 1]), isNeg);
   });
   if (excl.has("tomato")) excl.add("passata");
-  const unknown = !type; if (!type) type = "plate";
+  let unknown = false, guessed = false;
+  if (!type) { const g = guessType(wants.filter(k => !excl.has(k))); if (g) { type = g; guessed = true; } else { type = "plate"; unknown = true; } }
   if (!["smoothie", "oatmeal"].includes(type)) { const i = wants.indexOf("protein"); if (i >= 0) wants.splice(i, 1); }
-  return {type, wants: wants.filter(k => !excl.has(k)), excl: [...excl], unknown, skipped};
+  return {type, wants: wants.filter(k => !excl.has(k)), excl: [...excl], unknown, guessed, skipped};
+}
+/* no dish word: choose the dish by the products ("овсяное молоко" -> smoothie, "яйца с сыром" -> omelet) */
+function guessType(ws) {
+  if (!ws.length) return null;
+  const has = arr => ws.some(k => arr.includes(k)), only = arr => ws.every(k => arr.includes(k));
+  const LIQ = ["milk", "milkskim", "milk32", "oatmilk", "almondmilk", "soymilk", "kefir", "coconut", "protein", "matsoni", "yogurt", "greek0", "greek2", "skyr", "tvorog1", "tvorog2", "tvorog5", "tvorog9"];
+  const SWEET = [...FRUITS, "berries", "dates", "pomegranate", "lemon", "honey", "maple", "pb", "cocoa", "choc", "chia", "walnut", "almonds", "peanuts", "coconutflakes", "sugar", "ginger", "mint"];
+  const GRAIN = ["rice", "ricecooked", "quinoa", "bulgur", "couscous", "buckwheat", "buckwheatcooked", "lentils", "lentilsdry", "chickpeas", "beans"];
+  const GREENS = ["lettuce", "arugula", "spinach"];
+  if (has(["pasta", "pastacooked", "ricenoodles"])) return "pasta";
+  if (has(["lavash", "tortilla"])) return "wrap";
+  if (has(["bread"])) return "sandwich";
+  if (has(["oats", "granola", "semolina"])) return "oatmeal";
+  if (only([...LIQ, ...SWEET])) return "smoothie";
+  if (has(["egg", "eggwhite"]) && !has(GRAIN) && !has(["potato", "sweetpotato"])) return "omelet";
+  if (has(GREENS) || (!has(GRAIN) && !has(["potato", "sweetpotato"]) && ws.filter(k => ROLE_OF(k) === "veg").length >= 2 && !ws.some(k => ROLE_OF(k) === "prot"))) return "salad";
+  if (has(GRAIN)) return "bowl";
+  return "plate";
 }
 const TYPES_K = ["salad", "bowl", "pasta", "wrap", "omelet", "oatmeal", "smoothie", "plate", "sandwich"];
 function buildDish(req, strat, seed) {
@@ -1284,6 +1303,7 @@ function renderGenOut() {
   const T = t(), req = gen.req;
   let h = `<div class="gmeta">`;
   if (req.unknown) h += `<p class="hint">${esc(T.genUnknown)}</p>`;
+  if (req.guessed) h += `<p class="hint">${esc(T.genGuess)}: ${esc(L().gen.types[TYPES_K.indexOf(req.type)])}</p>`;
   if ((req.skipped || []).length) h += `<p class="hint">? ${esc(T.genSkip)}: ${req.skipped.map(esc).join(", ")}</p>`;
   if (req.wants.length) h += `<p class="hint">✓ ${esc(T.genUse)}: ${req.wants.map(k => esc(fname(k))).join(", ")}</p>`;
   const ex = req.excl.filter(k => MATCH.has(k)); if (ex.length) h += `<p class="hint">✕ ${esc(T.genNo)}: ${ex.slice(0, 8).map(k => esc(fname(k))).join(", ")}${ex.length > 8 ? "…" : ""}</p>`;
