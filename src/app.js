@@ -223,11 +223,8 @@ function renderList() {
     <label>${esc(T.vegF)}<select id="fv"><option value="any">${esc(T.any)}</option><option value="veg">${esc(T.vegetarian)}</option><option value="vegan">${esc(T.vegan)}</option></select></label></div>
     <p class="flbl">${esc(T.cuisT)}</p><div class="chips" role="group" aria-label="${esc(T.cuisT)}">` + [null, ...CUIS].map(c => `<button class="chip" data-cu="${c || ""}" aria-pressed="${state.cuis === c}">${esc(c ? T.cu[c] : T.allCu)}</button>`).join("") + `</div>
     <p class="flbl">${esc(T.base)}</p><div class="chips" role="group" aria-label="${esc(T.base)}">` + BASES.map(b => `<button class="chip" data-b="${b}" aria-pressed="${state.base === b}">${esc(L().bases[b])}</button>`).join("") + `</div>
-    </details>`;
+    <p class="flbl">${esc(T.quickl)}</p><div class="chips" role="group" aria-label="${esc(T.quickl)}">` + L().quick.map(w => `<button class="chip" data-w="${esc(w)}" aria-pressed="${state.q === w}">${esc(w)}</button>`).join("") + `</div></details>`;
   const lanes = !nf && !state.q && state.cat < 0 && !state.fav && !state.quick;
-  const ttl = state.q ? state.q.charAt(0).toUpperCase() + state.q.slice(1) : state.fav ? T.fav : state.quick ? T.quickT : state.cat >= 0 ? catName(state.cat) : state.cuis ? T.cu[state.cuis] : state.base ? L().bases[state.base] : state.veg !== "any" ? (state.veg === "vegan" ? T.vegan : T.vegetarian) : T.navR;
-  h = `<h2 class="ptitle">${esc(ttl)}</h2><div class="relw"><div class="rel" id="rel">` + L().quick.map(w => `<button class="relc" data-w="${esc(w)}" aria-pressed="${state.q === w}">${esc(w.charAt(0).toUpperCase() + w.slice(1))}</button>`).join("") +
-    `</div><button class="relnext" id="relNext" type="button" aria-label="›"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>` + h;
   if (!lanes) h += (state.cat >= 0 && !state.fav && !state.quick) ? `<p class="sub">${esc(catSub(state.cat))}</p>` : `<p class="sub">${esc(T.found)}${A.length}</p>`;
   if (hidden) h += `<p class="hint">${esc(T.hiddenN.replace("{n}", hidden))} <button class="linkbtn" id="showAll" style="padding:0">${esc(T.showAll)}</button></p>`;
   if (!A.length) h += `<div class="empty"><b>${esc(T.none)}</b>${esc(T.none2)}<br><br><button class="btn" id="reset">${esc(T.reset)}</button></div>`;
@@ -879,7 +876,7 @@ function route() {
   const morph = (isHome(prev) && isRec(h)) || (isRec(prev) && isHome(h));
   if (isRec(prev) && !isHome(h)) vt.id = null;
   const done = () => { document.querySelectorAll("[style*='view-transition-name']").forEach(e => e.style.viewTransitionName = ""); };
-  if (morph && document.startViewTransition && !reduceMotion()) { const tr = document.startViewTransition(() => routeNow(h, prev)); tr.ready.catch(() => {}); tr.finished.then(done, done); }
+  if (morph && document.startViewTransition && !reduceMotion()) { const tr = document.startViewTransition(() => routeNow(h, prev)); tr.ready.catch(() => {}); tr.updateCallbackDone.catch(() => {}); tr.finished.then(done, done); }
   else { routeNow(h, prev); done(); if (!reduceMotion()) { const a = $("#app"); a.classList.remove("enter"); void a.offsetWidth; a.classList.add("enter"); } }
 }
 function routeNow(h, prev) {
@@ -1017,7 +1014,6 @@ document.addEventListener("click", e => {
   const b = el.closest("[data-b]"); if (b) { state.base = state.base === b.dataset.b ? null : b.dataset.b; state.fopen = true; renderList(); return; }
   const w = el.closest("[data-w]"); if (w) { state.q = state.q === w.dataset.w ? "" : w.dataset.w; $("#q").value = state.q; $("#qx").hidden = !state.q; renderList(); return; }
   if (el.closest("#fltBtn")) { state.fopen = !state.fopen; if (location.hash && location.hash !== "#") location.hash = ""; else { renderList(); if (state.fopen) { const f = $("#fl"); f && f.scrollIntoView({block: "nearest", behavior: "smooth"}); } } return; }
-  if (el.closest("#relNext")) { const r = $("#rel"); r && r.scrollBy({left: r.clientWidth * 0.7, behavior: "smooth"}); return; }
   const tg = el.closest("[data-tg]"); if (tg) { const [kind, v] = tg.dataset.tg.split(":");
     Object.assign(state, {cat: -1, quick: false, cuis: null, veg: "any", base: null, kcal: "any", prot: "any", sort: "def", q: "", fav: false}); $("#q").value = ""; $("#qx").hidden = true;
     if (kind === "cat") state.cat = +v; else if (kind === "cu") state.cuis = v; else if (kind === "veg") state.veg = v; else if (kind === "b") state.base = v;
