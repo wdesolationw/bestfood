@@ -15,6 +15,11 @@ python3 build.py --watch    # пересобирать dist/ при каждом
 `dist-single/index.html` открывается двойным кликом, но без установки и офлайна.
 Иконки создаются скриптом `python3 tools/make_icons.py` (и `sips` на macOS для мелких размеров).
 
+## Сайт
+
+Приложение опубликовано: **https://wdesolationw.github.io/bestfood/**
+Обновить сайт после изменений: `sh tools/deploy.sh` (собирает `dist/` и выкладывает в ветку `gh-pages`).
+
 ## Где что лежит
 
 | Путь | Что внутри |
