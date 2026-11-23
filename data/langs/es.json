@@ -334,7 +334,8 @@
     "nextS": "Siguiente",
     "ingT": "Ingredientes",
     "cookDone": "¡Buen provecho!",
-    "dotd": "Plato del día"
+    "dotd": "Plato del día",
+    "bought": "Comprado {a} de {b}"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],

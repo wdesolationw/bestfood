@@ -329,7 +329,8 @@
     "nextS": "Next",
     "ingT": "Ingredients",
     "cookDone": "Enjoy your meal!",
-    "dotd": "Dish of the day"
+    "dotd": "Dish of the day",
+    "bought": "Bought {a} of {b}"
   },
   "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
   "stop": ["with", "and", "the", "a", "of", "in"],

@@ -492,8 +492,9 @@ function renderShop() {
   let h = foodSeg("shop");
   h += `<div class="row2"><button class="btn main" id="shopAdd">${esc(T.addProd)}</button><button class="btn" id="shopCopy">${esc(T.copy)}</button><button class="btn" id="shopDone">${esc(T.clearDone)}</button><button class="btn danger" id="shopClear">${esc(state.presetArm === "shop" ? T.sureAgain : T.clearAll)}</button></div>`;
   if (!ks.length) h += `<div class="empty">${esc(T.shopEmpty)}</div>`;
-  else h += SHOPORDER.map(c => { const kk = ks.filter(k => SHOPCAT[k] === c).sort((a, b) => fname(a).localeCompare(fname(b))); if (!kk.length) return "";
-    return `<p class="lbl">${esc(T.shopCat[c])}</p><ul class="shop">` + kk.map(k => `<li class="${shop.done[k] ? "done" : ""}" data-sk="${k}"><span>${esc(fname(k))}</span><b>${gfmt(shop.items[k])}</b><button data-srm="${k}" aria-label="${esc(T.remove)}">✕</button></li>`).join("") + `</ul>`; }).join("");
+  else { const nd = ks.filter(k => shop.done[k]).length; h += `<div class="shprog"><span>${esc(T.bought.replace("{a}", nd).replace("{b}", ks.length))}</span><div class="bar"><i style="width:${nd / ks.length * 100}%"></i></div></div>`; }
+  if (ks.length) h += SHOPORDER.map(c => { const kk = ks.filter(k => SHOPCAT[k] === c).sort((a, b) => fname(a).localeCompare(fname(b))); if (!kk.length) return "";
+    return `<p class="lbl shc"><span>${esc(T.shopCat[c])}</span><span>${kk.filter(k => shop.done[k]).length}/${kk.length}</span></p><ul class="shop">` + kk.map(k => `<li class="${shop.done[k] ? "done" : ""}" data-sk="${k}"><span>${esc(fname(k))}</span><b>${gfmt(shop.items[k])}</b><button data-srm="${k}" aria-label="${esc(T.remove)}">✕</button></li>`).join("") + `</ul>`; }).join("");
   if (shop.notes.length) h += `<p class="hint">${esc(T.shopNote)} ${shop.notes.map(id => esc(RX(R.find(x => x.id === id)).title)).join(", ")}</p>`;
   h += `<textarea id="shopTxt" class="vh" readonly aria-hidden="true" tabindex="-1"></textarea>`;
   $("#app").innerHTML = h;

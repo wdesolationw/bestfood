@@ -692,3 +692,11 @@ body.cooking{overflow:hidden}
 .cknav{display:grid;grid-template-columns:1fr 2fr;gap:10px}
 .cknav .btn{min-height:56px;font-size:17px}
 .cknav .btn[disabled]{opacity:.4}
+/* shopping list */
+.shprog{margin:14px 0 4px;display:grid;gap:6px;font-weight:700;font-size:14px;color:var(--muted)}
+.lbl.shc{display:flex;justify-content:space-between;margin-top:18px}
+ul.shop{gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+ul.shop li{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:11px 12px;box-shadow:none}
+ul.shop li:last-child{border-bottom:0}
+ul.shop li::before{border-radius:6px;border-width:1.8px}
+ul.shop li.done::before{background:var(--ink);border-color:var(--ink)}

@@ -334,7 +334,8 @@
     "nextS": "Suivant",
     "ingT": "Ingrédients",
     "cookDone": "Bon appétit !",
-    "dotd": "Plat du jour"
+    "dotd": "Plat du jour",
+    "bought": "Acheté {a} sur {b}"
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],
