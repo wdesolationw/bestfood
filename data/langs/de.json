@@ -330,7 +330,11 @@
     "ingT": "Zutaten",
     "cookDone": "Guten Appetit!",
     "dotd": "Gericht des Tages",
-    "bought": "{a} von {b} gekauft"
+    "bought": "{a} von {b} gekauft",
+    "autoPlan": "Woche passend zu meinem Ziel planen",
+    "autoPlanD": "Ich wähle Rezepte und Portionen für 7 Tage passend zu deinem Kalorien- und Eiweißziel. Ausgeschlossene Lebensmittel werden beachtet.",
+    "autoDone": "Woche fertig: etwa {k} kcal und {p} g Eiweiß pro Tag",
+    "autoNeed": "Berechne zuerst dein Ziel im Tab „Ich“"
   },
   "quick": ["Pasta", "Reis", "Hähnchen", "Quark", "Banane", "Schokolade"],
   "stop": ["mit", "und", "der", "die", "das", "ein", "eine", "im", "in"],

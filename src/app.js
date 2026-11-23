@@ -402,8 +402,8 @@ function goalBars(tot, compact) {
   if (+goal.p > 0) bars.push([T.goalP, tot[1], +goal.p, T.grams]);
   if (!bars.length) return "";
   return `<div class="goal">` + bars.map(([n, v, g, u]) => {
-    const over = v > g, pct = Math.min(100, v / g * 100);
-    return `<div class="goalrow"><div><span>${esc(n)}: ${r0(v)} / ${r0(g)}</span><span class="${over ? "up" : ""}">${esc(over ? T.over : T.left)} ${r0(Math.abs(g - v))} ${esc(u)}</span></div><div class="bar${over ? " over" : ""}"><i style="width:${pct}%"></i></div></div>`;
+    const prot = n === T.goalP, over = v > g, bad = over && !prot && v > g * 1.05, pct = Math.min(100, v / g * 100);
+    return `<div class="goalrow"><div><span>${esc(n)}: ${r0(v)} / ${r0(g)}</span><span class="${bad ? "up" : ""}">${prot && over ? "✓ " + esc(T.chDone) : esc(over ? T.over : T.left) + " " + r0(Math.abs(g - v)) + " " + esc(u)}</span></div><div class="bar${bad ? " over" : ""}"><i style="width:${pct}%"></i></div></div>`;
   }).join("") + `</div>`;
 }
 function daySummary(tot) {
@@ -453,10 +453,35 @@ function planEntryMac(e) {
 const planName = e => e.t === "r" ? ((R.find(x => x.id === e.id) && RX(R.find(x => x.id === e.id)).title) || "?") + (e.mode === "classic" ? " · " + t().modeClassic : "") : ((dishes.find(x => x.id === e.id) || {}).name || "?");
 const planEmpty = () => plan.d.every(d => SLOTS.every(sl => !d[sl].length));
 function dayTotal(i) { let s = [0, 0, 0, 0]; SLOTS.forEach(sl => plan.d[i][sl].forEach(e => s = add4(s, planEntryMac(e)))); return s; }
+/* ---------- auto week plan ---------- */
+const SLOT_CATS = {b: [1, 2, 3], l: [0, 7, 4, 10], d: [0, 4, 7, 11, 10], s: [8, 5, 3, 9]}, SLOT_SHARE = {b: .25, l: .35, d: .3, s: .1};
+function buildWeek() {
+  const gk = +goal.k, gp = +goal.p || 0; if (!(gk > 0)) return null;
+  const ok = r => !warnOf(r).length && recipeMacros(r)[0] > 40;
+  const pool = {}; SLOTS.forEach(s => pool[s] = R.filter(r => SLOT_CATS[s].includes(r.cat) && ok(r)));
+  const used = {}, mode = prof.defMode || "fit", rnd = n => Math.floor(Math.random() * n);
+  const days = [0, 1, 2, 3, 4, 5, 6].map(di => {
+    let best = null;
+    for (let tr = 0; tr < 160; tr++) {
+      const pick = {}; let k = 0, p = 0, pen = 0;
+      for (const s of SLOTS) { const L = pool[s]; if (!L.length) continue; const r = L[rnd(L.length)], m = recipeMacros(r, mode);
+        const n = Math.min(2.5, Math.max(.5, Math.round(gk * SLOT_SHARE[s] / m[0] * 2) / 2));
+        pick[s] = {r, n}; k += m[0] * n; p += m[1] * n; pen += (used[r.id] || 0) * .12; }
+      const score = Math.abs(k - gk) / gk + (gp ? Math.max(0, gp - p) / gp * 1.5 + Math.max(0, p - gp * 1.25) / gp * .6 : 0) + pen;
+      if (!best || score < best.score) best = {score, pick, k, p};
+    }
+    Object.values(best.pick).forEach(({r}) => used[r.id] = (used[r.id] || 0) + 1);
+    return best;
+  });
+  plan = {d: days.map(b => { const o = {b: [], l: [], d: [], s: []}; SLOTS.forEach(s => { const x = b.pick[s]; if (x) o[s].push({t: "r", id: x.r.id, n: x.n, mode}); }); return o; })};
+  savePlan();
+  return {k: r0(days.reduce((a, b) => a + b.k, 0) / 7), p: r0(days.reduce((a, b) => a + b.p, 0) / 7)};
+}
 function renderPlan(showPresets) {
   showPresets = showPresets || planEmpty();
   const T = t(), di = state.planDay, day = plan.d[di];
   let h = foodSeg("plan");
+  h += `<section class="autop"><div><b>${esc(T.autoPlan)}</b><p>${esc(T.autoPlanD)}</p></div><button class="btn main" id="autoPlan">${esc(state.presetArm === "auto" ? T.sureAgain : T.autoPlan)}</button></section>`;
   h += `<div class="wdays">` + [0, 1, 2, 3, 4, 5, 6].map(i => { const k = r0(dayTotal(i)[0]); return `<button data-pd="${i}" aria-pressed="${i === di}"><b>${esc(wdName(i))}</b><small>${k || "–"}</small></button>`; }).join("") + `</div>`;
   const tot = dayTotal(di);
   h += `<div class="macros">${tot.map((v, i) => `<div class="${i === 1 ? "p" : ""}"><b>${r0(v)}</b><span>${esc(T.g[i])}</span></div>`).join("")}</div>` + goalBars(tot);
@@ -1124,6 +1149,8 @@ document.addEventListener("click", e => {
   if (el.closest("#planShop")) { shopFromPlan(); toast(T.shopMade); location.hash = "shop"; return; }
   if (el.closest("#planToDay")) { const day = plan.d[state.planDay]; let n = 0; SLOTS.forEach(sl => day[sl].forEach(e2 => { const m = planEntryMac(e2).map(v => v / e2.n); (diary[todayIso()] = diary[todayIso()] || []).push(e2.t === "r" ? {t: "r", id: e2.id, n: e2.n, per: m, mode: e2.mode, name: planName(e2), m: sl} : {t: "d", id: e2.id, n: e2.n, per: m, name: planName(e2), m: sl}); n++; })); saveDiary(); toast(T.added + " (" + n + ")"); return; }
   if (el.closest("#planClear")) { if (state.presetArm !== "clear") { state.presetArm = "clear"; renderPlan(); return; } plan = {d: [0, 1, 2, 3, 4, 5, 6].map(() => ({b: [], l: [], d: [], s: []}))}; savePlan(); state.presetArm = null; renderPlan(); return; }
+  if (el.closest("#autoPlan")) { if (!(+goal.k > 0)) { toast(t().autoNeed); return; } if (!planEmpty() && state.presetArm !== "auto") { state.presetArm = "auto"; renderPlan(false); return; }
+    state.presetArm = null; const res = buildWeek(); if (res) toast(t().autoDone.replace("{k}", res.k).replace("{p}", res.p)); renderPlan(false); return; }
   const pre = el.closest("[data-pre]"); if (pre) { const i = +pre.dataset.pre; if (!planEmpty() && state.presetArm !== i) { state.presetArm = i; renderPlan(true); return; }
     const p = PRESETS[i]; plan = {d: p.days.map(d => ({b: d.b.map(x => ({t: "r", id: x[0], n: x[1], mode: "fit"})), l: d.l.map(x => ({t: "r", id: x[0], n: x[1], mode: "fit"})), d: d.d.map(x => ({t: "r", id: x[0], n: x[1], mode: "fit"})), s: d.s.map(x => ({t: "r", id: x[0], n: x[1], mode: "fit"}))}))};
     savePlan(); state.presetArm = null; toast(T.loaded); renderPlan(); return; }

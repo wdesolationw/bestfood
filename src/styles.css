@@ -700,3 +700,8 @@ ul.shop li{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:
 ul.shop li:last-child{border-bottom:0}
 ul.shop li::before{border-radius:6px;border-width:1.8px}
 ul.shop li.done::before{background:var(--ink);border-color:var(--ink)}
+/* auto plan */
+.autop{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--surface);margin-bottom:14px}
+.autop b{font-size:17px}
+.autop p{margin:2px 0 0;font-size:13.5px;color:var(--muted)}
+.autop .btn{align-self:flex-start}

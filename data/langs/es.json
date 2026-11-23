@@ -335,7 +335,11 @@
     "ingT": "Ingredientes",
     "cookDone": "¡Buen provecho!",
     "dotd": "Plato del día",
-    "bought": "Comprado {a} de {b}"
+    "bought": "Comprado {a} de {b}",
+    "autoPlan": "Armar mi semana según mi objetivo",
+    "autoPlanD": "Elegiré recetas y porciones para 7 días según tu objetivo de calorías y proteína. Se respetan los alimentos excluidos.",
+    "autoDone": "Semana lista: unas {k} kcal y {p} g de proteína al día",
+    "autoNeed": "Primero calcula tu objetivo en la pestaña «Yo»"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],

@@ -330,7 +330,11 @@
     "ingT": "Ingredients",
     "cookDone": "Enjoy your meal!",
     "dotd": "Dish of the day",
-    "bought": "Bought {a} of {b}"
+    "bought": "Bought {a} of {b}",
+    "autoPlan": "Build my week for my target",
+    "autoPlanD": "I'll pick recipes and portions for 7 days to match your calorie and protein target. Excluded foods are respected.",
+    "autoDone": "Week ready: about {k} kcal and {p} g protein per day",
+    "autoNeed": "First calculate your target in the Me tab"
   },
   "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
   "stop": ["with", "and", "the", "a", "of", "in"],
