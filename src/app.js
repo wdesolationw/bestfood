@@ -767,8 +767,8 @@ function renderSheet() {
   if (sheetKind === "prod") fillProd();
   if (sheetKind === "pick") fillPick();
 }
-function resultsHTML(keys, attr) { const T = t(); return keys.map(k => { const pg = PORTION[k], est = BRANDOF[k] && BRANDS[BRANDOF[k]].est;
-  return `<button ${attr}="${k}"><span>${esc(fname(k))}${est ? `<em class="est">≈ ${esc(T.estT)}</em>` : ""}</span><small>${pg ? `${pg} ${esc(T.grams)} · ${r0(FOOD[k][0] * pg / 100)} ${esc(T.kcal)} · ${esc(T.p)} ${r0(FOOD[k][1] * pg / 100)}` : `${r0(FOOD[k][0])} ${esc(T.kcal)} · ${esc(T.p)} ${r0(FOOD[k][1])} / 100 ${esc(T.grams)}`}</small></button>`; }).join(""); }
+function resultsHTML(keys, attr) { const T = t(); return keys.map(k => { const pg = PORTION[k], B = BRANDOF[k] && BRANDS[BRANDOF[k]], est = B && B.est, west = B && B.west;
+  return `<button ${attr}="${k}"><span>${esc(fname(k))}${est ? `<em class="est">≈ ${esc(T.estT)}</em>` : west ? `<em class="est">${esc(T.westT)}</em>` : ""}</span><small>${pg ? `${west ? "≈" : ""}${pg} ${esc(T.grams)} · ${r0(FOOD[k][0] * pg / 100)} ${esc(T.kcal)} · ${esc(T.p)} ${r0(FOOD[k][1] * pg / 100)}` : `${r0(FOOD[k][0])} ${esc(T.kcal)} · ${esc(T.p)} ${r0(FOOD[k][1])} / 100 ${esc(T.grams)}`}</small></button>`; }).join(""); }
 function fillProd() {
   const el = $("#pres"); if (!el) return; const T = t();
   if ((sheetCtx.q || "").trim()) { el.innerHTML = resultsHTML(findFood(sheetCtx.q), "data-pk"); return; }
