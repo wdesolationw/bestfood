@@ -566,3 +566,55 @@ details.fl[open]{background:var(--surface);border-radius:var(--radius);box-shado
 h3{font-size:20px;margin:30px 0 12px}
 .rrel{margin-top:34px}
 .rrel .lhd h3{margin:0}
+
+/* ===== Diary / Mine / Me in the same clean style ===== */
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:42px;padding:0 16px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);box-shadow:none;font-size:14.5px;font-weight:700;text-decoration:none}
+.btn:hover{border-color:var(--muted)}
+.btn.main{background:var(--ink);border-color:var(--ink);color:var(--bg);font-weight:800}
+.btn.main:hover{opacity:.9;border-color:var(--ink)}
+.btn.danger{color:var(--hot);border-color:var(--hot);box-shadow:none}
+.slh .btn{min-height:34px;padding:0 12px;font-size:13px}
+/* chips and option buttons */
+.chip{border:0;border-radius:6px;background:var(--line);color:var(--ink);box-shadow:none;font-weight:600;padding:7px 12px}
+.chip:hover{color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.genex .chip{background:var(--line);box-shadow:none;color:var(--ink);font-weight:600}
+.genex .chip:hover{box-shadow:none;color:var(--accent)}
+.modes button,.wdays button,.sw button,.langs button,.custom{border:1.5px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:none;font-weight:700}
+.modes button[aria-pressed="true"],.wdays button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.wdays button[aria-pressed="true"] small{color:var(--bg)}
+/* inputs */
+.field input,.sel,.filters select,.genrow input,.search input#nes,.search input#sq,.search input#pq{background:var(--line);border:0;box-shadow:none;border-radius:10px;color:var(--ink)}
+.field input:focus,.sel:focus,.filters select:focus,.genrow input:focus,.qty input:focus{outline:0;box-shadow:inset 0 0 0 2px var(--ink)}
+.field{font-size:12px;letter-spacing:.04em}
+.qty input{background:var(--line);border:0;box-shadow:none;border-radius:8px}
+.qty button{border:1.5px solid var(--line);background:var(--surface);border-radius:8px;box-shadow:none}
+/* flat panels with hairline borders */
+.mebox,.sumcard,.slot,.water,.entries,.gcard,.mcard,.ing,.coach.mini,.macros div,ul.shop li,.alts button,.results button,details.fl[open],.card.dish{box-shadow:none;border:1px solid var(--line)}
+.mebox,.sumcard,.slot,.water,.gcard{border-radius:14px}
+.mebox h2,.genbox h2{font-size:20px;font-weight:800;letter-spacing:-.01em}
+/* Diary: underline tabs instead of segmented control */
+.seg3{display:flex;gap:26px;background:transparent;border-radius:0;padding:0;margin:4px calc(-1*max(16px,env(safe-area-inset-left,0px))) 16px;
+  padding-inline:max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.seg3::-webkit-scrollbar{display:none}
+.seg3 a{flex:none;padding:10px 0 12px;border-radius:0;background:transparent;color:var(--muted);font-size:16px;font-weight:700;box-shadow:inset 0 -3px 0 transparent}
+.seg3 a:hover{color:var(--ink)}
+.seg3 a[aria-current="page"]{background:transparent;color:var(--ink);box-shadow:inset 0 -3px 0 var(--ink)}
+.daynav b{font-size:18px;font-weight:800}
+.daynav .iconbtn{width:42px;height:42px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:none;color:var(--ink)}
+/* Mine */
+.genbox{background:var(--surface);border:1px solid var(--line);box-shadow:none}
+.genic{background:var(--ink);color:var(--bg);border-radius:10px}
+.dlist{display:grid;gap:10px;margin-top:14px}
+.card.dish{display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:center;padding:10px;border-radius:14px;background:var(--surface);aspect-ratio:auto}
+.card.dish:hover{transform:none}
+.card.dish .meta{margin-top:8px;gap:8px}
+.card.dish .t{font-size:16px}
+/* Me: flat profile header */
+.mehead{background:transparent;color:var(--ink);border-radius:0;padding:8px 0 18px;margin:6px 0 14px;border-bottom:1px solid var(--line)}
+.ava{width:64px;height:64px;background:var(--line);color:var(--muted)}
+.ava svg{width:34px;height:34px}
+.mhs b{font-size:22px}
+.mhs span{opacity:1;color:var(--muted);font-weight:600;font-size:13px}
+.coach{background:var(--surface)}

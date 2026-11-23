@@ -510,7 +510,7 @@ function renderMine() {
     <div class="quick genex">${T.genEx.map(x => `<button class="chip" data-gex="${esc(x)}">${esc(x)}</button>`).join("")}</div></section><div id="genOut"></div>`;
   h += `<div class="row2" style="margin-top:22px"><a class="btn main" href="#dish-new">${esc(T.newDish)}</a></div>`;
   if (!dishes.length) h += `<div class="empty">${esc(T.emptyMine)}</div>`;
-  else h += `<div class="list">` + dishes.map(d => {
+  else h += `<div class="dlist">` + dishes.map(d => {
     const tot = dishTotal(d), per = tot.map(v => v / (d.serv || 1));
     return `<div class="card dish"><div class="dimg">${dishImg(d)}</div><div><p class="t">${esc(d.name || T.untitled)}</p><div class="c">${d.serv} × ${esc(T.oneServ)}: ${esc(fmtM(per))}</div>
       <div class="meta"><a class="btn" href="#dish-${d.id}">${esc(T.edit)}</a><button class="btn main" data-dday="${d.id}">${esc(T.addDay)}</button></div></div></div>`;
