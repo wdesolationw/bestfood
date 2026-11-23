@@ -1276,3 +1276,4 @@ function loadPhoto(file) {
 }
 window.addEventListener("hashchange", route);
 route();
+if (window.APP_PWA && "serviceWorker" in navigator && /^https?:$/.test(location.protocol)) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
