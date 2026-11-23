@@ -1,5 +1,6 @@
 const IMGS = DATA.imgs, R = DATA.recipes, LANGS = DATA.langs, ORDER = DATA.order, FOOD = DATA.food, SUBS = DATA.subs;
-const PORTION = DATA.portion || {}, LOCAL = Object.keys(DATA.portion || {}).filter(k => !Object.values(DATA.brands || {}).some(b => b.items.includes(k)));
+const STD = DATA.std || {}, STDK = new Set(Object.values(STD).flat());
+const PORTION = DATA.portion || {}, LOCAL = Object.keys(DATA.portion || {}).filter(k => !STDK.has(k) && !Object.values(DATA.brands || {}).some(b => b.items.includes(k)));
 const CLASSIC = DATA.classic, ALLERG = DATA.allerg, SHOPCAT = DATA.shopcat, VEGL = DATA.veglevel, PRESETS = DATA.presets, CUIS = DATA.cuisines, COACH = DATA.coach;
 const RATIO = {}; DATA.ratio.forEach(([a, b, r]) => RATIO[a + ">" + b] = r);
 const $ = s => document.querySelector(s);
@@ -173,7 +174,7 @@ function findFood(q) {
   const brandHit = new Set(Object.entries(BRANDS).filter(([b, v]) => q.split(" ").some(w => w.length > 1 && norm(v.name + " " + v.alias).split(" ").some(a => a.startsWith(w)))).flatMap(([b, v]) => v.items));
   const hit = keys.filter(k => brandHit.has(k) || norm(fname(k)).includes(q) || norm(LANGS.en.food[k]).includes(q));
   hit.sort((a, b) => (brandHit.has(b) - brandHit.has(a)) || (norm(fname(a)).indexOf(q) - norm(fname(b)).indexOf(q)));
-  return hit.slice(0, brandHit.size ? 16 : 8);
+  return hit.slice(0, brandHit.size ? 16 : 12);
 }
 let toastT = null;
 function toast(msg) { const el = $("#toast"); el.textContent = msg; el.classList.remove("out"); if (!el.hidden) { el.hidden = true; void el.offsetWidth; } el.hidden = false; clearTimeout(toastT);
@@ -780,6 +781,8 @@ function fillProd() {
   if ((sheetCtx.q || "").trim()) { el.innerHTML = resultsHTML(findFood(sheetCtx.q), "data-pk"); return; }
   const rec = recentFoods();
   el.innerHTML = (rec.length ? `<p class="lbl">${esc(T.recent)}</p>` + rec.map(([k, g]) => `<button data-pk="${k}" data-pg="${r0(g)}"><span>${esc(fname(k))}</span><small>${r0(g)} ${esc(T.grams)} · ${r0(FOOD[k][0] * g / 100)} ${esc(T.kcal)}</small></button>`).join("") : "") +
+    `<p class="lbl">${esc(T.stdT)}</p><div class="brandpick">` + Object.keys(STD).map(g => `<button class="chip" data-stdg="${g}" aria-pressed="${sheetCtx.stdg === g}">${esc(T.stdG[g])}</button>`).join("") + `</div>` +
+    (sheetCtx.stdg && STD[sheetCtx.stdg] ? resultsHTML(STD[sheetCtx.stdg], "data-pk") : "") +
     `<p class="lbl">${esc(T.cafesT)}</p><div class="brandpick">` + Object.entries(BRANDS).map(([b, v]) => `<button class="chip" data-brand="${b}" aria-pressed="${sheetCtx.brand === b}">${esc(v.name === "Pizza" ? T.cafesPizza || "Pizza" : v.name)}</button>`).join("") + `</div>` +
     (sheetCtx.brand && BRANDS[sheetCtx.brand] ? resultsHTML(BRANDS[sheetCtx.brand].items, "data-pk") : "") +
     `<p class="lbl">${esc(T.localT)}</p>` + LOCAL.map(k => `<button data-pk="${k}"><span>${esc(fname(k))}</span><small>1 ${esc(T.pcs)} ≈ ${PORTION[k]} ${esc(T.grams)} · ${r0(FOOD[k][0] * PORTION[k] / 100)} ${esc(T.kcal)}</small></button>`).join("");
@@ -1539,6 +1542,7 @@ document.addEventListener("click", e => {
   if (el.closest("#bkRestore")) { const v = ($("#bkIn") || {}).value || ""; if (!v.trim()) return; if (!state.bkArm) { state.bkArm = true; el.closest("#bkRestore").textContent = t().bkSure; return; } state.bkArm = false; restoreBackup(v); return; }
   const snb = el.closest("[data-sn]"); if (snb) { state.statN = +snb.dataset.sn; renderStats(); return; }
   const cha = el.closest("#chkApply"); if (cha) { const k = +cha.dataset.k, dk = k - +goal.k; goal = Object.assign({}, goal, {k, c: Math.max(0, r0(+goal.c + dk / 4))}); store.set("brfy-goal", JSON.stringify(goal)); store.set("brfy-checkin", JSON.stringify(todayIso())); toast(t().chkApplied); renderStats(); return; }
+  const sgb = el.closest("[data-stdg]"); if (sgb) { sheetCtx.stdg = sheetCtx.stdg === sgb.dataset.stdg ? null : sgb.dataset.stdg; fillProd(); return; }
   const brb = el.closest("[data-brand]"); if (brb) { sheetCtx.brand = sheetCtx.brand === brb.dataset.brand ? null : brb.dataset.brand; fillProd(); return; }
   const psl = el.closest("[data-psl]"); if (psl) { sheetCtx.slot = psl.dataset.psl; renderSheet(); return; }
   const amb = el.closest("[data-addm]"); if (amb) { openSheet("prod", {q: "", slot: amb.dataset.addm}); return; }
