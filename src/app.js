@@ -171,10 +171,14 @@ const inCat = i => R.filter(r => r.cat === i).length;
 function findFood(q) {
   q = norm(q.trim()); if (!q) return [];
   const keys = Object.keys(FOOD);
-  const brandHit = new Set(Object.entries(BRANDS).filter(([b, v]) => q.split(" ").some(w => w.length > 1 && norm(v.name + " " + v.alias).split(" ").some(a => a.startsWith(w)))).flatMap(([b, v]) => v.items));
+  const ws = q.split(" ").filter(w => w.length > 1), bw = new Set();
+  let br = Object.values(BRANDS).filter(v => { const m = ws.filter(w => norm(v.name + " " + v.alias).split(" ").some(a => a.startsWith(w))); m.forEach(w => bw.add(w)); return m.length; }).flatMap(v => v.items);
+  const rest = ws.filter(w => !bw.has(w)); // "антре лобиани": brand + dish narrows to that dish
+  if (rest.length) { const f = br.filter(k => { const n = norm(fname(k) + " " + LANGS.en.food[k]); return rest.every(w => n.includes(w)); }); if (f.length) br = f; }
+  const brandHit = new Set(br);
   const hit = keys.filter(k => brandHit.has(k) || norm(fname(k)).includes(q) || norm(LANGS.en.food[k]).includes(q));
   hit.sort((a, b) => (brandHit.has(b) - brandHit.has(a)) || (norm(fname(a)).indexOf(q) - norm(fname(b)).indexOf(q)));
-  return hit.slice(0, brandHit.size ? 16 : 12);
+  return hit.slice(0, brandHit.size ? 30 : 12);
 }
 let toastT = null;
 function toast(msg) { const el = $("#toast"); el.textContent = msg; el.classList.remove("out"); if (!el.hidden) { el.hidden = true; void el.offsetWidth; } el.hidden = false; clearTimeout(toastT);

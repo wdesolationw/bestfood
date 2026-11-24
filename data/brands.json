@@ -135,9 +135,36 @@
   },
   "entree": {
     "name": "Entrée",
-    "alias": "антре entree entrée",
+    "alias": "антре entree entrée ანტრე",
     "est": true,
-    "items": ["ent_crois", "ent_croisham", "ent_sand", "ent_eclair", "ent_capp"]
+    "items": [
+      "ent_crois",
+      "ent_croisham",
+      "ent_sand",
+      "ent_eclair",
+      "ent_capp",
+      "ent_croischoc",
+      "ent_croisalm",
+      "ent_croissalm",
+      "ent_sandsalm",
+      "ent_sandbrk",
+      "ent_caesar",
+      "ent_greek",
+      "ent_soup",
+      "ent_piecheese",
+      "ent_piebean",
+      "ent_piemeat",
+      "ent_bread",
+      "ent_danish",
+      "ent_cheesecake",
+      "ent_icecream",
+      "ent_oj",
+      "ent_latte",
+      "ent_espresso",
+      "ent_matcha",
+      "ent_tea",
+      "ent_cookie"
+    ]
   },
   "sp_stay": {
     "name": "Stay Strong",
