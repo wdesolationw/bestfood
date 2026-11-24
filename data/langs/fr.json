@@ -2571,7 +2571,18 @@
     "ent_espresso": "Expresso",
     "ent_matcha": "Matcha latte",
     "ent_tea": "Thé sans sucre",
-    "ent_cookie": "Biscuit"
+    "ent_cookie": "Biscuit",
+    "orange": "Orange",
+    "grapefruit": "Pamplemousse",
+    "watermelon": "Pastèque",
+    "cranberry": "Canneberges",
+    "oj": "Jus d'orange pressé",
+    "applejuice": "Jus de pomme",
+    "carrotjuice": "Jus de carotte",
+    "pomjuice": "Jus de grenade",
+    "grapefruitjuice": "Jus de pamplemousse",
+    "tomatojuice": "Jus de tomate",
+    "grapejuice": "Jus de raisin"
   },
   "gen": {
     "types": ["Salade", "Bowl", "Pâtes", "Wrap", "Omelette", "Porridge", "Smoothie", "Assiette", "Sandwich"],
@@ -3026,6 +3037,122 @@
         "Cuis la betterave (50 minutes), pomme de terre et carotte (20 minutes), laisse refroidir.",
         "Coupe tout en dés avec cornichons et oignon, ajoute les haricots.",
         "Assaisonne d'huile, sale et laisse reposer 15 minutes."
+      ]
+    },
+    "freshmix": {
+      "n": "Jus orange-pomme-carotte",
+      "s": [
+        "Presse 2 oranges, 1 pomme et 1 carotte (extracteur, ou mixeur + passoire).",
+        "Mélange, ajoute des glaçons et bois aussitôt : le jus frais perd ses vitamines en 15–20 minutes."
+      ]
+    },
+    "orangejuice": {
+      "n": "Jus d'orange pressé",
+      "s": ["Presse 4–5 oranges (≈250 ml).", "Sers aussitôt, avec des glaçons si tu veux."]
+    },
+    "applejuicedr": {
+      "n": "Jus de pomme",
+      "s": [
+        "Coupe 3–4 pommes et passe-les à l'extracteur (≈250 ml).",
+        "Ajoute quelques gouttes de citron pour qu'il ne noircisse pas, et bois aussitôt."
+      ]
+    },
+    "carrotapple": {
+      "n": "Jus carotte-pomme",
+      "s": [
+        "Passe 3 carottes et 1–2 pommes à l'extracteur.",
+        "Remue et bois aussitôt ; le carotène s'absorbe mieux avec un peu de gras."
+      ]
+    },
+    "pomegranatejuice": {
+      "n": "Jus de grenade",
+      "s": [
+        "Coupe 2 grenades en deux et presse-les sur un presse-agrumes (≈200 ml).",
+        "Filtre et bois aussitôt ; dilue 1:1 avec de l'eau si tu veux."
+      ]
+    },
+    "grapefruitdr": {
+      "n": "Jus de pamplemousse pressé",
+      "s": [
+        "Presse 2 pamplemousses (≈250 ml).",
+        "Bois aussitôt. Le pamplemousse interagit avec certains médicaments : si tu en prends, demande à ton médecin."
+      ]
+    },
+    "tomatojuicedr": {
+      "n": "Jus de tomate",
+      "s": [
+        "Verse 250 ml de jus de tomate et ajoute quelques gouttes de citron.",
+        "Sale et poivre à ton goût, sers bien frais."
+      ]
+    },
+    "grapejuicedr": {
+      "n": "Jus de raisin",
+      "s": [
+        "Passe 300 g de raisin à l'extracteur (≈200 ml).",
+        "Filtre et sers frais ; il est sucré, tu peux le couper d'eau."
+      ]
+    },
+    "greenjuice": {
+      "n": "Jus : pomme, concombre, céleri",
+      "s": [
+        "Passe à l'extracteur 2 pommes, un concombre, 2 branches de céleri, une poignée d'épinards, un quartier de citron et un morceau de gingembre.",
+        "Remue et bois aussitôt."
+      ]
+    },
+    "beetjuice": {
+      "n": "Jus : betterave, carotte, pomme",
+      "s": [
+        "Passe à l'extracteur une petite betterave, 2 carottes, une pomme, un quartier de citron et un morceau de gingembre.",
+        "Laisse reposer 10 minutes au frais et bois ; commence par de petites quantités."
+      ]
+    },
+    "watermelonjuice": {
+      "n": "Jus de pastèque",
+      "s": [
+        "Mixe 350 g de pastèque épépinée avec du jus de citron et de la menthe.",
+        "Filtre si tu le veux sans pulpe et sers avec des glaçons."
+      ]
+    },
+    "lemonade": {
+      "n": "Citronnade maison",
+      "s": [
+        "Presse 1 citron et mélange le jus avec le miel dans un peu d'eau tiède.",
+        "Ajoute la menthe, de l'eau froide et des glaçons. Pour moins de calories, remplace le miel par un édulcorant."
+      ]
+    },
+    "mors": {
+      "n": "Mors aux canneberges",
+      "s": [
+        "Écrase les canneberges, presse le jus et mets-le au frais.",
+        "Couvre la pulpe d'eau, porte à ébullition, filtre, ajoute le sucre et mélange au jus."
+      ]
+    },
+    "compote": {
+      "n": "Compote à boire pomme-cerise",
+      "s": [
+        "Coupe la pomme, couvre d'eau avec les cerises et porte à ébullition.",
+        "Ajoute le sucre, laisse frémir 5 minutes, infuser à couvert puis refroidir."
+      ]
+    },
+    "cocoadrink": {
+      "n": "Cacao au lait",
+      "s": [
+        "Mélange le cacao et le sucre avec 2 cuillères de lait jusqu'à ce que ce soit lisse.",
+        "Verse le reste du lait et chauffe en remuant, sans faire bouillir."
+      ]
+    },
+    "milkshake": {
+      "n": "Milk-shake",
+      "s": [
+        "Mixe le lait froid avec la glace vanille 1 minute.",
+        "Sers aussitôt. Pour moins de calories, prends du lait écrémé."
+      ]
+    },
+    "ayran": {
+      "n": "Ayran",
+      "s": [
+        "Fouette le yaourt avec de l'eau froide et une pincée de sel.",
+        "Ajoute la menthe et sers bien frais."
       ]
     }
   }

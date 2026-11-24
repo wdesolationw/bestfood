@@ -820,6 +820,7 @@ const VIS = {
   pepper: ["#D13B2E", "slice"], zucchini: ["#9BC265", "round"], broccoli: ["#3E8E41", "floret"], cauliflower: ["#F3EEDC", "floret"], mushroom: ["#D8C3A5", "round"], spinach: ["#2F7D32", "leaf"], carrot: ["#F08A24", "round"],
   tomato: ["#E0412F", "round"], passata: ["#C9402F", "base"], cucumber: ["#8DC26F", "round"], onion: ["#E9D2E6", "ring"], eggplant: ["#5B3A6E", "round"], greenbeans: ["#4C9A47", "stick"], vegmix: ["#6AA84F", "dot"],
   lettuce: ["#7FBF5A", "leaf"], arugula: ["#4E8F3A", "leaf"], banana: ["#F5D86A", "round"], apple: ["#E05A47", "wedge"], pear: ["#D4D96A", "wedge"], berries: ["#6B2E7A", "dot"], strawberry: ["#E0334B", "dot"],
+  orange: ["#F5A030", "round"], grapefruit: ["#F27B5E", "round"], watermelon: ["#E8505B", "cube"], cranberry: ["#B0213A", "dot"], oj: ["#F9A825", "base"], applejuice: ["#E8C468", "base"], carrotjuice: ["#F08A24", "base"], pomjuice: ["#9E1B32", "base"], grapefruitjuice: ["#F4A28C", "base"], tomatojuice: ["#C8382B", "base"], grapejuice: ["#6B2D5C", "base"],
   mango: ["#F5A623", "cube"], cherry: ["#9B1B3A", "dot"], pineapple: ["#F7D154", "cube"], kiwi: ["#8DBE3A", "round"], persimmon: ["#F08A24", "wedge"], avocado: ["#A5C96B", "wedge"], olives: ["#3B3A2A", "dot"],
   pb: ["#B07A3A", "drizzle"], walnut: ["#A87A4A", "dot"], almonds: ["#C9935A", "dot"], chia: ["#333333", "seed"], honey: ["#E8A91F", "drizzle"], maple: ["#B8691A", "drizzle"], cocoa: ["#5B3A2A", "seed"],
   choc: ["#4A2A1A", "cube"], soy: ["#5A2E1A", "drizzle"], ketchup: ["#C9302C", "drizzle"], mayo: ["#FFFDF2", "drizzle"]
@@ -1159,7 +1160,7 @@ const dishImg = d => d.photo ? `<img src="${d.photo}" alt="">` : dishSVG(d.items
 /* ---------- dish generator ---------- */
 const PROTS = ["chicken", "turkey", "veal", "beef", "pork", "chicken_mince", "salmon", "tuna", "shrimp", "whitefish", "tofu", "egg", "bacon"];
 const VEGS = ["cucumber", "tomato", "pepper", "carrot", "corn", "mushroom", "broccoli", "zucchini", "spinach", "cauliflower", "eggplant", "greenbeans", "onion"];
-const FRUITS = ["banana", "berries", "strawberry", "mango", "apple", "pear", "cherry", "pineapple", "kiwi", "persimmon"];
+const FRUITS = ["banana", "berries", "strawberry", "mango", "apple", "pear", "cherry", "pineapple", "kiwi", "persimmon", "orange", "grapefruit", "watermelon"];
 const MATCH = new Set(Object.keys(FOOD).filter(k => !BRANDOF[k] && !PORTION[k] && !["water", "spices", "broth", "sweetener"].includes(k)));
 const CATK = {meat: ["chicken", "chicken_mince", "chickenthigh", "turkey", "turkeyham", "veal", "beef", "beef20", "pork", "bacon"], fish: ["whitefish", "salmon", "shrimp", "tuna"],
   dairy: ["milk", "milkskim", "kefir", "yogurt", "greek0", "greek2", "skyr", "tvorog1", "tvorog2", "tvorog5", "hard", "lightcheese", "mozz", "feta", "suluguni", "procheese", "creamcheese", "cream10", "sour", "protein"],
@@ -1361,7 +1362,7 @@ function parseReq(text) {
 function guessType(ws) {
   if (!ws.length) return null;
   const has = arr => ws.some(k => arr.includes(k)), only = arr => ws.every(k => arr.includes(k));
-  const LIQ = ["milk", "milkskim", "milk32", "oatmilk", "almondmilk", "soymilk", "kefir", "coconut", "protein", "matsoni", "yogurt", "greek0", "greek2", "skyr", "tvorog1", "tvorog2", "tvorog5", "tvorog9"];
+  const LIQ = ["oj", "applejuice", "carrotjuice", "pomjuice", "grapefruitjuice", "tomatojuice", "grapejuice", "milk", "milkskim", "milk32", "oatmilk", "almondmilk", "soymilk", "kefir", "coconut", "protein", "matsoni", "yogurt", "greek0", "greek2", "skyr", "tvorog1", "tvorog2", "tvorog5", "tvorog9"];
   const SWEET = [...FRUITS, "berries", "dates", "pomegranate", "lemon", "honey", "maple", "pb", "cocoa", "choc", "chia", "walnut", "almonds", "peanuts", "coconutflakes", "sugar", "ginger", "mint"];
   const GRAIN = ["rice", "ricecooked", "quinoa", "bulgur", "couscous", "buckwheat", "buckwheatcooked", "lentils", "lentilsdry", "chickpeas", "beans"];
   const GREENS = ["lettuce", "arugula", "spinach"];
@@ -1377,7 +1378,7 @@ function guessType(ws) {
 }
 const TYPES_K = ["salad", "bowl", "pasta", "wrap", "omelet", "oatmeal", "smoothie", "plate", "sandwich"];
 const STARCH = ["flour", "pasta", "rice", "ricenoodles", "potato", "buckwheat", "tortilla", "lavash", "bread"];
-const LEAN = [{}, {beef20: "beef", chickenthigh: "chicken", sour: "greek0", mayo: "greek0", cream10: "milk", mozzfull: "mozz", hard: "lightcheese", tvorog9: "tvorog2", tvorog5: "tvorog2", milk: "milkskim", bacon: "turkeyham"},
+const LEAN = [{}, {beef20: "beef", chickenthigh: "chicken", sour: "greek0", mayo: "greek0", cream10: "milk", mozzfull: "mozz", hard: "lightcheese", tvorog9: "tvorog2", tvorog5: "tvorog2", milk: "milkskim", milk32: "milkskim", sugar: "sweetener", honey: "sweetener", bacon: "turkeyham"},
   {beef20: "beef", mayo: "sour", cream10: "milk", mozzfull: "mozz", tvorog9: "tvorog5"}];
 function buildNamed(req, strat) {
   const d = DISHES[req.dish], excl = new Set(req.excl), items = [];

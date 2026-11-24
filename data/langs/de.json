@@ -2551,7 +2551,18 @@
     "ent_espresso": "Espresso",
     "ent_matcha": "Matcha Latte",
     "ent_tea": "Tee ohne Zucker",
-    "ent_cookie": "Keks"
+    "ent_cookie": "Keks",
+    "orange": "Orange",
+    "grapefruit": "Grapefruit",
+    "watermelon": "Wassermelone",
+    "cranberry": "Cranberrys",
+    "oj": "Frisch gepresster Orangensaft",
+    "applejuice": "Apfelsaft",
+    "carrotjuice": "Karottensaft",
+    "pomjuice": "Granatapfelsaft",
+    "grapefruitjuice": "Grapefruitsaft",
+    "tomatojuice": "Tomatensaft",
+    "grapejuice": "Traubensaft"
   },
   "gen": {
     "types": ["Salat", "Bowl", "Pasta", "Wrap", "Omelett", "Haferbrei", "Smoothie", "Teller", "Sandwich"],
@@ -3011,6 +3022,122 @@
         "Rote Bete (50 Minuten), Kartoffel und Möhre (20 Minuten) kochen, abkühlen.",
         "Alles mit Gewürzgurken und Zwiebel würfeln, Bohnen dazu.",
         "Mit Öl anmachen, abschmecken und 15 Minuten ziehen lassen."
+      ]
+    },
+    "freshmix": {
+      "n": "Orangen-Apfel-Karotten-Saft",
+      "s": [
+        "2 Orangen, 1 Apfel und 1 Karotte entsaften (Entsafter oder Mixer + Sieb).",
+        "Mischen, Eis dazu und sofort trinken: frischer Saft verliert in 15–20 Minuten Vitamine."
+      ]
+    },
+    "orangejuice": {
+      "n": "Frischer Orangensaft",
+      "s": ["4–5 Orangen auspressen (≈250 ml).", "Sofort servieren, nach Wunsch mit Eis."]
+    },
+    "applejuicedr": {
+      "n": "Apfelsaft",
+      "s": [
+        "3–4 Äpfel schneiden und entsaften (≈250 ml).",
+        "Ein paar Tropfen Zitrone dazu, damit er hell bleibt, und sofort trinken."
+      ]
+    },
+    "carrotapple": {
+      "n": "Karotten-Apfel-Saft",
+      "s": [
+        "3 Karotten und 1–2 Äpfel entsaften.",
+        "Umrühren und sofort trinken; Carotin wird mit etwas Fett besser aufgenommen."
+      ]
+    },
+    "pomegranatejuice": {
+      "n": "Granatapfelsaft",
+      "s": [
+        "2 Granatäpfel halbieren und auf der Zitruspresse auspressen (≈200 ml).",
+        "Abseihen und sofort trinken; nach Wunsch 1:1 mit Wasser verdünnen."
+      ]
+    },
+    "grapefruitdr": {
+      "n": "Frischer Grapefruitsaft",
+      "s": [
+        "2 Grapefruits auspressen (≈250 ml).",
+        "Sofort trinken. Grapefruit wechselwirkt mit manchen Medikamenten: frag im Zweifel deinen Arzt."
+      ]
+    },
+    "tomatojuicedr": {
+      "n": "Tomatensaft",
+      "s": [
+        "250 ml Tomatensaft eingießen, ein paar Tropfen Zitrone dazu.",
+        "Mit Salz und Pfeffer abschmecken, gekühlt servieren."
+      ]
+    },
+    "grapejuicedr": {
+      "n": "Traubensaft",
+      "s": [
+        "300 g Trauben entsaften (≈200 ml).",
+        "Abseihen und gekühlt trinken; er ist süß, du kannst ihn mit Wasser verdünnen."
+      ]
+    },
+    "greenjuice": {
+      "n": "Saft: Apfel, Gurke, Sellerie",
+      "s": [
+        "2 Äpfel, eine Gurke, 2 Selleriestangen, eine Handvoll Spinat, eine Zitronenspalte und etwas Ingwer entsaften.",
+        "Umrühren und sofort trinken."
+      ]
+    },
+    "beetjuice": {
+      "n": "Saft: Rote Bete, Karotte, Apfel",
+      "s": [
+        "Eine kleine Rote Bete, 2 Karotten, einen Apfel, eine Zitronenspalte und etwas Ingwer entsaften.",
+        "10 Minuten im Kühlschrank ruhen lassen und trinken; mit kleinen Mengen anfangen."
+      ]
+    },
+    "watermelonjuice": {
+      "n": "Wassermelonensaft",
+      "s": [
+        "350 g kernlose Wassermelone mit Zitronensaft und Minze pürieren.",
+        "Für einen glatten Saft abseihen und mit Eis servieren."
+      ]
+    },
+    "lemonade": {
+      "n": "Hausgemachte Limonade",
+      "s": [
+        "1 Zitrone auspressen und den Saft mit Honig in etwas warmem Wasser verrühren.",
+        "Minze, kaltes Wasser und Eis dazu. Für weniger Kalorien Honig durch Süßstoff ersetzen."
+      ]
+    },
+    "mors": {
+      "n": "Cranberry-Mors",
+      "s": [
+        "Cranberrys zerdrücken, den Saft auspressen und kühlen.",
+        "Trester mit Wasser aufkochen, abseihen, Zucker zugeben und mit dem Saft mischen."
+      ]
+    },
+    "compote": {
+      "n": "Apfel-Kirsch-Kompott (Getränk)",
+      "s": [
+        "Apfel schneiden, mit den Kirschen in Wasser aufkochen.",
+        "Zucker zugeben, 5 Minuten köcheln, zugedeckt ziehen lassen und kühlen."
+      ]
+    },
+    "cocoadrink": {
+      "n": "Kakao mit Milch",
+      "s": [
+        "Kakao und Zucker mit 2 Löffeln Milch glatt rühren.",
+        "Restliche Milch zugießen und unter Rühren erhitzen, nicht kochen."
+      ]
+    },
+    "milkshake": {
+      "n": "Milchshake",
+      "s": [
+        "Kalte Milch mit Vanilleeis 1 Minute mixen.",
+        "Sofort servieren. Für weniger Kalorien Magermilch nehmen."
+      ]
+    },
+    "ayran": {
+      "n": "Ayran",
+      "s": [
+        "Joghurt mit kaltem Wasser und einer Prise Salz verquirlen.",
+        "Minze dazu und gekühlt servieren."
       ]
     }
   }

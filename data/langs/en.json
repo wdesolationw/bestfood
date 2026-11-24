@@ -2538,7 +2538,18 @@
     "ent_espresso": "Espresso",
     "ent_matcha": "Matcha latte",
     "ent_tea": "Tea, no sugar",
-    "ent_cookie": "Cookie"
+    "ent_cookie": "Cookie",
+    "orange": "Orange",
+    "grapefruit": "Grapefruit",
+    "watermelon": "Watermelon",
+    "cranberry": "Cranberries",
+    "oj": "Fresh orange juice",
+    "applejuice": "Apple juice",
+    "carrotjuice": "Carrot juice",
+    "pomjuice": "Pomegranate juice",
+    "grapefruitjuice": "Grapefruit juice",
+    "tomatojuice": "Tomato juice",
+    "grapejuice": "Grape juice"
   },
   "gen": {
     "types": ["Salad", "Bowl", "Pasta", "Wrap", "Omelet", "Oatmeal", "Smoothie", "Plate", "Sandwich"],
@@ -2994,6 +3005,119 @@
         "Dice everything with pickles and onion, add beans.",
         "Dress with oil, season and let it rest 15 minutes."
       ]
+    },
+    "freshmix": {
+      "n": "Orange-apple-carrot juice",
+      "s": [
+        "Juice 2 oranges, 1 apple and 1 carrot (juicer, or blender plus sieve).",
+        "Mix, add ice and drink right away: fresh juice loses vitamins within 15–20 minutes."
+      ]
+    },
+    "orangejuice": {
+      "n": "Fresh orange juice",
+      "s": ["Squeeze 4–5 oranges (≈250 ml).", "Serve right away, with ice if you like."]
+    },
+    "applejuicedr": {
+      "n": "Apple juice",
+      "s": [
+        "Cut 3–4 apples and run them through a juicer (≈250 ml).",
+        "Add a few drops of lemon so it stays light, and drink right away."
+      ]
+    },
+    "carrotapple": {
+      "n": "Carrot-apple juice",
+      "s": [
+        "Juice 3 carrots and 1–2 apples.",
+        "Stir and drink right away; carotene is absorbed better with a little fat on the side."
+      ]
+    },
+    "pomegranatejuice": {
+      "n": "Pomegranate juice",
+      "s": [
+        "Halve 2 pomegranates and press them on a citrus juicer (≈200 ml).",
+        "Strain and drink right away; dilute 1:1 with water if you like."
+      ]
+    },
+    "grapefruitdr": {
+      "n": "Fresh grapefruit juice",
+      "s": [
+        "Squeeze 2 grapefruits (≈250 ml).",
+        "Drink right away. Grapefruit interacts with some medicines: if you take any, check with your doctor."
+      ]
+    },
+    "tomatojuicedr": {
+      "n": "Tomato juice",
+      "s": [
+        "Pour 250 ml of tomato juice and add a few drops of lemon.",
+        "Season with salt and pepper and serve chilled."
+      ]
+    },
+    "grapejuicedr": {
+      "n": "Grape juice",
+      "s": [
+        "Juice 300 g of grapes (≈200 ml).",
+        "Strain and serve chilled; it is sweet, so you can dilute it with water."
+      ]
+    },
+    "greenjuice": {
+      "n": "Juice: apple, cucumber, celery",
+      "s": [
+        "Juice 2 apples, a cucumber, 2 celery stalks, a handful of spinach, a lemon wedge and a piece of ginger.",
+        "Stir and drink right away."
+      ]
+    },
+    "beetjuice": {
+      "n": "Juice: beet, carrot, apple",
+      "s": [
+        "Juice a small beet, 2 carrots, an apple, a lemon wedge and a piece of ginger.",
+        "Let it sit in the fridge for 10 minutes and drink; start with small servings."
+      ]
+    },
+    "watermelonjuice": {
+      "n": "Watermelon juice",
+      "s": [
+        "Blend 350 g of seedless watermelon with lemon juice and mint.",
+        "Strain if you want it smooth, and serve over ice."
+      ]
+    },
+    "lemonade": {
+      "n": "Homemade lemonade",
+      "s": [
+        "Squeeze 1 lemon and stir the juice with honey in a little warm water.",
+        "Add mint, cold water and ice. For fewer calories, swap the honey for a sweetener."
+      ]
+    },
+    "mors": {
+      "n": "Cranberry mors",
+      "s": [
+        "Mash the cranberries, press out the juice and chill it.",
+        "Cover the pulp with water, bring to a boil, strain, add sugar and mix with the juice."
+      ]
+    },
+    "compote": {
+      "n": "Apple and cherry kompot",
+      "s": [
+        "Cut the apple, cover it with water together with the cherries and bring to a boil.",
+        "Add sugar, simmer 5 minutes, let it steep covered and chill."
+      ]
+    },
+    "cocoadrink": {
+      "n": "Cocoa with milk",
+      "s": [
+        "Mix the cocoa and sugar with 2 spoons of milk until smooth.",
+        "Pour in the rest of the milk and heat, stirring, without boiling."
+      ]
+    },
+    "milkshake": {
+      "n": "Milkshake",
+      "s": [
+        "Blend cold milk with vanilla ice cream for 1 minute.",
+        "Pour right away. For fewer calories use skimmed milk."
+      ]
+    },
+    "ayran": {
+      "n": "Ayran",
+      "s": ["Whisk the yogurt with cold water and a pinch of salt.", "Add mint and serve chilled."]
     }
   }
 }

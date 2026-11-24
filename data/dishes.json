@@ -627,5 +627,274 @@
       ["onion", 20],
       ["oil", 15]
     ]
+  },
+  "freshmix": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "сок",
+      "фреш",
+      "свежевыжатый сок",
+      "juice",
+      "fresh juice",
+      "сік",
+      "шырын",
+      "шырыны",
+      "წვენი",
+      "ფრეში",
+      "zumo",
+      "jugo",
+      "saft",
+      "jus"
+    ],
+    "items": [["oj", 150], ["applejuice", 100], ["carrotjuice", 50]]
+  },
+  "orangejuice": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "апельсиновый сок",
+      "апельсиновый фреш",
+      "orange juice",
+      "апельсиновий сік",
+      "апельсин шырыны",
+      "ფორთოხლის წვენი",
+      "ფორთოხლის ფრეში",
+      "zumo de naranja",
+      "jugo de naranja",
+      "orangensaft",
+      "jus d'orange"
+    ],
+    "items": [["oj", 250]]
+  },
+  "applejuicedr": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "яблочный сок",
+      "apple juice",
+      "яблучний сік",
+      "алма шырыны",
+      "ვაშლის წვენი",
+      "zumo de manzana",
+      "jugo de manzana",
+      "apfelsaft",
+      "jus de pomme"
+    ],
+    "items": [["applejuice", 250]]
+  },
+  "carrotapple": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "морковный сок",
+      "морковно-яблочный сок",
+      "carrot juice",
+      "морквяний сік",
+      "сәбіз шырыны",
+      "სტაფილოს წვენი",
+      "zumo de zanahoria",
+      "jugo de zanahoria",
+      "karottensaft",
+      "möhrensaft",
+      "jus de carotte"
+    ],
+    "items": [["carrotjuice", 150], ["applejuice", 100]]
+  },
+  "pomegranatejuice": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "гранатовый сок",
+      "pomegranate juice",
+      "гранатовий сік",
+      "анар шырыны",
+      "ბროწეულის წვენი",
+      "zumo de granada",
+      "jugo de granada",
+      "granatapfelsaft",
+      "jus de grenade"
+    ],
+    "items": [["pomjuice", 200]]
+  },
+  "grapefruitdr": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "грейпфрутовый сок",
+      "grapefruit juice",
+      "грейпфрутовий сік",
+      "грейпфрут шырыны",
+      "გრეიფრუტის წვენი",
+      "zumo de pomelo",
+      "jugo de toronja",
+      "grapefruitsaft",
+      "jus de pamplemousse"
+    ],
+    "items": [["grapefruitjuice", 250]]
+  },
+  "tomatojuicedr": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "томатный сок",
+      "tomato juice",
+      "томатний сік",
+      "қызанақ шырыны",
+      "პომიდვრის წვენი",
+      "zumo de tomate",
+      "jugo de tomate",
+      "tomatensaft",
+      "jus de tomate"
+    ],
+    "items": [["tomatojuice", 250], ["lemon", 5]]
+  },
+  "grapejuicedr": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "виноградный сок",
+      "grape juice",
+      "виноградний сік",
+      "жүзім шырыны",
+      "ყურძნის წვენი",
+      "zumo de uva",
+      "jugo de uva",
+      "traubensaft",
+      "jus de raisin"
+    ],
+    "items": [["grapejuice", 200]]
+  },
+  "greenjuice": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "зелёный сок",
+      "зеленый сок",
+      "green juice",
+      "зелений сік",
+      "жасыл шырын",
+      "მწვანე წვენი",
+      "zumo verde",
+      "jugo verde",
+      "grüner saft",
+      "jus vert"
+    ],
+    "items": [
+      ["applejuice", 150],
+      ["cucumber", 100],
+      ["celery", 40],
+      ["spinach", 20],
+      ["lemon", 10],
+      ["ginger", 3]
+    ]
+  },
+  "beetjuice": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "свекольный сок",
+      "свёкольный сок",
+      "beet juice",
+      "beetroot juice",
+      "буряковий сік",
+      "қызылша шырыны",
+      "ჭარხლის წვენი",
+      "zumo de remolacha",
+      "jugo de betabel",
+      "rote-bete-saft",
+      "randensaft",
+      "jus de betterave"
+    ],
+    "items": [["carrotjuice", 100], ["applejuice", 100], ["beet", 60], ["lemon", 10], ["ginger", 3]]
+  },
+  "watermelonjuice": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "арбузный сок",
+      "арбузный фреш",
+      "watermelon juice",
+      "кавуновий сік",
+      "қарбыз шырыны",
+      "საზამთროს წვენი",
+      "zumo de sandía",
+      "jugo de sandía",
+      "wassermelonensaft",
+      "jus de pastèque"
+    ],
+    "items": [["watermelon", 350], ["lemon", 10], ["mint", 3]]
+  },
+  "lemonade": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": ["лимонад", "lemonade", "лимонад", "ლიმონათი", "limonada", "limonade"],
+    "items": [["lemon", 50], ["honey", 20], ["mint", 5], ["water", 250]]
+  },
+  "mors": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "морс",
+      "клюквенный морс",
+      "mors",
+      "cranberry drink",
+      "журавлинний морс",
+      "კლუკვის მორსი",
+      "bebida de arándanos",
+      "preiselbeergetränk",
+      "boisson aux canneberges"
+    ],
+    "items": [["cranberry", 80], ["sugar", 20], ["water", 250]]
+  },
+  "compote": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": ["компот", "compote", "kompot", "компот", "კომპოტი", "compota", "kompott"],
+    "items": [["apple", 80], ["cherry", 50], ["sugar", 20], ["water", 250]]
+  },
+  "cocoadrink": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "какао на молоке",
+      "горячий шоколад",
+      "напиток какао",
+      "чашка какао",
+      "hot cocoa",
+      "hot chocolate",
+      "cocoa drink",
+      "гарячий шоколад",
+      "какао сусыны",
+      "ცხელი შოკოლადი",
+      "chocolate caliente",
+      "cacao caliente",
+      "heiße schokolade",
+      "kakao trinken",
+      "chocolat chaud"
+    ],
+    "items": [["milk", 250], ["cocoa", 10], ["sugar", 10]]
+  },
+  "milkshake": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": [
+      "молочный коктейль",
+      "milkshake",
+      "milk shake",
+      "молочний коктейль",
+      "сүт коктейлі",
+      "რძის კოქტეილი",
+      "batido de leche",
+      "milchshake",
+      "milk-shake"
+    ],
+    "items": [["milk32", 200], ["s_icecream", 100]]
+  },
+  "ayran": {
+    "type": "smoothie",
+    "cuis": ["home"],
+    "kw": ["айран", "тан", "ayran", "airan", "აირანი", "მაწვნის სასმელი"],
+    "items": [["yogurt", 150], ["water", 100], ["mint", 2]]
   }
 }

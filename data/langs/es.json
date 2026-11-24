@@ -2557,7 +2557,18 @@
     "ent_espresso": "Espresso",
     "ent_matcha": "Matcha latte",
     "ent_tea": "Té sin azúcar",
-    "ent_cookie": "Galleta"
+    "ent_cookie": "Galleta",
+    "orange": "Naranja",
+    "grapefruit": "Pomelo (toronja)",
+    "watermelon": "Sandía",
+    "cranberry": "Arándanos rojos",
+    "oj": "Zumo de naranja natural",
+    "applejuice": "Zumo de manzana",
+    "carrotjuice": "Zumo de zanahoria",
+    "pomjuice": "Zumo de granada",
+    "grapefruitjuice": "Zumo de pomelo",
+    "tomatojuice": "Zumo de tomate",
+    "grapejuice": "Zumo de uva"
   },
   "gen": {
     "types": ["Ensalada", "Bowl", "Pasta", "Wrap", "Tortilla", "Avena", "Batido", "Plato", "Sándwich"],
@@ -3018,6 +3029,119 @@
         "Corta todo en dados con pepinillos y cebolla, añade las alubias.",
         "Aliña con aceite, sazona y deja reposar 15 minutos."
       ]
+    },
+    "freshmix": {
+      "n": "Zumo de naranja, manzana y zanahoria",
+      "s": [
+        "Exprime 2 naranjas, 1 manzana y 1 zanahoria (licuadora o batidora + colador).",
+        "Mezcla, añade hielo y bébelo enseguida: el zumo pierde vitaminas en 15–20 minutos."
+      ]
+    },
+    "orangejuice": {
+      "n": "Zumo de naranja natural",
+      "s": ["Exprime 4–5 naranjas (≈250 ml).", "Sírvelo enseguida, con hielo si quieres."]
+    },
+    "applejuicedr": {
+      "n": "Zumo de manzana",
+      "s": [
+        "Corta 3–4 manzanas y pásalas por la licuadora (≈250 ml).",
+        "Añade unas gotas de limón para que no se oscurezca y bébelo enseguida."
+      ]
+    },
+    "carrotapple": {
+      "n": "Zumo de zanahoria y manzana",
+      "s": [
+        "Licúa 3 zanahorias y 1–2 manzanas.",
+        "Remueve y bébelo enseguida; el caroteno se absorbe mejor con algo de grasa."
+      ]
+    },
+    "pomegranatejuice": {
+      "n": "Zumo de granada",
+      "s": [
+        "Parte 2 granadas por la mitad y exprímelas en un exprimidor (≈200 ml).",
+        "Cuela y bébelo enseguida; si quieres, dilúyelo 1:1 con agua."
+      ]
+    },
+    "grapefruitdr": {
+      "n": "Zumo de pomelo natural",
+      "s": [
+        "Exprime 2 pomelos (≈250 ml).",
+        "Bébelo enseguida. El pomelo interactúa con algunos medicamentos: si tomas alguno, consulta a tu médico."
+      ]
+    },
+    "tomatojuicedr": {
+      "n": "Zumo de tomate",
+      "s": [
+        "Sirve 250 ml de zumo de tomate y añade unas gotas de limón.",
+        "Salpimienta al gusto y sírvelo frío."
+      ]
+    },
+    "grapejuicedr": {
+      "n": "Zumo de uva",
+      "s": [
+        "Licúa 300 g de uvas (≈200 ml).",
+        "Cuela y sírvelo frío; es dulce, así que puedes diluirlo con agua."
+      ]
+    },
+    "greenjuice": {
+      "n": "Zumo: manzana, pepino, apio",
+      "s": [
+        "Licúa 2 manzanas, un pepino, 2 ramas de apio, un puñado de espinacas, un gajo de limón y un trozo de jengibre.",
+        "Remueve y bébelo enseguida."
+      ]
+    },
+    "beetjuice": {
+      "n": "Zumo: remolacha, zanahoria, manzana",
+      "s": [
+        "Licúa una remolacha pequeña, 2 zanahorias, una manzana, un gajo de limón y un trozo de jengibre.",
+        "Déjalo 10 minutos en la nevera y bébelo; empieza con raciones pequeñas."
+      ]
+    },
+    "watermelonjuice": {
+      "n": "Zumo de sandía",
+      "s": [
+        "Tritura 350 g de sandía sin pepitas con zumo de limón y menta.",
+        "Cuélalo si lo quieres sin pulpa y sírvelo con hielo."
+      ]
+    },
+    "lemonade": {
+      "n": "Limonada casera",
+      "s": [
+        "Exprime 1 limón y mezcla el zumo con miel en un poco de agua tibia.",
+        "Añade menta, agua fría y hielo. Para menos calorías, cambia la miel por edulcorante."
+      ]
+    },
+    "mors": {
+      "n": "Mors de arándanos rojos",
+      "s": [
+        "Machaca los arándanos, exprime el zumo y guárdalo en la nevera.",
+        "Cubre la pulpa con agua, lleva a ebullición, cuela, añade azúcar y mezcla con el zumo."
+      ]
+    },
+    "compote": {
+      "n": "Compota de manzana y cereza",
+      "s": [
+        "Corta la manzana, cúbrela de agua junto con las cerezas y lleva a ebullición.",
+        "Añade azúcar, cuece 5 minutos, deja reposar tapado y enfría."
+      ]
+    },
+    "cocoadrink": {
+      "n": "Cacao con leche",
+      "s": [
+        "Mezcla el cacao y el azúcar con 2 cucharadas de leche hasta que quede liso.",
+        "Añade el resto de la leche y calienta removiendo, sin que hierva."
+      ]
+    },
+    "milkshake": {
+      "n": "Batido de leche",
+      "s": [
+        "Bate leche fría con helado de vainilla 1 minuto.",
+        "Sírvelo enseguida. Para menos calorías usa leche desnatada."
+      ]
+    },
+    "ayran": {
+      "n": "Ayran",
+      "s": ["Bate el yogur con agua fría y una pizca de sal.", "Añade menta y sírvelo frío."]
     }
   }
 }

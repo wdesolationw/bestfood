@@ -255,5 +255,16 @@
   "ska_sm_blueberry": "other",
   "ska_j_citrus": "other",
   "ska_j_glow": "other",
-  "ska_j_berry": "other"
+  "ska_j_berry": "other",
+  "orange": "fruit",
+  "grapefruit": "fruit",
+  "watermelon": "fruit",
+  "cranberry": "fruit",
+  "oj": "other",
+  "applejuice": "other",
+  "carrotjuice": "other",
+  "pomjuice": "other",
+  "grapefruitjuice": "other",
+  "tomatojuice": "other",
+  "grapejuice": "other"
 }
