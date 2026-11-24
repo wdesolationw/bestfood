@@ -783,8 +783,10 @@ function fillProd() {
   el.innerHTML = (rec.length ? `<p class="lbl">${esc(T.recent)}</p>` + rec.map(([k, g]) => `<button data-pk="${k}" data-pg="${r0(g)}"><span>${esc(fname(k))}</span><small>${r0(g)} ${esc(T.grams)} · ${r0(FOOD[k][0] * g / 100)} ${esc(T.kcal)}</small></button>`).join("") : "") +
     `<p class="lbl">${esc(T.stdT)}</p><div class="brandpick">` + Object.keys(STD).map(g => `<button class="chip" data-stdg="${g}" aria-pressed="${sheetCtx.stdg === g}">${esc(T.stdG[g])}</button>`).join("") + `</div>` +
     (sheetCtx.stdg && STD[sheetCtx.stdg] ? resultsHTML(STD[sheetCtx.stdg], "data-pk") : "") +
-    `<p class="lbl">${esc(T.cafesT)}</p><div class="brandpick">` + Object.entries(BRANDS).map(([b, v]) => `<button class="chip" data-brand="${b}" aria-pressed="${sheetCtx.brand === b}">${esc(v.name === "Pizza" ? T.cafesPizza || "Pizza" : v.name)}</button>`).join("") + `</div>` +
-    (sheetCtx.brand && BRANDS[sheetCtx.brand] ? resultsHTML(BRANDS[sheetCtx.brand].items, "data-pk") : "") +
+    `<p class="lbl">${esc(T.sportT)}</p><div class="brandpick">` + Object.entries(BRANDS).filter(([b, v]) => v.sport).map(([b, v]) => `<button class="chip" data-brand="${b}" aria-pressed="${sheetCtx.brand === b}">${esc(v.name)}</button>`).join("") + `</div>` +
+    (sheetCtx.brand && BRANDS[sheetCtx.brand] && BRANDS[sheetCtx.brand].sport ? resultsHTML(BRANDS[sheetCtx.brand].items, "data-pk") : "") +
+    `<p class="lbl">${esc(T.cafesT)}</p><div class="brandpick">` + Object.entries(BRANDS).filter(([b, v]) => !v.sport).map(([b, v]) => `<button class="chip" data-brand="${b}" aria-pressed="${sheetCtx.brand === b}">${esc(v.name === "Pizza" ? T.cafesPizza || "Pizza" : v.name)}</button>`).join("") + `</div>` +
+    (sheetCtx.brand && BRANDS[sheetCtx.brand] && !BRANDS[sheetCtx.brand].sport ? resultsHTML(BRANDS[sheetCtx.brand].items, "data-pk") : "") +
     `<p class="lbl">${esc(T.localT)}</p>` + LOCAL.map(k => `<button data-pk="${k}"><span>${esc(fname(k))}</span><small>1 ${esc(T.pcs)} ≈ ${PORTION[k]} ${esc(T.grams)} · ${r0(FOOD[k][0] * PORTION[k] / 100)} ${esc(T.kcal)}</small></button>`).join("");
 }
 function fillPick() {

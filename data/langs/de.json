@@ -356,7 +356,8 @@
       "salad": "Salate",
       "bake": "Gebäck und Desserts",
       "drink": "Getränke"
-    }
+    },
+    "sportT": "Sportnahrung und Proteinprodukte"
   },
   "quick": ["Pasta", "Reis", "Hähnchen", "Quark", "Banane", "Schokolade"],
   "stop": ["mit", "und", "der", "die", "das", "ein", "eine", "im", "in"],
@@ -2483,7 +2484,30 @@
     "s_oj": "Orangensaft",
     "s_cola": "Cola",
     "s_kompot": "Kompott (Getränk)",
-    "s_smoothie_ban": "Bananen-Milch-Smoothie"
+    "s_smoothie_ban": "Bananen-Milch-Smoothie",
+    "sp_stay_yog_nat": "Protein-Joghurt natur",
+    "sp_stay_pud_van": "Protein-Pudding Vanille",
+    "sp_stay_pud_choc": "Protein-Pudding Schoko",
+    "sp_stay_drk_van": "Protein-Drink Vanille",
+    "sp_stay_drk_cocoa": "Protein-Drink Kakao mit Kollagen",
+    "sp_yopro_yog_fr": "Protein-Joghurt Frucht",
+    "sp_yopro_pud_van": "Protein-Pudding Vanille",
+    "sp_yopro_pud_hz": "Protein-Pudding Schoko-Haselnuss",
+    "sp_yopro_drk_yog": "Protein-Trinkjoghurt",
+    "sp_ehrmann_yog_fr": "Protein-Joghurt Frucht",
+    "sp_ehrmann_pud_choc": "Protein-Pudding Schoko",
+    "sp_ehrmann_pud_car": "Protein-Pudding Karamell",
+    "sp_arla_yog_nat": "Protein-Joghurt natur",
+    "sp_arla_pud_choc": "Protein-Pudding Schoko",
+    "sp_barebells_bar_cc": "Proteinriegel Cookies & Cream",
+    "sp_barebells_bar_pean": "Proteinriegel Salty Peanut",
+    "sp_barebells_bar_car": "Proteinriegel Karamell-Cashew",
+    "sp_barebells_shake": "Protein-Milchshake",
+    "sp_grenade_bar": "Proteinriegel",
+    "sp_quest_bar": "Proteinriegel",
+    "sp_bombbar_bar": "Proteinriegel",
+    "sp_myprotein_whey": "Whey-Protein (1 Messlöffel)",
+    "sp_on_whey": "Whey-Protein (1 Messlöffel)"
   },
   "gen": {
     "types": ["Salat", "Bowl", "Pasta", "Wrap", "Omelett", "Haferbrei", "Smoothie", "Teller", "Sandwich"],

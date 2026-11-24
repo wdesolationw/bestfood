@@ -361,7 +361,8 @@
       "salad": "Ensaladas",
       "bake": "Bollería y postres",
       "drink": "Bebidas"
-    }
+    },
+    "sportT": "Nutrición deportiva y productos proteicos"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],
@@ -2489,7 +2490,30 @@
     "s_oj": "Zumo de naranja",
     "s_cola": "Refresco de cola",
     "s_kompot": "Compota (bebida)",
-    "s_smoothie_ban": "Batido de plátano con leche"
+    "s_smoothie_ban": "Batido de plátano con leche",
+    "sp_stay_yog_nat": "Yogur proteico natural",
+    "sp_stay_pud_van": "Pudin proteico de vainilla",
+    "sp_stay_pud_choc": "Pudin proteico de chocolate",
+    "sp_stay_drk_van": "Bebida proteica de vainilla",
+    "sp_stay_drk_cocoa": "Bebida proteica de cacao con colágeno",
+    "sp_yopro_yog_fr": "Yogur proteico de frutas",
+    "sp_yopro_pud_van": "Pudin proteico de vainilla",
+    "sp_yopro_pud_hz": "Pudin proteico de chocolate y avellana",
+    "sp_yopro_drk_yog": "Yogur bebible proteico",
+    "sp_ehrmann_yog_fr": "Yogur proteico de frutas",
+    "sp_ehrmann_pud_choc": "Pudin proteico de chocolate",
+    "sp_ehrmann_pud_car": "Pudin proteico de caramelo",
+    "sp_arla_yog_nat": "Yogur proteico natural",
+    "sp_arla_pud_choc": "Pudin proteico de chocolate",
+    "sp_barebells_bar_cc": "Barrita proteica Cookies & Cream",
+    "sp_barebells_bar_pean": "Barrita proteica de cacahuete salado",
+    "sp_barebells_bar_car": "Barrita proteica de caramelo y anacardo",
+    "sp_barebells_shake": "Batido proteico",
+    "sp_grenade_bar": "Barrita proteica",
+    "sp_quest_bar": "Barrita proteica",
+    "sp_bombbar_bar": "Barrita proteica",
+    "sp_myprotein_whey": "Proteína de suero (1 cacito)",
+    "sp_on_whey": "Proteína de suero (1 cacito)"
   },
   "gen": {
     "types": ["Ensalada", "Bowl", "Pasta", "Wrap", "Tortilla", "Avena", "Batido", "Plato", "Sándwich"],

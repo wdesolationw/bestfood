@@ -138,5 +138,75 @@
     "alias": "антре entree entrée",
     "est": true,
     "items": ["ent_crois", "ent_croisham", "ent_sand", "ent_eclair", "ent_capp"]
+  },
+  "sp_stay": {
+    "name": "Stay Strong",
+    "alias": "stay strong стей стэй стронг staystrong",
+    "est": false,
+    "sport": true,
+    "items": [
+      "sp_stay_yog_nat",
+      "sp_stay_pud_van",
+      "sp_stay_pud_choc",
+      "sp_stay_drk_van",
+      "sp_stay_drk_cocoa"
+    ]
+  },
+  "sp_yopro": {
+    "name": "YoPRO / HiPRO",
+    "alias": "yopro hipro йопро хипро данон danone",
+    "est": false,
+    "sport": true,
+    "items": ["sp_yopro_yog_fr", "sp_yopro_pud_van", "sp_yopro_pud_hz", "sp_yopro_drk_yog"]
+  },
+  "sp_ehrmann": {
+    "name": "Ehrmann High Protein",
+    "alias": "ehrmann эрманн эрман high protein",
+    "est": false,
+    "sport": true,
+    "items": ["sp_ehrmann_yog_fr", "sp_ehrmann_pud_choc", "sp_ehrmann_pud_car"]
+  },
+  "sp_arla": {
+    "name": "Arla Protein",
+    "alias": "arla арла protein",
+    "est": false,
+    "sport": true,
+    "items": ["sp_arla_yog_nat", "sp_arla_pud_choc"]
+  },
+  "sp_barebells": {
+    "name": "Barebells",
+    "alias": "barebells бейрбелс барбелс бэрбелс",
+    "est": false,
+    "sport": true,
+    "items": ["sp_barebells_bar_cc", "sp_barebells_bar_pean", "sp_barebells_bar_car", "sp_barebells_shake"]
+  },
+  "sp_grenade": {
+    "name": "Grenade",
+    "alias": "grenade гренейд гренад carb killa",
+    "est": false,
+    "sport": true,
+    "items": ["sp_grenade_bar"]
+  },
+  "sp_quest": {"name": "Quest", "alias": "quest квест", "est": false, "sport": true, "items": ["sp_quest_bar"]},
+  "sp_bombbar": {
+    "name": "Bombbar",
+    "alias": "bombbar бомббар бомбар",
+    "est": false,
+    "sport": true,
+    "items": ["sp_bombbar_bar"]
+  },
+  "sp_myprotein": {
+    "name": "Myprotein",
+    "alias": "myprotein майпротеин impact whey",
+    "est": false,
+    "sport": true,
+    "items": ["sp_myprotein_whey"]
+  },
+  "sp_on": {
+    "name": "Optimum Nutrition",
+    "alias": "optimum nutrition оптимум gold standard",
+    "est": false,
+    "sport": true,
+    "items": ["sp_on_whey"]
   }
 }

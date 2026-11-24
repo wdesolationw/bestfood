@@ -361,7 +361,8 @@
       "salad": "Salades",
       "bake": "Viennoiseries et desserts",
       "drink": "Boissons"
-    }
+    },
+    "sportT": "Nutrition sportive et produits protéinés"
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],
@@ -2503,7 +2504,30 @@
     "s_oj": "Jus d'orange",
     "s_cola": "Cola",
     "s_kompot": "Compote (boisson)",
-    "s_smoothie_ban": "Smoothie banane au lait"
+    "s_smoothie_ban": "Smoothie banane au lait",
+    "sp_stay_yog_nat": "Yaourt protéiné nature",
+    "sp_stay_pud_van": "Pudding protéiné vanille",
+    "sp_stay_pud_choc": "Pudding protéiné chocolat",
+    "sp_stay_drk_van": "Boisson protéinée vanille",
+    "sp_stay_drk_cocoa": "Boisson protéinée cacao au collagène",
+    "sp_yopro_yog_fr": "Yaourt protéiné aux fruits",
+    "sp_yopro_pud_van": "Pudding protéiné vanille",
+    "sp_yopro_pud_hz": "Pudding protéiné chocolat-noisette",
+    "sp_yopro_drk_yog": "Yaourt à boire protéiné",
+    "sp_ehrmann_yog_fr": "Yaourt protéiné aux fruits",
+    "sp_ehrmann_pud_choc": "Pudding protéiné chocolat",
+    "sp_ehrmann_pud_car": "Pudding protéiné caramel",
+    "sp_arla_yog_nat": "Yaourt protéiné nature",
+    "sp_arla_pud_choc": "Pudding protéiné chocolat",
+    "sp_barebells_bar_cc": "Barre protéinée Cookies & Cream",
+    "sp_barebells_bar_pean": "Barre protéinée cacahuète salée",
+    "sp_barebells_bar_car": "Barre protéinée caramel-cajou",
+    "sp_barebells_shake": "Milkshake protéiné",
+    "sp_grenade_bar": "Barre protéinée",
+    "sp_quest_bar": "Barre protéinée",
+    "sp_bombbar_bar": "Barre protéinée",
+    "sp_myprotein_whey": "Protéine whey (1 dose)",
+    "sp_on_whey": "Protéine whey (1 dose)"
   },
   "gen": {
     "types": ["Salade", "Bowl", "Pâtes", "Wrap", "Omelette", "Porridge", "Smoothie", "Assiette", "Sandwich"],

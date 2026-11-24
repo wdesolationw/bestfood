@@ -356,7 +356,8 @@
       "salad": "Salads",
       "bake": "Bakery and desserts",
       "drink": "Drinks"
-    }
+    },
+    "sportT": "Sports nutrition and protein products"
   },
   "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
   "stop": ["with", "and", "the", "a", "of", "in"],
@@ -2470,7 +2471,30 @@
     "s_oj": "Orange juice",
     "s_cola": "Cola",
     "s_kompot": "Fruit compote drink",
-    "s_smoothie_ban": "Banana milk smoothie"
+    "s_smoothie_ban": "Banana milk smoothie",
+    "sp_stay_yog_nat": "Protein yogurt, natural",
+    "sp_stay_pud_van": "Protein pudding, vanilla",
+    "sp_stay_pud_choc": "Protein pudding, chocolate",
+    "sp_stay_drk_van": "Protein drink, vanilla",
+    "sp_stay_drk_cocoa": "Protein drink, cocoa with collagen",
+    "sp_yopro_yog_fr": "Protein yogurt, fruit",
+    "sp_yopro_pud_van": "Protein pudding, vanilla",
+    "sp_yopro_pud_hz": "Protein pudding, chocolate hazelnut",
+    "sp_yopro_drk_yog": "Protein drinking yogurt",
+    "sp_ehrmann_yog_fr": "Protein yogurt, fruit",
+    "sp_ehrmann_pud_choc": "Protein pudding, chocolate",
+    "sp_ehrmann_pud_car": "Protein pudding, caramel",
+    "sp_arla_yog_nat": "Protein yogurt, natural",
+    "sp_arla_pud_choc": "Protein pudding, chocolate",
+    "sp_barebells_bar_cc": "Protein bar Cookies & Cream",
+    "sp_barebells_bar_pean": "Protein bar, salty peanut",
+    "sp_barebells_bar_car": "Protein bar, caramel cashew",
+    "sp_barebells_shake": "Protein milkshake",
+    "sp_grenade_bar": "Protein bar",
+    "sp_quest_bar": "Protein bar",
+    "sp_bombbar_bar": "Protein bar",
+    "sp_myprotein_whey": "Whey protein (1 scoop)",
+    "sp_on_whey": "Whey protein (1 scoop)"
   },
   "gen": {
     "types": ["Salad", "Bowl", "Pasta", "Wrap", "Omelet", "Oatmeal", "Smoothie", "Plate", "Sandwich"],
