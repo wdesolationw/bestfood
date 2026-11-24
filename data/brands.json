@@ -208,5 +208,124 @@
     "est": false,
     "sport": true,
     "items": ["sp_on_whey"]
+  },
+  "sp_shock": {
+    "name": "FitnesShock",
+    "alias": "fitnesshock fitnes shock shocks фитнесшок фитнес шок шокс",
+    "est": false,
+    "sport": true,
+    "items": ["sp_shock_bar_pean", "sp_shock_bar_pist"]
+  },
+  "sp_snaq": {
+    "name": "Snaq Fabriq / SNAQER",
+    "alias": "snaq fabriq snaqer снек фабрик снакер снэкер снеккер",
+    "est": false,
+    "sport": true,
+    "items": ["sp_snaq_ck_pean", "sp_snaq_ck_pist", "sp_snaq_ck_cher"]
+  },
+  "sp_chika": {
+    "name": "Chikalab / Chikabar",
+    "alias": "chikalab chikabar чикалаб чикабар чика",
+    "est": false,
+    "sport": true,
+    "items": ["sp_chika_bar"]
+  },
+  "sp_expo": {
+    "name": "Exponenta High-Pro",
+    "alias": "exponenta экспонента high pro хай про",
+    "est": false,
+    "sport": true,
+    "items": ["sp_expo_drk_ferm"]
+  },
+  "sp_zuber": {
+    "name": "Züber Hi Protein",
+    "alias": "zuber züber зубер зюбер hi protein хай протеин",
+    "est": false,
+    "sport": true,
+    "items": ["sp_zuber_bar_hz", "sp_zuber_bar_pean"]
+  },
+  "sp_sek": {
+    "name": "SEK Protein",
+    "alias": "sek сек protein",
+    "est": false,
+    "sport": true,
+    "items": ["sp_sek_milk_cocoa"]
+  },
+  "sp_premier": {
+    "name": "Premier Protein",
+    "alias": "premier protein премьер премьер протеин",
+    "est": false,
+    "sport": true,
+    "items": ["sp_premier_shake"]
+  },
+  "sp_fairlife": {
+    "name": "Fairlife Core Power",
+    "alias": "fairlife core power фэйрлайф фейрлайф кор пауэр",
+    "est": false,
+    "sport": true,
+    "items": ["sp_fairlife_shake", "sp_fairlife_shake_el"]
+  },
+  "sp_oikos": {
+    "name": "Oikos",
+    "alias": "oikos ойкос pro triple zero",
+    "est": false,
+    "sport": true,
+    "items": ["sp_oikos_yog_van", "sp_oikos_yog_zero"]
+  },
+  "sp_rxbar": {
+    "name": "RXBAR",
+    "alias": "rxbar rx bar рх бар рксбар",
+    "est": false,
+    "sport": true,
+    "items": ["sp_rxbar_bar"]
+  },
+  "sp_one": {
+    "name": "ONE Bar",
+    "alias": "one bar ван бар",
+    "est": false,
+    "sport": true,
+    "items": ["sp_one_bar"]
+  },
+  "sp_clif": {
+    "name": "Clif Builders",
+    "alias": "clif builders клиф билдерс",
+    "est": false,
+    "sport": true,
+    "items": ["sp_clif_bar"]
+  },
+  "sp_pure": {
+    "name": "Pure Protein",
+    "alias": "pure protein пьюр протеин пур",
+    "est": false,
+    "sport": true,
+    "items": ["sp_pure_bar"]
+  },
+  "sp_kirkland": {
+    "name": "Kirkland Signature",
+    "alias": "kirkland киркланд costco костко",
+    "est": false,
+    "sport": true,
+    "items": ["sp_kirkland_bar"]
+  },
+  "sp_dymatize": {
+    "name": "Dymatize ISO100",
+    "alias": "dymatize iso100 iso 100 диматайз изо",
+    "est": false,
+    "sport": true,
+    "items": ["sp_dymatize_whey_iso"]
+  },
+  "sp_mullermp": {
+    "name": "Müller × Myprotein",
+    "alias": "muller müller мюллер мюлер myprotein crunch",
+    "est": false,
+    "sport": true,
+    "items": ["sp_mullermp_yog_crunch"]
+  },
+  "sp_alpro": {
+    "name": "Alpro High Protein",
+    "alias": "alpro алпро альпро high protein",
+    "est": false,
+    "sport": true,
+    "items": ["sp_alpro_yog_soy"]
   }
 }
