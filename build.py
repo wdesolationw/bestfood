@@ -111,7 +111,10 @@ def build(single=False):
     with open(os.path.join(out_dir, "manifest.webmanifest"), "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=1)
     files = ["./", "index.html", "manifest.webmanifest"] + ["icons/" + f for f in sorted(os.listdir(os.path.join(out_dir, "icons")))] + ["photos/" + f for f in photo_files()]
-    ver = hashlib.sha1(html.encode() + "".join(files).encode()).hexdigest()[:10]
+    h = hashlib.sha1(html.encode() + "".join(files).encode())
+    for f in photo_files():  # a replaced photo with the same name must refresh the offline cache too
+        h.update(read("data", "photos", f, mode="rb"))
+    ver = h.hexdigest()[:10]
     with open(os.path.join(out_dir, "sw.js"), "w", encoding="utf-8") as f:
         f.write(SW.replace("__VER__", ver).replace("__FILES__", json.dumps(files)))
     total = sum(os.path.getsize(os.path.join(dp, x)) for dp, _, fs in os.walk(out_dir) for x in fs)
