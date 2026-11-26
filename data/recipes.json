@@ -2596,5 +2596,23 @@
     "n": 4,
     "items": [[0, "chicken_mince", 780], [2, "pasta", 195], [5, "sour", 140]],
     "full": false
+  },
+  {
+    "id": 113,
+    "cat": 0,
+    "kind": "svg:bowl",
+    "base": {"k": 631, "p": 65, "f": 18, "c": 42},
+    "var": null,
+    "src": "auth",
+    "time": 30,
+    "cuis": ["american"],
+    "veg": 0,
+    "gen": false,
+    "filters": ["beef"],
+    "video": "",
+    "tags": "ужины на несколько дней завтрак говядина говяжий фарш мясо бекон белки яйца рис моцарелла сыр сироп",
+    "n": 4,
+    "items": [[0, "rice", 210], [1, "beef", 780], [3, "eggwhite", 260], [4, "bacon", 80], [5, "mozz", 130]],
+    "full": false
   }
 ]
