@@ -19,6 +19,9 @@ dist/ нужно выкладывать целиком на хостинг с ht
 """
 import base64, hashlib, json, os, shutil, sys, time
 
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "tools"))
+from stepmatch import step_ingredients
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Порядок ключей в объекте DATA и порядок языков (влияет на порядок в переключателе).
@@ -76,6 +79,8 @@ def build(single=False):
                 data[k] = {os.path.splitext(f)[0]: "photos/" + f for f in photo_files()}
         else:
             data[k] = load_json("data", k + ".json")
+    for r in data["recipes"]:  # per-step ingredient indices, so steps can show their amounts
+        if "si" not in r: r["si"] = step_ingredients(r, data["langs"]["en"])
     js_data = "const DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ";"
     head = "" if single else (
         '<link rel="manifest" href="manifest.webmanifest">\n'

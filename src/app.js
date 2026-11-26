@@ -26,6 +26,16 @@ function RX(r) {
   const ing = x[2] || r.items.map(([i, k, g]) => itemLine(k, g));
   return {title: x[0], serv: x[1] || `${r.n} ${t().portions}`, ing, steps: x[3], storage: x[4], note: x[5]};
 }
+function ingTxt(r, x, i, k, byIdx) {
+  const s = x.ing[i], e = byIdx[i], T = t(); if (s == null || /^<b>/.test(s)) return "";
+  if (e && (e.key !== e.key0 || e.g !== e.g0) && e.why !== "warn") return e.g > 0 ? `<b>${esc(fname(e.key))}</b>: ${fnum(rg(e.g * k))} ${esc(T.grams)}` : "";
+  return r.gen && e ? esc(itemLine(e.key0, e.g0 * k)) : scaleText(s, k);
+}
+function stepIng(r, x, si, k, byIdx) {
+  const a = (si || []).map(i => ingTxt(r, x, i, k, byIdx)).filter(Boolean);
+  return a.length ? `<ul class="sti">${a.map(z => `<li>${z}</li>`).join("")}</ul>` : "";
+}
+function ingCtx(r) { const byIdx = {}; effItems(r).forEach(e => byIdx[e.idx] = e); return {k: servOf(r) / r.n, byIdx}; }
 function itemLine(k, g) { const T = t(); let s = `${fname(k)}`; if (FOOD[k] && (FOOD[k][0] > 0 || g > 0) && !["spices", "khmeli"].includes(k)) s += `: ${fnum(rg(g))} ${T.grams}`; if (k === "egg" && g > 0) s += ` (${fnum(Math.max(1, Math.round(g / 55)))} ${T.pcs})`; return s; }
 const catName = i => L().cats[i][0], catShort = i => L().cats[i][1], catSub = i => L().cats[i][2];
 /* ---------- theme ---------- */
@@ -238,7 +248,7 @@ function closeCook() { cook.on = false; const el = $("#cook"); if (el) el.hidden
 function renderCook() {
   const el = $("#cook"); if (!el || !cook.on) return; const r = R.find(x => x.id === cook.rid); if (!r) return closeCook();
   const T = t(), x = RX(r), steps = x.steps, n = steps.length, i = cook.i, s = steps[i], mm = /^\[\[(.+?)\]\]\s*/.exec(s), txt = mm ? s.slice(mm[0].length) : s, mins = stepMinutes(s);
-  const tm = cook.timer, run = tm && tm.step === i;
+  const tm = cook.timer, run = tm && tm.step === i; const ic = ingCtx(r);
   let tbtn = "";
   if (mins) tbtn = run ? `<div class="ctimer${tm.paused ? " paused" : ""}"><b id="ctLeft">${mmss(timerLeft())}</b><button class="btn" id="ctPause">${esc(tm.paused ? T.tGo : T.tPause)}</button><button class="btn" id="ctReset">${esc(T.tReset)}</button></div>`
     : `<button class="btn main ctstart" id="ctStart" data-min="${mins}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2.5h5"/></svg>${esc(T.tStart.replace("{t}", mmss(mins * 60)))}</button>`;
@@ -248,8 +258,8 @@ function renderCook() {
       <button class="rbtn" id="ckIng" aria-label="${esc(T.ingT)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg></button></div>
     <div class="ckprog"><i style="width:${(i + 1) / n * 100}%"></i></div>
     ${other}
-    <div class="ckbody">${mm ? `<em class="stt">${esc(mm[1])}</em>` : ""}<p class="cktext">${esc(txt)}</p>${tbtn}</div>
-    ${cook.ing ? `<div class="cking"><h3>${esc(T.ingT)}</h3><ul>${x.ing.map(z => `<li>${/^<b>/.test(z) ? z : esc(z.replace(/<[^>]+>/g, ""))}</li>`).join("")}</ul></div>` : ""}
+    <div class="ckbody">${mm ? `<em class="stt">${esc(mm[1])}</em>` : ""}<p class="cktext">${esc(txt)}</p>${stepIng(r, x, (r.si || [])[i], ic.k, ic.byIdx)}${tbtn}</div>
+    ${cook.ing ? `<div class="cking"><h3>${esc(T.ingT)}</h3><ul>${x.ing.map((z, j) => `<li>${/^<b>/.test(z) ? z : ingTxt(r, x, j, ic.k, ic.byIdx) || esc(z.replace(/<[^>]+>/g, ""))}</li>`).join("")}</ul></div>` : ""}
     <div class="cknav"><button class="btn" id="ckPrev"${i ? "" : " disabled"}>${esc(T.prevS)}</button>${i < n - 1 ? `<button class="btn main" id="ckNext">${esc(T.nextS)}</button>` : `<button class="btn main" id="ckFin">${esc(T.done)}</button>`}</div>`;
 }
 setInterval(() => { const tm = cook.timer; if (!tm || tm.paused) return; const left = timerLeft();
@@ -360,8 +370,8 @@ function renderRecipe(id) {
     return `<li class="${note ? "note" : done[id].has(i) ? "done" : ""}" data-i="${i}"><span>${txt}${warn}</span>${btn}</li>`;
   }).join("") + `</ul>`;
   if (hasSwaps(r)) h += `<button class="linkbtn" id="swReset">${esc(T.resetSwaps)}</button>`;
-  h += `<div class="sthd"><h3>${esc(T.steph)}</h3><button class="btn main" id="cookGo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>${esc(T.cookBtn)}</button></div><ol class="steps">` + x.steps.map(s => { const m = /^\[\[(.+?)\]\]\s*/.exec(s);
-    return `<li><span>${m ? `<em class="stt">${esc(m[1])}</em>` : ""}${esc(m ? s.slice(m[0].length) : s)}</span></li>`; }).join("") + `</ol>`;
+  h += `<div class="sthd"><h3>${esc(T.steph)}</h3><button class="btn main" id="cookGo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>${esc(T.cookBtn)}</button></div><ol class="steps">` + x.steps.map((s, j) => { const m = /^\[\[(.+?)\]\]\s*/.exec(s);
+    return `<li><span>${m ? `<em class="stt">${esc(m[1])}</em>` : ""}${esc(m ? s.slice(m[0].length) : s)}${stepIng(r, x, (r.si || [])[j], k, byIdx)}</span></li>`; }).join("") + `</ol>`;
   if (x.storage) h += `<div class="box"><b>${esc(T.stor)}</b> ${esc(x.storage)}</div>`;
   if (x.note) h += `<div class="box">${esc(x.note)}</div>`;
   const rel = R.filter(o => o.cat === r.cat && o.id !== r.id && !(BANNED.size && !state.showAll && o.items.some(([i, kk]) => banned(kk)))).slice(0, 12);
