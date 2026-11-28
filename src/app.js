@@ -95,7 +95,8 @@ const state = {fopen: false, cat: -1, quick: false, cuis: null, veg: "any", base
 let favs = new Set(load("brfy-fav", [])), done = {};
 const saveFav = () => store.set("brfy-fav", JSON.stringify([...favs]));
 let swaps = load("brfy-swaps", {});
-const saveSwaps = () => store.set("brfy-swaps", JSON.stringify(swaps));
+let effV = 0;  // bumped on every swap change, so cached effItems results are dropped
+const saveSwaps = () => { effV++; store.set("brfy-swaps", JSON.stringify(swaps)); };
 let diary = load("brfy-day", {}), goal = Object.assign({k: "", p: "", f: "", c: ""}, load("brfy-goal", {})), dishes = load("brfy-dishes", []);
 let prof = Object.assign({sex: "f", age: "", h: "", w: "", act: "1.375", aim: "lose", groups: [], excl: [], defMode: "fit"}, load("brfy-prof", {}));
 let plan = load("brfy-plan", null) || {d: [0, 1, 2, 3, 4, 5, 6].map(() => ({b: [], l: [], d: [], s: []}))};
@@ -127,8 +128,15 @@ function bestAlt(r, key, g, avoid) {
   return best;
 }
 const OMIT = new Set(["onion", "garlic", "spices", "herbs", "greenonion", "lemon", "ginger", "khmeli", "mint", "broth", "water", "vinegar"]);  // seasonings: just leave them out
+// Cached: lists call this several times per card (macros, warnings, badges). Valid while swaps and allergens are unchanged.
+const effC = new Map();
 function effItems(r, mode) {
-  mode = mode || modeOf(r); const sw = swaps[r.id] || {};
+  mode = mode || modeOf(r); const k = r.id + mode; let c = effC.get(k);
+  if (!c || c.v !== effV || c.b !== BANNED) { c = {v: effV, b: BANNED, x: effCalc(r, mode)}; effC.set(k, c); }
+  return c.x;
+}
+function effCalc(r, mode) {
+  const sw = swaps[r.id] || {};
   return r.items.map(([idx, key0, g0]) => {
     let key = key0, g = g0, why = null;
     if (mode === "classic" && CLASSIC[key0]) { const [k2, m] = CLASSIC[key0]; if (k2 !== key0 || m !== 1) { key = k2; g = g0 * m; why = "classic"; } }
