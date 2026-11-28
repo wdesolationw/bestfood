@@ -157,11 +157,11 @@ function scaleText(s, k) {
 const BASES = ["chicken", "beef", "turkey", "fish", "eggs", "veg"];
 const CATORDER = [0, 1, 7, 4, 8, 2, 3, 9, 5, 10, 11, 6];
 const CYR = ["ru", "uk", "kk"];
-function stem(w) { if (CYR.includes(lang)) return w.length > 6 ? w.slice(0, -2) : w.length > 4 ? w.slice(0, -1) : w; return w.length > 4 ? w.slice(0, -1) : w; }
-const norm = s => String(s).toLowerCase().replace(/ё/g, "е").replace(/<[^>]+>/g, " ").normalize("NFD").replace(/[̀-ͯ]/g, "");
+function stem(w) { if (CYR.includes(lang)) return w.length > 6 ? w.slice(0, -2) : w.length > 3 ? w.slice(0, -1) : w; return w.length > 4 && /(oes|ies)$/.test(w) ? w.slice(0, -3) : w.length > 4 || (w.length > 3 && w.endsWith("s")) ? w.slice(0, -1) : w; }
+const norm = s => String(s).toLowerCase().replace(/ё/g, "е").replace(/œ/g, "oe").replace(/æ/g, "ae").replace(/<[^>]+>/g, " ").normalize("NFD").replace(/[̀-ͯ]/g, "");
 function hay(r) {
   r._h = r._h || {};
-  if (!r._h[lang]) { const x = RX(r); r._h[lang] = norm([x.title, x.ing.join(" "), r.filters.map(f => L().bases[f]).join(" "), catName(r.cat), r.cuis.map(c => L().ui.cu[c]).join(" "), lang === "ru" ? r.tags : ""].join(" ")); }
+  if (!r._h[lang]) { const x = RX(r); r._h[lang] = norm([x.title, x.ing.join(" "), r.items.map(i => L().food[i[1]] || "").join(" "), (r.shop || []).map(i => L().food[i[0]] || "").join(" "), r.filters.map(f => L().bases[f]).join(" "), catName(r.cat), r.cuis.map(c => L().ui.cu[c]).join(" "), lang === "ru" ? r.tags : ""].join(" ")); }
   return r._h[lang];
 }
 function matchQ(r, q) { const ws = norm(q).split(/[\s,]+/).filter(w => w.length > 1 && !L().stop.includes(w)); return ws.every(w => hay(r).includes(stem(w))); }
