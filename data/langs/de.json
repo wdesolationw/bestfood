@@ -360,7 +360,9 @@
     "sportT": "Sportnahrung und Proteinprodukte",
     "prodsL": "Produkte",
     "recRest": "Rest des Rezepts (Soßen, Gewürze, Nährwert-Abgleich)",
-    "chkUp": "Das Gewicht steigt: {d} kg in 2 Wochen. Ich schlage vor, das Ziel um {x} kcal zu senken."
+    "chkUp": "Das Gewicht steigt: {d} kg in 2 Wochen. Ich schlage vor, das Ziel um {x} kcal zu senken.",
+    "meterT": "Kalorienzähler",
+    "meter": {"ring": "Ring", "bars": "Balken", "scale": "Skala", "gauge": "Tacho"}
   },
   "quick": ["Pasta", "Reis", "Hähnchen", "Quark", "Banane", "Schokolade"],
   "stop": ["mit", "und", "der", "die", "das", "ein", "eine", "im", "in"],

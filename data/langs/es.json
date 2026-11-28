@@ -365,7 +365,9 @@
     "sportT": "Nutrición deportiva y productos proteicos",
     "prodsL": "Productos",
     "recRest": "Resto de la receta (salsas, especias, ajuste de macros)",
-    "chkUp": "El peso está subiendo: {d} kg en 2 semanas. Te sugiero bajar el objetivo {x} kcal."
+    "chkUp": "El peso está subiendo: {d} kg en 2 semanas. Te sugiero bajar el objetivo {x} kcal.",
+    "meterT": "Contador de calorías",
+    "meter": {"ring": "Anillo", "bars": "Barras", "scale": "Escala", "gauge": "Velocímetro"}
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],

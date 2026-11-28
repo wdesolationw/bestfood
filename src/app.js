@@ -40,7 +40,7 @@ function itemLine(k, g) { const T = t(); let s = `${fname(k)}`; if (FOOD[k] && (
 const catName = i => L().cats[i][0], catShort = i => L().cats[i][1], catSub = i => L().cats[i][2];
 /* ---------- theme ---------- */
 const PAL = {mint: ["#1D5A4B", "#5FC4A6"], ocean: ["#1F5FA8", "#6AA8F0"], berry: ["#A3245A", "#F07AAE"], sunset: ["#B4471A", "#FF9A5C"], lavender: ["#5B3FB0", "#A994F5"], graphite: ["#2E3338", "#D5DBE0"]};
-let look = Object.assign({mode: "auto", pal: "mint", custom: ""}, load("brfy-look", {}));
+let look = Object.assign({mode: "auto", pal: "mint", custom: "", meter: "ring"}, load("brfy-look", {}));
 const hex2rgb = h => { h = h.replace("#", ""); if (h.length === 3) h = h.split("").map(c => c + c).join(""); const n = parseInt(h, 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; };
 const rgb2hex = a => "#" + a.map(v => Math.round(Math.max(0, Math.min(255, v))).toString(16).padStart(2, "0")).join("");
 function rgb2hsl([r, g, b]) { r /= 255; g /= 255; b /= 255; const mx = Math.max(r, g, b), mn = Math.min(r, g, b); let h = 0, s = 0; const l = (mx + mn) / 2;
@@ -445,13 +445,53 @@ function goalBars(tot, compact) {
     return `<div class="goalrow"><div><span>${esc(n)}: ${r0(v)} / ${r0(g)}</span><span class="${bad ? "up" : ""}">${prot && over ? "✓ " + esc(T.chDone) : esc(over ? T.over : T.left) + " " + r0(Math.abs(g - v)) + " " + esc(u)}</span></div><div class="bar${bad ? " over" : ""}"><i style="width:${pct}%"></i></div></div>`;
   }).join("") + `</div>`;
 }
+const METERS = ["ring", "bars", "scale", "gauge"];
+const meterIco = m => `<svg class="mico" viewBox="0 0 32 20" aria-hidden="true">${{
+  ring: `<circle cx="16" cy="10" r="7.5"/><path class="on" d="M16 2.5a7.5 7.5 0 0 1 6.5 11.2"/>`,
+  bars: `<rect x="3" y="7" width="26" height="6" rx="3"/><path class="on" d="M6 10h8"/><path class="on2" d="M14 10h6"/>`,
+  scale: `<path d="M3 12h26M3 12v4M9.5 12v2.5M16 12v4M22.5 12v2.5M29 12v4"/><path class="on" d="M16 3l-3 5h6z"/>`,
+  gauge: `<path d="M4 17a12 12 0 0 1 24 0"/><path class="on" d="M16 17l6-8"/>`}[m]}</svg>`;
+// Range for the linear and dial meters: a quarter past the goal, so going over still shows; without a goal, a round number above what was eaten.
+const meterMax = (v, gk) => gk ? gk * 1.25 : Math.max(500, Math.ceil(v * 1.15 / 500) * 500);
+function kcalMeter(tot, gk) {
+  const T = t(), st = METERS.includes(look.meter) ? look.meter : "ring", left = gk - tot[0], over = gk && left < 0;
+  const num = gk ? r0(Math.abs(left)) : r0(tot[0]), cap = esc(gk ? (over ? T.over : T.left) : T.kcal), cls = over ? "up" : "";
+  if (st === "ring") {
+    const ring = gk ? donut([[tot[0], over ? "var(--hot)" : "var(--accent)"]], gk, "donut big") : donut([[tot[1] * 4, MACC[0]], [tot[2] * 9, MACC[1]], [tot[3] * 4, MACC[2]]], 0, "donut big");
+    return `<div class="ring big">${ring}<div class="rc"><b class="${cls}">${num}</b><span>${cap}</span></div></div>`;
+  }
+  const head = `<div class="mhead"><b class="${cls}">${num}</b><span>${cap}</span></div>`;
+  if (st === "bars") {  // one thick bar split by where the calories came from (protein / fat / carbs)
+    const kc = [tot[1] * 4, tot[2] * 9, tot[3] * 4], ks = kc.reduce((a, b) => a + b, 0), full = Math.max(gk, tot[0]) || 1;
+    const segs = tot[0] <= 0 ? "" : ks > 0 ? kc.map((v, i) => v > 0 ? `<i style="width:${tot[0] * v / ks / full * 100}%;background:${MACC[i]}"></i>` : "").join("") : `<i style="width:${tot[0] / full * 100}%;background:var(--accent)"></i>`;
+    const gm = gk && over ? `<em class="gm" style="left:${gk / full * 100}%"></em>` : "";
+    return `<div class="kmeter">${head}<div class="kbw"><div class="kbar${over ? " over" : ""}">${segs}</div>${gm}</div></div>`;
+  }
+  const mx = meterMax(tot[0], gk), f = Math.min(1, tot[0] / mx), gf = gk ? gk / mx : 0, fmt = v => r0(v);
+  if (st === "scale") {  // ruler with divisions, a marker for what was eaten and a goal line
+    const W = 300, X = v => 4 + v * (W - 8);
+    let ticks = ""; for (let i = 0; i <= 20; i++) ticks += `<line class="${i % 5 ? "tk" : "tk mj"}" x1="${X(i / 20)}" x2="${X(i / 20)}" y1="26" y2="${i % 5 ? 30 : 34}"/>`;
+    const lab = [0, gk ? gf : .5, 1].map((v, i) => `<text x="${X(v)}" y="46" text-anchor="${["start", "middle", "end"][i]}"${i === 1 && gk ? ' class="kgl"' : ""}>${fmt(mx * v)}</text>`).join("");
+    const goalL = gk ? `<line class="kgoal" x1="${X(gf)}" x2="${X(gf)}" y1="10" y2="34"/>` : "";
+    return `<div class="kmeter">${head}<svg class="kscale" viewBox="0 0 ${W} 50" aria-hidden="true"><rect class="ktrk" x="4" y="14" width="${W - 8}" height="8" rx="4"/>`
+      + `<rect class="${over ? "kfill over" : "kfill"}" x="4" y="14" width="${Math.max(0, f * (W - 8))}" height="8" rx="4"/>${ticks}${goalL}${lab}`
+      + `<path class="${over ? "kmark over" : "kmark"}" d="M${X(f) - 6} 2h12l-6 9z"/></svg></div>`;
+  }
+  // gauge: half dial with a needle
+  const pt = (v, r) => { const a = Math.PI * (1 - v); return [100 + r * Math.cos(a), 100 - r * Math.sin(a)].map(n => n.toFixed(1)); };
+  let ticks = ""; for (let i = 0; i <= 10; i++) { const [x1, y1] = pt(i / 10, 92), [x2, y2] = pt(i / 10, i % 5 ? 96 : 99); ticks += `<line class="${i % 5 ? "tk" : "tk mj"}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`; }
+  const [nx, ny] = pt(f, 64), arc = "M20 100A80 80 0 0 1 180 100";
+  const goalT = gk ? (() => { const [a1, b1] = pt(gf, 70), [a2, b2] = pt(gf, 90); return `<line class="kgoal" x1="${a1}" y1="${b1}" x2="${a2}" y2="${b2}"/>`; })() : "";
+  return `<div class="kgauge"><svg viewBox="0 0 200 106" aria-hidden="true"><path class="ktrk" d="${arc}" pathLength="100"/>`
+    + `<path class="${over ? "kfill over" : "kfill"}" d="${arc}" pathLength="100" stroke-dasharray="${(f * 100).toFixed(2)} 200"/>${ticks}${goalT}`
+    + `<line class="kneedle" x1="100" y1="100" x2="${nx}" y2="${ny}"/><circle class="kpin" cx="100" cy="100" r="6"/></svg>`
+    + `<div class="kgc"><b class="${cls}">${num}</b><span>${cap}</span></div></div>`;
+}
 function daySummary(tot) {
-  const T = t(), gk = +goal.k || 0, left = gk - tot[0], over = left < 0;
-  const ring = gk ? donut([[tot[0], over ? "var(--hot)" : "var(--accent)"]], gk, "donut big") : donut([[tot[1] * 4, MACC[0]], [tot[2] * 9, MACC[1]], [tot[3] * 4, MACC[2]]], 0, "donut big");
-  const center = gk ? `<b class="${over ? "up" : ""}">${r0(Math.abs(left))}</b><span>${esc(over ? T.over : T.left)}</span>` : `<b>${r0(tot[0])}</b><span>${esc(T.kcal)}</span>`;
+  const T = t(), gk = +goal.k || 0, left = gk - tot[0], over = left < 0, st = METERS.includes(look.meter) ? look.meter : "ring";
   const rows = gk ? [[T.goal, gk], [T.eaten || LANGS.en.ui.eaten, tot[0]], [over ? T.over : T.left, Math.abs(left)]] : [[T.eaten || LANGS.en.ui.eaten, tot[0]]];
   const gm = [+goal.p || 0, +goal.f || 0, +goal.c || 0];
-  return `<div class="sumcard"><div class="sumtop"><div class="ring big">${ring}<div class="rc">${center}</div></div>
+  return `<div class="sumcard"><div class="sumtop${st === "ring" ? "" : " col"}">${kcalMeter(tot, gk)}
     <div class="sumrows">${rows.map(([n, v]) => `<div><span>${esc(n)}</span><b>${r0(v)} <small>${esc(T.kcal)}</small></b></div>`).join("")}</div></div>
     <div class="mbars">${[0, 1, 2].map(i => { const v = tot[i + 1], g = gm[i], pct = g ? Math.min(100, v / g * 100) : 0;
       return `<div class="mb"><div class="mbh"><span>${esc(macName(i))}</span><b>${r0(v)}${g ? " / " + r0(g) : ""} ${esc(T.grams)}</b></div><div class="bar"><i style="width:${g ? pct : (v > 0 ? 100 : 0)}%;background:${MACC[i]}${g ? "" : ";opacity:.35"}"></i></div></div>`; }).join("")}</div></div>`;
@@ -774,6 +814,7 @@ function renderSheet() {
     const dark = isDark();
     h += `<p class="lbl">${esc(T.palette)}</p><div class="sw">` + Object.keys(PAL).map(p => `<button data-pal="${p}" aria-pressed="${!look.custom && look.pal === p}"><i style="background:${PAL[p][dark ? 1 : 0]}"></i>${esc(T.pal[p])}</button>`).join("") + `</div>`;
     h += `<div class="custom" data-on="${!!look.custom}"><input type="color" id="cc" value="${look.custom || PAL[look.pal][0]}"><label for="cc">${esc(T.custom)}</label></div>`;
+    h += `<p class="lbl">${esc(T.meterT)}</p><div class="modes m4">` + METERS.map(m => `<button data-meter="${m}" aria-pressed="${(look.meter || "ring") === m}">${meterIco(m)}<span>${esc(T.meter[m])}</span></button>`).join("") + `</div>`;
     h += `<div class="preview"><span class="pill">520 ${esc(T.kcal)}</span><span class="pill p">${esc(T.p)} 42</span><span class="pill o">${esc(T.plus)}</span><button class="btn main" tabindex="-1">${esc(T.withP)}</button></div>`;
     h += `<button class="linkbtn" id="lookReset">${esc(T.resetLook)}</button>`;
   } else if (sheetKind === "swap") {
@@ -1557,9 +1598,10 @@ document.addEventListener("click", e => {
   if (el.closest("#lookBtn")) { openSheet("look"); return; }
   if (el.id === "sheet" || el.closest("#sheetDone")) { closeSheet(); return; }
   const lb = el.closest("[data-lang]"); if (lb) { lang = lb.dataset.lang; store.set("brfy-lang", lang); $("#q").value = ""; state.q = ""; $("#qx").hidden = true; route(); renderSheet(); return; }
+  const mtr = el.closest("[data-meter]"); if (mtr) { look.meter = mtr.dataset.meter; saveLook(); renderSheet(); if (location.hash === "#day") renderDay(); return; }
   const md = el.closest("[data-mode]"); if (md) { look.mode = md.dataset.mode; saveLook(); renderSheet(); return; }
   const pl = el.closest("[data-pal]"); if (pl) { look.pal = pl.dataset.pal; look.custom = ""; saveLook(); renderSheet(); return; }
-  if (el.closest("#lookReset")) { look = {mode: "auto", pal: "mint", custom: ""}; saveLook(); renderSheet(); return; }
+  if (el.closest("#lookReset")) { look = {mode: "auto", pal: "mint", custom: "", meter: "ring"}; saveLook(); renderSheet(); return; }
   const al = el.closest("[data-alt]"); if (al) { const {rid, idx} = sheetCtx; (swaps[rid] = swaps[rid] || {})[idx] = al.dataset.alt; saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   if (el.closest("#altReset")) { const {rid, idx} = sheetCtx; if (swaps[rid]) { delete swaps[rid][idx]; if (!Object.keys(swaps[rid]).length) delete swaps[rid]; } saveSwaps(); closeSheet(); renderRecipe(rid); return; }
   const pk = el.closest("[data-pk]"); if (pk) { sheetCtx.key = pk.dataset.pk; sheetCtx.g = +pk.dataset.pg || PORTION[pk.dataset.pk] || 100; renderSheet(); const g = $("#pg"); g && g.focus(); return; }
