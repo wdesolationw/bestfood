@@ -1656,7 +1656,9 @@ document.addEventListener("click", e => {
   /* list */
   const f = el.closest("[data-f]");
   if (f) { e.stopPropagation(); const id = +f.dataset.f; favs.has(id) ? favs.delete(id) : favs.add(id); saveFav();
-    if (/^#recipe/.test(location.hash)) { f.setAttribute("aria-pressed", favs.has(id)); if (f.classList.contains("rfav")) { f.setAttribute("aria-label", favs.has(id) ? T.favOn : T.favAdd); f.title = favs.has(id) ? T.favOn : T.favAdd; } else f.textContent = favs.has(id) ? T.favOn : T.favAdd; } else { renderTabs(); renderList(); }
+    if (/^#recipe/.test(location.hash)) { f.setAttribute("aria-pressed", favs.has(id)); if (f.classList.contains("rfav")) { f.setAttribute("aria-label", favs.has(id) ? T.favOn : T.favAdd); f.title = favs.has(id) ? T.favOn : T.favAdd; } else f.textContent = favs.has(id) ? "★" : "☆"; }
+    else if (state.fav) { renderTabs(); renderList(); }  // the favourites filter must drop the card
+    else { renderTabs(); document.querySelectorAll(`[data-f="${id}"]`).forEach(b => { b.setAttribute("aria-pressed", favs.has(id)); b.textContent = favs.has(id) ? "★" : "☆"; }); }  // in place: keeps lane scroll
     if (favs.has(id)) document.querySelectorAll(`[data-f="${id}"]`).forEach(b => animIn(b, "popnow")); return; }
   const tab = el.closest(".tab");
   if (tab && tab.tagName === "BUTTON") { state.fav = !!tab.dataset.fav && !state.fav; state.quick = !!tab.dataset.quick && !state.quick; state.cat = tab.dataset.c != null ? +tab.dataset.c : -1; renderTabs(); renderList(); animIn($(".list") || $("#app")); return; }
