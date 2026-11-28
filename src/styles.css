@@ -58,7 +58,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;margin:0 
 .btn{font:inherit;cursor:pointer}
 .seg{display:inline-flex;overflow:hidden}
 .seg button{border:0;background:transparent;font:inherit;font-weight:800;font-size:13px;padding:9px 14px;cursor:pointer}
-.macros{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.macros{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}
 .macros div{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:10px 6px;text-align:center}
 .macros b{display:block;font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}
 .macros span{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
@@ -157,6 +157,7 @@ a.tab{text-decoration:none;border-style:dashed}
 .entry{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border:1.5px solid var(--line)}
 .entry>div{min-width:0}
 .entry .nm{font-weight:800;overflow-wrap:anywhere}
+@media (max-width:360px){.entry{grid-template-columns:1fr}.entry>.qty{justify-self:end}}
 .entry .sub2{font-size:12px;color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums;margin-top:2px}
 .qty{display:flex;align-items:center;gap:4px}
 .qty button{width:32px;height:32px;color:var(--ink);font:inherit;font-weight:800;cursor:pointer}
@@ -497,6 +498,8 @@ details.fl[open]{background:var(--surface);border-radius:var(--radius);box-shado
 .rmain{flex:none;height:42px;padding:0 16px;border:0;border-radius:10px;background:var(--ink);color:var(--bg);font:inherit;font-size:14.5px;font-weight:800;cursor:pointer;white-space:nowrap}
 .rmain:hover{opacity:.9}
 @media (max-width:380px){.rmain{padding:0 12px;font-size:13.5px}.rbtn{width:38px;height:38px}.rbar-r{gap:6px}}
+@media (max-width:350px){.rmain{white-space:normal;line-height:1.1;padding:0 10px;font-size:12.5px;flex:0 1 auto;min-width:0;text-align:center}.rbtn{width:34px;height:34px}.rbar-r{gap:4px}
+  .macros{gap:5px}.macros div{padding:9px 3px}.macros b{font-size:17px}.macros span{font-size:9.5px;letter-spacing:.02em;overflow-wrap:anywhere;hyphens:auto}}
 .hero .dimg.big{margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));width:auto;max-width:none;aspect-ratio:4/3;max-height:none;border-radius:0;box-shadow:none}
 @media (min-width:640px){.hero .dimg.big{margin-inline:0;border-radius:14px;max-height:520px}}
 .rstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:12px;padding:18px 0 4px}
@@ -748,3 +751,5 @@ ul.shop li.done::before{background:var(--ink);border-color:var(--ink)}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}}
 /* nothing may push the page sideways on phones (the tab strip bleeds to the edges) */
 html,body{overflow-x:clip}
+@media (max-width:420px){html[lang=kk] .seg3{gap:18px}html[lang=ka] .seg3{gap:14px}html[lang=ka] .seg3 a{font-size:14.5px}}
+@media (max-width:360px){.seg3,html[lang=kk] .seg3,html[lang=ka] .seg3{gap:10px}.seg3 a{font-size:13.5px}html[lang=ka] .seg3 a{font-size:13px}}

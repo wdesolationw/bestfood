@@ -1484,6 +1484,9 @@ function renderGenOut() {
     const kws = DISHES[req.dish].kw.map(gw).filter(k => k.length >= 4 && !/\s/.test(k));
     const rs = R.filter(r => { const tt = gw(RX(r).title); return kws.some(k => tt.split(/[\s-]+/).some(w => dishWord(w, k))); }).slice(0, 3);
     if (rs.length) h += `<p class="hint">★ ${esc(T.genHaveRec)}: ${rs.map(r => `<a href="#recipe-${r.id}">${esc(RX(r).title)}</a>`).join(", ")}</p>`;
+  } else {  // a dish the generator doesn't know may still be one of our recipes
+    const rs = R.filter(r => matchQ(r, gen.text) && norm(RX(r).title).includes(stem(norm(gen.text).split(/[\s,]+/)[0] || ""))).slice(0, 3);
+    if (rs.length) h += `<p class="hint">★ ${esc(T.genHaveRec)}: ${rs.map(r => `<a href="#recipe-${r.id}">${esc(RX(r).title)}</a>`).join(", ")}</p>`;
   }
   if (req.guessed) h += `<p class="hint">${esc(T.genGuess)}: ${esc(L().gen.types[TYPES_K.indexOf(req.type)])}</p>`;
   if ((req.skipped || []).length) h += `<p class="hint">? ${esc(T.genSkip)}: ${req.skipped.map(esc).join(", ")}</p>`;
