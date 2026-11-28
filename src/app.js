@@ -1727,6 +1727,9 @@ function loadPhoto(file) {
   img.onerror = () => URL.revokeObjectURL(url);
   img.src = url;
 }
+// Diary entries saved before a recipe got its fat/carbs filled in carry zeros there: refresh them once.
+(() => { let ch = false; Object.values(diary).forEach(es => (es || []).forEach(e => { if (e.t !== "r" || !e.per || e.per[2] || e.per[3]) return; const r = R.find(x => x.id === e.id); if (!r) return;
+  const m = recipeMacros(r, e.mode); if (m[2] || m[3]) { e.per = [e.per[0], e.per[1], m[2], m[3]]; ch = true; } })); if (ch) saveDiary(); })();
 window.addEventListener("hashchange", route);
 route();
 if (window.APP_PWA && "serviceWorker" in navigator && /^https?:$/.test(location.protocol)) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
