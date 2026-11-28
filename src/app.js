@@ -352,7 +352,7 @@ function renderRecipe(id) {
   h += `<p class="hint" style="margin-top:8px">${esc(mode === "fit" ? T.modeFitD : T.modeClassicD)}</p>`;
   h += `<div id="mac">${macroBlock(r)}</div>`;
   h += `<div class="servrow"><span>${esc(T.servings)}</span><div class="qty"><button data-sv="-1" aria-label="−">−</button><input id="svn" type="number" inputmode="numeric" min="1" value="${servOf(r)}" aria-label="${esc(T.servings)}"><button data-sv="1" aria-label="+">+</button></div></div>`;
-  if (r.items.length) h += `<div class="row2"><button class="btn" id="myVer">${esc(T.myVersion)}</button></div>`;
+  if (r.items.length || r.shop) h += `<div class="row2"><button class="btn" id="myVer">${esc(T.myVersion)}</button></div>`;
   if (r.video) h += `<div class="box video"><a class="btn main" href="${esc(r.video)}" target="_blank" rel="noopener">${esc(T.vid)}</a></div>`;
   h += `<h3>${esc(T.ingh)}</h3>`;
   if (r.items.length) h += `<p class="hint">${esc(T.swapHint)}</p>`;
@@ -718,7 +718,7 @@ function renderBuilder() {
   h += `<p class="lbl">${esc(T.ingredients)}</p><div class="entries" id="ditems" style="margin-top:0">` + draft.items.map((it, i) => {
     const nm = it.key ? fname(it.key) : it.name;
     return `<div class="entry"><div><div class="nm">${esc(nm)}</div><div class="sub2" id="di${i}">${esc(fmtM(itemMac(it)))}</div></div>
-      <div class="qty"><input type="number" inputmode="decimal" min="0" data-dg="${i}" value="${r0(it.g)}" aria-label="${esc(T.grams)}"><span class="x">${esc(T.grams)}</span><button data-drm="${i}" aria-label="${esc(T.remove)}">✕</button></div></div>`;
+      <div class="qty">${it.fix ? "" : `<input type="number" inputmode="decimal" min="0" data-dg="${i}" value="${r0(it.g)}" aria-label="${esc(T.grams)}"><span class="x">${esc(T.grams)}</span>`}<button data-drm="${i}" aria-label="${esc(T.remove)}">✕</button></div></div>`;
   }).join("") + `</div>`;
   h += `<div class="search" style="margin-top:10px"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="ds" type="search" placeholder="${esc(T.addIng)}" aria-label="${esc(T.addIng)}" autocomplete="off"></div><div class="results" id="dres"></div>`;
   h += `<details class="box2"><summary>${esc(T.customProd)}</summary><div style="display:grid;gap:8px;margin-top:8px">
@@ -1586,7 +1586,11 @@ document.addEventListener("click", e => {
   if (el.closest("#toShop")) { const r = R.find(x => x.id === curRecipeId()); addItemsToShop(recipeShopItems(r, servOf(r))); if (!r.full && !r.gen && !shop.notes.includes(r.id)) { shop.notes.push(r.id); saveShop(); } toast(T.addedShop); return; }
   if (el.closest("#myVer")) {
     const r = R.find(x => x.id === curRecipeId()), k = servOf(r) / r.n;
-    draft = {id: null, name: RX(r).title + T.copySuffix, serv: servOf(r), items: effItems(r).filter(x => x.g > 0).map(x => ({key: x.key, g: rg(x.g * k)}))};
+    const items = effItems(r).filter(x => x.g > 0).map(x => ({key: x.key, g: rg(x.g * k)})).concat((r.shop || []).map(([key, g]) => ({key, g: rg(g * k)})));
+    draft = {id: null, name: RX(r).title + T.copySuffix, serv: servOf(r), items};
+    // the recipe's own macros win: whatever the listed products don't explain (sauces, spices, label values) goes in one line
+    const want = recipeMacros(r).map(v => v * servOf(r)), diff = add4(want, dishTotal(draft), -1);
+    const sv = servOf(r); if (Math.abs(diff[0]) >= want[0] * .05 || diff.slice(1).some(v => Math.abs(v) / sv >= 3)) items.push({name: T.recRest, c: diff.map(v => Math.round(v * 10) / 10), g: 100, fix: 1});
     location.hash = "dish-new"; return;
   }
   if (el.closest("#dPrev")) { shiftDate(-1); renderDay(); return; }

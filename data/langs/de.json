@@ -358,7 +358,8 @@
       "drink": "Getränke"
     },
     "sportT": "Sportnahrung und Proteinprodukte",
-    "prodsL": "Produkte"
+    "prodsL": "Produkte",
+    "recRest": "Rest des Rezepts (Soßen, Gewürze, Nährwert-Abgleich)"
   },
   "quick": ["Pasta", "Reis", "Hähnchen", "Quark", "Banane", "Schokolade"],
   "stop": ["mit", "und", "der", "die", "das", "ein", "eine", "im", "in"],

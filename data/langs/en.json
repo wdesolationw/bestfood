@@ -358,7 +358,8 @@
       "drink": "Drinks"
     },
     "sportT": "Sports nutrition and protein products",
-    "prodsL": "Products"
+    "prodsL": "Products",
+    "recRest": "Rest of the recipe (sauces, spices, macro adjustment)"
   },
   "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
   "stop": ["with", "and", "the", "a", "of", "in"],

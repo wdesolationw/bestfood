@@ -363,7 +363,8 @@
       "drink": "Bebidas"
     },
     "sportT": "Nutrición deportiva y productos proteicos",
-    "prodsL": "Productos"
+    "prodsL": "Productos",
+    "recRest": "Resto de la receta (salsas, especias, ajuste de macros)"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],

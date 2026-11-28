@@ -363,7 +363,8 @@
       "drink": "Boissons"
     },
     "sportT": "Nutrition sportive et produits protéinés",
-    "prodsL": "Produits"
+    "prodsL": "Produits",
+    "recRest": "Reste de la recette (sauces, épices, ajustement des macros)"
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],
