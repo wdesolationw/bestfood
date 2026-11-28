@@ -1,0 +1,16 @@
+// Service worker: keeps the app and photos available offline.
+const CACHE = "bestfood-8e27be5052", FILES = ["./", "index.html", "manifest.webmanifest", "icons/apple-touch-icon.png", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "photos/1.webp", "photos/2.webp", "photos/3.webp", "photos/4.webp", "photos/5.webp", "photos/6.webp", "photos/7.webp", "photos/8.webp", "photos/9.webp", "photos/10.webp", "photos/11.webp", "photos/12.webp", "photos/13.webp", "photos/14.webp", "photos/15.webp", "photos/16.webp", "photos/17.webp", "photos/18.webp", "photos/19.webp", "photos/20.webp", "photos/21.webp", "photos/22.webp", "photos/23.webp", "photos/24.webp", "photos/25.webp", "photos/26.webp", "photos/27.webp", "photos/28.webp", "photos/29.webp", "photos/30.webp", "photos/31.webp", "photos/32.webp", "photos/33.webp", "photos/34.webp", "photos/35.webp", "photos/36.webp", "photos/37.webp", "photos/38.webp", "photos/39.webp", "photos/40.webp", "photos/41.webp", "photos/42.webp", "photos/43.webp", "photos/44.webp", "photos/45.webp", "photos/46.webp", "photos/47.webp", "photos/48.webp", "photos/49.webp", "photos/50.webp", "photos/51.webp", "photos/52.webp", "photos/53.webp", "photos/54.webp", "photos/55.webp", "photos/56.webp", "photos/57.webp", "photos/58.webp", "photos/59.webp", "photos/60.webp", "photos/61.webp", "photos/62.webp", "photos/63.webp", "photos/64.webp", "photos/65.webp", "photos/66.webp", "photos/67.webp", "photos/68.webp", "photos/69.webp", "photos/70.webp", "photos/71.webp", "photos/72.webp", "photos/73.webp", "photos/74.webp", "photos/75.webp", "photos/76.webp", "photos/77.webp", "photos/78.webp", "photos/79.webp", "photos/80.webp", "photos/81.webp", "photos/82.webp", "photos/83.webp", "photos/84.webp", "photos/85.webp", "photos/86.webp", "photos/87.webp", "photos/88.webp", "photos/89.webp", "photos/90.webp", "photos/91.webp", "photos/92.webp", "photos/93.webp", "photos/94.webp", "photos/95.webp", "photos/96.webp", "photos/97.webp", "photos/98.webp", "photos/99.webp", "photos/100.webp", "photos/101.webp", "photos/102.webp", "photos/103.webp", "photos/104.webp", "photos/105.webp", "photos/106.webp", "photos/107.webp", "photos/108.webp", "photos/109.webp", "photos/110.webp", "photos/111.webp", "photos/112.webp", "photos/113.webp"];
+self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
+self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE && k.startsWith("bestfood-")).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
+self.addEventListener("fetch", e => {
+  const req = e.request; if (req.method !== "GET") return;
+  const url = new URL(req.url);
+  if (url.origin === location.origin) {
+    if (req.mode === "navigate") { e.respondWith(fetch(req).then(r => { const cp = r.clone(); caches.open(CACHE).then(c => c.put("index.html", cp)); return r; }).catch(() => caches.match("index.html"))); return; }
+    e.respondWith(caches.match(req, {ignoreSearch: true}).then(r => r || fetch(req)));
+    return;
+  }
+  if (/fonts\.(googleapis|gstatic)\.com$/.test(url.hostname)) {
+    e.respondWith(caches.open(CACHE + "-fonts").then(c => c.match(req).then(r => r || fetch(req).then(n => { c.put(req, n.clone()); return n; }))));
+  }
+});
