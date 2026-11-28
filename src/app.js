@@ -144,7 +144,7 @@ function recipeMacros(r, mode) {
   return m.map(v => Math.max(0, v));
 }
 const hasSwaps = r => Object.keys(swaps[r.id] || {}).length > 0;
-const warnOf = r => effItems(r).filter(e => e.why === "warn").map(e => e.key);
+const warnOf = r => effItems(r).filter(e => e.why === "warn").map(e => e.key).concat((r.shop || []).map(x => x[0]).filter(banned));  // shop-only extras (sauces etc.) cannot be swapped
 const autoOf = r => effItems(r).some(e => e.why === "allerg");
 const FR = {"½": ".5", "¼": ".25", "¾": ".75", "⅓": ".33", "⅔": ".67"};
 function scaleText(s, k) {
