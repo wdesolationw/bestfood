@@ -448,7 +448,40 @@
     ["Ketchup sans sucre (ZERO)", "ketchup classique, un peu plus de calories"],
     ["Nouilles aux œufs", "n'importe quelles nouilles ou spaghettis"],
     ["Tomates séchées", "1 c. à soupe de concentré de tomate"],
-    ["Pâtes de marque (Barilla, etc.)", "n'importe quelles pâtes de blé dur"]
+    ["Pâtes de marque (Barilla, etc.)", "n'importe quelles pâtes de blé dur"],
+    ["Sauce enchilada", "coulis de tomate + piment moulu, cumin et ail, une pincée de cacao"],
+    [
+      "Assaisonnement pour tacos",
+      "paprika 2 c. à c., piment moulu 1 c. à c., cumin 1 c. à c., ail et oignon en poudre ½ c. à c. chacun, origan, sel"
+    ],
+    [
+      "Sauce salsa",
+      "tomates, oignon, piment, coriandre finement hachés et jus de citron vert, ou sauce tomate pimentée"
+    ],
+    ["Sauce salsa con queso", "fromage fondu fondu avec de la salsa ou des tomates pimentées, 1:1"],
+    [
+      "Crème condensée Campbell's",
+      "300 ml de lait 1,5 %, 25 g de fécule et ½ cube de bouillon, réduire jusqu'à épaississement"
+    ],
+    ["Crackers Club", "n'importe quels crackers salés ou biscottes non sucrées"],
+    [
+      "Chipotle à l'adobo",
+      "paprika fumé ½ c. à c. + une pincée de piment + 1 c. à c. de concentré de tomate"
+    ],
+    ["Peperoncini, jalapeños marinés", "n'importe quels piments marinés"],
+    ["Sel goût bacon", "sel ordinaire + une pincée de paprika fumé"],
+    ["Mélange sel, poivre et ail", "sel, poivre noir et ail en poudre 2:1:1"],
+    ["Sauce Alfredo en pot", "crème 10 % + parmesan râpé + ail, épaissie avec une pincée de fécule"],
+    [
+      "Sauce barbecue sans sucre",
+      "concentré de tomate + un peu de vinaigre et d'eau + paprika fumé + édulcorant"
+    ],
+    ["Riz jasmin", "n'importe quel riz long grain ou basmati"],
+    [
+      "Pâtes protéinées",
+      "pâtes de lentilles ou de pois chiches ; des pâtes de blé dur classiques conviennent aussi, avec moins de protéines"
+    ],
+    ["Sriracha", "n'importe quelle sauce pimentée, ou pâte de piment avec une goutte de vinaigre"]
   ],
   "rec": {
     "1": [

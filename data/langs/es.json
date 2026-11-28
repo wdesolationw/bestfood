@@ -434,7 +434,46 @@
     ["Kétchup sin azúcar (ZERO)", "kétchup normal, algunas calorías más"],
     ["Fideos de huevo", "cualquier fideo o espaguetis"],
     ["Tomates secos", "1 cucharada de tomate concentrado"],
-    ["Pasta de marca (Barilla, etc.)", "cualquier pasta de trigo duro"]
+    ["Pasta de marca (Barilla, etc.)", "cualquier pasta de trigo duro"],
+    ["Salsa para enchiladas", "tomate triturado + chile molido, comino y ajo, una pizca de cacao"],
+    [
+      "Sazonador para tacos",
+      "pimentón 2 cdtas, chile molido 1 cdta, comino 1 cdta, ajo y cebolla en polvo ½ cdta de cada, orégano, sal"
+    ],
+    [
+      "Salsa",
+      "tomate, cebolla, chile, cilantro y zumo de lima picados finos, o salsa de tomate con chile"
+    ],
+    ["Salsa con queso", "queso fundido derretido con salsa o tomate con chile, 1:1"],
+    [
+      "Crema condensada Campbell's",
+      "300 ml de leche 1,5 %, 25 g de maicena y ½ pastilla de caldo, reducir hasta espesar"
+    ],
+    ["Galletas Club", "cualquier galleta salada o picatostes sin azúcar"],
+    [
+      "Chipotle en adobo",
+      "pimentón ahumado ½ cdta + una pizca de chile + 1 cdta de concentrado de tomate"
+    ],
+    ["Peperoncini, jalapeños en vinagre", "cualquier guindilla en vinagre"],
+    ["Sal con sabor a beicon", "sal normal + una pizca de pimentón ahumado"],
+    ["Mezcla de sal, pimienta y ajo", "sal, pimienta negra y ajo en polvo 2:1:1"],
+    [
+      "Salsa Alfredo de bote",
+      "nata 10 % + parmesano rallado + ajo, espesada con una pizca de maicena"
+    ],
+    [
+      "Salsa barbacoa sin azúcar",
+      "concentrado de tomate + un poco de vinagre y agua + pimentón ahumado + edulcorante"
+    ],
+    ["Arroz jazmín", "cualquier arroz de grano largo o basmati"],
+    [
+      "Pasta proteica",
+      "pasta de lentejas o garbanzos; la pasta de trigo duro normal también sirve, con menos proteína"
+    ],
+    [
+      "Salsa sriracha",
+      "cualquier salsa picante de chile, o pasta de chile con unas gotas de vinagre"
+    ]
   ],
   "rec": {
     "1": [

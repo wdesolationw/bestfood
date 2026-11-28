@@ -418,7 +418,37 @@
     ["Sugar-free ketchup (ZERO)", "regular ketchup, a few more calories"],
     ["Egg noodles", "any noodles or spaghetti"],
     ["Sun-dried tomatoes", "1 tbsp tomato paste"],
-    ["Branded pasta (Barilla etc.)", "any durum wheat pasta"]
+    ["Branded pasta (Barilla etc.)", "any durum wheat pasta"],
+    ["Enchilada sauce", "tomato passata + ground chili, cumin and garlic, a pinch of cocoa"],
+    [
+      "Taco seasoning",
+      "paprika 2 tsp, ground chili 1 tsp, cumin 1 tsp, garlic and onion powder ½ tsp each, oregano, salt"
+    ],
+    [
+      "Salsa",
+      "finely chopped tomatoes, onion, hot pepper, cilantro and lime juice, or tomato sauce with chili"
+    ],
+    ["Salsa con queso", "processed cheese melted with salsa or tomatoes with chili, 1:1"],
+    [
+      "Campbell's condensed cream soup",
+      "300 ml 1.5% milk, 25 g cornstarch and ½ stock cube, simmer until thick"
+    ],
+    ["Club crackers", "any salted crackers or unsweetened rusks"],
+    ["Chipotle in adobo sauce", "smoked paprika ½ tsp + a pinch of chili + 1 tsp tomato paste"],
+    ["Pepperoncini, pickled jalapeños", "any pickled hot peppers"],
+    ["Bacon-flavored salt", "regular salt + a pinch of smoked paprika"],
+    ["Salt, pepper and garlic blend", "salt, black pepper and garlic powder 2:1:1"],
+    [
+      "Jarred Alfredo sauce",
+      "10% cream + grated Parmesan + garlic, thickened with a pinch of cornstarch"
+    ],
+    [
+      "Sugar-free BBQ sauce",
+      "tomato paste + a little vinegar and water + smoked paprika + sweetener"
+    ],
+    ["Jasmine rice", "any long-grain rice or basmati"],
+    ["Protein pasta", "lentil or chickpea pasta; regular durum pasta works too, with less protein"],
+    ["Sriracha", "any hot chili sauce, or chili paste with a drop of vinegar"]
   ],
   "rec": {
     "1": [

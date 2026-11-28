@@ -428,7 +428,43 @@
     ["Ketchup ohne Zucker (ZERO)", "normaler Ketchup, etwas mehr Kalorien"],
     ["Eiernudeln", "beliebige Nudeln oder Spaghetti"],
     ["Getrocknete Tomaten", "1 EL Tomatenmark"],
-    ["Markenpasta (Barilla usw.)", "beliebige Pasta aus Hartweizen"]
+    ["Markenpasta (Barilla usw.)", "beliebige Pasta aus Hartweizen"],
+    [
+      "Enchilada-Soße",
+      "passierte Tomaten + gemahlener Chili, Kreuzkümmel und Knoblauch, eine Prise Kakao"
+    ],
+    [
+      "Taco-Gewürz",
+      "Paprika 2 TL, Chilipulver 1 TL, Kreuzkümmel 1 TL, Knoblauch- und Zwiebelpulver je ½ TL, Oregano, Salz"
+    ],
+    [
+      "Salsa",
+      "fein gehackte Tomaten, Zwiebel, Chili, Koriander und Limettensaft oder Tomatensoße mit Chili"
+    ],
+    ["Salsa con Queso", "Schmelzkäse, 1:1 mit Salsa oder Tomaten mit Chili geschmolzen"],
+    [
+      "Campbell's Cremesuppe (Konzentrat)",
+      "300 ml Milch 1,5 %, 25 g Speisestärke und ½ Brühwürfel, sämig einkochen"
+    ],
+    ["Club-Cracker", "beliebige Salzcracker oder ungesüßter Zwieback"],
+    ["Chipotle in Adobo", "geräuchertes Paprikapulver ½ TL + eine Prise Chili + 1 TL Tomatenmark"],
+    ["Peperoncini, eingelegte Jalapeños", "beliebige eingelegte scharfe Paprika"],
+    ["Salz mit Speckgeschmack", "normales Salz + eine Prise geräuchertes Paprikapulver"],
+    ["Salz-Pfeffer-Knoblauch-Mischung", "Salz, schwarzer Pfeffer und Knoblauchpulver 2:1:1"],
+    [
+      "Fertige Alfredo-Soße",
+      "Sahne 10 % + geriebener Parmesan + Knoblauch, mit einer Prise Stärke gebunden"
+    ],
+    [
+      "Zuckerfreie BBQ-Soße",
+      "Tomatenmark + etwas Essig und Wasser + geräuchertes Paprikapulver + Süßstoff"
+    ],
+    ["Jasminreis", "beliebiger Langkornreis oder Basmati"],
+    [
+      "Protein-Pasta",
+      "Linsen- oder Kichererbsennudeln; normale Hartweizennudeln gehen auch, mit weniger Eiweiß"
+    ],
+    ["Sriracha", "beliebige scharfe Chilisoße oder Chilipaste mit einem Tropfen Essig"]
   ],
   "rec": {
     "1": [

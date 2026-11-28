@@ -151,8 +151,13 @@ const FR = {"½": ".5", "¼": ".25", "¾": ".75", "⅓": ".33", "⅔": ".67"};
 function scaleText(s, k) {
   if (Math.abs(k - 1) < 1e-6) return s;
   return s.replace(/\s*\([^)]*\)/g, "").replace(/(\d*)([½¼¾⅓⅔])/g, (m, a, f) => (a ? +a : 0) + +FR[f] + "")
-    .replace(/(\d+(?:[.,]\d+)?)(?!\s*[%°×x])(?![\d])/g, (m, n) => fnum(rg(parseFloat(n.replace(",", ".")) * k)));
+    .replace(/\d+(?:[.,]\d+)?/g, (m, off, str) => {
+      const after = str.slice(off + m.length); if (/^\s*[%°×x]/.test(after)) return m;  // 1,5% fat, 180°, 2×
+      const v = parseFloat(m.replace(",", ".")) * k;
+      return /^\s*(г|гр|мл|кг|л|g|ml|kg|l|გ|მლ|კგ|ლ)(?![\p{L}])/u.test(after) ? fnum(rg(v)) : qfmt(v);  // spoons, pieces, cloves: quarters
+    });
 }
+function qfmt(v) { const q = Math.max(.25, Math.round(v * 4) / 4); if (q >= 10) return fnum(Math.round(q)); const i = Math.floor(q), f = {0: "", .25: "¼", .5: "½", .75: "¾"}[q - i]; return (i || !f ? String(i) : "") + f; }
 
 /* ---------- search & filters ---------- */
 const BASES = ["chicken", "beef", "turkey", "fish", "eggs", "veg"];
