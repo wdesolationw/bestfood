@@ -359,7 +359,8 @@
     },
     "sportT": "Sports nutrition and protein products",
     "prodsL": "Products",
-    "recRest": "Rest of the recipe (sauces, spices, macro adjustment)"
+    "recRest": "Rest of the recipe (sauces, spices, macro adjustment)",
+    "chkUp": "Weight is going up: {d} kg in 2 weeks. I suggest lowering your target by {x} kcal."
   },
   "quick": ["pasta", "rice", "chicken", "cottage cheese", "banana", "chocolate"],
   "stop": ["with", "and", "the", "a", "of", "in"],

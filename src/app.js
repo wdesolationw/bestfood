@@ -603,7 +603,7 @@ function checkIn() {
   const now = weightAvg(0, 6), before = weightAvg(14, 20); if (now == null || before == null) return {msg: T.chkNeed};
   const d = now - before, ds = (d > 0 ? "+" : "") + fnum(Math.round(d * 10) / 10), w = now, aim = prof.aim;
   let x = 0, key = "chkOk";
-  if (aim === "lose") { if (d > -0.2) { x = -150; key = "chkLower"; } else if (-d > w * .02) { x = 150; key = "chkRaise"; } }
+  if (aim === "lose") { if (d > -0.2) { x = -150; key = d >= 0.3 ? "chkUp" : "chkLower"; } else if (-d > w * .02) { x = 150; key = "chkRaise"; } }
   else if (aim === "gain") { if (d < 0.2) { x = 150; key = "chkGainUp"; } else if (d > 1) { x = -150; key = "chkGainDown"; } }
   else if (Math.abs(d) > 0.6) { x = d > 0 ? -100 : 100; key = "chkMaint"; }
   return {msg: T[key].replace("{d}", ds).replace("{x}", Math.abs(x)), x, k: Math.round((gk + x) / 10) * 10};

@@ -364,7 +364,8 @@
     },
     "sportT": "Nutrition sportive et produits protéinés",
     "prodsL": "Produits",
-    "recRest": "Reste de la recette (sauces, épices, ajustement des macros)"
+    "recRest": "Reste de la recette (sauces, épices, ajustement des macros)",
+    "chkUp": "Le poids augmente : {d} kg en 2 semaines. Je propose de baisser l'objectif de {x} kcal."
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],
