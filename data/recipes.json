@@ -23,7 +23,8 @@
       [6, "spinach", 75],
       [7, "milk", 50]
     ],
-    "full": false
+    "full": false,
+    "shop": [["pastasauce", 360]]
   },
   {
     "id": 2,
@@ -48,7 +49,8 @@
       [5, "lightcheese", 100],
       [6, "procheese", 75]
     ],
-    "full": false
+    "full": false,
+    "shop": [["garlic", 20]]
   },
   {
     "id": 3,
@@ -91,7 +93,15 @@
     "tags": "ужины на несколько дней говядина говяжий фарш мясо бекон паста макароны йогурт сыр",
     "n": 4,
     "items": [[0, "beef", 550], [1, "bacon", 140], [2, "pepper", 325], [3, "onion", 125], [4, "pasta", 180]],
-    "full": false
+    "full": false,
+    "shop": [
+      ["greek0", 350],
+      ["milk", 200],
+      ["lightcheese", 90],
+      ["procheese", 30],
+      ["hard", 20],
+      ["honey", 12]
+    ]
   },
   {
     "id": 5,
@@ -115,7 +125,8 @@
       [6, "creamcheese", 150],
       [9, "pasta", 300]
     ],
-    "full": false
+    "full": false,
+    "shop": [["oil", 15], ["garlic", 60], ["sundried", 20], ["hard", 20], ["herbs", 10]]
   },
   {
     "id": 6,
@@ -139,7 +150,8 @@
       [4, "greek2", 200],
       [6, "mozz", 150]
     ],
-    "full": false
+    "full": false,
+    "shop": [["pesto", 60]]
   },
   {
     "id": 7,
@@ -163,7 +175,18 @@
       [3, "mushroom", 350],
       [4, "pepper", 200]
     ],
-    "full": false
+    "full": false,
+    "shop": [
+      ["carrot", 100],
+      ["onion", 100],
+      ["greenonion", 20],
+      ["soy", 60],
+      ["oyster", 40],
+      ["sriracha", 15],
+      ["garlic", 12],
+      ["ginger", 10],
+      ["starch", 8]
+    ]
   },
   {
     "id": 8,
@@ -181,7 +204,20 @@
     "tags": "ужины на несколько дней курица курятина куриное цыпленок мясо рис",
     "n": 4,
     "items": [[0, "chicken", 900], [2, "rice", 200], [3, "vegmix", 500]],
-    "full": false
+    "full": false,
+    "shop": [
+      ["pepper", 300],
+      ["onion", 150],
+      ["egg", 110],
+      ["ketchup", 75],
+      ["soy", 65],
+      ["honey", 30],
+      ["sriracha", 20],
+      ["vinegar", 20],
+      ["garlic", 10],
+      ["greenonion", 20],
+      ["starch", 4]
+    ]
   },
   {
     "id": 9,
@@ -199,7 +235,8 @@
     "tags": "ужины на несколько дней курица курятина куриное цыпленок мясо рис",
     "n": 4,
     "items": [[0, "chicken", 800], [5, "ricecooked", 320]],
-    "full": false
+    "full": false,
+    "shop": [["oj", 220], ["soy", 160], ["starch", 12], ["vinegar", 24], ["garlic", 6], ["ginger", 6]]
   },
   {
     "id": 10,
@@ -235,7 +272,8 @@
     "tags": "завтраки и быстрые блюда яйца творог йогурт",
     "n": 1,
     "items": [[0, "bread", 70]],
-    "full": false
+    "full": false,
+    "shop": [["egg", 55], ["milk", 80], ["protein", 30], ["honey", 20], ["greek0", 85]]
   },
   {
     "id": 12,
@@ -259,7 +297,8 @@
       [5, "protein", 60],
       [7, "walnut", 60]
     ],
-    "full": false
+    "full": false,
+    "shop": [["egg", 110], ["milk", 180], ["carrot", 100], ["honey", 80], ["tvorog1", 225], ["greek0", 30]]
   },
   {
     "id": 13,
@@ -277,7 +316,8 @@
     "tags": "десерты и сладкое яйца творог творог десерт сладкое",
     "n": 2,
     "items": [],
-    "full": false
+    "full": false,
+    "shop": [["tvorog1", 200], ["semolina", 50], ["egg", 165], ["milk", 60], ["cherry", 150], ["starch", 4]]
   },
   {
     "id": 14,
@@ -295,7 +335,8 @@
     "tags": "десерты и сладкое йогурт ягод десерт сладкое",
     "n": 1,
     "items": [[0, "greek2", 160]],
-    "full": false
+    "full": false,
+    "shop": [["lemon", 30], ["passion", 30], ["biscuits", 25], ["maple", 20]]
   },
   {
     "id": 15,
@@ -313,7 +354,8 @@
     "tags": "соусы йогурт",
     "n": 8,
     "items": [[0, "greek0", 220], [1, "mayo", 40]],
-    "full": false
+    "full": false,
+    "shop": [["honey", 40], ["mustard", 15], ["vinegar", 10]]
   },
   {
     "id": 16,
@@ -2111,7 +2153,8 @@
       [5, "lemon", 30],
       [6, "herbs", 15]
     ],
-    "full": false
+    "full": false,
+    "shop": [["salsa", 65]]
   },
   {
     "id": 92,
@@ -2129,7 +2172,8 @@
     "tags": "ужины на несколько дней говядина говяжий фарш мясо рис барбекю bbq горошек морковь творог",
     "n": 4,
     "items": [[0, "beef", 780], [1, "rice", 160], [2, "vegmix", 480], [3, "tvorog2", 85]],
-    "full": false
+    "full": false,
+    "shop": [["bbqsauce", 140]]
   },
   {
     "id": 93,
@@ -2173,7 +2217,8 @@
     "tags": "ужины на несколько дней говядина стейк мясо паста макароны творог сыр проволоне пармезан перец редис масса",
     "n": 4,
     "items": [[0, "beef", 780], [2, "pepper", 260], [4, "pasta", 235], [5, "tvorog2", 260], [6, "hard", 100]],
-    "full": false
+    "full": false,
+    "shop": [["radish", 170]]
   },
   {
     "id": 95,
@@ -2197,7 +2242,8 @@
       [5, "sour", 60],
       [6, "tortilla", 180]
     ],
-    "full": false
+    "full": false,
+    "shop": [["tacoseas", 14], ["tomatopaste", 30]]
   },
   {
     "id": 96,
@@ -2233,7 +2279,8 @@
     "tags": "ужины на несколько дней курица курятина куриное мясо паста макароны бекон сыр альфредо ранч",
     "n": 4,
     "items": [[0, "chicken", 725], [2, "pasta", 180], [3, "lightcheese", 90], [5, "bacon", 50]],
-    "full": false
+    "full": false,
+    "shop": [["alfredo", 170]]
   },
   {
     "id": 98,
@@ -2277,7 +2324,8 @@
     "tags": "ужины на несколько дней курица курятина куриное мясо бекон сыр крекеры сливочная йогурт масса",
     "n": 4,
     "items": [[0, "chicken", 710], [2, "bacon", 190], [4, "lightcheese", 115], [5, "greek0", 255]],
-    "full": false
+    "full": false,
+    "shop": [["crackers", 90], ["creamsoup", 340]]
   },
   {
     "id": 100,
@@ -2328,7 +2376,8 @@
       [5, "pickles", 145],
       [7, "greek0", 170]
     ],
-    "full": false
+    "full": false,
+    "shop": [["procheese", 80]]
   },
   {
     "id": 102,
@@ -2352,7 +2401,8 @@
       [3, "pepper", 300],
       [4, "onion", 85]
     ],
-    "full": false
+    "full": false,
+    "shop": [["enchilada", 325]]
   },
   {
     "id": 103,
@@ -2402,7 +2452,8 @@
       [5, "lightcheese", 110],
       [6, "tomato", 225]
     ],
-    "full": false
+    "full": false,
+    "shop": [["bbqsauce", 200]]
   },
   {
     "id": 105,
@@ -2455,7 +2506,8 @@
       [7, "corn", 80],
       [8, "beans", 120]
     ],
-    "full": false
+    "full": false,
+    "shop": [["tacoseas", 12]]
   },
   {
     "id": 107,
@@ -2507,7 +2559,8 @@
       [4, "lightcheese", 115],
       [5, "greek0", 160]
     ],
-    "full": false
+    "full": false,
+    "shop": [["tacoseas", 32], ["quesosauce", 135]]
   },
   {
     "id": 109,
@@ -2577,7 +2630,8 @@
     "tags": "ужины на несколько дней говядина говяжий фарш мясо паста макароны сальса перец болгарский сыр чеддер халапеньо",
     "n": 4,
     "items": [[0, "beef", 780], [2, "pepper", 300], [3, "pasta", 235], [4, "lightcheese", 115]],
-    "full": false
+    "full": false,
+    "shop": [["salsa", 260]]
   },
   {
     "id": 112,
@@ -2595,7 +2649,8 @@
     "tags": "ужины на несколько дней курица куриный фарш курятина паста макароны рожки сальса халапеньо сметана острое",
     "n": 4,
     "items": [[0, "chicken_mince", 780], [2, "pasta", 195], [5, "sour", 140]],
-    "full": false
+    "full": false,
+    "shop": [["salsa", 260], ["jalapeno", 140]]
   },
   {
     "id": 113,

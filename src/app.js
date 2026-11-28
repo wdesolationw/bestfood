@@ -525,7 +525,7 @@ function addRecipeToPlan(r, day, slot) { plan.d[day][slot].push({t: "r", id: r.i
 
 /* ---------- shopping list ---------- */
 function addItemsToShop(list) { list.forEach(([k, g]) => { if (!k || !(g > 0) || ["spices", "water", "broth", "khmeli"].includes(k)) return; shop.items[k] = (shop.items[k] || 0) + g; }); saveShop(); }
-function recipeShopItems(r, servings, mode) { const k = servings / r.n; return effItems(r, mode).map(e => [e.key, e.g * k]); }
+function recipeShopItems(r, servings, mode) { const k = servings / r.n; return effItems(r, mode).map(e => [e.key, e.g * k]).concat((r.shop || []).map(([key, g]) => [key, g * k])); }
 function shopFromPlan() {
   shop.items = {}; shop.notes = [];
   plan.d.forEach(day => SLOTS.forEach(sl => day[sl].forEach(e => {
@@ -536,7 +536,8 @@ function shopFromPlan() {
 }
 const SHOPORDER = ["meat", "dairy", "veg", "fruit", "grain", "other"];
 const gfmt = g => g >= 1000 ? fnum(Math.round(g / 100) / 10) + " " + t().kg : fnum(rg(g)) + " " + t().grams;
-function shopText() { const T = t(); return SHOPORDER.map(c => { const ks = Object.keys(shop.items).filter(k => SHOPCAT[k] === c); return ks.length ? `${T.shopCat[c]}:\n` + ks.map(k => `- ${fname(k)}: ${gfmt(shop.items[k])}`).join("\n") : ""; }).filter(Boolean).join("\n\n"); }
+const samt = (k, g) => gfmt(g) + (k === "egg" ? ` (${fnum(Math.max(1, Math.round(g / 55)))} ${t().pcs})` : "");
+function shopText() { const T = t(); return SHOPORDER.map(c => { const ks = Object.keys(shop.items).filter(k => SHOPCAT[k] === c); return ks.length ? `${T.shopCat[c]}:\n` + ks.map(k => `- ${fname(k)}: ${samt(k, shop.items[k])}`).join("\n") : ""; }).filter(Boolean).join("\n\n"); }
 function renderShop() {
   const T = t(), ks = Object.keys(shop.items);
   let h = foodSeg("shop");
@@ -544,7 +545,7 @@ function renderShop() {
   if (!ks.length) h += `<div class="empty">${esc(T.shopEmpty)}</div>`;
   else { const nd = ks.filter(k => shop.done[k]).length; h += `<div class="shprog"><span>${esc(T.bought.replace("{a}", nd).replace("{b}", ks.length))}</span><div class="bar"><i style="width:${nd / ks.length * 100}%"></i></div></div>`; }
   if (ks.length) h += SHOPORDER.map(c => { const kk = ks.filter(k => SHOPCAT[k] === c).sort((a, b) => fname(a).localeCompare(fname(b))); if (!kk.length) return "";
-    return `<p class="lbl shc"><span>${esc(T.shopCat[c])}</span><span>${kk.filter(k => shop.done[k]).length}/${kk.length}</span></p><ul class="shop">` + kk.map(k => `<li class="${shop.done[k] ? "done" : ""}" data-sk="${k}"><span>${esc(fname(k))}</span><b>${gfmt(shop.items[k])}</b><button data-srm="${k}" aria-label="${esc(T.remove)}">✕</button></li>`).join("") + `</ul>`; }).join("");
+    return `<p class="lbl shc"><span>${esc(T.shopCat[c])}</span><span>${kk.filter(k => shop.done[k]).length}/${kk.length}</span></p><ul class="shop">` + kk.map(k => `<li class="${shop.done[k] ? "done" : ""}" data-sk="${k}"><span>${esc(fname(k))}</span><b>${samt(k, shop.items[k])}</b><button data-srm="${k}" aria-label="${esc(T.remove)}">✕</button></li>`).join("") + `</ul>`; }).join("");
   if (shop.notes.length) h += `<p class="hint">${esc(T.shopNote)} ${shop.notes.map(id => esc(RX(R.find(x => x.id === id)).title)).join(", ")}</p>`;
   h += `<textarea id="shopTxt" class="vh" readonly aria-hidden="true" tabindex="-1"></textarea>`;
   $("#app").innerHTML = h;

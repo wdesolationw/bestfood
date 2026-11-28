@@ -28,7 +28,11 @@
     "sour20",
     "protein",
     "butter",
-    "matsoni"
+    "matsoni",
+    "alfredo",
+    "creamsoup",
+    "pesto",
+    "quesosauce"
   ],
   "gluten": [
     "pasta",
@@ -42,11 +46,13 @@
     "oats",
     "flour",
     "granola",
-    "soy"
+    "soy",
+    "crackers",
+    "biscuits"
   ],
-  "nuts": ["walnut", "almonds", "pb", "peanuts"],
+  "nuts": ["walnut", "almonds", "pb", "peanuts", "pesto"],
   "eggs": ["egg", "eggwhite", "mayo", "mayofull"],
-  "fish": ["whitefish", "salmon", "shrimp", "tuna"],
+  "fish": ["whitefish", "salmon", "shrimp", "tuna", "oyster"],
   "pork": ["pork", "bacon"],
   "meat": [
     "chicken",
@@ -113,6 +119,11 @@
     "mayo",
     "mayofull",
     "honey",
-    "granola"
+    "granola",
+    "alfredo",
+    "creamsoup",
+    "pesto",
+    "oyster",
+    "quesosauce"
   ]
 }
