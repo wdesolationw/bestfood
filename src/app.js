@@ -792,7 +792,11 @@ function resultsHTML(keys, attr) { const T = t(); return keys.map(k => { const p
   return `<button ${attr}="${k}"><span>${esc(fname(k))}${est ? `<em class="est">≈ ${esc(T.estT)}</em>` : west ? `<em class="est">${esc(T.westT)}</em>` : ""}</span><small>${pg ? `${west ? "≈" : ""}${pg} ${esc(T.grams)} · ${r0(FOOD[k][0] * pg / 100)} ${esc(T.kcal)} · ${esc(T.p)} ${r0(FOOD[k][1] * pg / 100)}` : `${r0(FOOD[k][0])} ${esc(T.kcal)} · ${esc(T.p)} ${r0(FOOD[k][1])} / 100 ${esc(T.grams)}`}</small></button>`; }).join(""); }
 function fillProd() {
   const el = $("#pres"); if (!el) return; const T = t();
-  if ((sheetCtx.q || "").trim()) { el.innerHTML = resultsHTML(findFood(sheetCtx.q), "data-pk"); return; }
+  if ((sheetCtx.q || "").trim()) {
+    const rs = sheetCtx.target === "shop" ? [] : R.filter(r => matchQ(r, sheetCtx.q)).slice(0, 6), fs = findFood(sheetCtx.q);
+    el.innerHTML = (rs.length ? `<p class="lbl">${esc(T.navR)}</p>` + rs.map(r => { const m = recipeMacros(r); return `<button data-pdr="${r.id}"><span>${esc(RX(r).title)}</span><small>${r0(m[0])} ${esc(T.kcal)} · ${esc(T.p)} ${r0(m[1])} · ${esc(T.perServ)}</small></button>`; }).join("") + (fs.length ? `<p class="lbl">${esc(T.prodsL)}</p>` : "") : "") + resultsHTML(fs, "data-pk");
+    return;
+  }
   const rec = recentFoods();
   el.innerHTML = (rec.length ? `<p class="lbl">${esc(T.recent)}</p>` + rec.map(([k, g]) => `<button data-pk="${k}" data-pg="${r0(g)}"><span>${esc(fname(k))}</span><small>${r0(g)} ${esc(T.grams)} · ${r0(FOOD[k][0] * g / 100)} ${esc(T.kcal)}</small></button>`).join("") : "") +
     `<p class="lbl">${esc(T.stdT)}</p><div class="brandpick">` + Object.keys(STD).map(g => `<button class="chip" data-stdg="${g}" aria-pressed="${sheetCtx.stdg === g}">${esc(T.stdG[g])}</button>`).join("") + `</div>` +
@@ -1565,6 +1569,7 @@ document.addEventListener("click", e => {
   const amb = el.closest("[data-addm]"); if (amb) { openSheet("prod", {q: "", slot: amb.dataset.addm}); return; }
   if (el.closest("#copyY")) { const [y, mo, d] = state.date.split("-").map(Number), yd = iso(new Date(y, mo - 1, d - 1)), src = diary[yd] || [];
     if (!src.length) { toast(t().emptyY); return; } (diary[state.date] = diary[state.date] || []).push(...JSON.parse(JSON.stringify(src))); saveDiary(); toast(t().copiedY); renderDay(); return; }
+  const pdr = el.closest("[data-pdr]"); if (pdr) { const r = R.find(x => x.id === +pdr.dataset.pdr); addToDay({t: "r", id: r.id, n: 1, per: recipeMacros(r), sw: hasSwaps(r), mode: modeOf(r), name: RX(r).title}, null, sheetCtx.slot || slotNow()); closeSheet(); renderDay(); return; }
   if (el.closest("#pAdd")) { const g = +($("#pg").value || 0); if (g > 0) { if (sheetCtx.target === "shop") { addItemsToShop([[sheetCtx.key, g]]); closeSheet(); renderShop(); } else { addToDay({t: "p", key: sheetCtx.key, g}, null, sheetCtx.slot || slotNow()); closeSheet(); renderDay(); } } return; }
   const pkr = el.closest("[data-pkr]"); if (pkr) { const r = R.find(x => x.id === +pkr.dataset.pkr); plan.d[state.planDay][sheetCtx.slot].push({t: "r", id: r.id, n: 1, mode: prof.defMode}); savePlan(); closeSheet(); renderPlan(); return; }
   const pkd = el.closest("[data-pkd]"); if (pkd) { plan.d[state.planDay][sheetCtx.slot].push({t: "d", id: pkd.dataset.pkd, n: 1}); savePlan(); closeSheet(); renderPlan(); return; }

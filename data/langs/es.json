@@ -362,7 +362,8 @@
       "bake": "Bollería y postres",
       "drink": "Bebidas"
     },
-    "sportT": "Nutrición deportiva y productos proteicos"
+    "sportT": "Nutrición deportiva y productos proteicos",
+    "prodsL": "Productos"
   },
   "quick": ["pasta", "arroz", "pollo", "requesón", "plátano", "chocolate"],
   "stop": ["con", "y", "de", "el", "la", "en", "un", "una"],

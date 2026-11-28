@@ -362,7 +362,8 @@
       "bake": "Viennoiseries et desserts",
       "drink": "Boissons"
     },
-    "sportT": "Nutrition sportive et produits protéinés"
+    "sportT": "Nutrition sportive et produits protéinés",
+    "prodsL": "Produits"
   },
   "quick": ["pâtes", "riz", "poulet", "fromage blanc", "banane", "chocolat"],
   "stop": ["avec", "et", "de", "du", "des", "le", "la", "les", "au", "aux", "un", "une"],
