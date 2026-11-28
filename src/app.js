@@ -126,13 +126,14 @@ function bestAlt(r, key, g, avoid) {
   for (const k of alts) { const d = add4(mac(k, g * ratio(key, k)), mac(key, g), -1); const s = Math.abs(d[1]) * 4 + Math.abs(d[0]) / 8; if (s < bs) { bs = s; best = k; } }
   return best;
 }
+const OMIT = new Set(["onion", "garlic", "spices", "herbs", "greenonion", "lemon", "ginger", "khmeli", "mint", "broth", "water", "vinegar"]);  // seasonings: just leave them out
 function effItems(r, mode) {
   mode = mode || modeOf(r); const sw = swaps[r.id] || {};
   return r.items.map(([idx, key0, g0]) => {
     let key = key0, g = g0, why = null;
     if (mode === "classic" && CLASSIC[key0]) { const [k2, m] = CLASSIC[key0]; if (k2 !== key0 || m !== 1) { key = k2; g = g0 * m; why = "classic"; } }
     if (sw[idx]) { key = sw[idx]; g = g0 * ratio(key0, key); why = "swap"; }
-    if (banned(key) && g > 0) { const a = bestAlt(r, key0, g0, BANNED); if (a) { key = a; g = g0 * ratio(key0, a); why = "allerg"; } else why = "warn"; }
+    if (banned(key) && g > 0) { const a = bestAlt(r, key0, g0, BANNED); if (a) { key = a; g = g0 * ratio(key0, a); why = "allerg"; } else if (OMIT.has(key)) { g = 0; why = "allerg"; } else why = "warn"; }
     return {idx, key0, g0, key, g, why};
   });
 }
@@ -144,7 +145,7 @@ function recipeMacros(r, mode) {
   return m.map(v => Math.max(0, v));
 }
 const hasSwaps = r => Object.keys(swaps[r.id] || {}).length > 0;
-const warnOf = r => effItems(r).filter(e => e.why === "warn").map(e => e.key).concat((r.shop || []).map(x => x[0]).filter(banned));  // shop-only extras (sauces etc.) cannot be swapped
+const warnOf = r => effItems(r).filter(e => e.why === "warn").map(e => e.key).concat((r.shop || []).map(x => x[0]).filter(k => banned(k) && !OMIT.has(k)));  // shop-only extras (sauces etc.) cannot be swapped
 const autoOf = r => effItems(r).some(e => e.why === "allerg");
 const FR = {"½": ".5", "¼": ".25", "¾": ".75", "⅓": ".33", "⅔": ".67"};
 function scaleText(s, k) {
@@ -525,7 +526,7 @@ function addRecipeToPlan(r, day, slot) { plan.d[day][slot].push({t: "r", id: r.i
 
 /* ---------- shopping list ---------- */
 function addItemsToShop(list) { list.forEach(([k, g]) => { if (!k || !(g > 0) || ["spices", "water", "broth", "khmeli"].includes(k)) return; shop.items[k] = (shop.items[k] || 0) + g; }); saveShop(); }
-function recipeShopItems(r, servings, mode) { const k = servings / r.n; return effItems(r, mode).map(e => [e.key, e.g * k]).concat((r.shop || []).map(([key, g]) => [key, g * k])); }
+function recipeShopItems(r, servings, mode) { const k = servings / r.n; return effItems(r, mode).map(e => [e.key, e.g * k]).concat((r.shop || []).filter(([key]) => !(banned(key) && OMIT.has(key))).map(([key, g]) => [key, g * k])); }
 function shopFromPlan() {
   shop.items = {}; shop.notes = [];
   plan.d.forEach(day => SLOTS.forEach(sl => day[sl].forEach(e => {
@@ -1586,7 +1587,7 @@ document.addEventListener("click", e => {
   if (el.closest("#toShop")) { const r = R.find(x => x.id === curRecipeId()); addItemsToShop(recipeShopItems(r, servOf(r))); if (!r.full && !r.gen && !shop.notes.includes(r.id)) { shop.notes.push(r.id); saveShop(); } toast(T.addedShop); return; }
   if (el.closest("#myVer")) {
     const r = R.find(x => x.id === curRecipeId()), k = servOf(r) / r.n;
-    const items = effItems(r).filter(x => x.g > 0).map(x => ({key: x.key, g: rg(x.g * k)})).concat((r.shop || []).map(([key, g]) => ({key, g: rg(g * k)})));
+    const items = effItems(r).filter(x => x.g > 0).map(x => ({key: x.key, g: rg(x.g * k)})).concat((r.shop || []).filter(([key]) => !(banned(key) && OMIT.has(key))).map(([key, g]) => ({key, g: rg(g * k)})));
     draft = {id: null, name: RX(r).title + T.copySuffix, serv: servOf(r), items};
     // the recipe's own macros win: whatever the listed products don't explain (sauces, spices, label values) goes in one line
     const want = recipeMacros(r).map(v => v * servOf(r)), diff = add4(want, dishTotal(draft), -1);
